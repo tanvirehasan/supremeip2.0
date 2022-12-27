@@ -1,0 +1,57 @@
+[24-May-2022 14:42:48 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function compressImage() in /home3/suprenc4/public_html/test/admin/home_list.php:24
+Stack trace:
+#0 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/home_list.php on line 24
+[24-May-2022 14:45:39 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function compressImage() in /home3/suprenc4/public_html/test/admin/home_list.php:24
+Stack trace:
+#0 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/home_list.php on line 24
+[24-May-2022 14:46:52 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function compressImage() in /home3/suprenc4/public_html/test/admin/home_list.php:23
+Stack trace:
+#0 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/home_list.php on line 23
+[24-May-2022 14:47:46 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function compressImage() in /home3/suprenc4/public_html/test/admin/home_list.php:23
+Stack trace:
+#0 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/home_list.php on line 23
+[24-May-2022 14:50:39 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function compressImage() in /home3/suprenc4/public_html/test/admin/home_list.php:23
+Stack trace:
+#0 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/home_list.php on line 23
+[26-May-2022 05:18:48 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home3/suprenc4/public_html/test/admin/controller/settings/settings_sql.php on line 489
+[26-May-2022 05:18:58 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home3/suprenc4/public_html/test/admin/controller/settings/settings_sql.php on line 489
+[04-Jun-2022 11:39:12 America/Boise] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function color_code_to_name(), 1 passed in /home3/suprenc4/public_html/test/admin/page_edit.php on line 238 and exactly 2 expected in /home3/suprenc4/public_html/test/admin/inc/function.php:152
+Stack trace:
+#0 /home3/suprenc4/public_html/test/admin/page_edit.php(238): color_code_to_name('linear-gradient...')
+#1 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/inc/function.php on line 152
+[04-Jun-2022 11:44:03 America/Boise] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function color_code_to_name(), 1 passed in /home3/suprenc4/public_html/test/admin/page_edit.php on line 238 and exactly 2 expected in /home3/suprenc4/public_html/test/admin/inc/function.php:152
+Stack trace:
+#0 /home3/suprenc4/public_html/test/admin/page_edit.php(238): color_code_to_name('linear-gradient...')
+#1 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/inc/function.php on line 152
+[04-Jun-2022 11:44:26 America/Boise] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function color_code_to_name(), 1 passed in /home3/suprenc4/public_html/test/admin/page_edit.php on line 238 and exactly 2 expected in /home3/suprenc4/public_html/test/admin/inc/function.php:152
+Stack trace:
+#0 /home3/suprenc4/public_html/test/admin/page_edit.php(238): color_code_to_name('linear-gradient...')
+#1 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/inc/function.php on line 152
+[04-Jun-2022 11:49:20 America/Boise] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function color_code_to_name(), 1 passed in /home3/suprenc4/public_html/test/admin/page_edit.php on line 238 and exactly 2 expected in /home3/suprenc4/public_html/test/admin/inc/function.php:152
+Stack trace:
+#0 /home3/suprenc4/public_html/test/admin/page_edit.php(238): color_code_to_name('#2d642d')
+#1 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/inc/function.php on line 152
+[04-Jun-2022 11:49:42 America/Boise] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function color_code_to_name(), 1 passed in /home3/suprenc4/public_html/test/admin/page_edit.php on line 238 and exactly 2 expected in /home3/suprenc4/public_html/test/admin/inc/function.php:152
+Stack trace:
+#0 /home3/suprenc4/public_html/test/admin/page_edit.php(238): color_code_to_name('#2d642d')
+#1 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/inc/function.php on line 152
+[04-Jun-2022 11:51:19 America/Boise] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function color_code_to_name(), 1 passed in /home3/suprenc4/public_html/test/admin/page_edit.php on line 238 and exactly 2 expected in /home3/suprenc4/public_html/test/admin/inc/function.php:152
+Stack trace:
+#0 /home3/suprenc4/public_html/test/admin/page_edit.php(238): color_code_to_name('#2d642d')
+#1 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/inc/function.php on line 152
+[04-Jun-2022 11:51:37 America/Boise] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function color_code_to_name(), 1 passed in /home3/suprenc4/public_html/test/admin/page_edit.php on line 238 and exactly 2 expected in /home3/suprenc4/public_html/test/admin/inc/function.php:152
+Stack trace:
+#0 /home3/suprenc4/public_html/test/admin/page_edit.php(238): color_code_to_name('$bgcolor')
+#1 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/inc/function.php on line 152
