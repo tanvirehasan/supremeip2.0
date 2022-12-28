@@ -36,10 +36,6 @@ font-family: 'Jost', sans-serif;
 
 }
 
-
-
-
-
 /*root color*/
 @font-face { font-family: bangla-title; src: url('font/AlinurNiladri/banlgaone.ttf'); }
 @font-face { font-family: bangla-regular; src: url('font/kalpurush/kalpurush.ttf'); }
@@ -70,7 +66,6 @@ font-family: 'Jost', sans-serif;
 }
 
 .text-black2{color:#666565 !important;}
-
 .bg-danger{background-color:var(--red)!important;}
 .bg-warning{background-color: #ffd147!important;}
 
@@ -83,6 +78,36 @@ font-family: 'Jost', sans-serif;
 body {
   font-size: .875rem;
 }
+
+.qr_link{
+  width:150px;
+  margin-left: 40px;
+  display: none;
+  /* position:absolute; */
+  /* bottom: 0; */
+}
+
+
+.icon_box:hover>.qr_link{
+  display: block;
+  cursor: pointer;
+}
+
+.icon_box:hover{
+  width: 40px;
+  font-size: 18px;
+  background-color: #0047b1f1;
+  color: #fff !important;
+  cursor: pointer;
+}
+
+.icon_box i:hover{
+  color: #fff !important;
+}
+
+
+
+
 
 .header_img{        
     position: -webkit-sticky;

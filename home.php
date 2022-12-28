@@ -44,11 +44,56 @@
 
   <div class="row m-0 p-0">
 
-  <div class="socialicon" style="width:40px; height:100%; background:#fff; z-index:999; position:fixed;">
+  <div class="socialicon p-0" style="width:40px; height:100%; background:#fff; z-index:999; position:fixed;">
     <div class="sqecode" style="position: absolute; bottom:50px;">
-      <a class="nav-link nav_menus mt-2 p-0 " href="/"><i class="fas fa-home"></i></a>
-      <a class="nav-link nav_menus mt-2 p-0 " href="/"><i class="fas fa-home"></i></a>
+
+      <div class="icon_box py-2">
+        <i class="fab fa-whatsapp p-1 ps-3"></i>
+        <div class="qr_link">
+          <img src="assets/brand/frame.png" alt="" width="100%">
+        </div> 
+      </div> 
+
+      <div class="icon_box py-2">
+        <i class="fab fa-linkedin-in p-1 ps-3"></i>
+        <div class="qr_link">
+          <img src="assets/brand/frame.png" alt="" width="100%">
+        </div> 
+      </div>
+
+      <div class="icon_box py-2">
+        <i class="fab fa-weixin p-1 ps-3"></i>
+        <div class="qr_link">
+          <img src="assets/brand/frame.png" alt="" width="100%">
+        </div> 
+      </div>
+
+      <div class="icon_box py-2">
+        <i class="fab fa-youtube p-1 ps-3"></i>
+        <div class="qr_link">
+          <img src="assets/brand/frame.png" alt="" width="100%">
+        </div> 
+      </div>
+
+      <div class="icon_box py-2">
+        <i class="fab fa-facebook-f p-1 ps-3"></i>
+        <div class="qr_link">
+          <img src="assets/brand/fb.png" alt="" width="100%">
+        </div> 
+      </div>
+
+      <div class="icon_box py-2">
+        <i class="fas fa-map-marker-alt p-1 ps-3"></i>
+        <div class="qr_link">
+          <img src="assets/brand/fb.png" alt="" width="100%">
+        </div> 
+      </div>
+      
+        
+        
     </div>
+
+
   </div>
 
     <nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block sidebar collapse ms-4" style="background:#ece7e3">
@@ -174,11 +219,6 @@
         padding: 0;
     }
 
-
-    .page-content  h2{
-        
-       
-    }
 
 
     .page-content a:hover{
