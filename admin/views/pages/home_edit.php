@@ -34,7 +34,7 @@
                                 <input name="link" class="form-control" value="<?=$row->link?>">
 
                                 <label for="icon" class=" form-label" style="font-weight:700;">Text</label>
-                                <textarea name="content" id="summernote" class="form-control mb-3"><?=$row->content?></textarea>
+                                <textarea name="content" id="neweditor" class="form-control mb-3"><?=$row->content?></textarea>
                           
                            
                                 <h6 class="h6 mt-3">Image & Overlay Color</h6>
@@ -46,10 +46,6 @@
                                     </div>
                                     <div class="col-md-4">
                                         <input type="color" class="form-control m-0 p-0 " value="<?=$row->bg_color?>" name="bg_color"  style='width:100%; height:50px;'>
-                                        <select name="bg_color" class="form-control">
-                                            <option value="<?=$row->bg_color?>" ><?=color_name($row->bg_color)?></option>
-                                            <?=select_color()?>
-                                        </select>
                                     </div>
                                     <div class="col-md-4">  
                                         <!--<input type="text" value="0.9" class="text-control" placeholder="Opasity">-->
@@ -75,15 +71,10 @@
 
 
   <script>
-        $(document).ready(function() {
-            $('#summernote').summernote();
-        });
-
-        jQuery('#summernote').summernote({
-              height: 100,                
-              minHeight: null,          
-              maxHeight: null,             
-              focus: false                
-        });
-
+    tinymce.init({
+        selector: 'textarea#neweditor',
+        height:400,
+        plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+        toolbar: 'insertfile blocks fontfamily fontsize forecolor backcolor | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+    });
   </script>

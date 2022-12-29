@@ -163,7 +163,7 @@
 
 
                     <!-- Setting-->
-                   <!--  <li class="sidenav-item">
+                    <li class="sidenav-item">
                         <a href="javascript:" class="sidenav-link sidenav-toggle">
                             <i class="sidenav-icon fas fa-cog"></i>
                             <div>Settings</div>                            
@@ -172,7 +172,7 @@
                             <li class="sidenav-item"><a href="general.php" class="sidenav-link"><div>General</div></a></li>                      
                             <li class="sidenav-item"><a href="../database-backup.php" class="sidenav-link"><div>Backup</div></a></li>                                         
                         </ul>
-                    </li> -->
+                    </li>
                     
                            <!-- Management-->
                     <!-- <li class="sidenav-item">

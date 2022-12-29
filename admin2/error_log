@@ -1,0 +1,146 @@
+[24-May-2022 14:42:48 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function compressImage() in /home3/suprenc4/public_html/test/admin/home_list.php:24
+Stack trace:
+#0 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/home_list.php on line 24
+[24-May-2022 14:45:39 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function compressImage() in /home3/suprenc4/public_html/test/admin/home_list.php:24
+Stack trace:
+#0 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/home_list.php on line 24
+[24-May-2022 14:46:52 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function compressImage() in /home3/suprenc4/public_html/test/admin/home_list.php:23
+Stack trace:
+#0 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/home_list.php on line 23
+[24-May-2022 14:47:46 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function compressImage() in /home3/suprenc4/public_html/test/admin/home_list.php:23
+Stack trace:
+#0 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/home_list.php on line 23
+[24-May-2022 14:50:39 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function compressImage() in /home3/suprenc4/public_html/test/admin/home_list.php:23
+Stack trace:
+#0 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/home_list.php on line 23
+[26-May-2022 05:18:48 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home3/suprenc4/public_html/test/admin/controller/settings/settings_sql.php on line 489
+[26-May-2022 05:18:58 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home3/suprenc4/public_html/test/admin/controller/settings/settings_sql.php on line 489
+[04-Jun-2022 11:39:12 America/Boise] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function color_code_to_name(), 1 passed in /home3/suprenc4/public_html/test/admin/page_edit.php on line 238 and exactly 2 expected in /home3/suprenc4/public_html/test/admin/inc/function.php:152
+Stack trace:
+#0 /home3/suprenc4/public_html/test/admin/page_edit.php(238): color_code_to_name('linear-gradient...')
+#1 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/inc/function.php on line 152
+[04-Jun-2022 11:44:03 America/Boise] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function color_code_to_name(), 1 passed in /home3/suprenc4/public_html/test/admin/page_edit.php on line 238 and exactly 2 expected in /home3/suprenc4/public_html/test/admin/inc/function.php:152
+Stack trace:
+#0 /home3/suprenc4/public_html/test/admin/page_edit.php(238): color_code_to_name('linear-gradient...')
+#1 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/inc/function.php on line 152
+[04-Jun-2022 11:44:26 America/Boise] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function color_code_to_name(), 1 passed in /home3/suprenc4/public_html/test/admin/page_edit.php on line 238 and exactly 2 expected in /home3/suprenc4/public_html/test/admin/inc/function.php:152
+Stack trace:
+#0 /home3/suprenc4/public_html/test/admin/page_edit.php(238): color_code_to_name('linear-gradient...')
+#1 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/inc/function.php on line 152
+[04-Jun-2022 11:49:20 America/Boise] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function color_code_to_name(), 1 passed in /home3/suprenc4/public_html/test/admin/page_edit.php on line 238 and exactly 2 expected in /home3/suprenc4/public_html/test/admin/inc/function.php:152
+Stack trace:
+#0 /home3/suprenc4/public_html/test/admin/page_edit.php(238): color_code_to_name('#2d642d')
+#1 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/inc/function.php on line 152
+[04-Jun-2022 11:49:42 America/Boise] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function color_code_to_name(), 1 passed in /home3/suprenc4/public_html/test/admin/page_edit.php on line 238 and exactly 2 expected in /home3/suprenc4/public_html/test/admin/inc/function.php:152
+Stack trace:
+#0 /home3/suprenc4/public_html/test/admin/page_edit.php(238): color_code_to_name('#2d642d')
+#1 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/inc/function.php on line 152
+[04-Jun-2022 11:51:19 America/Boise] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function color_code_to_name(), 1 passed in /home3/suprenc4/public_html/test/admin/page_edit.php on line 238 and exactly 2 expected in /home3/suprenc4/public_html/test/admin/inc/function.php:152
+Stack trace:
+#0 /home3/suprenc4/public_html/test/admin/page_edit.php(238): color_code_to_name('#2d642d')
+#1 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/inc/function.php on line 152
+[04-Jun-2022 11:51:37 America/Boise] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function color_code_to_name(), 1 passed in /home3/suprenc4/public_html/test/admin/page_edit.php on line 238 and exactly 2 expected in /home3/suprenc4/public_html/test/admin/inc/function.php:152
+Stack trace:
+#0 /home3/suprenc4/public_html/test/admin/page_edit.php(238): color_code_to_name('$bgcolor')
+#1 {main}
+  thrown in /home3/suprenc4/public_html/test/admin/inc/function.php on line 152
+[18-Aug-2022 18:54:24 UTC] PHP Warning:  Undefined array key "user" in /home/supremeip/public_html/admin/inc/function.php on line 71
+[18-Aug-2022 18:54:24 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/supremeip/public_html/admin/inc/function.php on line 72
+[19-Aug-2022 02:11:12 UTC] PHP Warning:  Undefined array key "user" in /home/supremeip/public_html/admin/inc/function.php on line 71
+[19-Aug-2022 02:11:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/supremeip/public_html/admin/inc/function.php on line 72
+[19-Aug-2022 02:40:32 UTC] PHP Warning:  Undefined array key "user" in /home/supremeip/public_html/admin/inc/function.php on line 71
+[19-Aug-2022 02:40:32 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/supremeip/public_html/admin/inc/function.php on line 72
+[19-Aug-2022 03:12:33 UTC] PHP Warning:  Undefined array key "user" in /home/supremeip/public_html/admin/inc/function.php on line 71
+[19-Aug-2022 03:12:33 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/supremeip/public_html/admin/inc/function.php on line 72
+[19-Aug-2022 04:56:58 UTC] PHP Warning:  Undefined array key "user" in /home/supremeip/public_html/admin/inc/function.php on line 71
+[19-Aug-2022 04:56:58 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/supremeip/public_html/admin/inc/function.php on line 72
+[19-Aug-2022 05:13:25 UTC] PHP Warning:  Undefined property: stdClass::$page_title in /home/supremeip/public_html/admin/post_edit.php on line 36
+[19-Aug-2022 05:13:25 UTC] PHP Warning:  Undefined array key "pageid" in /home/supremeip/public_html/admin/post_edit.php on line 80
+[19-Aug-2022 05:13:32 UTC] PHP Warning:  Undefined property: stdClass::$page_title in /home/supremeip/public_html/admin/post_edit.php on line 36
+[19-Aug-2022 05:13:32 UTC] PHP Warning:  Undefined array key "pageid" in /home/supremeip/public_html/admin/post_edit.php on line 80
+[19-Aug-2022 05:13:35 UTC] PHP Warning:  Undefined property: stdClass::$page_title in /home/supremeip/public_html/admin/post_edit.php on line 36
+[19-Aug-2022 05:13:35 UTC] PHP Warning:  Undefined array key "pageid" in /home/supremeip/public_html/admin/post_edit.php on line 80
+[19-Aug-2022 08:46:30 UTC] PHP Warning:  Undefined array key "user" in /home/supremeip/public_html/admin/inc/function.php on line 71
+[19-Aug-2022 08:46:30 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/supremeip/public_html/admin/inc/function.php on line 72
+[24-Sep-2022 06:06:03 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function widget_set(), 1 passed in /home/supremeip/public_html/admin/widget.php on line 189 and exactly 2 expected in /home/supremeip/public_html/admin/inc/function.php:139
+Stack trace:
+#0 /home/supremeip/public_html/admin/widget.php(189): widget_set('ptsize')
+#1 {main}
+  thrown in /home/supremeip/public_html/admin/inc/function.php on line 139
+[24-Sep-2022 06:08:08 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function widget_set(), 1 passed in /home/supremeip/public_html/admin/widget.php on line 189 and exactly 2 expected in /home/supremeip/public_html/admin/inc/function.php:139
+Stack trace:
+#0 /home/supremeip/public_html/admin/widget.php(189): widget_set('ptsize')
+#1 {main}
+  thrown in /home/supremeip/public_html/admin/inc/function.php on line 139
+[24-Sep-2022 06:08:20 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function widget_set(), 1 passed in /home/supremeip/public_html/admin/widget.php on line 35 and exactly 2 expected in /home/supremeip/public_html/admin/inc/function.php:139
+Stack trace:
+#0 /home/supremeip/public_html/admin/widget.php(35): widget_set('ptsize')
+#1 {main}
+  thrown in /home/supremeip/public_html/admin/inc/function.php on line 139
+[24-Sep-2022 06:09:06 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function widget_set(), 1 passed in /home/supremeip/public_html/admin/widget.php on line 35 and exactly 2 expected in /home/supremeip/public_html/admin/inc/function.php:139
+Stack trace:
+#0 /home/supremeip/public_html/admin/widget.php(35): widget_set('ptsize')
+#1 {main}
+  thrown in /home/supremeip/public_html/admin/inc/function.php on line 139
+[24-Sep-2022 06:09:25 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function widget_set(), 1 passed in /home/supremeip/public_html/admin/widget.php on line 35 and exactly 2 expected in /home/supremeip/public_html/admin/inc/function.php:139
+Stack trace:
+#0 /home/supremeip/public_html/admin/widget.php(35): widget_set('ptsize')
+#1 {main}
+  thrown in /home/supremeip/public_html/admin/inc/function.php on line 139
+[24-Sep-2022 06:10:13 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function widget_set(), 1 passed in /home/supremeip/public_html/admin/widget.php on line 46 and exactly 2 expected in /home/supremeip/public_html/admin/inc/function.php:139
+Stack trace:
+#0 /home/supremeip/public_html/admin/widget.php(46): widget_set('ptfont')
+#1 {main}
+  thrown in /home/supremeip/public_html/admin/inc/function.php on line 139
+[01-Nov-2022 10:04:17 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'supremeip_db'@'localhost' (using password: YES) in /home3/suprenc4/public_html/supremeip/admin/inc/db.php on line 17
+[01-Nov-2022 10:04:37 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'supremeip_db'@'localhost' (using password: YES) in /home3/suprenc4/public_html/supremeip/admin/inc/db.php on line 17
+[01-Nov-2022 11:27:09 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'supremeip_db'@'localhost' (using password: YES) in /home3/suprenc4/public_html/supremeip/admin/inc/db.php on line 17
+[13-Nov-2022 11:04:54 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/suprenc4/public_html/supremeip/admin/inc/header.php on line 2
+[13-Nov-2022 11:04:54 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/suprenc4/public_html/supremeip/admin/page_edit.php:1) in /home3/suprenc4/public_html/supremeip/admin/inc/header.php on line 7
+[13-Nov-2022 11:13:28 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/suprenc4/public_html/supremeip/admin/inc/header.php on line 2
+[13-Nov-2022 11:13:28 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/suprenc4/public_html/supremeip/admin/page_edit.php:1) in /home3/suprenc4/public_html/supremeip/admin/inc/header.php on line 7
+[13-Nov-2022 11:13:28 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function RandomStringGenerator() in /home3/suprenc4/public_html/supremeip/admin/page_edit.php:429
+Stack trace:
+#0 {main}
+  thrown in /home3/suprenc4/public_html/supremeip/admin/page_edit.php on line 429
+[13-Nov-2022 11:25:34 America/Boise] PHP Warning:  dns_get_record(): An unexpected server failure occurred. in /home3/suprenc4/public_html/supremeip/admin/page_edit.php on line 172
+[13-Nov-2022 11:25:34 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function RandomStringGenerator() in /home3/suprenc4/public_html/supremeip/admin/page_edit.php:432
+Stack trace:
+#0 {main}
+  thrown in /home3/suprenc4/public_html/supremeip/admin/page_edit.php on line 432
+[13-Nov-2022 11:25:50 America/Boise] PHP Warning:  dns_get_record(): An unexpected server failure occurred. in /home3/suprenc4/public_html/supremeip/admin/page_edit.php on line 172
+[13-Nov-2022 11:25:50 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function RandomStringGenerator() in /home3/suprenc4/public_html/supremeip/admin/page_edit.php:432
+Stack trace:
+#0 {main}
+  thrown in /home3/suprenc4/public_html/supremeip/admin/page_edit.php on line 432
+[13-Nov-2022 11:26:59 America/Boise] PHP Warning:  dns_get_record(): An unexpected server failure occurred. in /home3/suprenc4/public_html/supremeip/admin/page_edit.php on line 172
+[13-Nov-2022 11:26:59 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function RandomStringGenerator() in /home3/suprenc4/public_html/supremeip/admin/page_edit.php:432
+Stack trace:
+#0 {main}
+  thrown in /home3/suprenc4/public_html/supremeip/admin/page_edit.php on line 432
+[13-Nov-2022 11:27:30 America/Boise] PHP Warning:  dns_get_record(): An unexpected server failure occurred. in /home3/suprenc4/public_html/supremeip/admin/page_edit.php on line 172
+[13-Nov-2022 11:27:30 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function RandomStringGenerator() in /home3/suprenc4/public_html/supremeip/admin/page_edit.php:432
+Stack trace:
+#0 {main}
+  thrown in /home3/suprenc4/public_html/supremeip/admin/page_edit.php on line 432
+[13-Nov-2022 11:27:54 America/Boise] PHP Warning:  dns_get_record(): An unexpected server failure occurred. in /home3/suprenc4/public_html/supremeip/admin/page_edit.php on line 172
+[13-Nov-2022 11:27:54 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function RandomStringGenerator() in /home3/suprenc4/public_html/supremeip/admin/page_edit.php:432
+Stack trace:
+#0 {main}
+  thrown in /home3/suprenc4/public_html/supremeip/admin/page_edit.php on line 432
+[13-Nov-2022 11:28:37 America/Boise] PHP Warning:  dns_get_record(): An unexpected server failure occurred. in /home3/suprenc4/public_html/supremeip/admin/page_edit.php on line 172
+[13-Nov-2022 11:28:37 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function RandomStringGenerator() in /home3/suprenc4/public_html/supremeip/admin/page_edit.php:432
+Stack trace:
+#0 {main}
+  thrown in /home3/suprenc4/public_html/supremeip/admin/page_edit.php on line 432

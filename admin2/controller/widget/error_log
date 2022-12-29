@@ -1,0 +1,1 @@
+[04-Jun-2022 11:04:22 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home3/suprenc4/public_html/test/admin/inc/db.php on line 8

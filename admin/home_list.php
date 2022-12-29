@@ -64,7 +64,7 @@
                              <tbody>
 
 
-                        <tr class="bg-success"><td  class="h5">Section 1</td><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr class="bg-light"><td  class="h5">Section 1</td><td></td><td></td><td></td><td></td><td></td></tr>
                         <?php 
                             $i=1;
                             $home_data = SelectData('home_page', "LIMIT 0,3");
@@ -86,7 +86,7 @@
                             <?php } ?>
 
 
-                        <tr class="bg-success"><td class="h5">Section 2</td><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr class="bg-light"><td class="h5">Section 2</td><td></td><td></td><td></td><td></td><td></td></tr>
                         <?php 
                             $i=1;
                             $home_data = SelectData('home_page', "LIMIT 3,3");
@@ -111,7 +111,7 @@
 
 
 
-                        <tr class="bg-success"><td  class="h5">Section 3</td><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr class="bg-light"><td  class="h5">Section 3</td><td></td><td></td><td></td><td></td><td></td></tr>
                         <?php 
                             $i=1;
                             $home_data = SelectData('home_page', "LIMIT 6,3");
@@ -159,8 +159,6 @@
         });
     }
 </script>
-
-
 
 
 <!-- Modal for category -->
