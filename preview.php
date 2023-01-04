@@ -2,12 +2,8 @@
   include "inc/db.php";
   include "inc/function.php";
 
-  $pageurl = $_GET['child'];
-  $pdata = SelectData('menu_new',"WHERE manu_url='$pageurl' AND manu_status!='0' ");
-  $page  = $pdata->fetch_object();
-
-  $manu_title = $page->menu_page;
-  $page_data = SelectData('pages', "WHERE manu_title='$manu_title' AND page_status='1'");
+  $manu_title = $_GET['page'];
+  $page_data = SelectData('pages', "WHERE page_url='$manu_title' AND page_status='1'");
   $pageinfo  = $page_data->fetch_object();
 
 
@@ -56,36 +52,6 @@
         }
     </style>
 
-    <!-- mobile menu -->
-        <!-- mobile menu -->
-    <div class="d-sm-block d-md-none" >
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background:#ece7e3 !important">
-        <div class="container-fluid  mb-2">
-            <div class="d-flex">
-              <a class="" href="index.php"><img src="assets/brand/SUPREMEiP Law Firm.png" width="60%" alt="SUPREMEiP"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="text-white" style="outline: none !important;  box-shadow: none !important;"   ><i style="outline: none !important; box-shadow: none !important;" class="fas fa-bars"></i></span>
-              </button>
-            </div>
-
-            <div class="collapse  navbar-collapse "  id="navbarNav2">
-                <ul class="navbar-nav mt-3 mobile_menu">
-                  <li class="nav-item">
-                    <a class="nav-link nav_menu fw-bold" href="https://test.supremeip.com/" style="">
-                    <i class="fas fa-home" style="display: inline-block!important;transform: rotate(0deg); "></i>
-                    Home</a>
-                  </li>
-                </ul>
-            </div>
-            
-        </div>
-    </nav> 
-</div>
-
-
- <div class="mobile-margin" ></div>
-
-
 
 <!-- main content -->
  <main class="col-md-10 ms-sm-auto col-lg-10  m-0 p-0">
@@ -93,49 +59,7 @@
  	<!-- detail content --> 
  	<div class="row mx-0 p-0 m-0" style="background:<?=sub_menu('background_color')?>">
  		 <!--short sidebar -->
- 		<div class="col-md-2 col-lg-2 pt-4 p-0 h-100 side-menu">
-            <ul class="nav flex-column ">
-              <?php                 
-                $data = SelectData('menu_new',"WHERE menu_perent='$page->menu_perent' AND manu_status!='0' ");
-                foreach($data as $drow){?>
-                <li class="nav-item">                
-                    <a class="nav-link nav_menu "  href="pages.php?page=<?=$_GET['page'];?>&child=<?=$drow['manu_url']?>"><i class="fas <?=$drow['icon']?>" style="display: inline-block!important;transform: rotate(0deg);"></i> <?=$drow['menu_title']?></a>
-                </li>
-                <?php } ?>               
-            </ul>	
-
-            <!-- Your lowyer -->
-              <?php                              
-                    $cdata = SelectData('contactlawer','');
-                    $crow = $cdata->fetch_object();?>
-                    
-                     
-                    <div class="for_pc p-2 d-none d-sm-none d-md-block">
-                        <h6 class="row section_title m-0" id="ylhbtn">
-                        <div class="col-11 p-0" style="color:<?=sub_menu('font_color')?> !important;"><i style="color:<?=sub_menu('font_color')?> !important;" class="fas fa-user-graduate pe-2"></i><?=$crow->heading;?></div>
-                            <div class="col-1 p-0 text-end"><i class="fal fa-angle-down"></i></div> </h6> 
-                            <div class="team-card" id="ylh" style="background:<?= $crow->bg_color?>; <?php if(settings('Your_Lawyer_pc')!=1){echo "display: none;";}?>">   
-                            <div class="profile_pic"><img src="assets/mediacenter/<?=$crow->imge;?>" alt="" > </a></div>                                            
-                            <div class="team_info" style="background:<?= $crow->bg_color?>;"><?=$crow->text;?></div>                                 
-                        </div> 
-                    </div>
-                    
-                    
-                    <?php if(settings('Your_Lawyer_mobile')==1){?>
-                    <div class='for_mobile d-md-none d-lg-none mb-5'>
-                        <h6 class="row section_title m-0" id="ylhbtn">
-                        <div class="col-11 p-0" style="color:<?=sub_menu('font_color')?> !important;"><i style="color:<?=sub_menu('font_color')?> !important;" class="fas fa-user-graduate pe-2"></i><?=$crow->heading;?></div>
-                            <div class="col-1 p-0 text-end"><i class="fal fa-angle-down"></i></div> </h6> 
-                            <div class="team-card" id="ylh" style="background:<?= $crow->bg_color?>;">   
-                            <div class="profile_pic"><img src="assets/mediacenter/<?=$crow->imge;?>" alt="" > </a></div>                                            
-                            <div class="team_info" style="background:<?= $crow->bg_color?>;"><?=$crow->text;?></div>                                 
-                        </div>
-                    </div>
-                    <?php } ?>
-
-
-
- 		</div>
+ 		
 
         <div class="col-12 col-md-10 col-lg-10 pb-5 pt-4 " style="background:<?php echo settings('Center_bg') ?>; min-height: 900px ">                 
             <nav class="mb-1 d-md-none d-lg-none pt-5 pt-md-0 m-md-0">

@@ -36,10 +36,6 @@ font-family: 'Jost', sans-serif;
 
 }
 
-
-
-
-
 /*root color*/
 @font-face { font-family: bangla-title; src: url('font/AlinurNiladri/banlgaone.ttf'); }
 @font-face { font-family: bangla-regular; src: url('font/kalpurush/kalpurush.ttf'); }
@@ -346,10 +342,9 @@ letter-spacing: 0px;
 
 
  /*nav*/
-.header_menu_scroll{
-  overflow-y: none!important;
+.header_menu{
   overflow-x: hidden;
-
+  height: 300px !important;
 }
 
 
