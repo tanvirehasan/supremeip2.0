@@ -3,9 +3,8 @@
     include "../../inc/function.php";
 ?>
 
+<script src="https://cdn.tiny.cloud/1/4ji99lkzm49svloyysqo9xvmtu03b24c3gvvfby23di6bhfa/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
-  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
     <div class="container my-3">
        <div class="row">
@@ -70,8 +69,8 @@
         <input type="hidden" id="price_page_id" value="<?=$_GET['priceadd']?>">
           
          <!--  post description -->
-        <label for="ckdeditorpopup" class=" form-label mb-2" style="font-weight:700;">Price Description</label>
-        <textarea id="ckdeditorpopup" type="text" class="form-control mb-5 editors" require></textarea>
+        <label for="neweditor" class=" form-label mb-2" style="font-weight:700;">Price Description</label>
+        <textarea id="neweditor" type="text" class="form-control mb-5" require></textarea>
         <div id="divd"></div>
        
     </div> 
@@ -814,10 +813,26 @@ $redrow = $readdata->fetch_object();?>
 </div>
 
 
-<script>
-    $(document).ready(function() {
-        $('.editors').summernote();
+
+    <script src="../../assets/libs/popper/popper.js"></script>
+    <script src="../../assets/js/bootstrap.js"></script>
+
+
+    <!-- Libs -->
+    <script src="../../assets/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="../../assets/libs/eve/eve.js"></script>
+    <script src="../../assets/libs/flot/flot.js"></script>
+    <script src="../../assets/libs/flot/curvedLines.js"></script>
+    <script src="../../assets/libs/chart-am4/core.js"></script>
+    <script src="../../assets/libs/chart-am4/charts.js"></script>
+    <script src="../../assets/libs/chart-am4/animated.js"></script>
+
+
+  <script>
+    tinymce.init({
+        selector: 'textarea#neweditor',
+        height:400,
+        plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+        toolbar: 'insertfile blocks fontfamily fontsize forecolor backcolor | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
     });
-</script>
-
-
+  </script>
