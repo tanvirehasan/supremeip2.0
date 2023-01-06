@@ -150,7 +150,7 @@
 
                     <!-- menu -->           
                     <li class="sidenav-item">
-                        <a href="menu.php" class="sidenav-link">
+                        <a href="menu2.php" class="sidenav-link">
                             <i class="sidenav-icon fab fa-mendeley"></i>
                             <div>Menu</div>                            
                         </a>
