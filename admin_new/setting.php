@@ -505,12 +505,12 @@ if(isset($_GET['setting']) && $_GET['setting']=='Menu'){
         <div class="col-12 settingbtn"><h3 class="bg-white p-3 text-uppercase text-primary"><i class="fas fa-cog"></i> Settings</h3></div>
       
        <!--------- Section -1 ---------->
-        <div class="col-md-4 setting">
+        <div class="col-md-12 setting">
 
 
             <!-- social link -->
             <div class="card p-3">                             
-                    <label for="categoryname" class=" form-label" style="font-weight:700;" id="show_form">Social list + </label>
+                    <label for="categoryname" class=" form-label" style="font-weight:700;" id="show_form">Social Bar</label>
                     <table style="width:100%">
                 <?php 
                     $data = SelectData('social','');
@@ -533,7 +533,8 @@ if(isset($_GET['setting']) && $_GET['setting']=='Menu'){
                     <div id="add_slink" class="mt-3">
                         <input type="text" class="form-control"  name="icon" placeholder="Icon">
                         <input type="text" class="form-control"  name="name" placeholder="Name"> 
-                        <input type="text" class="form-control"  name="social_url" placeholder="Url"> 
+                        <input type="text" class="form-control"  name="social_url" placeholder="Url">
+                        <input type="file" class="form-control"  name="image" placeholder="image"> 
                         <button type="submit" class="btn btn-primary mt-3" name="newadd">Submit </button>
                     </div>   
                 </form>             
@@ -541,78 +542,6 @@ if(isset($_GET['setting']) && $_GET['setting']=='Menu'){
 
         </div>
 
-<!--------- Section -2 ---------->    
-        <!-- footer -->
-        <div class="col-md-4 setting">
-            
-            
-        
-<!--------- Section -3 ---------->   
-        <div class="col-md-4 setting">
-            <!-- home_hover -->
-            <div class="card p-3">
-                <form method="POST" action="" enctype="multipart/form-data">
-                    <label for="categoryname" class=" form-label" style="font-weight:700;">Home Hover</label>
-                    <input type="color" style="width: 100%;" height="20px" value="<?=settings('home_hover');?>">
-                    <select name="home_hover" class="form-control">
-                        <option value="<?=settings('home_hover');?>" ><?=color_name(settings('home_hover'))?></option>
-                        <?php select_color(); ?>
-                    </select>
-                    <div class=" m-0 my-3">
-                        <button type="submit" name="hove_homebtn" class="btn btn-primary"> Update</button>
-                    </div> 
-                </form> 
-            </div> 
-            
-            
-           
-            <!-- whatsapp -->
-            <div class="card p-3">
-                <form method="POST" action="" enctype="multipart/form-data">
-                    <label for="categoryname" class=" form-label" style="font-weight:700;">Whatsapp</label>
-                    <input type="text" name="whatsapp" value="<?= $row->whatsapp?>" class="form-control">
-                    <div class=" m-0 my-3">
-                        <button type="submit" name="whatno" class="btn btn-primary"> Update</button>
-                    </div> 
-                </form> 
-            </div> 
-
-
-
-            <!-- URL link -->
-            <div class="card p-3">                             
-                    <h3 for="categoryname" class=" form-label" style="font-weight:700;">Custom Url + </h3>
-                    <table style="width:100%">
-                        <tr>
-                            <th>Request Url</th>
-                            <th>Forward Url</th>
-                        </tr>
-                <?php 
-                    $data = SelectData('custom_url','');
-                    if ($data->num_rows>0) {
-                    while ($urlrow = $data->fetch_object()) {?>
-                    <form method="POST" action="" enctype="multipart/form-data">
-                        <tr>
-                            <td><input type="text" class="form-control" value="<?=$urlrow->Request_Url?>"  name="Request_Url"> </td>
-                            <td><input type="text" class="form-control" value="<?=$urlrow->Forward_Url?>"   name="Forward_Url"> </td>
-                            <input type="hidden" name="urlid" value="<?=$urlrow->urlid?>">
-                            <td class="ml-5"><button type="submit" class="btn" name="urlupdate"><i class="fas fa-check"></i> </button> </td>
-                            <td class="m-0"><a href="general.php?url_delete=<?=$urlrow->urlid?>" class="btn"><i class="fas fa-trash-alt"></i></a></td>
-                        </tr>
-                    </form>                        
-                <?php } } ?>
-                    </table> 
-
-                <form method="POST" action="" enctype="multipart/form-data">                
-                    <div id="add_slink" class="mt-3">
-                        <input type="text" class="form-control"  name="Request_Url" placeholder="Request Url">
-                        <input type="text" class="form-control"  name="Forward_Url" placeholder="Forward Url"> 
-                        <button type="submit" class="btn btn-primary mt-3" name="customurl">Submit </button>
-                    </div>   
-                </form>             
-            </div> 
-
-        </div>
 
     </div><!-- row -->
     

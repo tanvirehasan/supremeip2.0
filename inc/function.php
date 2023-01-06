@@ -96,29 +96,6 @@ function If_Not_Login($url){
 	}
 }
 
-// Delivery Status
-function Delivery_Status($status){
-
-	if ($status==0) {		
-		$order_status = "<span class='text-dark'>Pending</span>";
-	}else if($status==1){
-		$order_status = "<span class='text-dark'>Processing";
-	}else if($status==2){
-		$order_status = "<span class='text-dark'>Pickup";
-	}else if($status==3){
-		$order_status = "<span class='text-dark'>On The Way";
-	}else if($status==4){
-		$order_status = "<span class='text-dark'>Delivered</span>";
-	}else if($status==5){
-		$order_status = "<span class='text-dark'>Return";
-	}else if($status==6){
-		$order_status = "<span class='text-dark'>Cancel";
-	}
-
-	return $order_status;
-
-}
-
 
 
 //If_Login
