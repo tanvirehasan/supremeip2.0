@@ -12,7 +12,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Best iP Law firm in Bangladesh - SUPREMEiP</title> 
-    <base href="http://localhost/supremeip2.0/">
+    <!-- <base href="http://localhost/supremeip2.0/"> -->
     <meta name="description" content="SUPREMEiP is top-ranked IP law firm in Bangladesh with the international presence provides specialized services in Intellectual Property Rights, Corporate Affairs, Foreign Trade and Investment, Taxation, and Litigation." />
     <meta name="keywords" content="trademark, ipr, patent, design, copyright, registration, renewal, objection, opposition, assignment, remove, journal, search,">
     <meta name="author" content="SUPREMEiP">
