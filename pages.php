@@ -188,7 +188,7 @@
         $price_data = SelectData('prices', "WHERE price_page_id={$pageinfo->page_id} ORDER BY serial_list ASC");
         if ($price_data->num_rows>0) {?>                      
             <!-- price table -->
-            <div class="p-0 px-md-3 mt-4" style="background-color:<?=widget_set('Section_bg',1)?>; padding:<?=widget_set('padding',1)?>px !important; border:<?=widget_set('border',1)?> !important;">
+            <div class="p-0 mt-4" style="background-color:<?=widget_set('Section_bg',1)?>; padding:<?=widget_set('padding',1)?>px !important; border:<?=widget_set('border',1)?> !important;">
                 <h3 class="section_title_page ps-2"><i class="fas fa-money-check-alt px-1"></i> <?=$pageinfo->Section_Title_Price?></h3>
                 <div class="row mx-0">                       
                     <table id='priceTable' class="table" >
