@@ -10,13 +10,15 @@
       foreach($sdata as $srow){?>
 
       <div class="icon_box py-2" id="icon_<?=$srow['id']?>">
-        <a href="<?=$srow['social_url']?>" target="NULL" ><i class="<?=$srow['icon']?> p-1 ps-3"></i></a>
         <?php
             if ($srow['social_url']=='') {?>
+              <i class="<?=$srow['icon']?> p-1 ps-3"></i>
               <div class="qr_link" id="qr_link_<?=$srow['id']?>">
               <a href="<?=$srow['social_url']?>" target="NULL" ><img src="assets/mediacenter/<?=$srow['qr_image']?>" alt="" width="100%"></a>
               </div>
-            <?php }?> 
+            <?php }else{?>
+              <a href="<?=$srow['social_url']?>" target="NULL" ><i class="<?=$srow['icon']?> p-1 ps-3"></i></a>
+            <?php } ?> 
       </div> 
       <script>
         $(document).ready(function(){
