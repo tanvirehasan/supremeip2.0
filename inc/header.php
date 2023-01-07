@@ -12,7 +12,7 @@
       <div class="icon_box py-2" id="icon_<?=$srow['id']?>">
         <i class="<?=$srow['icon']?> p-1 ps-3"></i>
         <div class="qr_link" id="qr_link_<?=$srow['id']?>">
-          <a href="<?=$srow['social_url']?>" target="NULL" ><img src="assets/brand/frame.png" alt="" width="100%"></a>
+          <a href="<?=$srow['social_url']?>" target="NULL" ><img src="assets/mediacenter/<?=$srow['qr_image']?>" alt="" width="100%"></a>
         </div> 
       </div> 
       <script>

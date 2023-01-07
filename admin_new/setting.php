@@ -510,7 +510,7 @@ if(isset($_GET['setting']) && $_GET['setting']=='Menu'){
 
             <!-- social link -->
             <div class="card p-3">                             
-                    <label for="categoryname" class=" form-label" style="font-weight:700;" id="show_form">Social Bar</label>
+                    <label for="categoryname" class=" form-label" style="font-weight:700;" id="show_form">Social Bar | <a href="https://fontawesome.com/v5/search" target="null" >Icon List</a> </label>
                     <table style="width:100%">
                 <?php 
                     $data = SelectData('social','');
@@ -518,9 +518,12 @@ if(isset($_GET['setting']) && $_GET['setting']=='Menu'){
                     while ($social = $data->fetch_object()) {?>
                     <form method="POST" action="" enctype="multipart/form-data">
                         <tr>
-                            <td><input type="text" class="form-control" value="<?=$social->icon?>"   name="icon"></td>
+                            <td><i class="<?=$social->icon?>" ></i><input type="hidden" class="form-control" value="<?=$social->icon?>"   name="icon"></td>
                             <td><input type="text" class="form-control" value="<?=$social->name?>"  name="name"> </td>
-                            <td><input type="text" class="form-control" value="<?=$social->social_url?>"   name="social_url"> </td>
+                            <td><input type="text" class="form-control" value="<?=$social->social_url?>"   name="social_url"> </td>                            
+                            <td><input type="file" class="form-control" value="<?=$social->qr_image?>"  name="qr_image"> </td>
+                            <td> <img src="../assets/mediacenter/<?=$social->qr_image?>" alt="" width="80px"> </td>
+                            <input type="hidden" name="qr_image2" value="<?=$social->qr_image?>">
                             <input type="hidden" name="sid" value="<?=$social->id?>">
                             <td class="ml-5"><button type="submit" class="btn" name="supdate"><i class="fas fa-check"></i> </button> </td>
                             <td class="m-0"><a href="general.php?social_delete=<?=$social->id?>" class="btn"><i class="fas fa-trash-alt"></i></a></td>
@@ -534,8 +537,8 @@ if(isset($_GET['setting']) && $_GET['setting']=='Menu'){
                         <input type="text" class="form-control"  name="icon" placeholder="Icon">
                         <input type="text" class="form-control"  name="name" placeholder="Name"> 
                         <input type="text" class="form-control"  name="social_url" placeholder="Url">
-                        <input type="file" class="form-control"  name="image" placeholder="image"> 
-                        <button type="submit" class="btn btn-primary mt-3" name="newadd">Submit </button>
+                        <input type="file" class="form-control"  name="qr_image" placeholder="image"> 
+                        <button type="submit" class="btn btn-primary mt-3" name="socalnewadd">Submit </button>
                     </div>   
                 </form>             
             </div> 

@@ -556,13 +556,19 @@ if (isset($_POST['sidebarcolor'])) {
 
 
 //Socal 
-if (isset($_POST['newadd'])) {
+if (isset($_POST['socalnewadd'])) {
 
-    $icon=$_POST['icon'];
-    $name=$_POST['name'];
-    $social_url=$_POST['social_url'];
+  $icon=$_POST['icon'];
+  $name=$_POST['name']; 
+  $social_url=$_POST['social_url'];
+  $qr_image=$_FILES["qr_image"]["name"];
+      
+  //image
+  $target_dir  = "../assets/mediacenter/";
+  $target_file = $target_dir . basename($_FILES["qr_image"]["name"]);
+  move_uploaded_file($_FILES["qr_image"]["tmp_name"], $target_file);
 
-    $insrt = "INSERT INTO `social`(`name`, `social_url`, `icon`) VALUES ('$name','$social_url','$icon')";
+    $insrt = "INSERT INTO `social`(`name`, `social_url`, `icon`, `qr_image`) VALUES ('$name','$social_url','$icon', '$qr_image')";
     $conn->query($insrt);
 }
 
