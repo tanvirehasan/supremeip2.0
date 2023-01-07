@@ -6,7 +6,7 @@
   <div class="socialicon p-0 d-none d-lg-block d-md-block" style="width:40px; height:100%; background:#fff; z-index:999; position:fixed;">
     <div class="sqecode" style="position: absolute; bottom:50px;">
 
-    <?php $sdata = SelectData('social',"");
+      <?php $sdata = SelectData('social',"");
       foreach($sdata as $srow){?>
 
       <div class="icon_box py-2" id="icon_<?=$srow['id']?>">

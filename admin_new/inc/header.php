@@ -113,18 +113,19 @@
                     </li> 
 
                     <!-- Setting-->
-                    <li class="sidenav-item">
-                        <a href="javascript:" class="sidenav-link sidenav-toggle">
+                    <li class="sidenav-item dropright">
+                        <button class="sidenav-link btn bg-transparent  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="sidenav-icon fas fa-cog"></i>
                             <div>Widget</div>                            
-                        </a>
-                        <ul class="sidenav-menu">
+                        </button>
+                        <ul class="sidenav-menu dropdown-menu" style="z-index:999 !important" x-placement="right-start" style="width:100%;position:fixed;">
                             <li class="sidenav-item"><a href="widget.php?widget=price" class="sidenav-link"><div>Price</div></a></li>	
                             <li class="sidenav-item"><a href="widget.php?widget=flowchart" class="sidenav-link"><div>Flowchart</div></a></li>
                             <li class="sidenav-item"><a href="widget.php?widget=faq" class="sidenav-link"><div>FAQ</div></a></li>
                                         
                         </ul>
                     </li>
+
 
 
                     <!--  Blog & newws-->
