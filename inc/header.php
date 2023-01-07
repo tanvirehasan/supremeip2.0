@@ -13,7 +13,19 @@
         </div> 
       </div> 
 
-      
+
+<script>
+  $(document).ready(function(){
+    $(".icon_box").click(function(){
+      $(".qr_link").toggle();
+    });
+  });
+</script>
+
+
+
+
+     
       
     </div>
   </div>
