@@ -23,11 +23,7 @@
         });
       </script>
     <?php } ?>
-
-
-
-     
-      
+  
     </div>
   </div>
 
@@ -79,3 +75,13 @@
       </ul>
       </div>
   </nav>
+
+
+
+  <script>
+        $(document).ready(function(){
+          $("nav").click(function(){
+            $(".qr_link").hide();
+          });
+        });
+      </script>
