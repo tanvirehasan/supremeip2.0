@@ -92,6 +92,7 @@ body {
 
 .icon_box:hover>.qr_link{
   cursor: pointer;
+  display: block;
 }
 
 .icon_box:hover{
