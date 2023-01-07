@@ -585,7 +585,7 @@ if (isset($_POST['supdate'])) {
       $target_file = $target_dir . basename($_FILES["qr_image"]["name"]);
       move_uploaded_file($_FILES["qr_image"]["tmp_name"], $target_file);
     }else{
-      $qr_image=$_FILES["qr_image2"]["name"];
+      $qr_image=$_POST["qr_image2"];
     }
     $insrt = "UPDATE `social` SET `name`='$name', `social_url`='$social_url', `icon`='$icon', `qr_image`='$qr_image' WHERE id='$id'";
     $conn->query($insrt);

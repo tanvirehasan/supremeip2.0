@@ -521,8 +521,8 @@ if(isset($_GET['setting']) && $_GET['setting']=='Menu'){
                             <td><i class="<?=$social->icon?>" ></i><input type="hidden" class="form-control" value="<?=$social->icon?>"   name="icon"></td>
                             <td><input type="text" class="form-control" value="<?=$social->name?>"  name="name"> </td>
                             <td><input type="text" class="form-control" value="<?=$social->social_url?>"   name="social_url"> </td>                            
-                            <td><input type="file" class="form-control" value="<?=$social->qr_image?>"  name="qr_image"> </td>
-                            <td> <img src="../assets/mediacenter/<?=$social->qr_image?>" alt="" width="80px"> </td>
+                            <td><input type="file" class="form-control"  name="qr_image"> </td>
+                            <td> <img src="../assets/mediacenter/<?=$social->qr_image?>" alt="" width="40px"> </td>
                             <input type="hidden" name="qr_image2" value="<?=$social->qr_image?>">
                             <input type="hidden" name="sid" value="<?=$social->id?>">
                             <td class="ml-5"><button type="submit" class="btn" name="supdate"><i class="fas fa-check"></i> </button> </td>
