@@ -85,8 +85,8 @@ body {
   width:150px;
   margin-left: 40px;
   display: none;
-  /* position:absolute; */
-  /* bottom: 0; */
+  position:absolute;
+  bottom: 0;
 }
 
 

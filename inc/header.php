@@ -13,40 +13,8 @@
         </div> 
       </div> 
 
-      <div class="icon_box py-2">
-        <i class="fab fa-linkedin-in p-1 ps-3"></i>
-        <div class="qr_link">
-          <img src="assets/brand/frame.png" alt="" width="100%">
-        </div> 
-      </div>
-
-      <div class="icon_box py-2">
-        <i class="fab fa-weixin p-1 ps-3"></i>
-        <div class="qr_link">
-          <img src="assets/brand/frame.png" alt="" width="100%">
-        </div> 
-      </div>
-
-      <div class="icon_box py-2">
-        <i class="fab fa-youtube p-1 ps-3"></i>
-        <div class="qr_link">
-          <img src="assets/brand/frame.png" alt="" width="100%">
-        </div> 
-      </div>
-
-      <div class="icon_box py-2">
-        <i class="fab fa-facebook-f p-1 ps-3"></i>
-        <div class="qr_link">
-          <img src="assets/brand/fb.png" alt="" width="100%">
-        </div> 
-      </div>
-
-      <div class="icon_box py-2">
-        <i class="fas fa-map-marker-alt p-1 ps-3"></i>
-        <div class="qr_link">
-          <img src="assets/brand/fb.png" alt="" width="100%">
-        </div> 
-      </div>  
+      
+      
     </div>
   </div>
 
