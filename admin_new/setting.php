@@ -518,7 +518,8 @@ if(isset($_GET['setting']) && $_GET['setting']=='Menu'){
                     while ($social = $data->fetch_object()) {?>
                     <form method="POST" action="" enctype="multipart/form-data">
                         <tr>
-                            <td><i class="<?=$social->icon?>" ></i><input type="hidden" class="form-control" value="<?=$social->icon?>"   name="icon"></td>
+                            <td><i class="<?=$social->icon?>" ></i></td>
+                            <td><input type="text" class="form-control" value="<?=$social->icon?>"   name="icon"></td>
                             <td><input type="text" class="form-control" value="<?=$social->name?>"  name="name"> </td>
                             <td><input type="text" class="form-control" value="<?=$social->social_url?>"   name="social_url"> </td>                            
                             <td><input type="file" class="form-control"  name="qr_image"> </td>
