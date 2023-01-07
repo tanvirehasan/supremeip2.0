@@ -20,13 +20,6 @@
               <a href="<?=$srow['social_url']?>" target="NULL" ><i class="<?=$srow['icon']?> p-1 ps-3"></i></a>
             <?php } ?> 
       </div> 
-      <script>
-        $(document).ready(function(){
-          $("#icon_<?=$srow['id']?>").click(function(){
-            $("#qr_link_<?=$srow['id']?>").toggle();
-          });
-        });
-      </script>
     <?php } ?>
   
     </div>
