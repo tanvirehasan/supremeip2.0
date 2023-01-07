@@ -6,22 +6,23 @@
   <div class="socialicon p-0 d-none d-lg-block d-md-block" style="width:40px; height:100%; background:#fff; z-index:999; position:fixed;">
     <div class="sqecode" style="position: absolute; bottom:50px;">
 
-      <div class="icon_box py-2">
-        <i class="fab fa-whatsapp p-1 ps-3"></i>
-        <div class="qr_link">
-          <img src="assets/brand/frame.png" alt="" width="100%">
+    <?php $sdata = SelectData('social',"");
+      foreach($sdata as $srow){?>
+
+      <div class="icon_box py-2" id="icon_<?=$srow['id']?>">
+        <i class="<?=$srow['icon']?> p-1 ps-3"></i>
+        <div class="qr_link" id="qr_link_<?=$srow['id']?>">
+          <a href="<?=$srow['social_url']?>" target="NULL" ><img src="assets/brand/frame.png" alt="" width="100%"></a>
         </div> 
       </div> 
-
-
-<script>
-  $(document).ready(function(){
-    $(".icon_box").click(function(){
-      $(".qr_link").toggle();
-    });
-  });
-</script>
-
+      <script>
+        $(document).ready(function(){
+          $("#icon_<?=$srow['id']?>").click(function(){
+            $("#qr_link_<?=$srow['id']?>").toggle();
+          });
+        });
+      </script>
+    <?php } ?>
 
 
 
