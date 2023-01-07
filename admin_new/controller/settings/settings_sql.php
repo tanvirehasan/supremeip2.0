@@ -568,8 +568,8 @@ if (isset($_POST['socalnewadd'])) {
   $target_file = $target_dir . basename($_FILES["qr_image"]["name"]);
   move_uploaded_file($_FILES["qr_image"]["tmp_name"], $target_file);
 
-    $insrt = "INSERT INTO `social`(`name`, `social_url`, `icon`, `qr_image`) VALUES ('$name','$social_url','$icon', '$qr_image')";
-    $conn->query($insrt);
+  $insrt = "INSERT INTO `social`(`name`, `social_url`, `icon`, `qr_image`) VALUES ('$name','$social_url','$icon', '$qr_image')";
+  $conn->query($insrt);
 }
 
 if (isset($_POST['supdate'])) {
@@ -577,17 +577,23 @@ if (isset($_POST['supdate'])) {
     $icon=$_POST['icon'];
     $name=$_POST['name'];
     $social_url=$_POST['social_url'];
-    echo $id=$_POST['sid'];
+    $id=$_POST['sid'];
 
-    $insrt = "UPDATE `social` SET `name`='$name', `social_url`='$social_url', `icon`='$icon' WHERE id='$id'";
+    if ($_FILES["qr_image"]["name"]!='') {
+      $qr_image=$_FILES["qr_image"]["name"];
+      $target_dir  = "../assets/mediacenter/";
+      $target_file = $target_dir . basename($_FILES["qr_image"]["name"]);
+      move_uploaded_file($_FILES["qr_image"]["tmp_name"], $target_file);
+    }else{
+      $qr_image=$_FILES["qr_image2"]["name"];
+    }
+    $insrt = "UPDATE `social` SET `name`='$name', `social_url`='$social_url', `icon`='$icon', `qr_image`='$qr_image' WHERE id='$id'";
     $conn->query($insrt);
 }
 
 if (isset($_GET['social_delete'])) {
       $delete = "DELETE FROM social WHERE id={$_GET['social_delete']}";
       $conn->query($delete);
-      echo "Hellosdklfjaslkd fklasdjfl kjasdlkfj aslkdjf l";
-      Reconect('general.php');
 }
 
 

@@ -526,7 +526,7 @@ if(isset($_GET['setting']) && $_GET['setting']=='Menu'){
                             <input type="hidden" name="qr_image2" value="<?=$social->qr_image?>">
                             <input type="hidden" name="sid" value="<?=$social->id?>">
                             <td class="ml-5"><button type="submit" class="btn" name="supdate"><i class="fas fa-check"></i> </button> </td>
-                            <td class="m-0"><a href="general.php?social_delete=<?=$social->id?>" class="btn"><i class="fas fa-trash-alt"></i></a></td>
+                            <td class="m-0"><a href="setting.php?setting=General&social_delete=<?=$social->id?>" class="btn"><i class="fas fa-trash-alt"></i></a></td>
                         </tr>
                     </form>                        
                 <?php } } ?>
