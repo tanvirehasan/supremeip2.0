@@ -24,6 +24,9 @@
   padding: 5px;
 }
 
+
+
+
 .drop-zone--over {
   border-style: solid;
 }
@@ -115,3 +118,6 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+#add_slink{
+  display: none;
+}
