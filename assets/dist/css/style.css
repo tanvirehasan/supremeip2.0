@@ -103,6 +103,10 @@ body {
   cursor: pointer;
 }
 
+.icon_box a{
+  color: #000;
+}
+
 .icon_box i:hover{
   color: #fff !important;
 }
