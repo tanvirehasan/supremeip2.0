@@ -77,7 +77,7 @@
                                             
                                         </div>
                                     </td>
-                                    <td><?php $titlei=strip_tags(html_entity_decode($row['page_title'])); echo substr_replace($titlei, "",100);   ?></td>
+                                    <td><?php $titlei=strip_tags(html_entity_decode($row['page_title'])); echo substr_replace($titlei, "...",70);   ?></td>
 
                                     
 
