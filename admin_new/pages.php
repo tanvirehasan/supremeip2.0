@@ -77,7 +77,11 @@
                                             
                                         </div>
                                     </td>
-                                    <td><?=$row['page_title']?></td>
+                                    <td><?php $titlei=strip_tags(html_entity_decode($row['page_title'])); echo substr_replace($titlei, "",100);   ?></td>
+
+                                    
+
+
                                     <td><?=$row['page_url']?></td>
                                     <td>admin</td>
                                     <td><?=$retVal = ($row['page_status']=='0') ? "<p class='p-0 m-0 text-danger'>Private</p>" : "<p class='p-0 m-0 text-success'>Published</p>";?>
