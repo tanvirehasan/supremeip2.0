@@ -85,7 +85,7 @@
   <script>
     tinymce.init({
         selector: 'textarea#neweditordeflt',
-        height:200,
+        height:400,
         plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
         toolbar: 'insertfile blocks fontfamily fontsize forecolor backcolor | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
     });

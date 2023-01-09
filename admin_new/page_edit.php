@@ -7,7 +7,16 @@
         
         $page_title   = htmlspecialchars($_POST['page_title']);  
         $page_sub_title   = htmlspecialchars($_POST['page_sub_title']);
-        $page_content   = htmlspecialchars($_POST['page_content']);
+        $content1   = htmlspecialchars($_POST['content1']);
+        $content2   = htmlspecialchars($_POST['content2']);
+        $content3   = htmlspecialchars($_POST['content3']);
+        $content4   = htmlspecialchars($_POST['content4']);
+        $content5   = htmlspecialchars($_POST['content5']);
+        $content6   = htmlspecialchars($_POST['content6']);
+        $content7   = htmlspecialchars($_POST['content7']);
+        $content8   = htmlspecialchars($_POST['content8']);
+        $content9   = htmlspecialchars($_POST['content9']);
+
         $page_status    = $_POST['page_status'];
         $seo_title      = $_POST['seo_title'];
         $seo_keyword    = $_POST['seo_keyword'];
@@ -33,7 +42,16 @@
                     page_title='$page_title',
                     page_sub_title='$page_sub_title',
 
-                    page_content='$page_content',
+                    content1='$content1',
+                    content2='$content2',
+                    content3='$content3',
+                    content4='$content4',
+                    content5='$content5',
+                    content6='$content6',
+                    content7='$content7',
+                    content8='$content8',
+                    content9='$content9',
+
                     page_featured_image='$page_featured_image',
                     page_status='$page_status',
                     
@@ -69,27 +87,118 @@
 	  <div class="col-12 col-md-10 my-5 ">  
 	   <div class="bg-white p-5">  
 
-        <div class="row">
-            <div class="col-md-6">
-                <label for="">Title</label>
-                <textarea class="form-control mb-5" name="page_title" id="neweditordeflt" cols="30" rows="10">
-                <?=$row->page_title?>
-                </textarea> 
-            </div>
-            <div class="col-md-6">
-                <label for="">Sub-title</label>
-                <textarea class="form-control mb-5" name="page_sub_title" id="neweditordeflt" cols="30" rows="10">
-                <?=$row->page_sub_title?>
-                </textarea>
-            </div>
-        </div> 
-        <div class="divider my-5"></div>
-        <textarea id="neweditor"  class="form-control mb-5" name="page_content" require >
-            <?=$row->page_content?>      
-        </textarea>
+       <table>
 
+            <!-- Title Sub-title -->
+            <tr>
+                <td>
+                    <label for="">Title</label>
+                    <textarea class="form-control mb-5" name="page_title" id="neweditordeflt" cols="30" rows="10">
+                    <?=$row->page_title?>
+                    </textarea>
+                </td>
+                <td>
+                    <label for="">Sub-title</label>
+                    <textarea class="form-control mb-5" name="page_sub_title" id="neweditordeflt" cols="30" rows="10">
+                    <?=$row->page_sub_title?>
+                    </textarea>
+                </td>
+            </tr>
+            <!-- Title Sub-title End -->
+
+            <!-- Content 1,2 -->
+            <tr>
+                <td>
+                    <textarea class="form-control mb-5" name="content1" id="neweditordeflt" cols="30" rows="10">
+                    <?=$row->content1?>
+                    </textarea>
+                </td>
+                <td>
+                    <textarea class="form-control mb-5" name="content2" id="neweditordeflt" cols="30" rows="10">
+                    <?=$row->content2?>
+                    </textarea>
+                </td>
+            </tr>
+            <!-- Content 1,2 end -->
+
+            <!-- Content 3 -->
+            <tr>
+                <td class="text-center bg-light"> <p>Price widget</p></td>
+                <td>                    
+                    <textarea class="form-control mb-5" name="content3" id="neweditordeflt" cols="30" rows="10">
+                    <?=$row->content3?>
+                    </textarea>
+                </td>
+            </tr>
+            <!-- Content 3 end -->
+            
+            <tr>                
+                <td class="text-center bg-success mt-2" colspan="2">                    
+                    <p class="pt-2">File widget</p>
+                </td>
+            </tr>
+
+            <!-- Content 4,5 -->
+            <tr>
+                <td>
+                    <textarea class="form-control mb-5" name="content4" id="neweditordeflt" cols="30" rows="10">
+                    <?=$row->content4?>
+                    </textarea>
+                </td>
+                <td>
+                    <textarea class="form-control mb-5" name="content5" id="neweditordeflt" cols="30" rows="10">
+                    <?=$row->content5?>
+                    </textarea>
+                </td>
+            </tr>
+            <!-- Content 4,5 end -->
+
+            <tr>                
+                <td class="text-center bg-success mt-2" colspan="2">                    
+                    <p class="pt-2">Flowchart widget</p>
+                </td>
+            </tr>
+
+            <!-- Content 6,7-->
+            <tr>
+                <td>
+                    <textarea class="form-control mb-5" name="content6" id="neweditordeflt" cols="30" rows="10">
+                    <?=$row->content6?>
+                    </textarea>
+                </td>
+                <td>
+                    <textarea class="form-control mb-5" name="content7" id="neweditordeflt" cols="30" rows="10">
+                    <?=$row->content7?>
+                    </textarea>
+                </td>
+            </tr>
+            <!-- Content 6,7 end -->
+
+            <tr>                
+                <td class="text-center bg-success mt-2" colspan="2">                    
+                    <p class="pt-2">FAQ widget</p>
+                </td>
+            </tr>
+
+            <!-- Content 8,9-->
+            <tr>
+                <td>
+                    <textarea class="form-control mb-5" name="content8" id="neweditordeflt" cols="30" rows="10">
+                    <?=$row->content8?>
+                    </textarea>
+                </td>
+                <td>
+                    <textarea class="form-control mb-5" name="content9" id="neweditordeflt" cols="30" rows="10">
+                    <?=$row->content9?>
+                    </textarea>
+                </td>
+            </tr>
+            <!-- Content 8,9 end -->
+
+       </table>
+
+        <div class="divider my-5"></div>
         <div class="row" id="widget_view"></div>
-        <!-- Widget row -->
 
 	    </div>
 	   </div>
