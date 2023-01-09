@@ -161,20 +161,12 @@
                 </div>
             </div>
 
-            <!-- content content 1,2  -->
-            <div class="row">
-                <div class="<?=($pageinfo->content2=='') ? 'col-12' : 'col-md-6' ; ?>">
-                     <?=html_entity_decode($pageinfo->content1)?>
-                </div>
-                <div class="col-md-6">                    
-                    <?=html_entity_decode($pageinfo->content2)?>
-                </div>
-            </div>
-            <!-- content content 4,5  end -->
 
-            <!-- content3 -->
-            <div class="row">
-                <div class="<?=($pageinfo->content3=='') ? 'col-12' : 'col-md-6' ; ?>">
+            <div class="row mb-3">
+                <div class="col-12 mx-0">
+                    <div class="page_content p-0" ><?=html_entity_decode($pageinfo->page_content)?></div>
+                </div>     
+                
                 <?php 
                         $price_data = SelectData('prices', "WHERE price_page_id={$pageinfo->page_id} ORDER BY serial_list ASC");
                         if ($price_data->num_rows>0) {?>                      
@@ -196,18 +188,9 @@
                                 </div>
                             </div>
                         <?php } ?>
-                        <!-- price table end -->                    
-                </div>
-                <div class="col-md-6">                    
-                    <?=html_entity_decode($pageinfo->content3)?>
-                </div>
-            </div>
-            <!-- content end -->
+                        <!-- price table end -->  
 
-            <!-- File -->
-            <div class="row">
-                <div class="col-12?>">
-                    <!-- download fle -->
+                        <!-- download fle -->
                     <?php  $service_file_data = SelectData('page_file', "WHERE page_id={$pageinfo->page_id} ORDER BY serial_list ASC");
                     if ($service_file_data->num_rows>0) {?>  
                         <div class="downlod_file p-0 px-md-0 mt-4">
@@ -229,25 +212,8 @@
                     </div>
                     <?php } ?> 
                     <!-- download fle end -->
-                </div>                
-            </div>
-            <!-- File end -->
 
-            <!-- content content 4,5  -->
-            <div class="row">
-                <div class="<?=($pageinfo->content5=='') ? 'col-12' : 'col-md-6' ; ?>">
-                     <?=html_entity_decode($pageinfo->content4)?>
-                </div>
-                <div class="col-md-6">                    
-                    <?=html_entity_decode($pageinfo->content5)?>
-                </div>
-            </div>
-            <!-- content content 4,5  end -->
-
-            <!-- flowchart -->
-            <div class="row">
-                <div class="col-12?>">
-                     <!-- flowchart -->
+                    <!-- flowchart -->
                     <?php 
                     $i=1;
                     $flowchart_data = SelectData('flowchart', "WHERE page_id={$pageinfo->page_id} ORDER BY serial_list ASC");
@@ -267,26 +233,8 @@
                         </div>
                     <?php } ?>
                     <!-- flowchart end -->
-                </div>                
-            </div>
-            <!-- flowchart end -->
 
-
-            <!-- content 6,7 -->
-            <div class="row">
-                <div class="<?=($pageinfo->content7=='') ? 'col-12' : 'col-md-6' ; ?>">
-                     <?=html_entity_decode($pageinfo->content6)?>
-                </div>
-                <div class="col-md-6">                    
-                    <?=html_entity_decode($pageinfo->content7)?>
-                </div>
-            </div>
-            <!-- content 6,7 end -->
-
-            <!-- FAQ -->
-            <div class="row">
-                <div class="col-12?>">
-                     <!-- FAQ -->                 
+                    <!-- FAQ -->                 
                         <?php $faq_data = SelectData('faq', "WHERE page_id={$pageinfo->page_id} ORDER BY serial_list ASC");
 
                             if ($faq_data->num_rows>0) {?>
@@ -309,29 +257,6 @@
                             </div>
                         <?php } ?>
                         <!-- FAQ End-->
-                </div>                
-            </div>
-            <!-- FAQ end -->
-
-            <!-- content 8,9 -->
-            <div class="row">
-                <div class="<?=($pageinfo->content9=='') ? 'col-12' : 'col-md-6' ; ?>">
-                     <?=html_entity_decode($pageinfo->content8)?>
-                </div>
-                <div class="col-md-6">                    
-                    <?=html_entity_decode($pageinfo->content9)?>
-                </div>
-            </div>
-            <!-- content 6,7 end -->
-
-            
-            
-                        
-
-       
- 
-                
-                              
         </div> 
       
 
