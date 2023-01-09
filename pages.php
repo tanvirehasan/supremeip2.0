@@ -151,12 +151,21 @@
 
                             
             <div class="page_content  px-md-3 mb-5 p-0 m-0" >
-             
-              <div class="row mb-3">
-                <div class="page_content p-0 px-3" ><?=html_entity_decode($pageinfo->page_content)?></div>
-              </div> 
 
+            <div class="row">
+                <div class="<?=($pageinfo->page_sub_title=='') ? 'col-12' : 'col-md-6' ; ?>">                    
+                    <?=html_entity_decode($pageinfo->page_title)?>
+                </div>
+                <div class="col-md-6">                    
+                    <?=html_entity_decode($pageinfo->page_sub_title)?>
+                </div>
+            </div>
             
+            <div class="row mb-3">
+                <div class="col-12 mx-0">
+                    <div class="page_content p-0" ><?=html_entity_decode($pageinfo->page_content)?></div>
+                </div>
+            </div>            
 
        
  

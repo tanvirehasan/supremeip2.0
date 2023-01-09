@@ -5,10 +5,10 @@
 
     if (isset($_POST['page_update'])) {
         
-        $page_title     = $_POST['seo_title'];
+        $page_title   = htmlspecialchars($_POST['page_title']);  
+        $page_sub_title   = htmlspecialchars($_POST['page_sub_title']);
         $page_content   = htmlspecialchars($_POST['page_content']);
         $page_status    = $_POST['page_status'];
-
         $seo_title      = $_POST['seo_title'];
         $seo_keyword    = $_POST['seo_keyword'];
         
@@ -31,6 +31,8 @@
         $update = "UPDATE  pages SET
 
                     page_title='$page_title',
+                    page_sub_title='$page_sub_title',
+
                     page_content='$page_content',
                     page_featured_image='$page_featured_image',
                     page_status='$page_status',
@@ -67,16 +69,30 @@
 	  <div class="col-12 col-md-10 my-5 ">  
 	   <div class="bg-white p-5"> 
    
-            <div class="card p-3">
-                <div class="card-header p-0"><h5 class="py-3 text-danger">SEO</h5></div>
-                <input type="text" class="form-control" name="seo_title" value="<?=$row->seo_title?>">
-                <input type="text" class="form-control" name="seo_keyword" value="<?=$row->seo_keyword?>"> 
+        <div class="card p-3">
+            <div class="card-header p-0"><h5 class="py-3 text-danger">SEO</h5></div>
+            <input type="text" class="form-control" name="seo_title" value="<?=$row->seo_title?>">
+            <input type="text" class="form-control" name="seo_keyword" value="<?=$row->seo_keyword?>"> 
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <textarea class="form-control mb-5" name="page_title" id="neweditordeflt" cols="30" rows="10">
+                <?=$row->page_title?>
+                </textarea> 
             </div>
-
-
-		        <textarea id="neweditor"  class="form-control mb-5" name="page_content" require >
-                    <?=$row->page_content?>      
+            <div class="col-md-6">
+                <textarea class="form-control mb-5" name="page_sub_title" id="neweditordeflt" cols="30" rows="10">
+                <?=$row->page_sub_title?>
                 </textarea>
+            </div>
+        </div> 
+
+        <div class="divider my-5"></div>
+
+        <textarea id="neweditor"  class="form-control mb-5" name="page_content" require >
+            <?=$row->page_content?>      
+        </textarea>
 
 
         <div class="row" id="widget_view"></div>
