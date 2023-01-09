@@ -3,7 +3,7 @@
 
   <div class="row m-0 p-0">
 
-  <div class="socialicon p-0 d-none d-lg-block d-md-block" style="width:40px; height:100%; background:#fff; z-index:999; position:fixed;">
+  <div class="socialicon p-0 d-none d-lg-block d-md-block" style="width:40px; height:100%; background:<?=settings('socialbar_bgcolor');?>; z-index:999; position:fixed;">
     <div class="sqecode" style="position: absolute; bottom:50px;">
 
       <?php $sdata = SelectData('social',"");

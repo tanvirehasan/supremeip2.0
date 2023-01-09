@@ -587,14 +587,45 @@ if (isset($_POST['supdate'])) {
     }else{
       $qr_image=$_POST["qr_image2"];
     }
-    $insrt = "UPDATE `social` SET `name`='$name', `social_url`='$social_url', `icon`='$icon', `qr_image`='$qr_image' WHERE id='$id'";
-    $conn->query($insrt);
+    $update = "UPDATE `social` SET `name`='$name', `social_url`='$social_url', `icon`='$icon', `qr_image`='$qr_image' WHERE id='$id'";
+    $conn->query($update);
 }
 
 if (isset($_GET['social_delete'])) {
       $delete = "DELETE FROM social WHERE id={$_GET['social_delete']}";
       $conn->query($delete);
 }
+
+
+
+if (isset($_POST['socalsetingupdate'])) {
+
+  $socialbar_bgcolor        =$_POST['socialbar_bgcolor'];
+  $socialbar_iconcolor      =$_POST['socialbar_iconcolor'];
+  $socialbar_iconhovercolor =$_POST['socialbar_iconhovercolor'];
+  $socialbar_hoverbgcolor   =$_POST['socialbar_hoverbgcolor'];
+  $socialbar_imagesize      =$_POST['socialbar_imagesize'];
+
+  $setingupdate = "UPDATE `settings` SET  
+  `socialbar_bgcolor`='$socialbar_bgcolor',
+  `socialbar_iconcolor`='$socialbar_iconcolor',
+  `socialbar_iconhovercolor`='$socialbar_iconhovercolor',
+  `socialbar_hoverbgcolor`='$socialbar_hoverbgcolor',
+  `socialbar_imagesize`='$socialbar_imagesize' ";
+  $conn->query($setingupdate);
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

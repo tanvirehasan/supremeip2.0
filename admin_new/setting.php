@@ -499,20 +499,22 @@ if(isset($_GET['setting']) && $_GET['setting']=='Menu'){
 <?php } ?>
 
 
-<!--Page Setting -->
+<!--social Setting -->
 <?php if(isset($_GET['setting']) && $_GET['setting']=='General'){ ?>
 
 <div class="row">
-        <div class="col-12 settingbtn"><h3 class="bg-white p-3 text-uppercase text-primary"><i class="fas fa-cog"></i> Home > Social Bar </h3></div>
-      
+        <div class="col-12 settingbtn"><h3 class="bg-white p-3 text-uppercase text-primary"><i class="fas fa-cog"></i> Home > Social Bar </h3></div>    
        <!--------- Section -1 ---------->
         <div class="col-md-12 setting">
-
-
             <!-- social link -->
             <div class="card p-3">                             
-                    <label for="categoryname" class="form-label py-3" style="font-weight:700;"><a href="javascript:" class="text-primary" id="show_form" >Add New</a> | <a href="https://fontawesome.com/v5/search" target="null" >Icon List</a> </label>
-                    <table style="width:100%" class="table table-bordered">
+                    <label for="categoryname" class="form-label py-3" style="font-weight:700;">
+                    <a href="javascript:" class="text-primary" id="show_list" >List</a> |
+                    <a href="javascript:" class="text-primary" id="show_form" >Add New</a> |
+                    <a href="javascript:" class="text-primary" id="show_Bar_Settings" >Bar Settings</a> |
+                    <a href="https://fontawesome.com/v5/search" target="null" >Icon code</a>
+                 </label>
+                    <table style="width:100%" class="table table-bordered" id="list_social">
                     <thead>
                         <tr>
                             <th>Icon</th>
@@ -549,26 +551,91 @@ if(isset($_GET['setting']) && $_GET['setting']=='Menu'){
                     </table> 
 
                 <form method="POST" action="" enctype="multipart/form-data">                
-                    <div id="add_slink" class="mt-3">
+                       
+                </form> 
+            </div> 
+
+            <!-- Bar Settings -->
+            <div class="card p-3" id="add_slink">
+                <form method="POST" action="" enctype="multipart/form-data"> 
+                    <h4>Add New</h4>               
+                    <div  class="mt-3">
                         <input type="text" class="form-control"  name="icon" placeholder="Icon">
                         <input type="text" class="form-control"  name="name" placeholder="Name"> 
                         <input type="text" class="form-control"  name="social_url" placeholder="Url">
                         <input type="file" class="form-control"  name="qr_image" placeholder="image"> 
                         <button type="submit" class="btn btn-primary mt-3" name="socalnewadd">Submit </button>
                     </div>   
-                </form> 
+                </form>
+            </div>
+            <!-- Bar Settings end -->
 
-            </div> 
+
+
+            <!-- Bar Settings -->
+            <div class="card p-3" id="Bar_Settings">
+                <form method="POST" action="" enctype="multipart/form-data"> 
+                    <h4>Bar Settings</h4>               
+                    <div id="" class="mt-3">
+                        <table class="table table-bordered">
+                            <tr>
+                                <td>
+                                    <label for="">Bar color</label>
+                                    <input type="color" name="socialbar_bgcolor" value="<?=settings('socialbar_bgcolor');?>" class="form-control" style="border:none; padding:0;" >
+                                </td>
+                                <td>
+                                    <label for="">Icon color</label>
+                                    <input type="color" name="socialbar_iconcolor" value="<?=settings('socialbar_iconcolor');?>" class="form-control" style="border:none; padding:0;" >
+                                </td>
+                                <td>
+                                    <label for="">Hover icon color</label>
+                                    <input type="color" name="socialbar_iconhovercolor" value="<?=settings('socialbar_iconhovercolor');?>" class="form-control" style="border:none; padding:0;" >
+                                </td>
+                                <td>
+                                    <label for="">Hover bg color</label>
+                                    <input type="color" name="socialbar_hoverbgcolor" value="<?=settings('socialbar_hoverbgcolor');?>" class="form-control" style="border:none; padding:0;" >
+                                </td>
+                                <td>
+                                    <label for="">Image Size</label>
+                                    <input type="text" name="socialbar_imagesize" value="<?=settings('socialbar_imagesize');?>" class="form-control" style="padding:0;" >
+                                </td>
+                                <td>
+                                    <label for="">save</label>
+                                    <input type="submit" class="form-control bg-success" value="submit" name="socalsetingupdate" >
+                                </td>
+                            </tr>
+                        </table>
+                    </div>   
+                </form>
+            </div>
+            <!-- Bar Settings end -->
+
+
         </div>
     </div><!-- row -->
 
     <script>
-    $(document).ready(function(){
-        $("#show_form").click(function(){
-            $("#add_slink").toggle();
+        $(document).ready(function(){
+
+            $("#show_form").click(function(){
+                $("#add_slink").show();
+                $("#Bar_Settings, #list_social").hide();
+            });
+
+            $("#show_Bar_Settings").click(function(){
+                $("#Bar_Settings").show();
+                 $("#add_slink, #list_social").hide();
+            });
+
+            $("#show_list").click(function(){
+                $("#list_social").show();
+                 $("#add_slink,#Bar_Settings").hide();
+            });
+
         });
-    });
     </script>
+
+
 
 
 

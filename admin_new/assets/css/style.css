@@ -121,3 +121,8 @@ input:checked + .slider:before {
 #add_slink{
   display: none;
 }
+
+#Bar_Settings{
+  display: none;
+}
+

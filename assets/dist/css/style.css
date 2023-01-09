@@ -82,13 +82,11 @@ body {
 
 
 .qr_link{
-  width:150px;
   margin-left: 40px;
   display: none;
   position:absolute;
   bottom: 0;
 }
-
 
 .icon_box:hover>.qr_link{
   cursor: pointer;
@@ -98,17 +96,7 @@ body {
 .icon_box:hover{
   width: 40px;
   font-size: 18px;
-  background-color: #0047b1f1;
-  color: #fff !important;
   cursor: pointer;
-}
-
-.icon_box a{
-  color: #000;
-}
-
-.icon_box i:hover{
-  color: #fff !important;
 }
 
 
