@@ -97,12 +97,18 @@
                         </a>
                        </li>
 
+                    <!-- Home-->
                     <li class="sidenav-item">
-                        <a href="home_list.php" class="sidenav-link ">
-                            <i class="sidenav-icon fas fa-home"></i>
-                            <div>Home</div>
+                        <a href="javascript:" class="sidenav-link sidenav-toggle">
+                            <i class="sidenav-icon fas fa-cog"></i>
+                            <div>Home</div>                            
                         </a>
-                    </li> 
+                        <ul class="sidenav-menu">
+                            <li class="sidenav-item"><a href="setting.php?setting=General" class="sidenav-link"><div>Social Bar</div></a></li> 
+                            <li class="sidenav-item"><a href="setting.php?setting=Menu" class="sidenav-link"><div>Manu Setting</div></a></li>
+                            <li class="sidenav-item"><a href="home_list.php" class="sidenav-link"><div>Home Content</div></a></li>	                                
+                        </ul>
+                    </li>
 
                     <!--  page-->
                     <li class="sidenav-item">
