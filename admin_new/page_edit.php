@@ -67,33 +67,26 @@
 <div class="container-fluid">
 	<div class="row">
 	  <div class="col-12 col-md-10 my-5 ">  
-	   <div class="bg-white p-5"> 
-   
-        <div class="card p-3">
-            <div class="card-header p-0"><h5 class="py-3 text-danger">SEO</h5></div>
-            <input type="text" class="form-control" name="seo_title" value="<?=$row->seo_title?>">
-            <input type="text" class="form-control" name="seo_keyword" value="<?=$row->seo_keyword?>"> 
-        </div>
+	   <div class="bg-white p-5">  
 
         <div class="row">
             <div class="col-md-6">
+                <label for="">Title</label>
                 <textarea class="form-control mb-5" name="page_title" id="neweditordeflt" cols="30" rows="10">
                 <?=$row->page_title?>
                 </textarea> 
             </div>
             <div class="col-md-6">
+                <label for="">Sub-title</label>
                 <textarea class="form-control mb-5" name="page_sub_title" id="neweditordeflt" cols="30" rows="10">
                 <?=$row->page_sub_title?>
                 </textarea>
             </div>
         </div> 
-
         <div class="divider my-5"></div>
-
         <textarea id="neweditor"  class="form-control mb-5" name="page_content" require >
             <?=$row->page_content?>      
         </textarea>
-
 
         <div class="row" id="widget_view"></div>
         <!-- Widget row -->
@@ -142,17 +135,23 @@
 
        <div class="col-md-12">
 
-                    <div class="card p-3">
-                        <div class="card-header p-0"><h5 class="py-3 text-danger">Section Title</h5></div>
-                        <input type="text" class="form-control" name="Section_Title_Price" value="<?=$row->Section_Title_Price?>">
-                        <input type="text" class="form-control" name="Section_Title_Flowchart" value="<?=$row->Section_Title_Flowchart?>"> 
-                        <input type="text" class="form-control" name="Section_Title_Faq" value="<?=$row->Section_Title_Faq?>"> 
-                        <input type="text" class="form-control" name="Section_Title_File" value="<?=$row->Section_Title_File?>"> 
+       <div class="card p-3">
+            <div class="card-header p-0"><h5 class="py-3 text-danger">SEO</h5></div>
+            <input type="text" class="form-control" name="seo_title" value="<?=$row->seo_title?>">
+            <input type="text" class="form-control" name="seo_keyword" value="<?=$row->seo_keyword?>"> 
+        </div>
 
-                    <div class="my-5">
-                        <input type="submit" name="page_update" value="UPDATE" class="form-control btn btn-success m-0 fs-6">                               
-                    </div>         
-       </div>
+        <div class="card p-3">
+            <div class="card-header p-0"><h5 class="py-3 text-danger">Section Title</h5></div>
+            <input type="text" class="form-control" name="Section_Title_Price" value="<?=$row->Section_Title_Price?>">
+            <input type="text" class="form-control" name="Section_Title_Flowchart" value="<?=$row->Section_Title_Flowchart?>"> 
+            <input type="text" class="form-control" name="Section_Title_Faq" value="<?=$row->Section_Title_Faq?>"> 
+            <input type="text" class="form-control" name="Section_Title_File" value="<?=$row->Section_Title_File?>"> 
+            <div class="my-5">
+                <input type="submit" name="page_update" value="UPDATE" class="form-control btn btn-success m-0 fs-6">                               
+            </div>         
+        </div>
+
 	</div><!-- row -->
 </div>
 </form>
