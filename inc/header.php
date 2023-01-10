@@ -36,11 +36,8 @@
         <ul class="navbar-nav ms-3 header_menu" >
           <li class="nav-item m-0 p-0 ">
             <a class="nav-link nav_menus m-0 p-0 " href="/">           
-            <i class="fas fa-home" style="display: inline-block!important;transform: rotate(0deg);"></i> Home</a>
-       
-          </li>
-           
-          
+            <i class="fas fa-home" style="display: inline-block!important;transform: rotate(0deg);"></i> Home</a>       
+          </li>         
             <?php $data = SelectData('menu_new',"WHERE menu_perent='#' AND manu_status!='0' ");
                 foreach($data as $row){?>
                     <li class="nav-item m-0 p-0 dropdown">
@@ -65,11 +62,11 @@
                       });
                     });
                     </script>
-
-
             <?php } ?>   
-
-      
+              <li class="nav-item m-0 p-0 ">
+                <a class="nav-link nav_menus m-0 p-0 " href="team.php">           
+                <i class="fas fa-home" style="display: inline-block!important;transform: rotate(0deg);"></i> Our Team</a>       
+              </li>
       </ul>
       </div>
   </nav>
