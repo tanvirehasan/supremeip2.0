@@ -69,7 +69,7 @@
 }
 
 #homebtn{
-  padding:10px 0px  !important;
+  padding:5px 0px !important;
   border-bottom:1px solid #F9F7F7 !important; 
 }
 
@@ -106,6 +106,7 @@
 }
 .accordion-button{
   border-bottom:1px solid #F9F7F7 !important; 
+  padding:12px 20px !important;
 }
 
 
