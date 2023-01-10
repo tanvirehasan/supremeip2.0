@@ -43,12 +43,12 @@
 }
 
 
-.accordion-header {
+nav .accordion-header {
   background-color:none !important;
 }
 
 
-.accordion-header a{
+nav .accordion-header a{
   font-size: <?=header_menu('font_size')?>px !important;
   color:<?=header_menu('font_color')?>;
   text-transform:<?=header_menu('text_transform')?>;
@@ -60,7 +60,7 @@
 }
 
 
-.accordion-header a:hover{
+nav .accordion-header a:hover{
   color: <?=header_menu('hover_color');?> !important;
   text-decoration: none;  
   font-weight: bold !important;
@@ -68,11 +68,11 @@
   font-size: <?=1+header_menu('font_size');?>px !important;
 }
 
-.accordion-header a:active{
+nav .accordion-header a:active{
   color: <?=header_menu('hover_color');?> !important;
 }
 
-.accordion-button:not(.collapsed) {
+nav .accordion-button:not(.collapsed) {
     color: <?=header_menu('hover_color');?> !important;
     background-color: <?=header_menu('text_bg_hover_color');?> !important;
     box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%) !important;
@@ -88,7 +88,7 @@
   background:<?=header_menu('text_bg_hover_color');?>!important;
 }
 
-.accordion-body{
+nav .accordion-body{
   background:#979797;
 }
 
@@ -104,24 +104,24 @@
   color:#fffff !important;
 }
 
-.accordion-item{
+nav .accordion-item{
   border:none !important;
 }
 
-.accordion-item:hover{
+nav .accordion-item:hover{
   background:<?=header_menu('text_bg_hover_color');?>!important;
 }
 
-.accordion-button:hover{
+nav .accordion-button:hover{
   background:<?=header_menu('text_bg_hover_color');?>!important;;
 }
-.accordion-button{
+nav .accordion-button{
   border-bottom:1px solid #F9F7F7 !important; 
   padding:12px 20px !important;
 }
 
 
-.accordion-button::after {
+nav .accordion-button::after {
     flex-shrink: 0 !important;
     width: 5px !important;
     height: 5px !important;
