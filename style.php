@@ -32,20 +32,6 @@
   border-radius: 10px;
 }
 
-
-
-.header_menu a{
-  font-size: <?=header_menu('font_size')?>px !important;
-  color:<?=header_menu('font_color')?>;
-  text-transform:<?=header_menu('text_transform')?>;
-  line-height:<?=header_menu('line_height')?>; 
-  letter-spacing: 10px ;
-  cursor: pointer;
-  padding-left:10px !important;
-  font-family:<?php echo html_entity_decode(header_menu('font_family')); ?>;
-}
-
-
 .mobile_menu a{
   font-size: <?=header_menu('font_size')?>px !important;
   color:<?=header_menu('font_color')?> !important;
@@ -57,13 +43,24 @@
 }
 
 
-.header_menu a i{
-  transform: rotate(45deg);
-  padding: 0 5px;
-  display: none;
+.accordion-header {
+  background-color:none !important;
 }
 
-.header_menu a:hover{
+
+.accordion-header a{
+  font-size: <?=header_menu('font_size')?>px !important;
+  color:<?=header_menu('font_color')?>;
+  text-transform:<?=header_menu('text_transform')?>;
+  line-height:<?=header_menu('line_height')?>; 
+  letter-spacing: 10px ;
+  cursor: pointer;
+  padding-left:20px !important;
+  font-family:<?php echo html_entity_decode(header_menu('font_family')); ?>;
+}
+
+
+.accordion-header a:hover{
   color: <?=header_menu('hover_color');?> !important;
   text-decoration: none;  
   font-weight: bold !important;
@@ -71,31 +68,46 @@
   font-size: <?=1+header_menu('font_size');?>px !important;
 }
 
-.header_menu li{
-  border-bottom:1px solid green; 
-  padding:10px 0px !important;
+#homebtn{
+  padding:10px 0px  !important;
+  border-bottom:1px solid green !important; 
 }
 
-.header_menu li:hover{
+#homebtn:hover{
   background:green;
 }
 
-.header_menu li ul li:hover{
-  background:red;
+.accordion-body{
+  background:#979797;
 }
 
-.header_menu li ul{
-  background:#628e62;
-  margin-top:10px;
+#sub_menu_link{
+  border-bottom:1px solid green !important; 
+  color:#ffffff !important;
+  font-size:14px !important;
 }
 
-.header_menu li ul li{
-  border-bottom:1px solid #FFFF; 
+
+#sub_menu_link:hover{
+  background:green !important;
+  color:#fffff !important;
 }
 
-.header_menu li ul li a{
-  color:#fff;
+.accordion-item{
+  border:none !important;
 }
+
+.accordion-item:hover{
+  background:green !important;
+}
+
+.accordion-button:hover{
+  background:green !important;
+}
+.accordion-button{
+  border-bottom:1px solid green !important; 
+}
+
 
 
 .active{
