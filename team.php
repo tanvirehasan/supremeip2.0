@@ -57,7 +57,9 @@
                 <h5><?=$row->Phone_No?></h5>
               </div>
 
-            <?=html_entity_decode($row->About)?>
+            <div class="contetnteam">
+              <?=html_entity_decode($row->About)?>
+            </div>
 
             </div>
  
