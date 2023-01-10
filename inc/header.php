@@ -65,7 +65,7 @@
             <?php } ?>   
               <li class="nav-item m-0 p-0 ">
                 <a class="nav-link nav_menus m-0 p-0 " href="team.php">           
-                <i class="fas fa-home" style="display: inline-block!important;transform: rotate(0deg);"></i> Our Team</a>       
+                <i class="fas fa-users" style="display: inline-block!important;transform: rotate(0deg);"></i> Our Team</a>       
               </li>
       </ul>
       </div>
