@@ -116,22 +116,22 @@ if (isset($_POST['faviconupdate'])) {
 if (isset($_POST['sidebarupdated'])) {
 
   $font_size        =$_POST["font_size"];
-  $line_height      =$_POST["line_height"];
   $font_color       =$_POST["font_color"];
   $font_family      = htmlspecialchars($_POST["font_family"]);
   $background_color =$_POST["background_color"];
   $hover_color      =$_POST["hover_color"];
+  $text_bg_hover_color=$_POST["text_bg_hover_color"];
   $active_color     =$_POST["active_color"];
   $text_transform   =$_POST["text_transform"];
 
 
      $sql=" UPDATE header_menu SET     
       font_size='$font_size',
-      line_height='$line_height',
       font_color='$font_color',
       font_family='$font_family',
       background_color='$background_color',
       hover_color='$hover_color',
+      text_bg_hover_color='$text_bg_hover_color',
       active_color='$active_color',    
       text_transform='$text_transform'    
       

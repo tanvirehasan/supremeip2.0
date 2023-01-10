@@ -74,7 +74,7 @@
 }
 
 #homebtn:hover{
-  background:green;
+  background:<?=header_menu('text_bg_hover_color');?>!important;
 }
 
 .accordion-body{
@@ -98,16 +98,15 @@
 }
 
 .accordion-item:hover{
-  background:green !important;
+  background:<?=header_menu('text_bg_hover_color');?>!important;
 }
 
 .accordion-button:hover{
-  background:green !important;
+  background:<?=header_menu('text_bg_hover_color');?>!important;;
 }
 .accordion-button{
   border-bottom:1px solid #F9F7F7 !important; 
 }
-
 
 
 .accordion-button::after {
@@ -121,8 +120,6 @@
     transition: transform .2s ease-in-out;
     opacity: 0.3;
 }
-
-
 
 
 
