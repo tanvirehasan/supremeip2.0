@@ -68,6 +68,17 @@
   font-size: <?=1+header_menu('font_size');?>px !important;
 }
 
+.accordion-header a:active{
+  color: <?=header_menu('hover_color');?> !important;
+}
+
+.accordion-button:not(.collapsed) {
+    color: <?=header_menu('hover_color');?> !important;
+    background-color: <?=header_menu('text_bg_hover_color');?> !important;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%) !important;
+}
+
+
 #homebtn{
   padding:5px 0px !important;
   border-bottom:1px solid #F9F7F7 !important; 
