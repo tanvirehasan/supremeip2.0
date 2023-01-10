@@ -70,7 +70,7 @@
 
 #homebtn{
   padding:10px 0px  !important;
-  border-bottom:1px solid green !important; 
+  border-bottom:1px solid #F9F7F7 !important; 
 }
 
 #homebtn:hover{
@@ -82,7 +82,7 @@
 }
 
 #sub_menu_link{
-  border-bottom:1px solid green !important; 
+  border-bottom:1px solid #F9F7F7 !important; 
   color:#ffffff !important;
   font-size:14px !important;
 }
@@ -105,8 +105,24 @@
   background:green !important;
 }
 .accordion-button{
-  border-bottom:1px solid green !important; 
+  border-bottom:1px solid #F9F7F7 !important; 
 }
+
+
+
+.accordion-button::after {
+    flex-shrink: 0 !important;
+    width: 5px !important;
+    height: 5px !important;
+    margin-left: auto;
+    content: "⇣" !important;
+    background-repeat: no-repeat !important;
+    background: none !important;
+    transition: transform .2s ease-in-out;
+    opacity: 0.3;
+}
+
+
 
 
 
