@@ -75,7 +75,6 @@ font-family: 'Jost', sans-serif;
   background-color: red;
 }
 
-
 body {
   font-size: .875rem;
 }
@@ -110,8 +109,8 @@ body {
 
  .dropdowncard{
   display: none;
-  padding-left:15px;
-  margin-bottom:20px;
+  margin: 0px;
+  padding:0px;
 }
 
 
@@ -119,21 +118,10 @@ body {
   list-style: none;
   margin: 0px !important;
   padding: 0 !important;
+  margin-top: 15px;
 }
 
-.dropdowncard .nav-link{
-  margin: 0px !important;
-  padding: 0px !important;
-  font-size: 12px !important;
-  padding-bottom: 5px !important;
-}
-
-.dropdowncard .nav-link:hover{
-   font-size: 12px !important;
-}
-
-.side-menu{    
-
+.side-menu{ 
     text-align: left;  
     position: -webkit-sticky;
     position: sticky;
@@ -332,7 +320,7 @@ letter-spacing: 0px;
  /*nav*/
 .header_menu{
   overflow-x: hidden;
-  height: 300px !important;
+  height: 600px !important;
 }
 
 

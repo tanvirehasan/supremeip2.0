@@ -4,8 +4,6 @@
   $sharelink = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
   $baseurl=basename($_SERVER['REQUEST_URI']);
 ?>
-
-
 <!doctype html>
 <html lang="en">
   <head>
