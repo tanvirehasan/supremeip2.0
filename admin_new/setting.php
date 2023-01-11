@@ -14,7 +14,48 @@ $row = $data->fetch_object();
     
     <div class="row">
         <div class="col-12 menubtn"><h3 class="bg-white p-3 text-uppercase text-primary"><i class="fas fa-cog"></i> Menu Setting</h3></div>
-            <!-- Main Side Menu -->     
+            
+        <div class="col-12">
+            <div class="card"></div>
+            <table class="table">
+                <tr>
+                    <td>
+                        <form method="POST" action="" enctype="multipart/form-data">
+                                <label for="categoryname" class=" form-label " style="font-weight:700;">Logo</label>                
+                                <img src="../assets/brand/<?= $row->logo?>" alt="" style="width:200px" class="img-thumbnail mb-4">            
+                                <input type="file" class="form-control mb-4" name="logo" style="border:none;">  
+                                <input type="hidden" name="logo2" value="<?=$row->logo?>">  
+                                <input type="range" name="logo_size" class="form-range" min="1" max="100" value="<?=$row->logo_size;?>" id="logosize">
+
+                                <div class=" m-0 my-3">
+                                    <button type="submit" name="logoupdate" class="btn btn-primary"> Update</button>
+                                </div> 
+                            </form>
+                    </td>
+
+                    <td><!-- icon -->
+                        
+                            <form method="POST" action="" enctype="multipart/form-data">
+                                <label for="categoryname" class=" form-label " style="font-weight:700;">Favicon</label>                
+                                <img src="../assets/brand/<?= $row->favicon?>" alt="" style="width:65px" class="img-thumbnail mb-4">            
+                                <input type="file" class="form-control mb-4 " id="" name="favicon" style="border:none;">  
+                                <div class=" m-0 my-3">
+                                    <button type="submit" name="faviconupdate" class="btn btn-primary"> Update</button>
+                                </div> 
+                            </form> 
+                        
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+
+
+        
+        
+        
+        <!-- Main Side Menu -->     
             <div class="col-md-12 menu">
                 <div class="card p-3">
                     <form method="POST" action="" enctype="multipart/form-data">
@@ -129,12 +170,6 @@ $row = $data->fetch_object();
                                     <input type="color" name="downactive_color"  value="<?=header_menu('downactive_color');?>" class="form-control" style='border:none;  padding:0'>
                                 </td>
                             </tr>
-
-
-
-
-
-
 
                         </table>                        
                         <div class=" m-0 my-3"><button type="submit" name="sidebarupdated" class="btn btn-primary">Update</button></div> 
