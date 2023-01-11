@@ -24,9 +24,12 @@ $row = $data->fetch_object();
                                 <td>
                                     <span id="fontsizevalu">font size</span>
                                     <input type="text" name="font_size" class="form-control" min="1" max="100" value="<?=header_menu('font_size');?>" id="fontsize">
-
                                 </td>
 
+                                <td>
+                                    <span id="">Divider size</span>
+                                    <input type="text" name="divider_size" class="form-control" min="1" max="100" value="<?=header_menu('divider_size');?>" id="fontsize">
+                                </td>
                                 <td>
                                     <span  style="font-family:<?=header_menu('font_family');?>;">Font:</span>
                                     <select name="font_family" class="form-control" >
@@ -40,34 +43,99 @@ $row = $data->fetch_object();
                                         <option value="<?=header_menu('text_transform');?>">Select</option>
                                         <option value="uppercase">uppercase</option>
                                         <option value="lowercase">lowercase</option>
-                                        <option value="capitalize">capitalize</option>
-                                        
+                                        <option value="capitalize">capitalize</option>                                        
                                     </select>
                                 </td>
                             </tr>
+
+
+                            <!-- Dropdown design -->
+                            <tr>
+                                <td>
+                                    <span id="">Dropdown Font size</span>
+                                    <input type="text" name="downfont_size" class="form-control" min="1" max="100" value="<?=header_menu('downfont_size');?>" id="fontsize">
+                                </td>
+
+                                <td>
+                                    <span id="">Dropdown Divider size</span>
+                                    <input type="text" name="downdivider_size" class="form-control" min="1" max="100" value="<?=header_menu('downdivider_size');?>" id="fontsize">
+                                </td>
+                                <td>
+                                    <span  style="font-family:<?=header_menu('downfont_family');?>;">Dropdown Font:</span>
+                                    <select name="downfont_family" class="form-control" >
+                                        <option value="<?=header_menu('downfont_family');?>"><?=header_menu('downfont_family');?></option>
+                                        <?=font_select()?>
+                                    </select>
+                                </td>                                
+                                <td>
+                                    <span  style="text-transform:<?=header_menu('downtext_transform');?>;">Dropdown Letter case:</span>
+                                    <select name="downtext_transform" class="form-control" >
+                                        <option value="<?=header_menu('downtext_transform');?>">Select</option>
+                                        <option value="uppercase">uppercase</option>
+                                        <option value="lowercase">lowercase</option>
+                                        <option value="capitalize">capitalize</option>                                        
+                                    </select>
+                                </td>
+                            </tr>
+
+
+
+
                         </table>                   
-                        <table style="width: 100%;">
+                        <table class="table table-bordered">
                             <tr>
                                 <td>
                                      Menu BG color
-                                    <input type="color" name="background_color" class="form-control" value="<?=header_menu('background_color');?>" style="height: 50px; border:none; padding:0"> 
+                                    <input type="color" name="background_color" class="form-control" value="<?=header_menu('background_color');?>" style="border:none; padding:0"> 
                                 </td>
                                 <td>Text Color:
-                                    <input type="color" name="font_color" value="<?=header_menu('font_color');?>" class="form-control" style='height: 50px; border:none; padding:0'>
+                                    <input type="color" name="font_color" value="<?=header_menu('font_color');?>" class="form-control" style='border:none; padding:0'>
                                 </td>
                                 <td>Text Hover Color:
-                                    <input type="color" name="hover_color" value="<?=header_menu('hover_color');?>" class="form-control" style='height: 50px; border:none;  padding:0' >
+                                    <input type="color" name="hover_color" value="<?=header_menu('hover_color');?>" class="form-control" style='border:none;  padding:0' >
                                 </td>
 
                                 <td>Text BG Hover Color:
-                                    <input type="color" name="text_bg_hover_color" value="<?=header_menu('text_bg_hover_color');?>" class="form-control" style='height: 50px; border:none;  padding:0' >
+                                    <input type="color" name="text_bg_hover_color" value="<?=header_menu('text_bg_hover_color');?>" class="form-control" style='border:none;  padding:0' >
                                 </td>
-
+                                    <td>Divider color:
+                                    <input type="color" name="divider_color"  value="<?=header_menu('divider_color');?>" class="form-control" style='border:none;  padding:0'>
+                                </td>
                                 <td>Active Color:
-                                    <input type="color" name="active_color"  value="<?=header_menu('active_color');?>" class="form-control" style='height: 50px; border:none;  padding:0'>
-
+                                    <input type="color" name="active_color"  value="<?=header_menu('active_color');?>" class="form-control" style='border:none;  padding:0'>
                                 </td>
                             </tr>
+
+
+                            <tr>
+                                <td>
+                                     Dropdown BG color:
+                                    <input type="color" name="downbackground_color" class="form-control" value="<?=header_menu('downbackground_color');?>" style="border:none; padding:0"> 
+                                </td>
+                                <td>Text Color:
+                                    <input type="color" name="downfont_color" value="<?=header_menu('downfont_color');?>" class="form-control" style='border:none; padding:0'>
+                                </td>
+                                <td>Text Hover Color:
+                                    <input type="color" name="downhover_color" value="<?=header_menu('downhover_color');?>" class="form-control" style='border:none;  padding:0' >
+                                </td>
+
+                                <td>Text BG Hover Color:
+                                    <input type="color" name="downtext_bg_hover_color" value="<?=header_menu('downtext_bg_hover_color');?>" class="form-control" style='border:none;  padding:0' >
+                                </td>
+                                    <td>Divider color:
+                                    <input type="color" name="downdivider_color"  value="<?=header_menu('downdivider_color');?>" class="form-control" style='border:none;  padding:0'>
+                                </td>
+                                <td>Active Color:
+                                    <input type="color" name="downactive_color"  value="<?=header_menu('downactive_color');?>" class="form-control" style='border:none;  padding:0'>
+                                </td>
+                            </tr>
+
+
+
+
+
+
+
                         </table>                        
                         <div class=" m-0 my-3"><button type="submit" name="sidebarupdated" class="btn btn-primary">Update</button></div> 
                     </form> 

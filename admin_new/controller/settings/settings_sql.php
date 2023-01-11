@@ -115,17 +115,31 @@ if (isset($_POST['faviconupdate'])) {
 // Main Side Menu
 if (isset($_POST['sidebarupdated'])) {
 
-  $font_size        =$_POST["font_size"];
-  $font_color       =$_POST["font_color"];
-  $font_family      = htmlspecialchars($_POST["font_family"]);
-  $background_color =$_POST["background_color"];
-  $hover_color      =$_POST["hover_color"];
-  $text_bg_hover_color=$_POST["text_bg_hover_color"];
-  $active_color     =$_POST["active_color"];
-  $text_transform   =$_POST["text_transform"];
+  $font_size            =$_POST["font_size"];
+  $font_color           =$_POST["font_color"];
+  $font_family          = htmlspecialchars($_POST["font_family"]);
+  $background_color     =$_POST["background_color"];
+  $hover_color          =$_POST["hover_color"];
+  $text_bg_hover_color  =$_POST["text_bg_hover_color"];
+  $active_color         =$_POST["active_color"];
+  $text_transform       =$_POST["text_transform"];
+  $divider_color        =$_POST["divider_color"];
+  $divider_size         =$_POST["divider_size"];
+
+  $downfont_size            =$_POST["downfont_size"];
+  $downfont_color           =$_POST["downfont_color"];
+  $downfont_family          = htmlspecialchars($_POST["downfont_family"]);
+  $downbackground_color     =$_POST["downbackground_color"];
+  $downhover_color          =$_POST["downhover_color"];
+  $downtext_bg_hover_color  =$_POST["downtext_bg_hover_color"];
+  $downactive_color         =$_POST["downactive_color"];
+  $downtext_transform       =$_POST["downtext_transform"];
+  $downdivider_color        =$_POST["downdivider_color"];
+  $downdivider_size         =$_POST["downdivider_size"];
 
 
-     $sql=" UPDATE header_menu SET     
+     $sql=" UPDATE header_menu SET  
+
       font_size='$font_size',
       font_color='$font_color',
       font_family='$font_family',
@@ -133,10 +147,22 @@ if (isset($_POST['sidebarupdated'])) {
       hover_color='$hover_color',
       text_bg_hover_color='$text_bg_hover_color',
       active_color='$active_color',    
-      text_transform='$text_transform'    
-      
-      
-       ";
+      text_transform='$text_transform',
+      divider_color='$divider_color',
+      divider_size='$divider_size',
+
+      downfont_size='$downfont_size',
+      downfont_color='$downfont_color',
+      downfont_family='$downfont_family',
+      downbackground_color='$downbackground_color',
+      downhover_color='$downhover_color',
+      downtext_bg_hover_color='$downtext_bg_hover_color',
+      downactive_color='$downactive_color',    
+      downtext_transform='$downtext_transform',
+      downdivider_color='$downdivider_color',
+      downdivider_size='$downdivider_size'    
+           
+      ";
      if(mysqli_query($conn, $sql)){
        $msg = "favicon Update Successfully !";
        $bg = "alert alert-success";
