@@ -15,38 +15,55 @@ $row = $data->fetch_object();
     <div class="row">
         <div class="col-12 menubtn"><h3 class="bg-white p-3 text-uppercase text-primary"><i class="fas fa-cog"></i> Menu Setting</h3></div>
             
-        <div class="col-12">
-            <div class="card"></div>
-            <table class="table">
+        <div class="col-12 ">
+            <div class="card bg-white p-3">
+                <form method="POST" action="" enctype="multipart/form-data">
+            <table class="table table-bordered">
                 <tr>
-                    <td>
-                        <form method="POST" action="" enctype="multipart/form-data">
-                                <label for="categoryname" class=" form-label " style="font-weight:700;">Logo</label>                
-                                <img src="../assets/brand/<?= $row->logo?>" alt="" style="width:200px" class="img-thumbnail mb-4">            
-                                <input type="file" class="form-control mb-4" name="logo" style="border:none;">  
-                                <input type="hidden" name="logo2" value="<?=$row->logo?>">  
-                                <input type="range" name="logo_size" class="form-range" min="1" max="100" value="<?=$row->logo_size;?>" id="logosize">
-
-                                <div class=" m-0 my-3">
-                                    <button type="submit" name="logoupdate" class="btn btn-primary"> Update</button>
-                                </div> 
-                            </form>
+                    <th><b>Logo</</th>
+                    <th><b>Favicon</b></th>
+                    <th><b>SEO Banner</b></th>
+                    <th><b>Site Title & Description</b></th>
+                </tr>
+                <tr>
+                    <td>              
+                        <img src="../assets/brand/<?= $row->logo?>" alt="" style="width:200px" class="img-thumbnail mb-4">            
+                        <input type="file" class="form-control mb-2" name="logo" style="border:none;">  
+                        <input type="hidden" name="logo2" value="<?=$row->logo?>">  
+                        <input type="range" name="logo_size" class="form-range" min="1" max="100" value="<?=$row->logo_size;?>" id="logosize">                           
                     </td>
 
-                    <td><!-- icon -->
-                        
-                            <form method="POST" action="" enctype="multipart/form-data">
-                                <label for="categoryname" class=" form-label " style="font-weight:700;">Favicon</label>                
-                                <img src="../assets/brand/<?= $row->favicon?>" alt="" style="width:65px" class="img-thumbnail mb-4">            
-                                <input type="file" class="form-control mb-4 " id="" name="favicon" style="border:none;">  
-                                <div class=" m-0 my-3">
-                                    <button type="submit" name="faviconupdate" class="btn btn-primary"> Update</button>
-                                </div> 
-                            </form> 
-                        
+                    <!-- icon -->
+                    <td>                                  
+                        <img src="../assets/brand/<?= $row->favicon?>" alt="" style="width:65px" class="img-thumbnail mb-4">            
+                        <input type="file" class="form-control mb-4" name="favicon" style="border:none;"> 
+                        <input type="hidden" name="favicon2" value="<?=$row->favicon?>"> 
+                    </td>
+
+                    <!-- SEO Banner -->
+                    <td>                                   
+                        <img src="../assets/brand/<?= $row->site_banner?>" alt="" style="width:150px" class="img-thumbnail mb-4">            
+                        <input type="file" class="form-control mb-4 " id="" name="site_banner" style="border:none;"> 
+                        <input type="hidden" name="site_banner2" value="<?=$row->site_banner?>">  
+
+                    </td>
+
+                    <!-- Site Title & Description -->
+                    <td >                                    
+                        <input type="text" class="form-control" name="site_title" value="<?=$row->site_title?>">
+                        <textarea name="site_Description" class="form-control border"  cols="50" rows="5"><?=$row->site_Description?></textarea>                                                  
+                    </td>
+                </tr>
+                <tr>                  
+                    <td colspan="4"  >
+                        <div class="text-right">
+                            <button type="submit" name="logoupdate" class="btn btn-primary"> Update</button>
+                        </div>
                     </td>
                 </tr>
             </table>
+            </form>
+            </div>
         </div>
 
 

@@ -69,9 +69,13 @@ if (isset($_POST['textcolorupdate'])) {
 
 if (isset($_POST['logoupdate'])) {
 
+
+
   $logo_size=$_POST["logo_size"];
+  $site_title=$_POST["site_title"];
+  $site_Description=$_POST["site_Description"];
  
-  //image
+  //logo
   if ($_FILES["logo"]["name"]!='') {
     $logo=$_FILES["logo"]["name"];
     $target_dir  = "../assets/brand/";
@@ -81,9 +85,30 @@ if (isset($_POST['logoupdate'])) {
     $logo=$_POST["logo2"];
   }
 
+    //favicon
+  if ($_FILES["favicon"]["name"]!='') {
+    $favicon=$_FILES["favicon"]["name"];
+    $target_dir  = "../assets/brand/";
+    $target_file = $target_dir . basename($_FILES["favicon"]["name"]);
+    move_uploaded_file($_FILES["favicon"]["tmp_name"], $target_file);
+  }else{
+    $favicon=$_POST["favicon2"];
+  }
+
+    //site_banner
+  if ($_FILES["site_banner"]["name"]!='') {
+    $site_banner=$_FILES["site_banner"]["name"];
+    $target_dir  = "../assets/brand/";
+    $target_file = $target_dir . basename($_FILES["site_banner"]["name"]);
+    move_uploaded_file($_FILES["site_banner"]["tmp_name"], $target_file);
+  }else{
+    $site_banner=$_POST["site_banner2"];
+  }
 
 // Update query
-     $sql=" UPDATE settings SET logo='$logo', logo_size='$logo_size' ";
+     $sql="UPDATE settings SET logo='$logo', favicon='$favicon', logo_size='$logo_size', site_title='$site_title',
+     site_Description='$site_Description', site_banner='$site_banner' ";
+
      if(mysqli_query($conn, $sql)){
        $msg = "Logo Update Successfully !";
        $bg = "alert alert-success";
@@ -92,23 +117,7 @@ if (isset($_POST['logoupdate'])) {
      }
 }
 
-if (isset($_POST['faviconupdate'])) {
 
-  $favicon=$_FILES["favicon"]["name"];
-
-  //image
-  $target_dir  = "../assets/brand/";
-  $target_file = $target_dir . basename($_FILES["favicon"]["name"]);
-  move_uploaded_file($_FILES["favicon"]["tmp_name"], $target_file);
-// Update query
-     $sql=" UPDATE settings SET favicon='$favicon' ";
-     if(mysqli_query($conn, $sql)){
-       $msg = "favicon Update Successfully !";
-       $bg = "alert alert-success";
-     }else{
-       echo "error";
-     }
-}
 
 
 
