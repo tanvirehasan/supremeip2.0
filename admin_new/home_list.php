@@ -1,44 +1,10 @@
-<?php 
-
-    include "inc/header.php";
-
-
-//------------ Edit Home -----------------------------------------
-    if (isset($_POST['home_update'])) {
-        
-        $id       = $_POST['home_id'];        
-        $title    = $_POST['title'];
-        $content  = $_POST['content'];
-        $link     = $_POST['link'];
-        $bg_color = $_POST['bg_color'];
-
-        if ($_FILES["image"]["name"]!='') {
-
-            $target_dir = "../assets/mediacenter/";
-            $image    = $_FILES["image"]["name"];           
-
-            $fileName = basename($_FILES["image"]["name"]); 
-            $imageTemp = $_FILES["image"]["tmp_name"];
-            $imageUploadPath = $target_dir . $fileName; 
-            $compressedImage = compressImage($imageTemp, $imageUploadPath, 40);
-
-        }else{ $image= $_POST['imagevalue'];}
-
-        $update = "UPDATE home_page  SET 
-                    title='$title',
-                    content='$content',
-                    link='$link',
-                    bg_color='$bg_color',
-                    image='$image' WHERE id='$id'";
-        if ($conn->query($update)) {}else{echo "Sorry";}
-    }
-?>
-
-
+<?php include "inc/header.php";?>
 
 <div class="layout-content">
-     <div class="container-fluid flex-grow-1 container-p-y"> 
+    <div class="container-fluid flex-grow-1 container-p-y"> 
       <div class="row">
+
+
           <div class="col-md-12">
              <div class="card mt-5">
                  <div class="card-header">
@@ -79,7 +45,7 @@
                                     </td>
 
                                     <td>
-                                        <a onclick="home_edit('views/pages/home_edit.php?home_edit=<?=$home->id?>')"  class="btn btn-danger btn-sm text-white">Edit</a>                               
+                                        <a target="NULL" href="home_edit.php?home_edit=<?=$home->id?>"  class="btn btn-danger btn-sm text-white">Edit</a>                               
                                     </td>
                                 </tr> 
 
@@ -102,7 +68,7 @@
                                     </td>
 
                                     <td>
-                                        <a onclick="home_edit('views/pages/home_edit.php?home_edit=<?=$home->id?>')"  class="btn btn-danger btn-sm text-white">Edit</a>                               
+                                        <a target="NULL" href="home_edit.php?home_edit=<?=$home->id?>"  class="btn btn-danger btn-sm text-white">Edit</a>                               
                                     </td>
                                 </tr> 
 
@@ -127,7 +93,7 @@
                                     </td>
 
                                     <td>
-                                        <a onclick="home_edit('views/pages/home_edit.php?home_edit=<?=$home->id?>')"  class="btn btn-danger btn-sm text-white">Edit</a>                               
+                                        <a target="NULL" href="home_edit.php?home_edit=<?=$home->id?>"  class="btn btn-danger btn-sm text-white">Edit</a>                               
                                     </td>
                                 </tr> 
 
@@ -139,109 +105,12 @@
                      </div>
                  </div>
              </div>
-             
-             <?php
-                    //------------ Edit Home -----------------------------------------
-                        if (isset($_POST['seo_save'])) {
-                            
-                            $title       = $_POST['title'];        
-                            $description    = $_POST['description'];
-                            $keywords  = $_POST['keywords'];
-                            $image     = $_POST['image'];
-
-                            if ($_FILES["image"]["name"]!='') {
-                    
-                                $target_dir = "../assets/mediacenter/";
-                                $image    = $_FILES["image"]["name"];           
-                    
-                                $fileName = basename($_FILES["image"]["name"]); 
-                                $imageTemp = $_FILES["image"]["tmp_name"];
-                                $imageUploadPath = $target_dir . $fileName; 
-                                $compressedImage = compressImage($imageTemp, $imageUploadPath, 40);
-                    
-                            }else{ $image= $_POST['imagevalue'];}
-                    
-                            $update = "UPDATE home_seo  SET 
-                                        title='$title',
-                                        description='$description',
-                                        keywords='$keywords',
-                                        image='$image' WHERE id='1'";
-                                        
-                            if ($conn->query($update)) {}else{echo "Sorry";}
-                        }
-                    ?>             
-             
-             
-             
-                    <?php
-                    
-                        $seodata = SelectData('home_seo', "");
-                        $seorow = $seodata->fetch_object();
-                    ?>
-                    
-                    <div class='card p-5'>
-                        <form action="" method="POST" enctype="multipart/form-data">
-                            
-                            <label for="">Title</label>
-                            <input type="text" name="title" value="<?=$seorow->title?>" class="form-control mb-3">
-            
-                            <label for="">Description</label> 
-                            <input type="text" name="description" value="<?=$seorow->description?>" class="form-control mb-3" >
-            
-                            <label for="">Keywords</label> 
-                            <input type="text" name="keywords" value="<?=$seorow->keywords?>" class="form-control mb-3" >
-                            
-                            <label for="">Image</label> </br>
-                            
-                            <img src="../assets/mediacenter/<?=$seorow->image?>" width="200" >
-                            
-                            <input type="file" name="image" class="form-control mb-4" >
-                            <input type="hidden" name="imagevalue" value="<?=$seorow->image?>" class="form-control mb-4" >
-            
-                            <input type="submit"  name="seo_save" class="form-control btn btn-success">
-                        </form> 
-                    </div>
-                    
-                    
-                    
-                    
+                              
                     
              
           </div>
      </div>
   </div>
 </div>
-
-
-
-
-<script type="text/javascript">
-        function home_edit(url) {
-        $.ajax({
-            url: url,
-            method: "POST",
-            success: function(data) {
-                $("#home_popup").html(data);
-                $("#dataModal").modal("show");
-            },
-        });
-    }
-</script>
-
-
-
-
-<!-- Modal for category -->
-<div class="modal fade" id="dataModal">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content" id="home_popup">
-
-    </div>
-  </div>
-</div>
-
-
-
-
 
 <?php include 'inc/footer.php';?>

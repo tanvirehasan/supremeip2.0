@@ -9,9 +9,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Best iP Law firm in Bangladesh - SUPREMEiP</title> 
+    <title><?=settings('site_title')?></title> 
     <!-- <base href="http://localhost/supremeip2.0/"> -->
-    <meta name="description" content="SUPREMEiP is top-ranked IP law firm in Bangladesh with the international presence provides specialized services in Intellectual Property Rights, Corporate Affairs, Foreign Trade and Investment, Taxation, and Litigation." />
+    <meta name="description" content="<?=settings('site_Description')?>" />
     <meta name="keywords" content="trademark, ipr, patent, design, copyright, registration, renewal, objection, opposition, assignment, remove, journal, search,">
     <meta name="author" content="SUPREMEiP">
     
@@ -19,12 +19,10 @@
     <meta property="og:type"               content="article" />
     <meta property="og:title"              content="SUPREMEiP"/>
     <meta property="og:description"        content="SUPREMEiP is top-ranked IP law firm in Bangladesh with the international presence provides specialized services in Intellectual Property Rights, Corporate Affairs, Foreign Trade and Investment, Taxation, and Litigation."/>
-    <meta property="og:image"              content="assets/mediacenter/supremeip.png" />
+    <meta property="og:image"              content="assets/mediacenter/<?=settings('site_banner')?>" />
     
-    <link rel="icon" href="https://www.supremeip.com/assets/brand/icon.png" sizes="32x32" />
-    <link rel="icon" href="https://www.supremeip.com/assets/brand/icon.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="https://www.supremeip.com/assets/brand/icon.png" />
-    
+    <link rel="icon" href="assets/brand/<?=settings('favicon')?>" sizes="32x32" />
+   
     
     <link href="assets/dist/css/style.css" type="text/css" rel="stylesheet">
     <link rel='stylesheet' type='text/css' href='style.php' />
@@ -162,7 +160,7 @@
         <div class="col-12 m-0 p-0" >    
         
             <div class="page-content page1" style="background-image:url(assets/mediacenter/<?=HomePage('image', '1')?>);">
-                <div class="page1overlay" style="background:<?=HomePage('bg_color', '1')?>; opacity: 0.8;">
+                <div class="page1overlay" style="background:<?=HomePage('bg_color', '1')?>; opacity:<?=HomePage('opasity', '1')?>;">
                     <a class="home-link" href="<?=HomePage('link', '1')?>">
                     <div class="p-5"><?=HomePage('content', '1')?></div> 
                     </a>
@@ -176,7 +174,7 @@
         <!--section-1.2--> 
         <div class="col-12 m-0 p-0">
             <div class="page-content page2" style="background-image:url(assets/mediacenter/<?=HomePage('image', '2')?>);">   
-                <div class="page2overlay " style="background:<?=HomePage('bg_color', '2')?>;opacity: 0.8;">
+                <div class="page2overlay " style="background:<?=HomePage('bg_color', '2')?>;opacity: <?=HomePage('opasity', '2')?>;">
                  <a class="home-link" href="<?=HomePage('link', '2')?>">
                     <div class="p-5" ><?=HomePage('content', '2')?></div> 
                  </a>
@@ -187,7 +185,7 @@
         <!--section-1.3--> 
         <div class="col-12 m-0 p-0">
             <div class="page-content page2" style="background-image:url(assets/mediacenter/<?=HomePage('image', '3')?>);">   
-                <div class="page2overlay" style="background:<?=HomePage('bg_color', '3')?>;opacity: 0.8;"> 
+                <div class="page2overlay" style="background:<?=HomePage('bg_color', '3')?>;opacity: <?=HomePage('opasity', '3')?>;"> 
                  <a class="home-link" href="<?=HomePage('link', '3')?>">
                     <div class="p-5" style="opacity: 1; z-index:999; "><?=HomePage('content', '3')?></div>  
                  </a>                 
@@ -206,7 +204,7 @@
         <!--section-2.1--> 
         <div class="col-12 m-0 p-0">
             <div class="page-content page2" style="background-image:url(assets/mediacenter/<?=HomePage('image', '4')?>);">  
-                <div class="page2overlay" style="background:<?=HomePage('bg_color', '4')?>;opacity: 0.8;">
+                <div class="page2overlay" style="background:<?=HomePage('bg_color', '4')?>;opacity: <?=HomePage('opasity', '4')?>;">
                     <a class="home-link" href="<?=HomePage('link', '4')?>">
                         <div class="p-5" ><?=HomePage('content', '4')?></div> 
                     </a>
@@ -219,7 +217,7 @@
         <!--section-2.2--> 
         <div class="col-12 m-0 p-0">
             <div class="page-content page2" style="background-image:url(assets/mediacenter/<?=HomePage('image', '5')?>);">  
-                <div class="page2overlay" style="background:<?=HomePage('bg_color', '5')?>;opacity: 0.8;">
+                <div class="page2overlay" style="background:<?=HomePage('bg_color', '5')?>;opacity: <?=HomePage('opasity', '5')?>;">
                     <a class="home-link" href="<?=HomePage('link', '5')?>">
                         <div class="p-5" ><?=HomePage('content', '5')?></div> 
                     </a>
@@ -231,7 +229,7 @@
          <!--section-2.3-->        
         <div class="col-12 m-0 p-0" >            
             <div class="page-content page1" style="background-image:url(assets/mediacenter/<?=HomePage('image', '6')?>);">
-                <div class="page1overlay" style="background:<?=HomePage('bg_color', '6')?>; opacity: 0.8;">
+                <div class="page1overlay" style="background:<?=HomePage('bg_color', '6')?>; opacity: <?=HomePage('opasity', '6')?>;">
                     <a class="home-link" href="<?=HomePage('link', '1')?>">
                     <div class="p-5"><?=HomePage('content', '6')?></div> 
                     </a>
@@ -250,7 +248,7 @@
         <!--section-3.1-->         
         <div class="col-12 m-0 p-0" >            
             <div class="page-content page1" style="background-image:url(assets/mediacenter/<?=HomePage('image', '7')?>);">
-                <div class="page1overlay" style="background:<?=HomePage('bg_color', '7')?>; opacity: 0.8;">
+                <div class="page1overlay" style="background:<?=HomePage('bg_color', '7')?>; opacity: <?=HomePage('opasity', '7')?>;">
                     <a class="home-link" href="<?=HomePage('link', '1')?>">
                     <div class="p-5"><?=HomePage('content', '7')?></div> 
                     </a>
@@ -262,7 +260,7 @@
         <a class="home-link" href="<?=HomePage('link', '8')?>">
         <div class="col-12 m-0 p-0">
             <div class="page-content page2" style="background-image:url(assets/mediacenter/<?=HomePage('image', '8')?>);">   
-                <div class="page2overlay" style="background:<?=HomePage('bg_color', '8')?>;opacity: 0.8;">                    
+                <div class="page2overlay" style="background:<?=HomePage('bg_color', '8')?>;opacity: <?=HomePage('opasity', '8')?>;">                    
                     <a class="home-link" href="<?=HomePage('link', '8')?>">
                       <div class="p-5" > <?=HomePage('content', '8')?></div>
                     </a>                    
@@ -274,7 +272,7 @@
         <!--section-3.3--> 
         <div class="col-12 m-0 p-0">
             <div class="page-content page2" style="background-image:url(assets/mediacenter/<?=HomePage('image', '9')?>);">  
-                <div class="page2overlay" style="background:<?=HomePage('bg_color', '9')?>;opacity: 0.8;">
+                <div class="page2overlay" style="background:<?=HomePage('bg_color', '9')?>;opacity: <?=HomePage('opasity', '9')?>;">
                     <div class="home-link" href="<?=HomePage('link', '9')?>">
                         <div class="p-5" ><?=HomePage('content', '9')?></div> 
                     </div>
