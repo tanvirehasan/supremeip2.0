@@ -66,25 +66,125 @@
  		<div class="col-md-9 mt-3">           
         <div class="row">
             <div class="col-md-4 bg-warning">
-                <h1 class="pt-5 mt-5 text-center">What is Lorem Ipsum?</h1>
+                <div class="p-3"><?=html_entity_decode($pageinfo->page_title)?></div>
             </div>
             <div class="col-md-8 bg-light p-0 m-0"> 
                 <div class="notice"> <p class="bg-success p-2 float-end">There are many variations of passages</p> </div>               
-                <p class="p-3 mt-5"> <strong>"</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. <strong>"</strong></p>
+                <div class="p-3 mt-5"><?=html_entity_decode($pageinfo->page_sub_title)?></div>
             </div>
-            <div class="col-12 bg-info mt-3 p-1 text-center text-white"> Trademark | Registration | simply | variations </div>
-
-            <div class="col-md-12  bg-light mt-3 ">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic</p>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic</p>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic</p>
+            <div class="col-12 bg-info mt-3 p-1 text-center text-white">                   
+                <?php                 
+                    $data = SelectData('menu_new',"WHERE menu_perent='$page->menu_perent' AND manu_status!='0' ");
+                    foreach($data as $drow){?>
+                    <li class="nav-item d-flex float-start p-0 ">                
+                        <a class="nav-link nav_menu p-0 ps-1 "  href="pages.php?page=<?=$_GET['page'];?>&child=<?=$drow['manu_url']?>">  <?=$drow['menu_title']?> | </a>
+                    </li>
+                    <?php } ?>        
             </div>
-        </div>
 
- 
-        
+            <div class="col-md-12  bg-light mt-3 "><?=html_entity_decode($pageinfo->page_content)?></div>
 
-        </div>     
+
+
+
+
+            <!-- widget_set -->
+            <div class="col-md-12 p-0 m-0 mb-5">
+                <?php 
+                        $price_data = SelectData('prices', "WHERE price_page_id={$pageinfo->page_id} ORDER BY serial_list ASC");
+                        if ($price_data->num_rows>0) {?>                      
+                            <!-- price table -->
+                            <div class="p-0 mt-4" style="background-color:<?=widget_set('Section_bg',1)?>; padding:<?=widget_set('padding',1)?>px !important; border:<?=widget_set('border',1)?> !important;">
+                                <h3 class="section_title_page ps-2"><i class="fas fa-money-check-alt px-1"></i> <?=$pageinfo->Section_Title_Price?></h3>
+                                <div class="row mx-0">                       
+                                    <table id='priceTable' class="table" >
+                                        <?php while ($price = $price_data->fetch_object()) {?> 
+                                                <tr>
+                                                    <td style="width: 80%;" class="p-3" >
+                                                        <div class='<?=widget_set('ptsize',1)?>' style="font-family:<?=widget_set('ptfont',1)?> !important; color:<?=widget_set('ptcolor',1)?> !important; text-transform:<?=widget_set('ptcase',1)?> !important " ><?=$price->price_title?></div>
+                                                        <p class="<?=widget_set('pdsize',1)?> p-0 m-0" style="font-family:<?=widget_set('pdfont',1)?> !important; color:<?=widget_set('pdcolor',1)?> !important; text-transform:<?=widget_set('pdcase',1)?> !important; margin: 0; padding: 0;" > <?=html_entity_decode($price->Price_Description)?></p>
+                                                    </td>
+                                                    <td><h5 class="<?=widget_set('psize',1)?> p-0 m-0 pt-4" style="font-family:<?=widget_set('pfont',1)?> !important; color:<?=widget_set('pcolor',1)?> !important; text-transform:<?=widget_set('pcase',1)?> !important " ><?=$price->Priceamount?></h5></td>
+                                                </tr>
+                                        <?php } ?>
+                                    </table>   
+                                </div>
+                            </div>
+                        <?php } ?>
+                        <!-- price table end -->  
+
+                        <!-- download fle -->
+                    <?php  $service_file_data = SelectData('page_file', "WHERE page_id={$pageinfo->page_id} ORDER BY serial_list ASC");
+                    if ($service_file_data->num_rows>0) {?>  
+                        <div class="downlod_file p-0 px-md-0 mt-4">
+                            <h3 class="section_title_page"><i class="fas fa-file-download px-1"></i><?=$pageinfo->Section_Title_File?></h3>
+                            <li class=" px-3 my-4 d-flex justify-content-between align-items-start">
+                                <p class="fw-bold m-0 p-0 ">TTLE</p>
+                                <p class="fw-bold m-0 p-0">LAST MODIFIED</p>
+                            </li>
+                        <div class="downlod_file_item">
+                            <ul class="list-group list-group-flush">     
+                            <?php  while ($servicefile = $service_file_data->fetch_object()) {?>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <a href="assets/servicefile/<?=$servicefile->file_name?>" class="text-dark" download><i class="fas fa-file-pdf px-1 text-danger"></i> <?=$servicefile->file_title?></a>
+                                    <span><?=$servicefile->fileuploaddate?></span>
+                                </li>  
+                            <?php } ?>                            
+                            </ul>
+                        </div>
+                    </div>
+                    <?php } ?> 
+                    <!-- download fle end -->
+
+                    <!-- flowchart -->
+                    <?php 
+                    $i=1;
+                    $flowchart_data = SelectData('flowchart', "WHERE page_id={$pageinfo->page_id} ORDER BY serial_list ASC");
+                    if ($flowchart_data->num_rows>0) {?>                
+                        <div class=" p-0 px-md-3 mt-4" style="background-color:<?=widget_set('Section_bg',2)?>; padding:<?=widget_set('padding',2)?>px !important; border:<?=widget_set('border',2)?> !important;" >
+                            <h3 class="section_title_page "><i class="fas fa-chart-line px-1"></i> <?=$pageinfo->Section_Title_Flowchart?></h3>
+                            <div class="">
+                            <?php while ($flowchart = $flowchart_data->fetch_object()) {?>
+                                <!-- stage1 -->
+                                <div class="mb-2 p-3" style="background-color:<?=widget_set('stage_bg',2)?> !important;">
+                                    <div class="<?=widget_set('ptsize',2)?> border-0 border-bottom pb-2" style="font-family:<?=widget_set('ptfont',2)?> !important; color:<?=widget_set('ptcolor',2)?> !important; text-transform:<?=widget_set('ptcase',2)?> !important; width: 120px; "><?=$flowchart->Process_Title?></div>
+                                    <div class='<?=widget_set('psize',2)?>'  style="font-family:<?=widget_set('pfont',2)?> !important; color:<?=widget_set('pcolor',2)?> !important; text-transform:<?=widget_set('pcase',2)?> !important; "><?=$flowchart->Flowchart_Titel; ?></div>
+                                    <div class='<?=widget_set('pdsize',2)?>'  style="font-family:<?=widget_set('pdfont',2)?> !important; color:<?=widget_set('pdcolor',2)?> !important; text-transform:<?=widget_set('pdcase',2)?> !important; margin: 0; padding: 0;"><?=html_entity_decode($flowchart->Flowchart_descripstion)?></div >
+                                </div>
+                            <?php } ?>
+                            </div>
+                        </div>
+                    <?php } ?>
+                    <!-- flowchart end -->
+
+                    <!-- FAQ -->                 
+                        <?php $faq_data = SelectData('faq', "WHERE page_id={$pageinfo->page_id} ORDER BY serial_list ASC");
+
+                            if ($faq_data->num_rows>0) {?>
+                            <div class="faq mt-4 p-0 px-md-0 " style="background-color:<?=widget_set('Section_bg',3)?>; padding:<?=widget_set('padding',3)?>px !important; border:<?=widget_set('border',3)?> !important;">  
+                                <h3 class="section_title_page "><i class="fas fa-question-circle px-1"></i><?=$pageinfo->Section_Title_Faq?></h3> 
+
+                                <div class="accordion accordion-flush" id="accordionFlushExample">
+                                    <?php while ($faq = $faq_data->fetch_object()) {?> 
+                                            <div class="accordion-item">
+                                            <h2 class="accordion-header p-0" id="flush-heading<?=$faq->FAQid?>">
+                                                <button class="accordion-button collapsed <?=widget_set('ptsize',3)?>" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?=$faq->FAQid?>" aria-expanded="false" aria-controls="flush-collapse<?=$faq->FAQid?>"   style="font-family:<?=widget_set('ptfont',3)?> !important; color:<?=widget_set('ptcolor',3)?> !important; text-transform:<?=widget_set('ptcase',3)?> !important;"  ><?=$faq->faq_title?></button>
+                                            </h2>
+                                            <div id="flush-collapse<?=$faq->FAQid?>" class="accordion-collapse collapse" aria-labelledby="flush-heading<?=$faq->FAQid?>" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body fw-normal <?=widget_set('pdsize',3)?>"  style="font-family:<?=widget_set('pdfont',3)?> !important; color:<?=widget_set('pdcolor',3)?> !important; text-transform:<?=widget_set('pdcase',3)?> !important;"  ><?=html_entity_decode($faq->faq_descrippstion)?></div>
+                                            </div>
+                                            </div>
+                                    <?php } ?> 
+                                </div>         
+
+                            </div>
+                        <?php } ?>
+                        <!-- FAQ End-->
+            </div>
+            <!-- widget_set end  -->
+
+        </div>       
+    </div>     
 
     </div><!-- row end  -->
 </main>
