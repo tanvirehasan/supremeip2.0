@@ -42,15 +42,6 @@
   font-family:<?php echo html_entity_decode(header_menu('font_family')); ?>;
 }
 
-.page-content a{ text-decoration:none !important }
-
-.page-content a:hover{
-  color:<?=header_menu('font_color')?> !important;
-  background-color:<?=header_menu('text_bg_hover_color');?>!important;
-  padding:5px;
-
-}
-
 
 nav .accordion-header {
   background-color:none !important;
@@ -68,6 +59,14 @@ nav .accordion-header a{
   padding-left:20px !important;
 }
 
+.page-content a{ text-decoration:none !important }
+
+.page-content a:hover{
+  color:<?=header_menu('hover_color')?> !important;
+  background-color:<?=header_menu('text_bg_hover_color');?>!important;
+  padding:5px;
+
+}
 
 nav .accordion-header a:hover{
   color: <?=header_menu('hover_color');?> !important;
