@@ -46,7 +46,7 @@
 
 .page-content a:hover{
   color:<?=header_menu('font_color')?> !important;
-  background:<?=header_menu('text_bg_hover_color');?>!important;
+  background-color:<?=header_menu('text_bg_hover_color');?>!important;
   padding:5px;
 
 }
@@ -323,10 +323,6 @@ p{ color:<?=text_color_settings('color_code', 'p')?> !important;}
 
 blockquote{ color:<?=text_color_settings('color_code', 'q')?> !important;}
 .Recent_post:hover h5{
-  color:<?=text_color_settings('color_code', 'hover')?>!important;
-}
-
-a:hover, i:hover{
   color:<?=text_color_settings('color_code', 'hover')?>!important;
 }
 
