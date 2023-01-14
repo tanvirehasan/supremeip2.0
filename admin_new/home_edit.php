@@ -9,6 +9,7 @@
         $link     = $_POST['link'];
         $opasity     = $_POST['opasity'];
         $bg_color = $_POST['bg_color'];
+        $img_yes_no = $_POST['img_yes_no'];
 
         if ($_FILES["image"]["name"]!='') {
 
@@ -28,6 +29,7 @@
                     link='$link',
                     bg_color='$bg_color',
                     opasity='$opasity',
+                    img_yes_no='$img_yes_no',
 
                     image='$image' WHERE id='$id'";
 
@@ -63,17 +65,23 @@
         <textarea name="content" id="neweditordeflt" class="form-control mb-3"><?=$row->content?></textarea>
 
         <div class='row my-5'>            
-                <div class="col-4">
-                    <img src="../assets/mediacenter/<?=$row->image?>" style='width:100%;'>
-                    <input type="file" class="form-control" name="image">
+                <div class="col-5">
+                    <img class="mb-2" src="../assets/mediacenter/<?=$row->image?>" style='width:100%;'>
+                    <input type="file" class="" name="image">
                     <input type="hidden" name="imagevalue" value="<?=$row->image?>">
-                    <select name="img_offon" class="form-control">
-                        <option>Image Yes/No</option>
+
+                    <label class="" for="">Image Yes/No</label>
+                    <select name="img_yes_no" class="">
+                        <option value="<?=$row->img_yes_no?>" > <?=($row->img_yes_no==1) ? 'Yes' : 'No' ; ?> </option>
                         <option value="1">Yes</option>
                         <option value="2">No</option>
                     </select>
-                    <input type="color" class="form-control m-0 p-0 " value="<?=$row->bg_color?>" name="bg_color" >
-                    <input type="text" value="<?=$row->opasity?>" name="opasity"  class="form-control" placeholder="Opasity">
+                </div>
+
+                <div class="col-md-4">                 
+                    <input type="color" class="form-control m-0 p-0 border " value="<?=$row->bg_color?>" name="bg_color" style="height:230px ;" >
+                    <label class="" for="">Opacity</label>
+                    <input type="text" value="<?=$row->opasity?>" class="border" name="opasity"  placeholder="Opasity">
                 </div>         
         </div>        
 
