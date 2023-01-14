@@ -61,6 +61,8 @@ nav .accordion-header a{
 
 .page-content a{ text-decoration:none !important }
 
+
+
 .page-content a:hover{
   color:<?=header_menu('hover_color')?> !important;
   background-color:<?=header_menu('text_bg_hover_color');?>!important;

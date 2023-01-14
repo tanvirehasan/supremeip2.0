@@ -114,29 +114,12 @@
 
 
 
-    .page-content a:hover{
-        color: #3090C7!important;
-    }
 
 
-    .page-content a{
-        color: #fff;
-    }
 
-    .readmore{
-        font-family:arial;
-        font-size: 16px;
-        text-decoration: none;
-        color: #fff;
-        text-align: center;
-        text-shadow:none;
-        opacity: 1;
-        font-weight: bold;
-    }
 
-    .readmore:hover{
-        color:yellow;
-    }
+
+
 
       @media only screen and (max-width: 600px) {
       .mobile-margin{
