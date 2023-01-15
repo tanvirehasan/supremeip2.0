@@ -186,8 +186,8 @@
 
         <!--section-2.1--> 
         <div class="col-12 m-0 p-0">
-            <div class="page-content page2" style="background-image:url(assets/mediacenter/<?=(HomePage('img_yes_no', '4')==1) ? HomePage('image', '4') : '' ; ?>;">  
-                <div class="page2overlay" style="background:<?=HomePage('bg_color', '4')?>;opacity: <?=HomePage('opasity', '4')?>;">
+            <div class="page-content page2" style="background-image:url(assets/mediacenter/<?=(HomePage('img_yes_no', '4')==1) ? HomePage('image', '4') : '' ; ?>);">  
+                <div class="page2overlay" style="background:<?=HomePage('bg_color', '4')?>; opacity:<?=HomePage('opasity', '4')?>;">
                     <a class="home-link" href="<?=HomePage('link', '4')?>">
                         <div class="p-5" ><?=HomePage('content', '4')?></div> 
                     </a>
@@ -242,7 +242,7 @@
         <!--section-3.2--> 
         <a class="home-link" href="<?=HomePage('link', '8')?>">
         <div class="col-12 m-0 p-0">
-            <div class="page-content page2" style="background-image:url(assets/mediacenter/<?=(HomePage('img_yes_no', '8')==1) ? HomePage('image', '8') : '' ; ?>;">   
+            <div class="page-content page2" style="background-image:url(assets/mediacenter/<?=(HomePage('img_yes_no', '8')==1) ? HomePage('image', '8') : '' ; ?>);">   
                 <div class="page2overlay" style="background:<?=HomePage('bg_color', '8')?>;opacity: <?=HomePage('opasity', '8')?>;">                    
                     <a class="home-link" href="<?=HomePage('link', '8')?>">
                       <div class="p-5" > <?=HomePage('content', '8')?></div>
