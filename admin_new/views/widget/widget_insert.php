@@ -1,21 +1,15 @@
 
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+
 <?php 
     include "../../inc/db.php";
     include "../../inc/function.php";
 ?>
-  
-    <script src="https://cdn.tiny.cloud/1/4ji99lkzm49svloyysqo9xvmtu03b24c3gvvfby23di6bhfa/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
 
-  <script>
-    tinymce.init({
-        selector: 'textarea',
-        height:400,
-        plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
-        toolbar: 'insertfile blocks fontfamily fontsize forecolor backcolor | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
-    });
-  </script>
-
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
     <div class="container my-3">
        <div class="row">
@@ -30,7 +24,6 @@
 
 
 <?php if (isset($_GET['priceadd'])) {?>
-
 
     <script>
         $(document).ready(function(){
@@ -64,7 +57,7 @@
     <div class="container-fluid my-5">
         <!-- price title -->
         <div class="row">
-            <div class="col-12 col-md-12">
+            <div class="col-12 col-md-6">
                 <label for="categoryname" class=" form-label" style="font-weight:700;">Price Title</label>
                <input type="text" class="form-control mb-4 "  id="price_title" require>
             </div>
@@ -72,7 +65,7 @@
         
            <!-- price icon -->
         <div class="row">
-            <div class="col-12 col-md-12">
+            <div class="col-12 col-md-6">
                 <label for="icom" class=" form-label" style="font-weight:700;">Price</label>
                 <input type="text" class="form-control mb-4 "  id="Priceamount" require>
             </div>
@@ -81,8 +74,8 @@
         <input type="hidden" id="price_page_id" value="<?=$_GET['priceadd']?>">
           
          <!--  post description -->
-        <label for="neweditor" class=" form-label mb-2" style="font-weight:700;">Price Description</label>
-        <textarea id="neweditorffff" type="text" class="form-control mb-5" require></textarea>
+        <label for="ckdeditorpopup" class=" form-label mb-2" style="font-weight:700;">Price Description</label>
+        <textarea id="ckdeditorpopup" type="text" class="form-control mb-5 editors" require></textarea>
         <div id="divd"></div>
        
     </div> 
@@ -99,16 +92,16 @@
     $(document).ready(function(){
         $("#flowchart_save").click(function(){
 
-        var Flowchart_Titel=$("#Flowchart_Titel").val();
-        var page_id=$("#page_id").val();
-        var Flowchart_descripstion=$(".editors").val();
-        var Process_Title=$("#Process_Title").val();
+        var Flowchart_Titel   = $("#Flowchart_Titel").val();
+        var page_id = $("#page_id").val();
+        var Flowchart_descripstion   = $(".editors").val();
+        var Process_Title   = $("#Process_Title").val();
 
             $.ajax({
                 type: 'POST',
                 url: 'controller/widget/widget_insert_ajaxphp.php',
                 data: {                    
-                    Flowchart_Titel:Flowchart_Titel,
+                    Flowchart_Titel: Flowchart_Titel,
                     Process_Title:Process_Title,
                     page_id:page_id,
                     Flowchart_descripstion:Flowchart_descripstion
@@ -126,11 +119,11 @@
     <div class="container-fluid my-5">
 
         <!-- Flowchart title -->  
-        <label for="categoryname" class=" form-label" style="font-weight:700;">Process Title-1</label>
+        <label for="categoryname" class=" form-label" style="font-weight:700;">Process Title</label>
         <input type="text" class="form-control mb-4 "  id="Process_Title" require> 
 
         <!-- Flowchart title -->  
-        <label for="categoryname" class=" form-label" style="font-weight:700;">Flowchart Title-2</label>
+        <label for="categoryname" class=" form-label" style="font-weight:700;">Flowchart Title</label>
         <input type="text" class="form-control mb-4 "  id="Flowchart_Titel" require> 
 
         
@@ -531,14 +524,13 @@
 
 <form method="POST" action="" enctype="multipart/form-data">          
     <div class="container-fluid my-5">
+        <!-- Flowchart title -->  
+        <label for="categoryname" class=" form-label" style="font-weight:700;">Flowchart Title</label>
+        <input type="text" class="form-control mb-4" value="<?=$flowrow->Flowchart_Titel?>"  id="Flowchart_Titel" require> 
 
         <!-- Flowchart title -->  
-        <label for="categoryname" class=" form-label" style="font-weight:700;">Process Title 01</label>
+        <label for="categoryname" class=" form-label" style="font-weight:700;">Process Title</label>
         <input type="text" class="form-control mb-4" value="<?=$flowrow->Process_Title?>" id="Process_Title" require> 
-        
-                <!-- Flowchart title -->  
-        <label for="categoryname" class=" form-label" style="font-weight:700;">Flowchart Title 02</label>
-        <input type="text" class="form-control mb-4" value="<?=$flowrow->Flowchart_Titel?>"  id="Flowchart_Titel" require> 
 
 
          <!--  post description -->
@@ -826,8 +818,9 @@ $redrow = $readdata->fetch_object();?>
 
 
 
-
-
-
-
+<script>
+    $(document).ready(function() {
+        $('.editors').summernote();
+    });
+</script>
 
