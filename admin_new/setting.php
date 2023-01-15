@@ -312,7 +312,10 @@ $row = $data->fetch_object();
                     <th>Title Box BG</th>
                     <th>Sub-title Box BG</th>
                     <th>Content Box BG</th>
-                    <th>Contact Box BG</th>
+                    <th>Contact Box BG</th>                    
+                    <th>Contact color</th>
+                    <th>Sub-menu BG</th>
+                    <th>Sub-menu color</th>
                     <th>Contact Text</th>
                 </tr>
                 <tr>                    
@@ -321,11 +324,15 @@ $row = $data->fetch_object();
                     <td><input type="color" name="page_sub_title_bg"  value="<?=$row->page_sub_title_bg?>" class="form-control border p-0"></td>
                     <td><input type="color" name="page_content_bg"  value="<?=$row->page_content_bg?>" class="form-control border p-0"></td>
                     <td><input type="color" name="page_contact_bg"  value="<?=$row->page_contact_bg?>" class="form-control border p-0"></td>
+                    <td><input type="color" name="page_contact_text_color"  value="<?=$row->page_contact_text_color?>" class="form-control border p-0"></td>
+                    <td><input type="color" name="page_submenu_bg"  value="<?=$row->page_submenu_bg?>" class="form-control border p-0"></td>
+                    <td><input type="color" name="page_submenu_textcolor"  value="<?=$row->page_submenu_textcolor?>" class="form-control border p-0"></td>
                     <td><input type="text" name="page_contact_text"  value="<?=$row->page_contact_text?>" class="form-control border p-0"></td>
+                
                 </tr>
                 
                 <tr>
-                    <td colspan="6" ><div class="text-right"><button type="submit" name="page_bg_color" class="btn btn-primary"> Update</button></div></td>
+                    <td colspan="9" ><div class="text-right"><button type="submit" name="page_bg_color" class="btn btn-primary"> Update</button></div></td>
                 </tr>
                 
 

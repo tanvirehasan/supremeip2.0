@@ -223,6 +223,9 @@ if (isset($_POST['page_bg_color'])) {
     $page_content_bg=$_POST["page_content_bg"];
     $page_contact_bg=$_POST["page_contact_bg"];
     $page_contact_text=$_POST["page_contact_text"];  
+    $page_contact_text_color=$_POST["page_contact_text_color"];  
+    $page_submenu_bg=$_POST["page_submenu_bg"];  
+    $page_submenu_textcolor=$_POST["page_submenu_textcolor"];  
 
     $sql=" UPDATE settings SET 
     
@@ -231,13 +234,12 @@ if (isset($_POST['page_bg_color'])) {
     page_sub_title_bg='$page_sub_title_bg',
     page_content_bg='$page_content_bg',
     page_contact_bg='$page_contact_bg',
-    page_contact_text='$page_contact_text'
+    page_contact_text='$page_contact_text',
+    page_contact_text_color='$page_contact_text_color',
+    page_submenu_bg='$page_submenu_bg',
+    page_submenu_textcolor='$page_submenu_textcolor' 
     
-    
-    
-    
-    
-       ";        
+    ";        
     mysqli_query($conn, $sql);   
     
 }

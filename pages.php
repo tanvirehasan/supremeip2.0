@@ -69,15 +69,15 @@
                 <div class="p-3"><?=html_entity_decode($pageinfo->page_title)?></div>
             </div>
             <div class="col-md-8 p-0 m-0" style="background:<?=settings('page_sub_title_bg')?>" > 
-                <div class="notice"> <div class="p-2 float-end" style="background:<?=settings('page_contact_bg')?>" ><?=settings('page_contact_text')?></div> </div>               
+                <div class="notice"> <div class="p-2 float-end" style="background:<?=settings('page_contact_bg')?>; color:<?=settings('page_contact_text_color')?>;" ><?=settings('page_contact_text')?></div> </div>               
                 <div class="p-3 mt-5"><?=html_entity_decode($pageinfo->page_sub_title)?></div>
             </div>
-            <div class="col-12 mt-3 p-1" style="background:<?=settings('page_title_bg')?>" >                   
+            <div class="col-12 mt-3 p-1" style="background:<?=settings('page_submenu_bg')?>" >                   
                 <?php                 
                     $data = SelectData('menu_new',"WHERE menu_perent='$page->menu_perent' AND manu_status!='0' ");
                     foreach($data as $drow){?>
                     <li class="nav-item d-flex float-start p-0 ">                
-                        <a class="nav-link nav_menu p-0 ps-1 text-white "  href="pages.php?page=<?=$_GET['page'];?>&child=<?=$drow['manu_url']?>">  <?=$drow['menu_title']?> | </a>
+                        <a class="nav-link nav_menu p-0 ps-1" style="color:<?=settings('page_submenu_textcolor')?>"  href="pages.php?page=<?=$_GET['page'];?>&child=<?=$drow['manu_url']?>">  <?=$drow['menu_title']?> | </a>
                     </li>
                     <?php } ?>        
             </div>
