@@ -1,9 +1,19 @@
+
 <?php 
     include "../../inc/db.php";
     include "../../inc/function.php";
 ?>
 
-<script src="https://cdn.tiny.cloud/1/4ji99lkzm49svloyysqo9xvmtu03b24c3gvvfby23di6bhfa/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/4ji99lkzm49svloyysqo9xvmtu03b24c3gvvfby23di6bhfa/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+  <script>
+    tinymce.init({
+        selector: 'textarea',
+        height:400,
+        plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+        toolbar: 'insertfile blocks fontfamily fontsize forecolor backcolor | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+    });
+  </script>
 
 
     <div class="container my-3">
@@ -19,6 +29,7 @@
 
 
 <?php if (isset($_GET['priceadd'])) {?>
+
 
     <script>
         $(document).ready(function(){
@@ -52,7 +63,7 @@
     <div class="container-fluid my-5">
         <!-- price title -->
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-12">
                 <label for="categoryname" class=" form-label" style="font-weight:700;">Price Title</label>
                <input type="text" class="form-control mb-4 "  id="price_title" require>
             </div>
@@ -60,7 +71,7 @@
         
            <!-- price icon -->
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-12">
                 <label for="icom" class=" form-label" style="font-weight:700;">Price</label>
                 <input type="text" class="form-control mb-4 "  id="Priceamount" require>
             </div>
@@ -70,7 +81,7 @@
           
          <!--  post description -->
         <label for="neweditor" class=" form-label mb-2" style="font-weight:700;">Price Description</label>
-        <textarea id="neweditor" type="text" class="form-control mb-5" require></textarea>
+        <textarea id="neweditorffff" type="text" class="form-control mb-5" require></textarea>
         <div id="divd"></div>
        
     </div> 
@@ -814,25 +825,8 @@ $redrow = $readdata->fetch_object();?>
 
 
 
-    <script src="../../assets/libs/popper/popper.js"></script>
-    <script src="../../assets/js/bootstrap.js"></script>
 
 
-    <!-- Libs -->
-    <script src="../../assets/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-    <script src="../../assets/libs/eve/eve.js"></script>
-    <script src="../../assets/libs/flot/flot.js"></script>
-    <script src="../../assets/libs/flot/curvedLines.js"></script>
-    <script src="../../assets/libs/chart-am4/core.js"></script>
-    <script src="../../assets/libs/chart-am4/charts.js"></script>
-    <script src="../../assets/libs/chart-am4/animated.js"></script>
 
 
-  <script>
-    tinymce.init({
-        selector: 'textarea#neweditor',
-        height:400,
-        plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
-        toolbar: 'insertfile blocks fontfamily fontsize forecolor backcolor | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
-    });
-  </script>
+
