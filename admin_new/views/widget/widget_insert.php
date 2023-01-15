@@ -3,8 +3,9 @@
     include "../../inc/db.php";
     include "../../inc/function.php";
 ?>
-
+  
     <script src="https://cdn.tiny.cloud/1/4ji99lkzm49svloyysqo9xvmtu03b24c3gvvfby23di6bhfa/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
 
   <script>
     tinymce.init({
