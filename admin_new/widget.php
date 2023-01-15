@@ -10,11 +10,6 @@ $row = $data->fetch_object();
 
 <div class="container-fluid flex-grow-1 container-p-y"> 
 
-<?php 
-
-if(isset($_GET['widget']) && $_GET['widget']=='price'){
-
-?>
     
     <div class="row">
         <div class="col-12 menubtn"><h3 class="bg-white p-3 text-uppercase text-primary"><i class="fas fa-cog"></i> Price</h3></div>
@@ -26,19 +21,18 @@ if(isset($_GET['widget']) && $_GET['widget']=='price'){
                     
                     <form method="POST" action="" enctype="multipart/form-data">
                         
-                            <table class="mb-3" style="width: 100%;">
+                            <table class="table mb-3">
                                 <tr>
                                     <td>Price Title:</td>
                                     <td> Font Size:
-                                        <select name='ptsize'>
-                                            
+                                        <select name='ptsize' class="">                                            
                                             <option value="<?=widget_set('ptsize',1)?>"><?=widget_set('ptsize',1)?></option>
                                             <option value="h1">H1</option>
                                             <option value="h2">H2</option>
                                             <option value="h3">H3</option>
                                             <option value="h4">H4</option>
                                             <option value="h5">H5</option>
-                                            <option value="h6">H6</option>
+                                            <option value="h6">H6</option>                                         
                                         </select> 
                                     </td>
                                     <td>Font
@@ -57,12 +51,10 @@ if(isset($_GET['widget']) && $_GET['widget']=='price'){
                                         </select>
                                     </td>
                                     
-                                    <td>Text Color:
-                                        <input type="color" value="<?=widget_set('ptcolor',1);?>" style='height:25px; border:none;  padding:0;marin:0;' >
-                                        <select name="ptcolor" >
-                                            <option value="<?=widget_set('ptcolor',1);?>" ><?=color_name(widget_set('ptcolor',1))?></option>
-                                            <?php select_color(); ?>
-                                        </select>
+                                    <td>Text Color: 
+                                        <input type="color" name="ptcolor" value="<?=widget_set('ptcolor',1);?>" style='border:none;  padding:0;marin:0;' >
+                                        
+                                        
                                     </td>
                                 </tr>
                                 
@@ -94,15 +86,8 @@ if(isset($_GET['widget']) && $_GET['widget']=='price'){
                                             <option value="capitalize">capitalize</option>
                                             <option value="none">none</option>
                                         </select>
-                                    </td>
-                                    
-                                    <td>Text Color:
-                                        <input type="color" value="<?=widget_set('pcolor',1);?>" style='height:25px; border:none;  padding:0;marin:0;' >
-                                        <select name="pcolor" >
-                                            <option value="<?=widget_set('pcolor',1);?>" ><?=color_name(widget_set('pcolor',1))?></option>
-                                            <?php select_color(); ?>
-                                        </select>
-                                    </td>
+                                    </td>                                    
+                                    <td>Text Color:<input type="color" name="pcolor" value="<?=widget_set('pcolor',1);?>" style='padding:0;marin:0;' ></td>
                                 </tr>
                                 
                                 <!--Price Description-->
@@ -138,11 +123,7 @@ if(isset($_GET['widget']) && $_GET['widget']=='price'){
                                     </td>
                                     
                                     <td>Text Color:
-                                        <input type="color" value="<?=widget_set('pdcolor',1);?>" style='height:25px; border:none;  padding:0;marin:0;' >
-                                        <select name="pdcolor" >
-                                            <option value="<?=widget_set('pdcolor',1);?>" ><?=color_name(widget_set('pdcolor',1))?></option>
-                                            <?php select_color(); ?>
-                                        </select>
+                                        <input type="color" name="pdcolor" class="" value="<?=widget_set('pdcolor',1);?>" style='border:none; padding:0; marin:0;' > 
                                     </td>
                                 </tr>
                                 
@@ -151,13 +132,10 @@ if(isset($_GET['widget']) && $_GET['widget']=='price'){
                                 
                                 <!--Section-->
                                 <tr>
-                                    <td>Section BG:
-                                        <input type="color" value="<?=widget_set('Section_bg',1);?>" style='height:25px; border:none;  padding:0;marin:0;' >
-                                        <select name="Section_bg" >
-                                            <option value="<?=widget_set('Section_bg',1);?>" ><?=color_name(widget_set('Section_bg',1))?></option>
-                                            <?php select_color(); ?>
-                                        </select>
+                                    <td>Section BG: 
+                                        <input type="color" name="Section_bg" class="" value="<?=widget_set('Section_bg',1);?>" style='border:none; padding:0; marin:0;' > 
                                     </td>
+
                                     
                                     <td>Border
                                         <input type="text"  name="border" value="<?=widget_set('border',1);?>" >
@@ -168,19 +146,13 @@ if(isset($_GET['widget']) && $_GET['widget']=='price'){
                                     </td>
                                     
                                       <td>odd 
-                                        <input type="color" value="<?=widget_set('odd',1);?>" style='height:25px; border:none;  padding:0;marin:0;' >
-                                        <select name="odd" >
-                                            <option value="<?=widget_set('odd',1);?>" ><?=color_name(widget_set('odd',1))?></option>
-                                            <?php select_color(); ?>
-                                        </select>
+                                        <input type="color" name="odd"  value="<?=widget_set('odd',1);?>" style='border:none;  padding:0;marin:0;' >
+                                        
                                     </td>
                                     
                                     <td>even 
-                                        <input type="color" value="<?=widget_set('even',1);?>" style='height:25px; border:none;  padding:0;marin:0;' >
-                                        <select name="even" >
-                                            <option value="<?=widget_set('even',1);?>" ><?=color_name(widget_set('even',1))?></option>
-                                            <?php select_color(); ?>
-                                        </select>
+                                        <input name="even"  type="color" value="<?=widget_set('even',1);?>" style=' border:none;  padding:0;marin:0;' >
+                                        
                                     </td>
                                     
                                     
@@ -198,20 +170,10 @@ if(isset($_GET['widget']) && $_GET['widget']=='price'){
             
 </div>
 <!-- price end  -->
-<?php } ?>
 
 
 
 
-
-
-
-<!-- Flowchart Title  -->
-<?php 
-
-if(isset($_GET['widget']) && $_GET['widget']=='flowchart'){
-
-?>
     
     <div class="row">
         <div class="col-12 menubtn"><h3 class="bg-white p-3 text-uppercase text-primary"><i class="fas fa-cog"></i> Flowchart</h3></div>
@@ -223,7 +185,7 @@ if(isset($_GET['widget']) && $_GET['widget']=='flowchart'){
                     
                     <form method="POST" action="" enctype="multipart/form-data">
                         
-                            <table class="mb-3" style="width: 100%;">
+                            <table class="mb-3 table " >
                                 <tr>
                                     <td>Process Title:</td>
                                     <td> Font Size:
@@ -254,11 +216,8 @@ if(isset($_GET['widget']) && $_GET['widget']=='flowchart'){
                                     </td>
                                     
                                     <td>Text Color:
-                                        <input type="color" value="<?=widget_set('ptcolor',2);?>" style='height:25px; border:none;  padding:0;marin:0;' >
-                                        <select name="ptcolor" >
-                                            <option value="<?=widget_set('ptcolor',2);?>" ><?=color_name(widget_set('ptcolor',2))?></option>
-                                            <?php select_color(); ?>
-                                        </select>
+                                        <input type="color" name="ptcolor" value="<?=widget_set('ptcolor',2);?>" style='height:25px; border:none;  padding:0;marin:0;' >
+                                        
                                     </td>
                                 </tr>
                                 
@@ -293,11 +252,8 @@ if(isset($_GET['widget']) && $_GET['widget']=='flowchart'){
                                     </td>
                                     
                                     <td>Text Color:
-                                        <input type="color" value="<?=widget_set('pcolor',2);?>" style='height:25px; border:none;  padding:0;marin:0;' >
-                                        <select name="pcolor" >
-                                            <option value="<?=widget_set('pcolor',2);?>" ><?=color_name(widget_set('pcolor',2))?></option>
-                                            <?php select_color(); ?>
-                                        </select>
+                                        <input type="color" name="pcolor" value="<?=widget_set('pcolor',2);?>" style='height:25px; border:none;  padding:0;marin:0;' >
+                                        
                                     </td>
                                 </tr>
                                 
@@ -334,30 +290,21 @@ if(isset($_GET['widget']) && $_GET['widget']=='flowchart'){
                                     </td>
                                     
                                     <td>Text Color:
-                                        <input type="color" value="<?=widget_set('pdcolor',2);?>" style='height:25px; border:none;  padding:0;marin:0;' >
-                                        <select name="pdcolor" >
-                                            <option value="<?=widget_set('pdcolor',2);?>" ><?=color_name(widget_set('pdcolor',2))?></option>
-                                            <?php select_color(); ?>
-                                        </select>
+                                        <input type="color" name="pdcolor"  value="<?=widget_set('pdcolor',2);?>" style='height:25px; border:none;  padding:0;marin:0;' >
+                                        
                                     </td>
                                 </tr>
                                 
                                  <!--Section-->
                                 <tr>
                                     <td>Section BG:
-                                        <input type="color" value="<?=widget_set('Section_bg',2);?>" style='height:25px; border:none;  padding:0;marin:0;' >
-                                        <select name="Section_bg" >
-                                            <option value="<?=widget_set('Section_bg',2);?>" ><?=color_name(widget_set('Section_bg',2))?></option>
-                                            <?php select_color(); ?>
-                                        </select>
+                                        <input type="color" name="Section_bg" value="<?=widget_set('Section_bg',2);?>" style='height:25px; border:none;  padding:0;marin:0;' >
+                                        
                                     </td>
                                     
                                     <td>stage BG:
-                                        <input type="color" value="<?=widget_set('stage_bg',2);?>" style='height:25px; border:none;  padding:0;marin:0;' >
-                                        <select name="stage_bg" >
-                                            <option value="<?=widget_set('stage_bg',2);?>" ><?=color_name(widget_set('stage_bg',2))?></option>
-                                            <?php select_color(); ?>
-                                        </select>
+                                        <input type="color" name="stage_bg" value="<?=widget_set('stage_bg',2);?>" style='height:25px; border:none;  padding:0;marin:0;' >
+                                        
                                     </td>
                                     
                                     <td>stage padding:
@@ -387,19 +334,9 @@ if(isset($_GET['widget']) && $_GET['widget']=='flowchart'){
             
 </div>
 <!-- Flowchart end  -->
-<?php } ?>
 
 
 
-
-
-
-<!-- FAQ Title  -->
-<?php 
-
-if(isset($_GET['widget']) && $_GET['widget']=='faq'){
-
-?>
     
     <div class="row">
         <div class="col-12 menubtn"><h3 class="bg-white p-3 text-uppercase text-primary"><i class="fas fa-cog"></i> FAQ</h3></div>
@@ -411,7 +348,7 @@ if(isset($_GET['widget']) && $_GET['widget']=='faq'){
                     
                     <form method="POST" action="" enctype="multipart/form-data">
                         
-                            <table class="mb-3" style="width: 100%;">
+                            <table class="mb-3 table ">
                                 <tr>
                                     <td>FAQ Title:</td>
                                     <td> Font Size:
@@ -442,11 +379,8 @@ if(isset($_GET['widget']) && $_GET['widget']=='faq'){
                                     </td>
                                     
                                     <td>Text Color:
-                                        <input type="color" value="<?=widget_set('ptcolor',3);?>" style='height:25px; border:none;  padding:0;marin:0;' >
-                                        <select name="ptcolor" >
-                                            <option value="<?=widget_set('ptcolor',3);?>" ><?=color_name(widget_set('ptcolor',3))?></option>
-                                            <?php select_color(); ?>
-                                        </select>
+                                        <input type="color" name="ptcolor" value="<?=widget_set('ptcolor',3);?>" style='height:25px; border:none;  padding:0;marin:0;' >
+                                        
                                     </td>
                                 </tr>
                                 
@@ -489,22 +423,16 @@ if(isset($_GET['widget']) && $_GET['widget']=='faq'){
                                     </td>
                                     
                                     <td>Text Color:
-                                        <input type="color" value="<?=widget_set('pdcolor',3);?>" style='height:25px; border:none;  padding:0;marin:0;' >
-                                        <select name="pdcolor" >
-                                            <option value="<?=widget_set('pdcolor',3);?>" ><?=color_name(widget_set('pdcolor',3))?></option>
-                                            <?php select_color(); ?>
-                                        </select>
+                                        <input type="color"  name="pdcolor" value="<?=widget_set('pdcolor',3);?>" style='height:25px; border:none;  padding:0;marin:0;' >
+                                        
                                     </td>
                                 </tr>
                                 
                                 <!--Section-->
                                 <tr>
                                     <td>Section BG:
-                                        <input type="color" value="<?=widget_set('Section_bg',3);?>" style='height:25px; border:none;  padding:0;marin:0;' >
-                                        <select name="Section_bg" >
-                                            <option value="<?=widget_set('Section_bg',3);?>" ><?=color_name(widget_set('Section_bg',3))?></option>
-                                            <?php select_color(); ?>
-                                        </select>
+                                        <input name="Section_bg" type="color" value="<?=widget_set('Section_bg',3);?>" style='border:none;  padding:0;marin:0;' >
+                                        
                                     </td>
                                     
                                     <td>Border
@@ -531,18 +459,6 @@ if(isset($_GET['widget']) && $_GET['widget']=='faq'){
             
 </div>
 <!-- menu setting end  -->
-<?php } ?>
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -24,15 +24,12 @@ if (isset($_POST['price_design'])) {
         `odd`='{$_POST['odd']}',
         `even`='{$_POST['even']}',
         `stage_bg`='{$_POST['stage_bg']}',
-        `stage_bg_padding`='{$_POST['stage_bg_padding']}'
-        
-        
-        
+        `stage_bg_padding`='{$_POST['stage_bg_padding']}'            
         
         where wsid='{$_POST['wsid']}'
     ";
   if (mysqli_query($conn, $update)==TRUE) {
-        $messerror =  "Success!";
+        // $messerror =  "Success!";
   }
 }
 

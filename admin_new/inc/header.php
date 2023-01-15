@@ -112,27 +112,17 @@
 
                     <!--  page-->
                     <li class="sidenav-item">
-                        <a href="pages.php" class="sidenav-link ">
-                            <i class="sidenav-icon fas fa-copy"></i>
-                            <div>Pages</div>
-                        </a>
-                    </li> 
-
-                    <!-- Setting-->
-                    <li class="sidenav-item">
                         <a href="javascript:" class="sidenav-link sidenav-toggle">
                             <i class="sidenav-icon fas fa-cog"></i>
-                            <div>Widget</div>                            
+                            <div>Pages</div>                            
                         </a>
                         <ul class="sidenav-menu">
-                            <li class="sidenav-item"><a href="widget.php?widget=price" class="sidenav-link"><div>Price</div></a></li>	
-                            <li class="sidenav-item"><a href="widget.php?widget=flowchart" class="sidenav-link"><div>Flowchart</div></a></li>
-                            <li class="sidenav-item"><a href="widget.php?widget=faq" class="sidenav-link"><div>FAQ</div></a></li>
-                                        
+                            <li class="sidenav-item"><a href="pages.php" class="sidenav-link"><div>Pages</div></a></li> 
+                            <li class="sidenav-item"><a href="setting.php?setting=Page" class="sidenav-link"><div>Pages Setting</div></a></li>
+                            <li class="sidenav-item"><a href="widget.php" class="sidenav-link"><div>widget Setting</div></a></li>	                                
                         </ul>
                     </li>
-
-
+                    
                     <!--  Blog & newws-->
                     <!-- <li class="sidenav-item">
                         <a href="javascript:" class="sidenav-link sidenav-toggle">
