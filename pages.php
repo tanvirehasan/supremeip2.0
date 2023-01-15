@@ -62,27 +62,27 @@
 
 <!-- main content -->
  <main class="col-md-10 ms-sm-auto col-lg-10  m-0 p-0">
- 	<div class="row mx-0 p-0 m-0 d-flex justify-content-center" style="background:<?=sub_menu('background_color')?>">
+ 	<div class="row mx-0 p-0 m-0 d-flex justify-content-center" style="background:<?=settings('Center_bg')?>">
  		<div class="col-md-9 mt-3">           
         <div class="row">
-            <div class="col-md-4 bg-warning">
+            <div class="col-md-4" style="background:<?=settings('page_title_bg')?>" >
                 <div class="p-3"><?=html_entity_decode($pageinfo->page_title)?></div>
             </div>
-            <div class="col-md-8 bg-light p-0 m-0"> 
-                <div class="notice"> <p class="bg-success p-2 float-end">There are many variations of passages</p> </div>               
+            <div class="col-md-8 p-0 m-0" style="background:<?=settings('page_sub_title_bg')?>" > 
+                <div class="notice"> <div class="p-2 float-end" style="background:<?=settings('page_contact_bg')?>" ><?=settings('page_contact_text')?></div> </div>               
                 <div class="p-3 mt-5"><?=html_entity_decode($pageinfo->page_sub_title)?></div>
             </div>
-            <div class="col-12 bg-info mt-3 p-1 text-center text-white">                   
+            <div class="col-12 mt-3 p-1" style="background:<?=settings('page_title_bg')?>" >                   
                 <?php                 
                     $data = SelectData('menu_new',"WHERE menu_perent='$page->menu_perent' AND manu_status!='0' ");
                     foreach($data as $drow){?>
                     <li class="nav-item d-flex float-start p-0 ">                
-                        <a class="nav-link nav_menu p-0 ps-1 "  href="pages.php?page=<?=$_GET['page'];?>&child=<?=$drow['manu_url']?>">  <?=$drow['menu_title']?> | </a>
+                        <a class="nav-link nav_menu p-0 ps-1 text-white "  href="pages.php?page=<?=$_GET['page'];?>&child=<?=$drow['manu_url']?>">  <?=$drow['menu_title']?> | </a>
                     </li>
                     <?php } ?>        
             </div>
 
-            <div class="col-md-12  bg-light mt-3 "><?=html_entity_decode($pageinfo->page_content)?></div>
+            <div class="col-md-12 mt-3 p-3" style="background:<?=settings('page_content_bg')?>" ><?=html_entity_decode($pageinfo->page_content)?></div>
 
 
 

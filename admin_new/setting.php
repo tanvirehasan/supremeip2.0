@@ -301,28 +301,42 @@ $row = $data->fetch_object();
 <div class="row">
     <div class="col-12 pagebtn"><h3 class="bg-white p-3 text-uppercase text-primary"><i class="fas fa-cog"></i> Page Setting</h3></div>
     
-    <div class="col-md-4 page">
+    <div class="col-md-12 page">
         <!-- default_img -->
             <div class="card p-3 bg" >
-                <form method="POST" action="" enctype="multipart/form-data">
-                    <div class="row">
+                <table class="table" >
+                <form method="POST" action="" enctype="multipart/form-data">  
+                
+                <tr>
+                    <th>Page BG</th>
+                    <th>Title Box BG</th>
+                    <th>Sub-title Box BG</th>
+                    <th>Content Box BG</th>
+                    <th>Contact Box BG</th>
+                    <th>Contact Text</th>
+                </tr>
+                <tr>                    
+                    <td><input type="color" name="Center_bg"  value="<?=$row->Center_bg?>" class="form-control border p-0"></td>
+                    <td><input type="color" name="page_title_bg"  value="<?=$row->page_title_bg?>" class="form-control border p-0"></td>
+                    <td><input type="color" name="page_sub_title_bg"  value="<?=$row->page_sub_title_bg?>" class="form-control border p-0"></td>
+                    <td><input type="color" name="page_content_bg"  value="<?=$row->page_content_bg?>" class="form-control border p-0"></td>
+                    <td><input type="color" name="page_contact_bg"  value="<?=$row->page_contact_bg?>" class="form-control border p-0"></td>
+                    <td><input type="text" name="page_contact_text"  value="<?=$row->page_contact_text?>" class="form-control border p-0"></td>
+                </tr>
+                
+                <tr>
+                    <td colspan="6" ><div class="text-right"><button type="submit" name="page_bg_color" class="btn btn-primary"> Update</button></div></td>
+                </tr>
+                
 
-                  
-                    <div class="col-md-12">  
-                        <label class=" form-label " style="font-weight:700;">Center/Content</label> 
-                        <input type="color" name="Center_bg"  value="<?=$row->Center_bg?>" class="form-control" style="height: 80px;">
-                    </div>
-                 
-                    </div>
-                    <div class=" m-0 my-3">
-                        <button type="submit" name="page_bg_color" class="btn btn-primary"> Update</button>
-                    </div> 
+                     
                 </form> 
             </div> 
+            </table>
          </div>
 
 
-        <div class="col-md-4 page" >
+        <div class="col-md-12 page" >
             <div class="card p-3">
                 <form method="POST" action="" enctype="multipart/form-data">
                     <label for="categoryname" class="h5 w-100" style="font-weight:700;">Section Title Design </label>
@@ -359,55 +373,6 @@ $row = $data->fetch_object();
             </div> 
         </div>
 
-            <div class="col-md-4 page" >
-                <div class="card p-3">
-                    <form method="POST" action="" enctype="multipart/form-data">
-                        <label for="categoryname" class="h5 w-100" style="font-weight:700;">Heading Text</label>
-                            <table class="mb-3" style="width: 100%;">
-                            </table>
-                            <table class="mb-3" style="width: 100%;">
-                                <tr>
-                                    <td>font size:</td>
-                                    <td><input type="text" name="page_header_font_size" class="form-control" min="1" max="100" value="<?=settings('page_header_font_size');?>" id="font_size_submenu"></td>
-
-                                    <td  style="font-family:<?=settings('page_header_font_famaily');?>;">Font:</td>
-                                    <td>
-                                        <select name="page_header_font_famaily" class="form-control">
-                                            <option value="<?=settings('page_header_font_famaily');?>"><?=settings('page_header_font_famaily');?></option>
-                                            <?=font_select()?>
-                                        </select>
-                                    </td>
-                                    <td> | </td>
-                                    <td  style="text-transform:<?=settings('page_header_font_lettercash');?>;">Letter case:</td>
-                                    <td>
-                                        <select name="page_header_font_lettercash" class="form-control" >
-                                            <option value="<?=settings('page_header_font_lettercash');?>">Select</option>
-                                            <option value="uppercase">uppercase</option>
-                                            <option value="lowercase">lowercase</option>
-                                            <option value="capitalize">capitalize</option>                                            
-                                        </select>
-                                    </td>
-                                </tr>
-                            </table>                   
-                            <table style="width: 100%;">
-                                <tr>
-                                    <td>Text Color:
-                                        <input type="color" name="page_header_font_color" value="<?=settings('page_header_font_color');?>" class="form-control" style='height: 50px; border:none; padding:0'>
-                                    </td>
-
-                                    <td>Icon Color:
-                                        <input type="color" name="page_header_icon_color" value="<?=settings('page_header_icon_color');?>" class="form-control" style='height: 50px; border:none; padding:0'>
-                                    </td>
-                                </tr>
-                            </table>
-                            <div class=" m-0 my-3"><button type="submit" name="pageheader_update" class="btn btn-primary">Update</button></div> 
-                    </form> 
-                </div> 
-            </div>
-
-            <div class="col-md-4 page" >
-                 
-        </div>
 </div>
 <?php } ?>
 

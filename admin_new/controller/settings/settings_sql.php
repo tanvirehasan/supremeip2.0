@@ -218,7 +218,26 @@ if (isset($_POST['sub_menu_update'])) {
 if (isset($_POST['page_bg_color'])) {
     
     $Center_bg=$_POST["Center_bg"];
-    $sql=" UPDATE settings SET Center_bg='$Center_bg'";        
+    $page_title_bg=$_POST["page_title_bg"];
+    $page_sub_title_bg=$_POST["page_sub_title_bg"];
+    $page_content_bg=$_POST["page_content_bg"];
+    $page_contact_bg=$_POST["page_contact_bg"];
+    $page_contact_text=$_POST["page_contact_text"];  
+
+    $sql=" UPDATE settings SET 
+    
+    Center_bg='$Center_bg',
+    page_title_bg='$page_title_bg',
+    page_sub_title_bg='$page_sub_title_bg',
+    page_content_bg='$page_content_bg',
+    page_contact_bg='$page_contact_bg',
+    page_contact_text='$page_contact_text'
+    
+    
+    
+    
+    
+       ";        
     mysqli_query($conn, $sql);   
     
 }
