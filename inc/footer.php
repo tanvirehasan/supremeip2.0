@@ -51,53 +51,7 @@ var height = 0;
   }
 </script>
 
-
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/62f9e5d854f06e12d88ea7bd/1gag2jltk';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-
-
-<!-- Messenger Chat plugin Code -->
-    <!-- <div id="fb-root" class='d-none d-md-block' ></div> -->
-
-<!--  Your Chat plugin code -->
-    <!-- <div id="fb-customer-chat" class="fb-customerchat">
-    </div>  -->
-
-<!--     <script>
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "1148465988562538");
-      chatbox.setAttribute("attribution", "biz_inbox");
-    </script> -->
-
-    <!-- Your SDK code -->
-  <!--   <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v13.0'
-        });
-      };
-
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>  -->
-   
+  
 
   </body>
 </html>

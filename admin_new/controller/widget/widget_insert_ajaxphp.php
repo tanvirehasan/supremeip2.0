@@ -1,9 +1,6 @@
 <?php 
 
-    include "../../inc/db.php";
-    include "../../inc/function.php";
-
-    if (isset($_POST['price_title'])) {
+    if (isset($_POST['price_add'])) {
 
         $price_title=$_POST['price_title'];
         $Priceamount=$_POST['Priceamount'];    
@@ -13,8 +10,8 @@
         $insert="INSERT INTO `prices`( `price_title`, `Priceamount`, `price_page_id`, `Price_Description`, `datetimet` ) VALUES( '$price_title', '$Priceamount', '$price_page_id', '$description', NOW() )";
 
         if ($conn->query($insert)) {
-            echo "success";
-            }else{echo "sorry";}
+            $err_mess= "Success";
+            }else{echo $err_mess="sorry";}
     }
 
 
@@ -150,17 +147,17 @@
 
 // --------------- Edit/Update -----------------
 
-    if (isset($_POST['price_id'])) {
+    if (isset($_POST['price_update'])) {
 
-        $price_title=$_POST['price_title_edit'];
+        $price_title=$_POST['price_title'];
         $Priceamount=$_POST['Priceamount'];    
         $price_id=$_POST['price_id'];
         $description=htmlspecialchars($_POST['description']);
 
         $update="UPDATE `prices` SET `price_title`='$price_title', `Priceamount`='$Priceamount', `Price_Description`='$description' WHERE `priceid`='$price_id'" ;
         if ($conn->query($update)) {
-            echo "success";
-            }else{echo "sorry";}
+            $err_mess = "success";
+            }else{echo $err_mess = "sorry";}
     }
 
 

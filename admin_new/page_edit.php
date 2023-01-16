@@ -118,10 +118,10 @@
 
 			 <div class="Widget mt-5">
 		 		<h5 class=""><i class="fas fa-clipboard-list"></i> Widget</h5>
-			 	<a class="btn btn-dark text-white m-1" onclick="widget('views/widget/widget_insert.php?priceadd=<?=$row->page_id?>&title=Price')" >+ Price</a>
-			 	<a class="btn btn-dark text-white m-1" onclick="widget('views/widget/widget_insert.php?flowchartadd=<?=$row->page_id?>&title=Flowchart')" >+ Flowchart</a>	 	
-			 	<a class="btn btn-dark text-white m-1" onclick="widget('views/widget/widget_insert.php?faqadd=<?=$row->page_id?>&title=FAQ')">+ FAQ List</a>
-                <a class="btn btn-dark text-white m-1" onclick="widget('views/widget/widget_insert.php?fileadd=<?=$row->page_id?>&title=File')">+ File List</a>
+			 	<a class="btn btn-dark text-white m-1" href="widget_crud.php?priceadd=<?=$row->page_id?>" target="NULL" >+ Price</a>
+			 	<a class="btn btn-dark text-white m-1" onclick="widget('widget_crud.php?flowchartadd=<?=$row->page_id?>&title=Flowchart')" >+ Flowchart</a>	 	
+			 	<a class="btn btn-dark text-white m-1" onclick="widget('widget_crud.php?faqadd=<?=$row->page_id?>&title=FAQ')">+ FAQ List</a>
+                <a class="btn btn-dark text-white m-1" onclick="widget('widget_crud.php?fileadd=<?=$row->page_id?>&title=File')">+ File List</a>
 			 </div>
 
 		</div>

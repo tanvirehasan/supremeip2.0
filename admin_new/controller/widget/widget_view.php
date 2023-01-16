@@ -39,7 +39,7 @@
                             <td><?=$i++?>. </td>
                             <td><?=$pricerow->price_title?></td>
                             <td><div class="ml-5"><?=$pricerow->Priceamount?></div></td>                                     
-                            <td><a class="btn ml-5 m-0 p-0 text-success" onclick="widget('views/widget/widget_insert.php?priceedit=<?=$pricerow->priceid?>&title=Price')"><i class="fas fa-edit"></i></a>
+                            <td><a class="btn ml-5 m-0 p-0 text-success" href="widget_crud.php?priceid=<?=$pricerow->priceid?>" target="NULL" ><i class="fas fa-edit"></i></a>
                                 <a onclick="urlpass('controller/widget/widget_view.php?pricedelete=<?=$pricerow->priceid?>')" class="btn m-0  text-danger"><i class="fas fa-trash-alt"></i></a></td>
                         </tr> 
                         <?php } ?>
