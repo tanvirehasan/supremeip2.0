@@ -64,7 +64,7 @@
               foreach($sdata as $srow){?>
                     <div class="accordion-item bg-transparent">
                       <div class="accordion-header p-0" id="homebtn">                              
-                          <a class="nav-link" href="pages.php?page=<?=$srow['menu_title']?>&child=<?=$srow['manu_url']?>"> <i class="<?=$srow['menu_title']?>"  pe-1></i> <?=$srow['menu_title']?> </a>            
+                          <a class="nav-link" href="pages.php?page=<?=$srow['menu_title']?>&child=<?=$srow['manu_url']?>"> <i class="<?=$srow['icon']?>"  pe-1></i> <?=$srow['menu_title']?> </a>            
                       </div>
                   </div>
               <?php } ?> 
