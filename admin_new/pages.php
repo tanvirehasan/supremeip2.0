@@ -5,7 +5,6 @@
 
 <style type="text/css">
     #pages{
-
       color: #575757;
       width: 50%;
     }

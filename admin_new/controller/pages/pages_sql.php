@@ -20,7 +20,7 @@
         $manu_title     = $_POST['manu_title'];
         $page_url       = str_replace(' ', '-', $_POST['page_url']);
 
-        $update = "UPDATE pages  SET manu_title='$manu_title', page_url='$page_url', WHERE page_id='$page_id'";
+        $update = "UPDATE pages  SET manu_title='$manu_title', page_url='$page_url' WHERE page_id='$page_id'";
 
         if ($conn->query($update)) {
             

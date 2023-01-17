@@ -65,7 +65,7 @@
 
                     <div class="row">
                         <div class="col-12 col-md-6">
-                            <label for="categoryname"  class=" form-label" style="font-weight:700;">Manu Title</label>
+                            <label for="categoryname"  class=" form-label" style="font-weight:700;">Short Name</label>
                             <input type="text" class="form-control mb-4 " value="<?=$row->manu_title?>" name="manu_title">
                         </div>                                      
                         <div class="col-12 col-md-6">
@@ -73,41 +73,6 @@
                             <input type="text" class="form-control  mb-4" value="<?=$row->page_url?>" name="page_url"> 
                         </div>
                     </div>
-
-
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <label for="icon" class=" form-label" style="font-weight:700;">Date</label>
-                            <input type="date" class="form-control  mb-4" value="<?=$row->date?>"  name="date">
-                        </div>
-                        <div class="col-12 col-md-6">
-                        <label for="icon" class=" form-label" style="font-weight:700;">Menu icon</label>
-                        <input type="text" class="form-control  mb-4" value="<?=$row->menu_icon?>" id="menu_icon" name="menu_icon">
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <label for="icon" class=" form-label" style="font-weight:700;">Patent</label>
-                            <select class="form-control" name="page_parent_id" >
-                                <option value="<?=$row->page_parent_id?>">Select</option>
-                                <option value="0">None</option>
-                                <?php 
-                                    $pdata = SelectData('pages',"WHERE page_parent_id='0'");
-                                    while($prow = $pdata->fetch_object()){?>
-                                    <option value="<?=$prow->page_id?>"><?=$prow->manu_title?></option> 
-                                <?php } ?>
-                            </select> 
-                        </div> 
-
-                        <div class="col-12 col-md-6">
-                            <label for="icon" class="form-label" style="font-weight:700;">Status</label>
-                            <select class="form-control" name="page_status">
-                                <option value="<?=$row->page_status?>">Select</option>
-                                <option value="0">Private</option>                              
-                                <option value="1">Published</option>
-                            </select> 
-                        </div> 
                     </div>    
 
                             <div class="float-right my-3">
