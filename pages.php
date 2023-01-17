@@ -94,17 +94,21 @@
                         $price_data = SelectData('prices', "WHERE price_page_id={$pageinfo->page_id} ORDER BY serial_list ASC");
                         if ($price_data->num_rows>0) {?>                      
                             <!-- price table -->
-                            <div class="p-0 mt-4" style="background-color:<?=widget_set('Section_bg',1)?>; padding:<?=widget_set('padding',1)?>px !important; border:<?=widget_set('border',1)?> !important;">
+                            <div class="p-0 mt-4" style="background-color:<?=widget_set('Section_bg',1)?>; padding:<?=widget_set('padding',1)?>px !important; ">
                                 <h3 class="section_title_page ps-2"><i class="fas fa-money-check-alt px-1"></i> <?=$pageinfo->Section_Title_Price?></h3>
                                 <div class="row mx-0">                       
-                                    <table id='priceTable' class="table" >
+                                    <table id="priceTable" class="table table-bordered">
+                                        <tr>
+                                            <th>Descipstion</th>
+                                            <th>Price</th>
+                                        </tr>
                                         <?php while ($price = $price_data->fetch_object()) {?> 
                                                 <tr>
-                                                    <td style="width: 80%;" class="p-3" >
+                                                    <td>
                                                         <div class='<?=widget_set('ptsize',1)?>' style="font-family:<?=widget_set('ptfont',1)?> !important; color:<?=widget_set('ptcolor',1)?> !important; text-transform:<?=widget_set('ptcase',1)?> !important " ><?=$price->price_title?></div>
-                                                        <p class="<?=widget_set('pdsize',1)?> p-0 m-0" style="font-family:<?=widget_set('pdfont',1)?> !important; color:<?=widget_set('pdcolor',1)?> !important; text-transform:<?=widget_set('pdcase',1)?> !important; margin: 0; padding: 0;" > <?=html_entity_decode($price->Price_Description)?></p>
+                                                        <p class="<?=widget_set('pdsize',1)?>" style="font-family:<?=widget_set('pdfont',1)?> !important; color:<?=widget_set('pdcolor',1)?> !important; text-transform:<?=widget_set('pdcase',1)?> !important; margin: 0; padding: 0;" > <?=html_entity_decode($price->Price_Description)?></p>
                                                     </td>
-                                                    <td><h5 class="<?=widget_set('psize',1)?> p-0 m-0 pt-4" style="font-family:<?=widget_set('pfont',1)?> !important; color:<?=widget_set('pcolor',1)?> !important; text-transform:<?=widget_set('pcase',1)?> !important " ><?=$price->Priceamount?></h5></td>
+                                                    <td><h5 class="<?=widget_set('psize',1)?>" style="font-family:<?=widget_set('pfont',1)?> !important; color:<?=widget_set('pcolor',1)?> !important; text-transform:<?=widget_set('pcase',1)?> !important " ><?=$price->Priceamount?></h5></td>
                                                 </tr>
                                         <?php } ?>
                                     </table>   

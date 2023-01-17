@@ -337,9 +337,7 @@ blockquote{ color:<?=text_color_settings('color_code', 'q')?> !important;}
 }
 
 #priceTable th, td {
-  text-align: left !important;
-  padding: 0px !important;
-  border:none !important;
+  border:<?=widget_set('border',1)?> !important;
 }
 
 #priceTable tr:nth-child(even) {background-color: <?=widget_set('even',1)?> !important;}
