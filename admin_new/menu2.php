@@ -113,7 +113,7 @@
                         <input type="text" list="perent" name="menu_perent" value="<?=$sigel_data->menu_perent?>" class="form-control">                       
                             <datalist id="perent">
                                 <option value="#">
-                            <?php $data2 = SelectData('menu_new',"");
+                            <?php $data2 = SelectData('menu_new',"where menu_perent='#'");
                                 foreach($data2 as $rowp){?>
                                     <option value="<?=$rowp['menu_title']?>">
                               <?php } ?>
