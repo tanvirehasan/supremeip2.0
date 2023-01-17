@@ -18,6 +18,29 @@ if ($_POST['update'] == "update"){
     echo 'All saved! refresh the page to see the changes';
 }
 
+//New menu
+if ($_POST['update'] == "newmenu"){  
+    $count = 1;
+    foreach ($array as $idval) {
+        $sql = "UPDATE menu_new SET serial_list = " . $count . " WHERE menu_id= ". $idval;
+        if ($conn->query($sql) === TRUE) {
+            echo "Record updated successfully";
+        } else {
+            echo "Error updating record: " . $conn->error;
+        }
+        $count ++; 
+    }
+    echo 'All saved! refresh the page to see the changes';
+}
+
+
+
+
+
+
+
+
+
 
 //our Team
 if ($_POST['update'] == "team"){  

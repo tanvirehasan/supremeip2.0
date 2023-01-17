@@ -38,7 +38,7 @@
               <a class="nav-link" href=""> <i class="fas fa-home"></i> Home </a>            
           </div>
         </div>
-        <?php $data = SelectData('menu_new',"WHERE menu_perent='#' AND manu_status!='0' ");
+        <?php $data = SelectData('menu_new',"WHERE menu_perent='#' AND manu_status!='0' ORDER BY serial_list ASC");
               foreach($data as $row){?>
 
               <div class="accordion-item bg-transparent">
@@ -49,7 +49,7 @@
                 <div id="collapseTwo<?=$row['menu_id']?>" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                   <div class="accordion-body m-0 p-0">                    
                       <?php $pageid = $row['menu_title'];
-                      $data = SelectData('menu_new',"WHERE menu_perent='$pageid' AND manu_status!='0' ");
+                      $data = SelectData('menu_new',"WHERE menu_perent='$pageid' AND manu_status!='0' ORDER BY serial_list ASC");
                       foreach($data as $crow){?>                                      
                           <a class="nav-link" id="sub_menu_link"  href="pages.php?page=<?=$row['manu_url']?>&child=<?=$crow['manu_url']?>">
                           <i class="fas fa-jug "></i> <?=$crow['menu_title']?></a>
@@ -60,7 +60,7 @@
 
         <?php } ?>  
 
-        <?php $sdata = SelectData('menu_new',"WHERE menu_perent='single' AND manu_status!='0' ");
+        <?php $sdata = SelectData('menu_new',"WHERE menu_perent='single' AND manu_status!='0' ORDER BY serial_list ASC");
               foreach($sdata as $srow){?>
                     <div class="accordion-item bg-transparent">
                       <div class="accordion-header p-0" id="homebtn">                              

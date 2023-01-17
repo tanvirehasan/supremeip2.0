@@ -130,6 +130,19 @@
                 </div>  
 
 
+                <script>
+                    $(document).ready(function(){  
+                        $(function() {
+                                $(".manulist").sortable({ opacity: 0.8, cursor: 'move', axis: 'y', update: function() {
+                                    var order = $(this).sortable("serialize") + '&update=newmenu';
+                                    $.post("controller/menu/menu_postion_update.php", order);           
+                                } 
+                            });
+                        }); 
+                    }); 
+                </script>
+
+
 
 
                 <!--========== Out put Table =========== -->
@@ -144,13 +157,13 @@
                                      
                                  </tr>
                              </thead>
-                             <tbody>                      
+                             <tbody class="manulist">                      
                                                     
                             <?php 
                                 $i=1;
-                                $data = SelectData('menu_new',"WHERE menu_perent='#' AND manu_status!='0' ");
+                                $data = SelectData('menu_new',"WHERE menu_perent='#' AND manu_status!='0' ORDER BY serial_list ASC");
                                 foreach($data as $row){?>                                                        
-                                <tr>    
+                                <tr id="arrayorder_<?=$row['menu_id']?>" >    
                                     <td><?=$i?> <input type="checkbox" name=""></td>                                    
                                     <td id="pages"><b ><?=$row['menu_title']?>  <i class="fas fa-universal-access"></i></b></td>
                                     <td><?=$row['menu_perent']?></td>  
@@ -166,9 +179,9 @@
                             <?php 
                                 $ci =1;
                                 $pageid = $row['menu_title'];
-                                $data = SelectData('menu_new',"WHERE menu_perent='$pageid' AND manu_status!='0' ");
+                                $data = SelectData('menu_new',"WHERE menu_perent='$pageid' AND manu_status!='0' ORDER BY serial_list ASC");
                                 foreach($data as $crow){?>                            
-                                <tr>    
+                                <tr id="arrayorder_<?=$crow['menu_id']?>" >    
                                     <td></td>                                    
                                     <td id="pages">
                                         <b class="text-muted" ><?=$i.".".$ci?> <i class="fas fa-long-arrow-alt-right"></i> <?=$crow['menu_title']?></b>
@@ -185,9 +198,9 @@
                              <?php  $ci++; } $i++; } ?>
 
                              <?php $i=1;
-                                $data = SelectData('menu_new',"WHERE menu_perent='single' AND manu_status!='0' ");
+                                $data = SelectData('menu_new',"WHERE menu_perent='single' AND manu_status!='0' ORDER BY serial_list ASC");
                                 foreach($data as $row){?>                                                        
-                                <tr>    
+                                <tr id="arrayorder_<?=$row['menu_id']?>">    
                                     <td><?=$i?> <input type="checkbox" name=""></td>                                    
                                     <td id="pages"><b ><?=$row['menu_title']?>  <i class="fas fa-universal-access"></i></b></td>
                                     <td><?=$row['menu_perent']?></td>  
