@@ -57,20 +57,17 @@ $(document).ready(function(){
                 <div class="col-md-4">
                     <div class="card p-5">
                         <div id="list">
-                            <!-- <div id="response"> </div> -->
+                            <div id="response"> </div>
                             <ul>
                                 <?php
                                     $results = $conn->query("SELECT page_id, manu_title FROM pages WHERE page_parent_id='0' ORDER BY main_menu ASC");
                                     foreach ($results as $row){$pageid=$row['page_id']; $manu_title=$row['manu_title'];?>
                                     <li id="arrayorder_<?php echo $pageid ?>"><?php echo $manu_title; ?></li> 
-
                                         <?php $results2 = $conn->query("SELECT page_id, manu_title FROM pages WHERE page_parent_id='$pageid' ORDER BY main_menu ASC");
                                         foreach ($results2 as $row2){$id=$row2['page_id']; $manu_title=$row2['manu_title'];?>
-                                        <li class="ml-4" id="arrayorder_<?php echo $id ?>"><?php echo $manu_title; ?></li>                       
-                                    
-                                                           
+                                        <li class="ml-4" id="arrayorder_<?php echo $id ?>"><?php echo $manu_title; ?></li>                                           
                                 <?php } }?>
-                                <div class="clear"></div> 
+                            <div class="clear"></div> 
                             </ul>
                         </div>
                     </div>

@@ -35,6 +35,22 @@ if ($_POST['update'] == "team"){
 }
 
 
+//socal link
+if ($_POST['update'] == "socal"){  
+    $count = 1;
+    foreach ($array as $idval) {
+        $sql = "UPDATE social SET serial_list = " . $count . " WHERE id= " . $idval;
+        if ($conn->query($sql) === TRUE) {
+            echo "Record updated successfully";
+        } else {
+            echo "Error updating record: " . $conn->error;
+        }
+        $count ++; 
+    }
+    echo 'All saved! refresh the page to see the changes';
+}
+
+
 
 
 //Widget

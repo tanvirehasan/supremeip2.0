@@ -412,13 +412,44 @@ $row = $data->fetch_object();
                             <th>Delete</th>
                         </tr>
                     </thead>
-                    <tbody>
+
+<script type="text/javascript">
+
+$(document).ready(function(){  
+   function slideout(){
+  setTimeout(function(){
+  $("#response").slideUp("slow", function () {
+ });
+ }, 2000);
+ }
+  
+   $("#response").hide();
+   $(function() {
+        $("#list").sortable({ opacity: 0.8, cursor: 'move', axis: 'y', update: function() {
+            var order = $(this).sortable("serialize") + '&update=socal';
+            $.post("controller/menu/menu_postion_update.php", order, function(theResponse){
+            $("#response").html(theResponse);
+            $("#response").slideDown('slow');
+            slideout();
+        });                
+   }         
+    });
+   });
+ 
+}); 
+</script>
+
+
+
+
+                    <tbody id="list">
                         <?php 
-                            $data = SelectData('social','');
+                            $data = SelectData('social','ORDER BY serial_list ASC');
                             if ($data->num_rows>0) {
                             while ($social = $data->fetch_object()) {?>
                             <form method="POST" action="" enctype="multipart/form-data">
-                                <tr>
+                               
+                                <tr  id="arrayorder_<?=$social->id?>"> 
                                     <td><i class="<?=$social->icon?>" ></i></td>
                                     <td><input type="text" class="form-control border-0" value="<?=$social->icon?>"   name="icon"></td>
                                     <td><input type="text" class="form-control border-0" value="<?=$social->name?>"  name="name"> </td>
@@ -430,6 +461,8 @@ $row = $data->fetch_object();
                                     <td class="ml-5"><button type="submit" class="btn" name="supdate"><i class="fas fa-check"></i> </button> </td>
                                     <td class="m-0"><a href="setting.php?setting=General&social_delete=<?=$social->id?>" class="btn"><i class="fas fa-trash-alt"></i></a></td>
                                 </tr>
+                                
+
                             </form>                        
                         <?php } } ?>
                 </tbody>
