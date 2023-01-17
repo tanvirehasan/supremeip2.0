@@ -71,12 +71,12 @@
                               <?php } ?>
                             </datalist>
 
-                        <label class="form-label pt-3">Select Perent Page</label>
+                        <label class="form-label pt-3">Select Parent Page</label>
                         <input type="text" list="perent" name="menu_perent" class="form-control">                       
                             <datalist id="perent">
-                                <option value="#">
-                                <option value="single">
-                            <?php $data2 = SelectData('menu_new',"");
+                                <option value="#">Set as Parent Page</option>
+                                <option value="single">Set as Single Page</option>
+                            <?php $data2 = SelectData('menu_new',"WHERE menu_perent='#'");
                                 foreach($data2 as $rowp){?>
                                     <option value="<?=$rowp['menu_title']?>">
                               <?php } ?>
@@ -112,8 +112,9 @@
                         <label class="form-label pt-3">Select Perent Page</label>
                         <input type="text" list="perent" name="menu_perent" value="<?=$sigel_data->menu_perent?>" class="form-control">                       
                             <datalist id="perent">
-                                <option value="#">
-                            <?php $data2 = SelectData('menu_new',"where menu_perent='#'");
+                                <option value="#">Set as Parent Page</option>
+                                <option value="single">Set as Single Page</option>
+                            <?php $data2 = SelectData('menu_new',"WHERE menu_perent='#' ");
                                 foreach($data2 as $rowp){?>
                                     <option value="<?=$rowp['menu_title']?>">
                               <?php } ?>
