@@ -22,7 +22,7 @@
                         <h5 class="mt-2 text-white"><i class="fas fa-list"></i> Price List</h5>
                     </div>
                     <div class="col-6 d-flex justify-content-end">
-                        <a class="btn text-white mr-1" onclick="widget('views/widget/widget_insert.php?priceadd=<?=$pageid?>&title=Price')"><i class="fas fa-plus"></i></a>
+                        <a class="btn text-white mr-1" target="NULL" href="widget_crud.php?priceadd=<?=$pageid?>"><i class="fas fa-plus"></i></a>
                         <a class="btn text-white mr-1"><i class="fas fa-eye"></i></a>
                         <a onclick="widget('controller/widget/delete_widget.php?price_all_delete=<?=$pageid?>')" class="btn text-white"><i class="fas fa-times"></i></a>
                     </div>

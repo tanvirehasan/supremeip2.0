@@ -97,10 +97,10 @@
                             <div class="p-0 mt-4" style="background-color:<?=widget_set('Section_bg',1)?>; padding:<?=widget_set('padding',1)?>px !important; ">
                                 <h3 class="section_title_page ps-2"><i class="fas fa-money-check-alt px-1"></i> <?=$pageinfo->Section_Title_Price?></h3>
                                 <div class="row mx-0">                       
-                                    <table id="priceTable" class="table table-bordered">
+                                    <table id="priceTable" class="table table-bordered" style="width: 100%;">
                                         <tr>
-                                            <th>Descipstion</th>
-                                            <th>Price</th>
+                                            <th>Description</th>
+                                            <th>Cost </th>
                                         </tr>
                                         <?php while ($price = $price_data->fetch_object()) {?> 
                                                 <tr>

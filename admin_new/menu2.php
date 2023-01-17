@@ -75,6 +75,7 @@
                         <input type="text" list="perent" name="menu_perent" class="form-control">                       
                             <datalist id="perent">
                                 <option value="#">
+                                <option value="single">
                             <?php $data2 = SelectData('menu_new',"");
                                 foreach($data2 as $rowp){?>
                                     <option value="<?=$rowp['menu_title']?>">
@@ -182,6 +183,27 @@
                                 </tr> 
                                 
                              <?php  $ci++; } $i++; } ?>
+
+                             <?php $i=1;
+                                $data = SelectData('menu_new',"WHERE menu_perent='single' AND manu_status!='0' ");
+                                foreach($data as $row){?>                                                        
+                                <tr>    
+                                    <td><?=$i?> <input type="checkbox" name=""></td>                                    
+                                    <td id="pages"><b ><?=$row['menu_title']?>  <i class="fas fa-universal-access"></i></b></td>
+                                    <td><?=$row['menu_perent']?></td>  
+                                    <td>
+                                        <div class="action_button" style="font-size: 12px; color:#979797;">
+                                            <a href="menu2.php?id=<?=$row['menu_id']?>" style="color:#979797;">Edit</a> |
+                                            <a href="menu2.php?delete=<?=$row['menu_id']?>" onclick="return confirm('Are you sure?')" style="color:#979797;">Delete</a> 
+                                        </div>
+                                    </td>                              
+                                </tr>
+                                <?php } ?>
+
+
+
+
+
                             
                             </tbody>
                          </table>

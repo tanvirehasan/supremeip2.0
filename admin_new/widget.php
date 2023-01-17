@@ -125,10 +125,7 @@ $row = $data->fetch_object();
                                     <td>Text Color:
                                         <input type="color" name="pdcolor" class="" value="<?=widget_set('pdcolor',1);?>" style='border:none; padding:0; marin:0;' > 
                                     </td>
-                                </tr>
-                                
-                                
-                                
+                                </tr>                                                             
                                 
                                 <!--Section-->
                                 <tr>
