@@ -59,7 +59,7 @@
                         <label class="form-label pt-3" >Menu Title</label>                     
                         <input type="text" name="menu_title" class="form-control">
 
-                        <label class="form-label pt-3" >Icon</label>                     
+                        <label class="form-label pt-3" >Icon  <a target="NULL" href="https://fontawesome.com/v5/search">List</a> </label>                     
                         <input type="text" name="icon" class="form-control">
 
                         <label class="form-label pt-3">Select Page</label> 
@@ -97,7 +97,7 @@
                         <label class="form-label pt-3" >Menu Title</label>                     
                         <input type="text" name="menu_title" value="<?=$sigel_data->menu_title?>" class="form-control">
 
-                        <label class="form-label pt-3" >Icon</label>                     
+                        <label class="form-label pt-3" >Icon  <a target="NULL" href="https://fontawesome.com/v5/search">List</a> </label>                     
                         <input type="text" name="icon" value="<?=$sigel_data->icon?>" class="form-control">
 
                         <label class="form-label pt-3">Select Page</label> 
