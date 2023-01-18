@@ -18,13 +18,13 @@ if (isset($_POST['new_menu_create'])) {
 //Updat
 if (isset($_POST['menu_update'])) {
     $menu_title   = $_POST['menu_title'];
-    $manu_url = str_replace(' ', '-', $_POST['menu_title']);
+    $manu_url = str_replace(' ', '-', $_POST['manu_url']);
     $icon         = $_POST['icon'];
-    $menu_page    = $_POST['menu_page'];
+    $page_id    = $_POST['page_id'];
     $menu_perent  = $_POST['menu_perent'];
 
     $update = "UPDATE menu_new SET menu_title='$menu_title', manu_url='$manu_url', icon='$icon',
-         menu_page='$menu_page',menu_perent='$menu_perent' WHERE menu_id={$_GET['id']}";
+         page_id='$page_id',menu_perent='$menu_perent' WHERE menu_id={$_GET['id']}";
     if (mysqli_query($conn, $update) == TRUE) {
     } else {
         echo "Error: " . $insert . "<br>" . $conn->error;
@@ -82,7 +82,7 @@ if (isset($_GET['delete'])) {
                             <option value="single">Set as Single Page</option>
                             <?php $data2 = SelectData('menu_new', "WHERE menu_perent='#'");
                             foreach ($data2 as $rowp) { ?>
-                                <option value="<?=$rowp['menu_id']?>"><?= $rowp['menu_title'] ?></option>
+                                <option value="<?= $rowp['menu_id'] ?>"><?= $rowp['menu_title'] ?></option>
                             <?php } ?>
 
                         </datalist>
@@ -104,13 +104,17 @@ if (isset($_GET['delete'])) {
                         <label class="form-label pt-3">Icon <a target="NULL" href="https://fontawesome.com/v5/search">List</a> </label>
                         <input type="text" name="icon" value="<?= $sigel_data->icon ?>" class="form-control">
 
+                        <label class="form-label pt-3">Url </label>
+                        <input type="text" name="manu_url" value="<?= $sigel_data->manu_url ?>" class="form-control">
+
                         <label class="form-label pt-3">Select Page</label>
-                        <input type="text" list="pages" name="menu_page" value="<?= $sigel_data->menu_page ?>" class="form-control">
+                        <input type="text" list="pages" name="page_id" value="<?= $sigel_data->page_id ?>" class="form-control">
                         <datalist id="pages">
+                            <option value="0">None</option>
                             <?php $data = SelectData('pages', "WHERE page_status!='3' ");
                             foreach ($data as $row) { ?>
-                                <option value="<?= $row['manu_title'] ?>">
-                                <?php } ?>
+                                <option value="<?= $row['page_id'] ?>"><?= $row['manu_title'] ?></option>
+                            <?php } ?>
                         </datalist>
 
                         <label class="form-label pt-3">Select Perent Page</label>
@@ -120,8 +124,8 @@ if (isset($_GET['delete'])) {
                             <option value="single">Set as Single Page</option>
                             <?php $data2 = SelectData('menu_new', "WHERE menu_perent='#' ");
                             foreach ($data2 as $rowp) { ?>
-                                <option value="<?= $rowp['menu_title'] ?>">
-                                <?php } ?>
+                                <option value="<?= $rowp['menu_id'] ?>"><?= $rowp['menu_title'] ?></option>
+                            <?php } ?>
 
                         </datalist>
 
@@ -195,7 +199,7 @@ if (isset($_GET['delete'])) {
                                     <td id="pages">
                                         <b class="text-muted"><?= $i . "." . $ci ?> <i class="fas fa-long-arrow-alt-right"></i> <?= $crow['menu_title'] ?></b>
                                     </td>
-                                    <td><?= $row['menu_title'] ?>/<?= $crow['menu_title'] ?></td>
+                                    <td><?= $row['manu_url'] ?>/<?= $crow['manu_url'] ?></td>
                                     <td>
                                         <div class="action_button" style="font-size: 12px; color:#979797;">
                                             <a href="menu2.php?id=<?= $crow['menu_id'] ?>" style="color:#979797;">Edit</a> |
