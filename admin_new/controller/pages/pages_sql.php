@@ -6,7 +6,7 @@
 
         $insert = "INSERT INTO pages ( manu_title, date, page_status ) VALUES ( '$manu_title', now(), '1' )";
         if ($conn->query($insert)) {
-            echo "<script>alert('success')</script>";
+            echo "<script>window.location.href='".$_SERVER['PHP_SELF']."';</script>";
         }
 
     }
@@ -20,7 +20,7 @@
         $update = "UPDATE pages  SET manu_title='$manu_title' WHERE page_id='$page_id'";
 
         if ($conn->query($update)) {
-            
+            echo "<script>window.location.href='" . $_SERVER['PHP_SELF'] . "';</script>";
         }
 
     }
