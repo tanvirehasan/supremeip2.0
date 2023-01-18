@@ -3,9 +3,8 @@
     if (isset($_POST['page_add'])) {
         
         $manu_title     = $_POST['manu_title'];
-        $page_url       = str_replace(' ', '-', $_POST['page_url']);
 
-        $insert = "INSERT INTO pages ( manu_title, page_url, date, page_status ) VALUES ( '$manu_title', '$page_url', now(), '1' )";
+        $insert = "INSERT INTO pages ( manu_title, date, page_status ) VALUES ( '$manu_title', now(), '1' )";
         if ($conn->query($insert)) {
             echo "<script>alert('success')</script>";
         }
@@ -18,9 +17,7 @@
         
         $page_id        = $_POST['page_id'];        
         $manu_title     = $_POST['manu_title'];
-        $page_url       = str_replace(' ', '-', $_POST['page_url']);
-
-        $update = "UPDATE pages  SET manu_title='$manu_title', page_url='$page_url' WHERE page_id='$page_id'";
+        $update = "UPDATE pages  SET manu_title='$manu_title' WHERE page_id='$page_id'";
 
         if ($conn->query($update)) {
             
