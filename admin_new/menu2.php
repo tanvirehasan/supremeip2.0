@@ -55,6 +55,13 @@ if (isset($_GET['delete'])) {
 
                 <?php if (!isset($_GET['id'])) { ?>
 
+                    <div class="buttt">
+                        <button id="Parent">Parent</button>
+                        <button id="Sub-menu">Sub-menu</button>
+                        <button id="singel">Single page</button>
+                        <button id="cusurl">Custom URL</button>
+                    </div>
+
                     <form method="POST" action="">
                         <label class="form-label pt-3">Menu Title</label>
                         <input type="text" name="menu_title" class="form-control">
@@ -62,30 +69,33 @@ if (isset($_GET['delete'])) {
                         <label class="form-label pt-3">Icon <a target="NULL" href="https://fontawesome.com/v5/search">List</a> </label>
                         <input type="text" name="icon" class="form-control">
 
-                        <label class="form-label pt-3">Url </label>
-                        <input type="text" name="manu_url" class="form-control">
+                        <div class="url" style="display: none;">
+                            <label class="form-label pt-3">Url </label>
+                            <input type="text" name="manu_url" value="" class="form-control">
+                        </div>
 
-                        <label class="form-label pt-3">Select Page</label>
-                        <input type="text" list="pages" name="page_id" class="form-control">
-                        <datalist id="pages">
-                            <option value="0">None</option>
-                            <?php $data = SelectData('pages', "WHERE page_status!='3' ");
-                            foreach ($data as $row) { ?>
-                                <option value="<?= $row['page_id'] ?>"><?= $row['manu_title'] ?></option>
-                            <?php } ?>
-                        </datalist>
+                        <div class="selectpage" style="display: none;">
+                            <label class="form-label pt-3">Select Page</label>
+                            <input type="text" list="pages" name="page_id" class="form-control">
+                            <datalist id="pages">
+                                <option value="0">None</option>
+                                <?php $data = SelectData('pages', "WHERE page_status!='3' ");
+                                foreach ($data as $row) { ?>
+                                    <option value="<?= $row['page_id'] ?>"><?= $row['manu_title'] ?></option>
+                                <?php } ?>
+                            </datalist>
+                        </div>
+                        <div class="selectparent" style="display: none;">
+                            <label class=" form-label pt-3">Select Parent Page</label>
+                            <input type="text" list="perent" id="sprent" name="menu_perent" class="form-control">
+                            <datalist id="perent">
+                                <?php $data2 = SelectData('menu_new', "WHERE menu_perent='#'");
+                                foreach ($data2 as $rowp) { ?>
+                                    <option value="<?= $rowp['menu_id'] ?>"><?= $rowp['menu_title'] ?></option>
+                                <?php } ?>
 
-                        <label class="form-label pt-3">Select Parent Page</label>
-                        <input type="text" list="perent" name="menu_perent" class="form-control">
-                        <datalist id="perent">
-                            <option value="#">Set as Parent Page</option>
-                            <option value="single">Set as Single Page</option>
-                            <?php $data2 = SelectData('menu_new', "WHERE menu_perent='#'");
-                            foreach ($data2 as $rowp) { ?>
-                                <option value="<?= $rowp['menu_id'] ?>"><?= $rowp['menu_title'] ?></option>
-                            <?php } ?>
-
-                        </datalist>
+                            </datalist>
+                        </div>
 
                         <input type="submit" name="new_menu_create" class="btn btn-primary my-3">
                     </form>
@@ -133,11 +143,37 @@ if (isset($_GET['delete'])) {
                     </form>
 
                 <?php } ?>
-
-
-
             </div>
 
+            <script>
+                $(document).ready(function() {
+                    $("#Parent").click(function() {
+                        $(".url,.selectpage,.selectparent").hide();
+                        $('#sprent').val('#');
+                    });
+
+                    $("#Sub-menu").click(function() {
+                        $(".url,.selectpage,.selectparent").show();
+                        $('#sprent').val('');
+                    });
+
+                    $("#singel").click(function() {
+                        $(".url,.selectpage").show();
+                        $(".selectparent").hide();
+                        $('#sprent').val('single');
+                    });
+
+                    $("#cusurl").click(function() {
+                        $(".url").show();
+                        $(".selectpage,.selectparent").hide();
+                        $('#sprent').val('single');
+                    });
+
+
+
+
+                });
+            </script>
 
             <script>
                 $(document).ready(function() {
@@ -154,6 +190,9 @@ if (isset($_GET['delete'])) {
                     });
                 });
             </script>
+
+
+
 
 
 
@@ -219,7 +258,7 @@ if (isset($_GET['delete'])) {
                             <tr id="arrayorder_<?= $row['menu_id'] ?>">
                                 <td><?= $i ?> <input type="checkbox" name=""></td>
                                 <td id="pages"><b><?= $row['menu_title'] ?> <i class="fas fa-universal-access"></i></b></td>
-                                <td><?= $row['menu_perent'] ?></td>
+                                <td><?= $row['manu_url'] ?></td>
                                 <td>
                                     <div class="action_button" style="font-size: 12px; color:#979797;">
                                         <a href="menu2.php?id=<?= $row['menu_id'] ?>" style="color:#979797;">Edit</a> |
