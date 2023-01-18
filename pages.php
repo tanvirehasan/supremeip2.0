@@ -6,10 +6,9 @@
   $pdata = SelectData('menu_new',"WHERE manu_url='$pageurl' AND manu_status!='0' ");
   $page  = $pdata->fetch_object();
 
-  $manu_title = $page->menu_page;
-  $page_data = SelectData('pages', "WHERE manu_title='$manu_title' AND page_status='1'");
+  $page_iid  = $page->page_id;
+  $page_data = SelectData('pages', "WHERE page_id='$page_iid' AND page_status='1'");
   $pageinfo  = $page_data->fetch_object();
-
 
   $sharelink = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
   $baseurl=basename($_SERVER['REQUEST_URI']);

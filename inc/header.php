@@ -48,7 +48,7 @@
                 </div>
                 <div id="collapseTwo<?=$row['menu_id']?>" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                   <div class="accordion-body m-0 p-0">                    
-                      <?php $pageid = $row['menu_title'];
+                      <?php $pageid = $row['menu_id'];
                       $data = SelectData('menu_new',"WHERE menu_perent='$pageid' AND manu_status!='0' ORDER BY serial_list ASC");
                       foreach($data as $crow){?>                                      
                           <a class="nav-link" id="sub_menu_link"  href="pages.php?page=<?=$row['manu_url']?>&child=<?=$crow['manu_url']?>">
