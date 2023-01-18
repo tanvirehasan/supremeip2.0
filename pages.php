@@ -76,7 +76,7 @@
                     $data = SelectData('menu_new',"WHERE menu_perent='$page->menu_perent' AND manu_status!='0' ");
                     foreach($data as $drow){?>
                     <li class="nav-item d-flex float-start p-0 ">                
-                        <a class="nav-link nav_menu p-0 ps-1" style="color:<?=settings('page_submenu_textcolor')?>"  href="pages.php?page=<?=$_GET['page'];?>&child=<?=$drow['manu_url']?>">  <?=$drow['menu_title']?> | </a>
+                        <a class="nav-link nav_menu p-0 ps-1" style="color:<?=settings('page_submenu_textcolor')?>"  href="pages.php?page=<?=$page->menu_title;?>&child=<?=$drow['manu_url']?>">  <?=$drow['menu_title']?> | </a>
                     </li>
                     <?php } ?>        
             </div>
