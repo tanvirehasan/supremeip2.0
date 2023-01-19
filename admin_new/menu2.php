@@ -57,10 +57,10 @@ if (isset($_GET['delete'])) {
                 <?php if (!isset($_GET['id'])) { ?>
 
                     <div class="buttt">
-                        <button id="Parent">Parent</button>
-                        <button id="Sub-menu">Sub-menu</button>
-                        <button id="singel">Single page</button>
-                        <button id="cusurl">Custom URL</button>
+                        <button class="bg-success" id="Parent">Parent</button>
+                        <button class="" id="Sub-menu">Sub-menu</button>
+                        <button class="" id="singel">Single page</button>
+                        <button class="" id="cusurl">Custom URL</button>
                     </div>
 
                     <form method="POST" action="">
@@ -151,23 +151,34 @@ if (isset($_GET['delete'])) {
                     $("#Parent").click(function() {
                         $(".url,.selectpage,.selectparent").hide();
                         $('#sprent').val('#');
+                        $("#cusurl,#singel,#Sub-menu").removeClass("bg-success");
+                        $("#Parent").addClass("bg-success");
+
                     });
 
                     $("#Sub-menu").click(function() {
                         $(".url,.selectpage,.selectparent").show();
                         $('#sprent').val('');
+                        $("#cusurl,#singel,#Parent").removeClass("bg-success");
+                        $("#Sub-menu").addClass("bg-success");
+
                     });
 
                     $("#singel").click(function() {
                         $(".url,.selectpage").show();
                         $(".selectparent").hide();
                         $('#sprent').val('single');
+                        $("#cusurl,#Sub-menu,#Parent").removeClass("bg-success");
+                        $("#singel").addClass("bg-success");
                     });
 
                     $("#cusurl").click(function() {
                         $(".url").show();
                         $(".selectpage,.selectparent").hide();
                         $('#sprent').val('single');
+                        $("#singel,#Sub-menu,#Parent").removeClass("bg-success");
+                        $("#cusurl").addClass("bg-success");
+
                     });
 
 
@@ -222,7 +233,7 @@ if (isset($_GET['delete'])) {
                                 <td><?= $row['manu_url'] ?></td>
                                 <td>
                                     <div class="action_button" style="font-size: 12px; color:#979797;">
-                                        <a href="menu2.php?id=<?= $row['menu_id'] ?>" style="color:#979797;">Edit</a> |
+                                        <a href="menu2.php?id=<?= $row['menu_id'] ?>&p" style="color:#979797;">Edit</a> |
                                         <a href="menu2.php?delete=<?= $row['menu_id'] ?>" onclick="return confirm('Are you sure?')" style="color:#979797;">Delete</a>
                                     </div>
                                 </td>
