@@ -10,6 +10,7 @@ if (isset($_POST['new_menu_create'])) {
     $menu_perent  = $_POST['menu_perent'];
     $insert = "INSERT INTO menu_new (menu_title,icon,page_id,menu_perent, manu_url) VALUES ('$menu_title', '$icon', '$page_id', '$menu_perent','$manu_url')";
     if (mysqli_query($conn, $insert) == TRUE) {
+        echo "<script>window.location.href='" . $_SERVER['PHP_SELF'] . "';</script>";
     } else {
         echo "Error: " . $insert . "<br>" . $conn->error;
     }
