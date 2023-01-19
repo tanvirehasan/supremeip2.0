@@ -106,8 +106,8 @@ if (isset($_GET['delete'])) {
                     $sigel_data = $menudata->fetch_object();
                 ?>
 
-                    <form method="POST" action="">
 
+                    <form method="POST" action="">
                         <label class="form-label pt-3">Menu Title</label>
                         <input type="text" name="menu_title" value="<?= $sigel_data->menu_title ?>" class="form-control">
 
@@ -144,6 +144,7 @@ if (isset($_GET['delete'])) {
                             </datalist>
                         </div>
                         <input type="submit" name="menu_update" value="Update" class="btn btn-success my-3">
+                        <a href="menu2.php" class="btn btn-info">New Menu</a>
                     </form>
 
                 <?php } ?>
@@ -236,11 +237,6 @@ if (isset($_GET['delete'])) {
                     });
                 });
             </script>
-
-
-
-
-
 
 
             <!--========== Out put Table =========== -->
