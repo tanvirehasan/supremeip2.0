@@ -51,7 +51,7 @@
                                  <th style="width:5px;" ></th>                                  
                                      <th>Short Name</th>
                                      <th>Page Title</th>
-                                     <th>Url</th>
+                        
                                      <th>Author</th>
                                      <th>Date</th>
                                  </tr>
@@ -72,13 +72,13 @@
                                             <a href="page_edit.php?pageid=<?=$row['page_id']?>" style="color:#979797;">Edit</a> |
                                             <a onclick="queck_edit('views/pages/add_page_queck.php?queckedit=<?=$row['page_id']?>')" style="color:#979797;">Quick Edit</a> | 
                                             <a href="pages.php?trashpage=<?=$row['page_id']?>" onclick="return confirm('Are you sure?')" style="color:#979797;">Trash</a> | 
-                                            <a target="null" href="../preview.php?page=<?=$row['page_url']?>" style="color:#979797;">View</a> 
+                                            <a target="null" href="../preview.php?page=<?=$row['page_id']?>" style="color:#979797;">View</a> 
                                             
                                         </div>
                                     </td>
                                     <td><?php $titlei=strip_tags(html_entity_decode($row['page_title'])); echo substr_replace($titlei, "...",70);   ?></td>
 
-                                                            <td><?=$row['page_url']?></td>
+                                    
                                     <td>admin</td>
                                     <td><?=$retVal = ($row['page_status']=='0') ? "<p class='p-0 m-0 text-danger'>Private</p>" : "<p class='p-0 m-0 text-success'>Published</p>";?>
                                         <small><?=$row['date']?></small></td>                                      
