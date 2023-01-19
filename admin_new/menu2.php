@@ -106,45 +106,79 @@ if (isset($_GET['delete'])) {
                     $sigel_data = $menudata->fetch_object();
                 ?>
 
-
-
                     <form method="POST" action="">
+
                         <label class="form-label pt-3">Menu Title</label>
                         <input type="text" name="menu_title" value="<?= $sigel_data->menu_title ?>" class="form-control">
 
                         <label class="form-label pt-3">Icon <a target="NULL" href="https://fontawesome.com/v5/search">List</a> </label>
                         <input type="text" name="icon" value="<?= $sigel_data->icon ?>" class="form-control">
 
-                        <label class="form-label pt-3">Url </label>
-                        <input type="text" name="manu_url" value="<?= $sigel_data->manu_url ?>" class="form-control">
+                        <div class="urlll">
+                            <label class="form-label pt-3">Url </label>
+                            <input type="text" name="manu_url" value="<?= $sigel_data->manu_url ?>" class="form-control">
+                        </div>
 
-                        <label class="form-label pt-3">Select Page</label>
-                        <input type="text" list="pages" name="page_id" value="<?= $sigel_data->page_id ?>" class="form-control">
-                        <datalist id="pages">
-                            <option value="0">None</option>
-                            <?php $data = SelectData('pages', "WHERE page_status!='3' ");
-                            foreach ($data as $row) { ?>
-                                <option value="<?= $row['page_id'] ?>"><?= $row['manu_title'] ?></option>
-                            <?php } ?>
-                        </datalist>
+                        <div class="submanurr">
+                            <label class="form-label pt-3">Select Page</label>
+                            <input type="text" list="pages" name="page_id" value="<?= $sigel_data->page_id ?>" class="form-control">
+                            <datalist id="pages">
+                                <option value="0">None</option>
+                                <?php $data = SelectData('pages', "WHERE page_status!='3' ");
+                                foreach ($data as $row) { ?>
+                                    <option value="<?= $row['page_id'] ?>"><?= $row['manu_title'] ?></option>
+                                <?php } ?>
+                            </datalist>
+                        </div>
 
-                        <label class="form-label pt-3">Select Perent Page</label>
-                        <input type="text" list="perent" name="menu_perent" value="<?= $sigel_data->menu_perent ?>" class="form-control">
-                        <datalist id="perent">
-                            <option value="#">Set as Parent Page</option>
-                            <option value="single">Set as Single Page</option>
-                            <?php $data2 = SelectData('menu_new', "WHERE menu_perent='#' ");
-                            foreach ($data2 as $rowp) { ?>
-                                <option value="<?= $rowp['menu_id'] ?>"><?= $rowp['menu_title'] ?></option>
-                            <?php } ?>
-
-                        </datalist>
-
+                        <div class="perentss">
+                            <label class="form-label pt-3">Select Perent Page</label>
+                            <input type="text" list="perent" name="menu_perent" value="<?= $sigel_data->menu_perent ?>" class="form-control">
+                            <datalist id="perent">
+                                <option value="#">Set as Parent Page</option>
+                                <option value="single">Set as Single Page</option>
+                                <?php $data2 = SelectData('menu_new', "WHERE menu_perent='#' ");
+                                foreach ($data2 as $rowp) { ?>
+                                    <option value="<?= $rowp['menu_id'] ?>"><?= $rowp['menu_title'] ?></option>
+                                <?php } ?>
+                            </datalist>
+                        </div>
                         <input type="submit" name="menu_update" value="Update" class="btn btn-success my-3">
                     </form>
 
                 <?php } ?>
             </div>
+
+            <?php if (isset($_GET['p'])) { ?>
+                <style>
+                    .perentss,
+                    .submanurr,
+                    .urlll {
+                        display: none;
+                    }
+                </style>
+            <?php } ?>
+
+            <!--single-->
+            <?php if (isset($_GET['s'])) { ?>
+                <style>
+                    .perentss {
+                        display: none;
+                    }
+                </style>
+            <?php } ?>
+
+            <!--custom url-->
+            <?php if (isset($_GET['curl'])) { ?>
+                <style>
+                    .perentss,
+                    .submanurr {
+                        display: none;
+                    }
+                </style>
+            <?php } ?>
+
+
 
             <script>
                 $(document).ready(function() {
@@ -273,7 +307,7 @@ if (isset($_GET['delete'])) {
                                 <td><?= $row['manu_url'] ?></td>
                                 <td>
                                     <div class="action_button" style="font-size: 12px; color:#979797;">
-                                        <a href="menu2.php?id=<?= $row['menu_id'] ?>" style="color:#979797;">Edit</a> |
+                                        <a href="menu2.php?id=<?= $row['menu_id'] ?>&s" style="color:#979797;">Edit</a> |
                                         <a href="menu2.php?delete=<?= $row['menu_id'] ?>" onclick="return confirm('Are you sure?')" style="color:#979797;">Delete</a>
                                     </div>
                                 </td>
