@@ -87,7 +87,7 @@ if (isset($_GET['delete'])) {
                         </div>
                         <div class="selectparent" style="display: none;">
                             <label class=" form-label pt-3">Select Parent Page</label>
-                            <input type="text" list="perent" id="sprent" name="menu_perent" class="form-control">
+                            <input type="text" list="perent" id="sprent" value="#" name="menu_perent" class="form-control">
                             <datalist id="perent">
                                 <?php $data2 = SelectData('menu_new', "WHERE menu_perent='#'");
                                 foreach ($data2 as $rowp) { ?>
