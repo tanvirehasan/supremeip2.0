@@ -218,8 +218,8 @@ if (isset($_GET['delete'])) {
                         foreach ($data as $row) { ?>
                             <tr id="arrayorder_<?= $row['menu_id'] ?>">
                                 <td><?= $i ?> <input type="checkbox" name=""></td>
-                                <td id="pages"><b><?= $row['menu_title'] ?> <i class="fas fa-universal-access"></i></b></td>
-                                <td><?= $row['menu_perent'] ?></td>
+                                <td id="pages"><b><?= $row['menu_title'] ?> <i class="fas fa-universal-access"></i></b> -- Parent</td>
+                                <td><?= $row['manu_url'] ?></td>
                                 <td>
                                     <div class="action_button" style="font-size: 12px; color:#979797;">
                                         <a href="menu2.php?id=<?= $row['menu_id'] ?>" style="color:#979797;">Edit</a> |
@@ -258,7 +258,7 @@ if (isset($_GET['delete'])) {
                         foreach ($data as $row) { ?>
                             <tr id="arrayorder_<?= $row['menu_id'] ?>">
                                 <td><?= $i ?> <input type="checkbox" name=""></td>
-                                <td id="pages"><b><?= $row['menu_title'] ?> <i class="fas fa-universal-access"></i></b></td>
+                                <td id="pages"><b><?= $row['menu_title'] ?></b></td>
                                 <td><?= $row['manu_url'] ?></td>
                                 <td>
                                     <div class="action_button" style="font-size: 12px; color:#979797;">
