@@ -86,11 +86,11 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
     }
 
     .page2 {
-        min-height: 100%;
+        min-height: 550px;
     }
 
     .page2overlay {
-        min-height: 100%;
+        min-height: 550px;
         width: 100%;
         overflow: hidden;
     }
@@ -151,20 +151,20 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
     <div class="row m-0">
         <!-- section-1 -->
         <div class="col-md-6 m-0 p-0 mb-lg-0">
-            <div class="page-content page1" style="background-image:url(assets/mediacenter/<?= (AboutPage('img_yes_no', '1') == 1) ? AboutPage('image', '1') : ''; ?>);">
-                <div class="page1overlay" style="background:<?= AboutPage('bg_color', '1') ?>; opacity:<?= AboutPage('opasity', '1') ?>;">
-                    <a class="home-link" href="<?= AboutPage('link', '1') ?>">
-                        <div class="p-5"><?= AboutPage('content', '1') ?></div>
+            <div class="page-content page1" style="background-image:url(assets/mediacenter/<?= (contactPage('img_yes_no', '1') == 1) ? contactPage('image', '1') : ''; ?>);">
+                <div class="page1overlay" style="background:<?= contactPage('bg_color', '1') ?>; opacity:<?= contactPage('opasity', '1') ?>;">
+                    <a class="home-link" href="<?= contactPage('link', '1') ?>">
+                        <div class="p-5"><?= contactPage('content', '1') ?></div>
                     </a>
                 </div>
             </div>
         </div>
 
         <div class="col-md-6 m-0 p-0">
-            <div class="page-content page1" style="background-image:url(assets/mediacenter/<?= (AboutPage('img_yes_no', '2') == 1) ? AboutPage('image', '2') : ''; ?>);">
-                <div class="page1overlay " style="background:<?= AboutPage('bg_color', '2') ?>;opacity: <?= AboutPage('opasity', '2') ?>;">
-                    <a class="home-link" href="<?= AboutPage('link', '2') ?>">
-                        <div class="p-5"><?= AboutPage('content', '2') ?></div>
+            <div class="page-content page1" style="background-image:url(assets/mediacenter/<?= (contactPage('img_yes_no', '2') == 1) ? contactPage('image', '2') : ''; ?>);">
+                <div class="page1overlay " style="background:<?= contactPage('bg_color', '2') ?>;opacity: <?= contactPage('opasity', '2') ?>;">
+                    <a class="home-link" href="<?= contactPage('link', '2') ?>">
+                        <div class="p-5"><?= contactPage('content', '2') ?></div>
                     </a>
                 </div>
             </div>
@@ -172,33 +172,33 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
     </div>
 
 
-    <div class="row m-0">
+    <div class="row m-0" style="background:<?= contactPage('bg_color', '3') ?>; !important">
         <!-- section-2 -->
         <div class="col-md-2 m-0 p-0 mb-lg-0">
-            <div class=" page-content page2" style="background-image:url(assets/mediacenter/<?= (AboutPage('img_yes_no', '3') == 1) ? AboutPage('image', '3') : ''; ?>);">
-                <div class="page2overlay" style="background:<?= AboutPage('bg_color', '3') ?>; opacity:<?= AboutPage('opasity', '3') ?>;">
-                    <a class="home-link" href="<?= AboutPage('link', '3') ?>">
-                        <div class="p-5"><?= AboutPage('content', '3') ?></div>
+            <div class="page-content page2" style="background-image:url(assets/mediacenter/<?= (contactPage('img_yes_no', '3') == 1) ? contactPage('image', '3') : ''; ?>);">
+                <div class="page2overlay" style="background:<?= contactPage('bg_color', '3') ?>; opacity:<?= contactPage('opasity', '3') ?>;">
+                    <a class="home-link" href="<?= contactPage('link', '3') ?>">
+                        <div class="p-5"><?= contactPage('content', '3') ?></div>
                     </a>
                 </div>
             </div>
         </div>
 
         <div class="col-md-8 m-0 p-0">
-            <div class="page-content page2" style="background-image:url(assets/mediacenter/<?= (AboutPage('img_yes_no', '4') == 1) ? AboutPage('image', '4') : ''; ?>);">
-                <div class="page2overlay" style="background:<?= AboutPage('bg_color', '4') ?>;opacity: <?= AboutPage('opasity', '4') ?>;">
-                    <a class="home-link" href="<?= AboutPage('link', '4') ?>">
-                        <div class="p-5"><?= AboutPage('content', '4') ?></div>
+            <div class="page-content page2" style="background-image:url(assets/mediacenter/<?= (contactPage('img_yes_no', '4') == 1) ? contactPage('image', '4') : ''; ?>);">
+                <div class="page2overlay" style="background:<?= contactPage('bg_color', '4') ?>;opacity: <?= contactPage('opasity', '4') ?>;">
+                    <a class="home-link" href="<?= contactPage('link', '4') ?>">
+                        <div class="p-5"><?= contactPage('content', '4') ?></div>
                     </a>
                 </div>
             </div>
         </div>
 
         <div class="col-md-2 m-0 p-0">
-            <div class="page-content page2" style="background-image:url(assets/mediacenter/<?= (AboutPage('img_yes_no', '5') == 1) ? AboutPage('image', '5') : ''; ?>);">
-                <div class="page2overlay " style="background:<?= AboutPage('bg_color', '5') ?>;opacity: <?= AboutPage('opasity', '5') ?>;">
-                    <a class="home-link" href="<?= AboutPage('link', '5') ?>">
-                        <div class="p-5"><?= AboutPage('content', '5') ?></div>
+            <div class="page-content page2" style="background-image:url(assets/mediacenter/<?= (contactPage('img_yes_no', '5') == 1) ? contactPage('image', '5') : ''; ?>);">
+                <div class="page2overlay " style="background:<?= contactPage('bg_color', '5') ?>;opacity: <?= contactPage('opasity', '5') ?>;">
+                    <a class="home-link" href="<?= contactPage('link', '5') ?>">
+                        <div class="p-5"><?= contactPage('content', '5') ?></div>
                     </a>
                 </div>
             </div>
@@ -208,20 +208,20 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
     <div class="row m-0">
         <!-- section-3 -->
         <div class="col-md-6 m-0 p-0 mb-lg-0">
-            <div class="page-content page3" style="background-image:url(assets/mediacenter/<?= (AboutPage('img_yes_no', '6') == 1) ? AboutPage('image', '6') : ''; ?>);">
-                <div class="page3overlay" style="background:<?= AboutPage('bg_color', '6') ?>; opacity:<?= AboutPage('opasity', '6') ?>;">
-                    <a class="home-link" href="<?= AboutPage('link', '6') ?>">
-                        <div class="p-5"><?= AboutPage('content', '6') ?></div>
+            <div class="page-content page3" style="background-image:url(assets/mediacenter/<?= (contactPage('img_yes_no', '6') == 1) ? contactPage('image', '6') : ''; ?>);">
+                <div class="page3overlay" style="background:<?= contactPage('bg_color', '6') ?>; opacity:<?= contactPage('opasity', '6') ?>;">
+                    <a class="home-link" href="<?= contactPage('link', '6') ?>">
+                        <div class="p-5"><?= contactPage('content', '6') ?></div>
                     </a>
                 </div>
             </div>
         </div>
 
         <div class="col-md-6 m-0 p-0">
-            <div class="page-content page3" style="background-image:url(assets/mediacenter/<?= (AboutPage('img_yes_no', '7') == 1) ? AboutPage('image', '7') : ''; ?>);">
-                <div class="page3overlay " style="background:<?= AboutPage('bg_color', '7') ?>;opacity: <?= AboutPage('opasity', '7') ?>;">
-                    <a class="home-link" href="<?= AboutPage('link', '7') ?>">
-                        <div class="p-5"><?= AboutPage('content', '7') ?></div>
+            <div class="page-content page3" style="background-image:url(assets/mediacenter/<?= (contactPage('img_yes_no', '7') == 1) ? contactPage('image', '7') : ''; ?>);">
+                <div class="page3overlay " style="background:<?= contactPage('bg_color', '7') ?>;opacity: <?= contactPage('opasity', '7') ?>;">
+                    <a class="home-link" href="<?= contactPage('link', '7') ?>">
+                        <div class="p-5"><?= contactPage('content', '7') ?></div>
                     </a>
                 </div>
             </div>

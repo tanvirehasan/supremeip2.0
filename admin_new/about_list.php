@@ -8,7 +8,7 @@
           <div class="col-md-12">
              <div class="card mt-5">
                  <div class="card-header">
-                     <h5> Home Page List </h5>
+                     <h5> About Page List </h5>
                  </div>
                  <div class="card-body">
                      <div class="row align-items-center m-l-0">

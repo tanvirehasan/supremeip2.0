@@ -23,12 +23,21 @@ function HomePage($col_name, $id){
     return $row[$col_name];
 }
 
-//Home Page
+//About Page
 function AboutPage($col_name, $id)
 {
     $row = mysqli_fetch_array(SelectData('about_page', "WHERE id='$id'"));
     return $row[$col_name];
 }
+
+//contactPage
+function contactPage($col_name, $id)
+{
+    $row = mysqli_fetch_array(SelectData('contact_page', "WHERE id='$id'"));
+    return $row[$col_name];
+}
+
+
 
 
 
