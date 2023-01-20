@@ -1,11 +1,11 @@
-<?php 
-    session_start();
-    include "db.php";
-    include "function.php";
-   
-      if (!isset($_SESSION['user'])) {
-        header('location:login.php');
-    }
+<?php
+session_start();
+include "db.php";
+include "function.php";
+
+if (!isset($_SESSION['user'])) {
+    header('location:login.php');
+}
 ?>
 
 
@@ -24,16 +24,16 @@
     <meta property="og:type" content="website" />
     <meta name="keywords" content="bootstrap admin template, dashboard template, backend panel, bootstrap 4, backend template, dashboard template, saas admin, CRM dashboard, eCommerce dashboard">
     <meta name="author" content="Codedthemes" />
-    <link rel="icon" href="../assets/brand/<?=settings('favicon')?>" sizes="32x32" />
-    <link rel="icon" href="../assets/brand/<?=settings('favicon')?>" sizes="192x192" />
-    <link rel="apple-touch-icon" href="../assets/brand/<?=settings('favicon')?>" /> 
-   
+    <link rel="icon" href="../assets/brand/<?= settings('favicon') ?>" sizes="32x32" />
+    <link rel="icon" href="../assets/brand/<?= settings('favicon') ?>" sizes="192x192" />
+    <link rel="apple-touch-icon" href="../assets/brand/<?= settings('favicon') ?>" />
 
-<!-- Google fonts -->
+
+    <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 
     <!-- Icon fonts -->
-    <link rel="stylesheet" href="assets/css/style.css">    
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome.css">
     <link rel="stylesheet" href="assets/fonts/ionicons.css">
     <link rel="stylesheet" href="assets/fonts/linearicons.css">
@@ -56,12 +56,12 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
     <!-- <script src="assets/js/tinymce.min.js" referrerpolicy="origin"></script> -->
     <script src="https://cdn.tiny.cloud/1/4ji99lkzm49svloyysqo9xvmtu03b24c3gvvfby23di6bhfa/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-    
-    <link rel="stylesheet" href="dist/css/jquery.dataTables.min.css">   
+
+    <link rel="stylesheet" href="dist/css/jquery.dataTables.min.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 </head>
@@ -84,7 +84,7 @@
                     <span class="app-brand-logo demo">
                         <img src="assets/img/logo.png" alt="Brand Logo" width="170" class="img-fluid">
                     </span>
-                   <!--  <a href="index.html" class="app-brand-text demo sidenav-text font-weight-normal  ml-2">supremeip</a> -->
+                    <!--  <a href="index.html" class="app-brand-text demo sidenav-text font-weight-normal  ml-2">supremeip</a> -->
                     <a href="javascript:" class="layout-sidenav-toggle sidenav-link text-large ml-auto">
                         <i class="ion ion-md-menu align-middle"></i>
                     </a>
@@ -94,23 +94,29 @@
                 <!-- Links -->
                 <ul class="sidenav-inner py-1">
                     <!-- Dashboards -->
-                       <li class="sidenav-item active">
+                    <li class="sidenav-item active">
                         <a href="index.php" class="sidenav-link">
                             <i class="sidenav-icon feather icon-home"></i>
                             <div>Dashboards</div>
                         </a>
-                       </li>
+                    </li>
 
                     <!-- Home-->
                     <li class="sidenav-item">
                         <a href="javascript:" class="sidenav-link sidenav-toggle">
                             <i class="sidenav-icon fas fa-cog"></i>
-                            <div>Home</div>                            
+                            <div>Home</div>
                         </a>
                         <ul class="sidenav-menu">
-                            <li class="sidenav-item"><a href="setting.php?setting=General" class="sidenav-link"><div>Social Bar</div></a></li> 
-                            <li class="sidenav-item"><a href="setting.php?setting=Menu" class="sidenav-link"><div>Manu Setting</div></a></li>
-                            <li class="sidenav-item"><a href="home_list.php" class="sidenav-link"><div>Home Content</div></a></li>	                                
+                            <li class="sidenav-item"><a href="setting.php?setting=General" class="sidenav-link">
+                                    <div>Social Bar</div>
+                                </a></li>
+                            <li class="sidenav-item"><a href="setting.php?setting=Menu" class="sidenav-link">
+                                    <div>Manu Setting</div>
+                                </a></li>
+                            <li class="sidenav-item"><a href="home_list.php" class="sidenav-link">
+                                    <div>Home Content</div>
+                                </a></li>
                         </ul>
                     </li>
 
@@ -118,15 +124,21 @@
                     <li class="sidenav-item">
                         <a href="javascript:" class="sidenav-link sidenav-toggle">
                             <i class="sidenav-icon fas fa-cog"></i>
-                            <div>Pages</div>                            
+                            <div>Pages</div>
                         </a>
                         <ul class="sidenav-menu">
-                            <li class="sidenav-item"><a href="pages.php" class="sidenav-link"><div>Pages</div></a></li> 
-                            <li class="sidenav-item"><a href="setting.php?setting=Page" class="sidenav-link"><div>Pages Setting</div></a></li>
-                            <li class="sidenav-item"><a href="widget.php" class="sidenav-link"><div>widget Setting</div></a></li>	                                
+                            <li class="sidenav-item"><a href="pages.php" class="sidenav-link">
+                                    <div>Pages</div>
+                                </a></li>
+                            <li class="sidenav-item"><a href="setting.php?setting=Page" class="sidenav-link">
+                                    <div>Pages Setting</div>
+                                </a></li>
+                            <li class="sidenav-item"><a href="widget.php" class="sidenav-link">
+                                    <div>widget Setting</div>
+                                </a></li>
                         </ul>
                     </li>
-                    
+
                     <!--  Blog & newws-->
                     <!-- <li class="sidenav-item">
                         <a href="javascript:" class="sidenav-link sidenav-toggle">
@@ -148,26 +160,36 @@
                     </li> -->
 
 
-                    <!-- menu -->           
+                    <!-- menu -->
                     <li class="sidenav-item">
                         <a href="menu2.php" class="sidenav-link">
                             <i class="sidenav-icon fab fa-mendeley"></i>
-                            <div>Menu</div>                            
+                            <div>Menu</div>
                         </a>
-                    </li>     
+                    </li>
 
 
                     <!-- we-->
                     <li class="sidenav-item">
                         <a href="javascript:" class="sidenav-link sidenav-toggle">
                             <i class="sidenav-icon fas fa-door-open"></i>
-                            <div>WE</div>                            
+                            <div>WE</div>
                         </a>
                         <ul class="sidenav-menu">
-                            <li class="sidenav-item"><a href="team.php" class="sidenav-link"><div>Team</div></a></li>
-                            <li class="sidenav-item"><a href="ourclients.php" class="sidenav-link"><div>Clients</div></a></li>                        
-                            <li class="sidenav-item"><a href="services.php" class="sidenav-link"><div>Services</div></a></li>                        
-                       
+                            <li class="sidenav-item"><a href="about_list.php" class="sidenav-link">
+                                    <div>About Us</div>
+                                </a></li>
+
+                            <li class="sidenav-item"><a href="team.php" class="sidenav-link">
+                                    <div>Team</div>
+                                </a></li>
+                            <li class="sidenav-item"><a href="ourclients.php" class="sidenav-link">
+                                    <div>Clients</div>
+                                </a></li>
+                            <li class="sidenav-item"><a href="services.php" class="sidenav-link">
+                                    <div>Services</div>
+                                </a></li>
+
                         </ul>
                     </li>
 
@@ -176,33 +198,39 @@
                     <li class="sidenav-item">
                         <a href="javascript:" class="sidenav-link sidenav-toggle">
                             <i class="sidenav-icon fas fa-cog"></i>
-                            <div>Settings</div>                            
+                            <div>Settings</div>
                         </a>
                         <ul class="sidenav-menu">
-                            <li class="sidenav-item"><a href="setting.php?setting=General" class="sidenav-link"><div>General Setting</div></a></li>	
-                            <li class="sidenav-item"><a href="setting.php?setting=Menu" class="sidenav-link"><div>Manu Setting</div></a></li>
+                            <li class="sidenav-item"><a href="setting.php?setting=General" class="sidenav-link">
+                                    <div>General Setting</div>
+                                </a></li>
+                            <li class="sidenav-item"><a href="setting.php?setting=Menu" class="sidenav-link">
+                                    <div>Manu Setting</div>
+                                </a></li>
                             <!-- <li class="sidenav-item"><a href="setting.php?setting=Team" class="sidenav-link"><div>Team Setting</div></a></li> -->
-                            <li class="sidenav-item"><a href="setting.php?setting=Page" class="sidenav-link"><div>Page Setting</div></a></li>
+                            <li class="sidenav-item"><a href="setting.php?setting=Page" class="sidenav-link">
+                                    <div>Page Setting</div>
+                                </a></li>
                             <!-- <li class="sidenav-item"><a href="setting.php?setting=Color" class="sidenav-link"><div>Color Setting</div></a></li> -->
                             <!-- <li class="sidenav-item"><a href="link.php" class="sidenav-link"><div>Forward Url</div></a></li> -->
                             <!-- <li class="sidenav-item"><a href="../database-backup.php" class="sidenav-link"><div>Backup</div></a></li>                                          -->
                         </ul>
                     </li>
-                    
-                    
-                    
-                    
-                    
-                           <!-- Management-->
+
+
+
+
+
+                    <!-- Management-->
                     <li class="sidenav-item">
                         <a href="file_management.php" class="sidenav-link ">
                             <i class="sidenav-icon fas fa-copy"></i>
                             <div>File Management</div>
-                        </a>                                               
+                        </a>
                     </li>
 
 
-        </ul>
+                </ul>
 
 
             </div>
@@ -272,7 +300,8 @@
                                             <div class="ui-icon ui-icon-sm feather icon-user-plus bg-primary border-0 text-white"></div>
                                             <div class="media-body line-height-condenced ml-3">
                                                 <div class="text-dark">You have
-                                                    <strong>4</strong> new followers</div>
+                                                    <strong>4</strong> new followers
+                                                </div>
                                                 <div class="text-light small mt-1">
                                                     Phasellus nunc nisl, posuere cursus pretium nec, dictum vehicula tellus.
                                                 </div>
@@ -367,12 +396,12 @@
                             <div class="demo-navbar-user nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
                                     <span class="d-inline-flex flex-lg-row-reverse align-items-center align-middle">
-                                        <img src="../assets/brand/<?=settings('favicon')?>" alt class="d-block ui-w-30 rounded-circle">
+                                        <img src="../assets/brand/<?= settings('favicon') ?>" alt class="d-block ui-w-30 rounded-circle">
                                         <span class="px-1 mr-lg-2 ml-2 ml-lg-0"><?php echo UserData('email'); ?></span>
                                     </span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
-                                   <!--  <a href="javascript:" class="dropdown-item">
+                                    <!--  <a href="javascript:" class="dropdown-item">
                                         <i class="feather icon-user text-muted"></i> &nbsp; My profile</a>
                                     <a href="javascript:" class="dropdown-item">
                                         <i class="feather icon-mail text-muted"></i> &nbsp; Messages</a>
@@ -387,6 +416,3 @@
                     </div>
                 </nav>
                 <!-- [ Layout navbar ( Header ) ] End -->
-
-
-

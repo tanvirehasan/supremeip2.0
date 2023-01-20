@@ -23,6 +23,17 @@ function HomePage($col_name, $id){
     return $row[$col_name];
 }
 
+//Home Page
+function AboutPage($col_name, $id)
+{
+    $row = mysqli_fetch_array(SelectData('about_page', "WHERE id='$id'"));
+    return $row[$col_name];
+}
+
+
+
+
+
 //catagory
 function postcate($col_name, $id){
     $row = mysqli_fetch_array(SelectData('blogs_category',"WHERE cat_id='$id'"));
