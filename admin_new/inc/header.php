@@ -179,6 +179,9 @@ if (!isset($_SESSION['user'])) {
                             <li class="sidenav-item"><a href="about_list.php" class="sidenav-link">
                                     <div>About Us</div>
                                 </a></li>
+                            <li class="sidenav-item"><a href="contact_list.php" class="sidenav-link">
+                                    <div>Contact Us</div>
+                                </a></li>
 
                             <li class="sidenav-item"><a href="team.php" class="sidenav-link">
                                     <div>Team</div>
