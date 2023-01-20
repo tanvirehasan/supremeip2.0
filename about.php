@@ -133,6 +133,16 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
         .mobile-margin {
             margin-top: 60px;
         }
+
+        .page1,
+        .page2,
+        .page3,
+        .page1overlay,
+        .page2overlay,
+        .page3overlay {
+            min-height: 100px;
+            
+        }
     }
 </style>
 
