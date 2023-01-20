@@ -86,7 +86,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
     }
 
     .page2 {
-        min-height: 550;
+        min-height: 550px;
     }
 
     .page2overlay {
