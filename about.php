@@ -86,11 +86,11 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
     }
 
     .page2 {
-        min-height: 100%;
+        min-height: 550;
     }
 
     .page2overlay {
-        min-height: 100%;
+        min-height: 550%;
         width: 100%;
         overflow: hidden;
     }
@@ -125,9 +125,6 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
         margin: 0;
         padding: 0;
     }
-
-
-
 
     @media only screen and (max-width: 600px) {
         .mobile-margin {
