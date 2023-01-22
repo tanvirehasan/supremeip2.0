@@ -37,6 +37,14 @@ function contactPage($col_name, $id)
     return $row[$col_name];
 }
 
+//Team Page
+function TeamPage($col_name, $id)
+{
+    $row = mysqli_fetch_array(SelectData('team_page', "WHERE id='$id'"));
+    return $row[$col_name];
+}
+
+
 
 
 

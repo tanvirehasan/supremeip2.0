@@ -172,7 +172,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
     </div>
 
 
-    <div class="row m-0" style="background:<?= contactPage('bg_color', '3') ?>; !important">
+    <div class="row m-0" style="background:<?= contactPage('bg_color', '3') ?>!important;">
         <!-- section-2 -->
         <div class="col-md-2 m-0 p-0 mb-lg-0">
             <div class="page-content page2" style="background-image:url(assets/mediacenter/<?= (contactPage('img_yes_no', '3') == 1) ? contactPage('image', '3') : ''; ?>);">

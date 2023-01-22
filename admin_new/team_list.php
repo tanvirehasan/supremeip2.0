@@ -8,7 +8,7 @@
           <div class="col-md-12">
              <div class="card mt-5">
                  <div class="card-header">
-                     <h5> About Page List </h5>
+                     <h5> Team Page List </h5>
                  </div>
                  <div class="card-body">
                      <div class="row align-items-center m-l-0">
@@ -33,7 +33,7 @@
                         <tr class="bg-success"><td  class="h5">Section 1</td><td></td><td></td><td></td><td></td><td></td></tr>
                         <?php 
                             $i=1;
-                            $home_data = SelectData('about_page', "LIMIT 0,2");
+                            $home_data = SelectData('team_page', "LIMIT 0,2");
                             while ($home = $home_data->fetch_object()) {?>
                                  <tr>
                                     <td><?=$i++?></td>
@@ -45,7 +45,7 @@
                                     </td>
 
                                     <td>
-                                        <a target="NULL" href="about_edit.php?about_edit=<?=$home->id?>"  class="btn btn-danger btn-sm text-white">Edit</a>                               
+                                        <a target="NULL" href="teampage_edit.php?team_edit=<?=$home->id?>"  class="btn btn-danger btn-sm text-white">Edit</a>                               
                                     </td>
                                 </tr> 
 
@@ -55,20 +55,20 @@
                         <tr class="bg-success"><td class="h5">Section 2</td><td></td><td></td><td></td><td></td><td></td></tr>
                         <?php 
                             $i=1;
-                            $home_data = SelectData('about_page', "LIMIT 2,3");
+                            $home_data = SelectData('team_page', "LIMIT 2,3");
                             while ($home = $home_data->fetch_object()) {?>
 
                                  <tr>
                                     <td><?=$i++?></td>
                                     <td><?=$home->title?></td>
-                                    <td><?php $contetext=strip_tags($home->content); echo substr_replace($contetext, "...", 100);   ?></td>
+                                    <td><?php $contetext =strip_tags($home->content); echo substr_replace($contetext, "...", 100);   ?></td>
                                     <td><img src="../assets/mediacenter/<?=$home->image?>" style=" width: 50px; height:50px;" ></td>
                                     <td>
                                         <div style="background:<?=$home->bg_color?>; width: 50px; height:50px;"></div>
                                     </td>
 
                                     <td>
-                                        <a target="NULL" href="about_edit.php?about_edit=<?=$home->id?>"  class="btn btn-danger btn-sm text-white">Edit</a>                               
+                                        <a target="NULL" href="teampage_edit.php?team_edit=<?=$home->id?>"  class="btn btn-danger btn-sm text-white">Edit</a>                               
                                     </td>
                                 </tr> 
 
@@ -77,7 +77,7 @@
                         <tr class="bg-success"><td  class="h5">Section 3</td><td></td><td></td><td></td><td></td><td></td></tr>
                         <?php 
                             $i=1;
-                            $home_data = SelectData('about_page', "LIMIT 5,2");
+                            $home_data = SelectData('team_page', "LIMIT 5,2");
                             while ($home = $home_data->fetch_object()) {?>
 
                                  <tr >
@@ -90,7 +90,7 @@
                                     </td>
 
                                     <td>
-                                        <a target="NULL" href="about_edit.php?about_edit=<?=$home->id?>"  class="btn btn-danger btn-sm text-white">Edit</a>                               
+                                        <a target="NULL" href="teampage_edit.php?team_edit=<?=$home->id?>"  class="btn btn-danger btn-sm text-white">Edit</a>                               
                                     </td>
                                 </tr> 
 
