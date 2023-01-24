@@ -103,8 +103,6 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
   }
 
   .page-content {
-    background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
   }
 
@@ -146,9 +144,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
     <div class="col-md-6 m-0 p-0 mb-lg-0">
       <div class="page-content page1" style="background-image:url(assets/mediacenter/<?= (TeamPage('img_yes_no', '1') == 1) ? TeamPage('image', '1') : ''; ?>);">
         <div class="page1overlay" style="background:<?= TeamPage('bg_color', '1') ?>; opacity:<?= TeamPage('opasity', '1') ?>;">
-          <a class="home-link" href="<?= TeamPage('link', '1') ?>">
-            <div class="p-5"><?= TeamPage('content', '1') ?></div>
-          </a>
+          <div class="p-5"><?= TeamPage('content', '1') ?></div>
         </div>
       </div>
     </div>
@@ -156,9 +152,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
     <div class="col-md-6 m-0 p-0">
       <div class="page-content page1" style="background-image:url(assets/mediacenter/<?= (TeamPage('img_yes_no', '2') == 1) ? TeamPage('image', '2') : ''; ?>);">
         <div class="page1overlay " style="background:<?= TeamPage('bg_color', '2') ?>;opacity: <?= TeamPage('opasity', '2') ?>;">
-          <a class="home-link" href="<?= TeamPage('link', '2') ?>">
-            <div class="p-5"><?= TeamPage('content', '2') ?></div>
-          </a>
+          <div class="p-5"><?= TeamPage('content', '2') ?></div>
         </div>
       </div>
     </div>
@@ -170,9 +164,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
     <div class="col-md-2 m-0 p-0 mb-lg-0" style="background-image:url(assets/mediacenter/<?= (TeamPage('img_yes_no', '3') == 1) ? TeamPage('image', '3') : ''; ?>);">
       <div class=" page-content page2">
         <div class="page2overlay" style="background:<?= TeamPage('bg_color', '3') ?>; opacity:<?= TeamPage('opasity', '3') ?>;">
-          <a class="home-link" href="<?= TeamPage('link', '3') ?>">
-            <div class=" py-5 text-center"><?= TeamPage('content', '3') ?></div>
-          </a>
+          <div class="p-5"><?= TeamPage('content', '3') ?></div>
         </div>
       </div>
     </div>
@@ -205,9 +197,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
     <div class="col-md-2 m-0 p-0">
       <div class="page-content page2" style="background-image:url(assets/mediacenter/<?= (TeamPage('img_yes_no', '5') == 1) ? TeamPage('image', '5') : ''; ?>);">
         <div class="page2overlay " style="background:<?= TeamPage('bg_color', '5') ?>;opacity: <?= TeamPage('opasity', '5') ?>;">
-          <a class="home-link" href="<?= TeamPage('link', '5') ?>">
-            <div class="p-5"><?= TeamPage('content', '5') ?></div>
-          </a>
+          <div class="p-5"><?= TeamPage('content', '5') ?></div>
         </div>
       </div>
     </div>
@@ -218,9 +208,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
     <div class="col-md-6 m-0 p-0 mb-lg-0">
       <div class="page-content page3" style="background-image:url(assets/mediacenter/<?= (TeamPage('img_yes_no', '6') == 1) ? TeamPage('image', '6') : ''; ?>);">
         <div class="page3overlay" style="background:<?= TeamPage('bg_color', '6') ?>; opacity:<?= TeamPage('opasity', '6') ?>;">
-          <a class="home-link" href="<?= TeamPage('link', '6') ?>">
-            <div class="p-5"><?= TeamPage('content', '6') ?></div>
-          </a>
+          <div class="p-5"><?= TeamPage('content', '6') ?></div>
         </div>
       </div>
     </div>
@@ -228,9 +216,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
     <div class="col-md-6 m-0 p-0">
       <div class="page-content page3" style="background-image:url(assets/mediacenter/<?= (TeamPage('img_yes_no', '7') == 1) ? TeamPage('image', '7') : ''; ?>);">
         <div class="page3overlay " style="background:<?= TeamPage('bg_color', '7') ?>;opacity: <?= TeamPage('opasity', '7') ?>;">
-          <a class="home-link" href="<?= TeamPage('link', '7') ?>">
-            <div class="p-5"><?= TeamPage('content', '7') ?></div>
-          </a>
+          <div class="p-5"><?= TeamPage('content', '7') ?></div>
         </div>
       </div>
     </div>

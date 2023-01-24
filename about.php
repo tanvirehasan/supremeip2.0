@@ -87,7 +87,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
 
 
     .page2overlay {
-        
+
         width: 100%;
         overflow: hidden;
     }
@@ -104,8 +104,6 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
 
 
     .page-content {
-        background-size: cover;
-        background-repeat: no-repeat;
         background-position: center;
     }
 
@@ -147,9 +145,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
         <div class="col-md-6 m-0 p-0 mb-lg-0">
             <div class="page-content page1" style="background-image:url(assets/mediacenter/<?= (AboutPage('img_yes_no', '1') == 1) ? AboutPage('image', '1') : ''; ?>);">
                 <div class="page1overlay" style="background:<?= AboutPage('bg_color', '1') ?>; opacity:<?= AboutPage('opasity', '1') ?>;">
-                    <a class="home-link" href="<?= AboutPage('link', '1') ?>">
-                        <div class="p-5"><?= AboutPage('content', '1') ?></div>
-                    </a>
+                    <div class="p-5"><?= AboutPage('content', '1') ?></div>
                 </div>
             </div>
         </div>
@@ -157,9 +153,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
         <div class="col-md-6 m-0 p-0">
             <div class="page-content page1" style="background-image:url(assets/mediacenter/<?= (AboutPage('img_yes_no', '2') == 1) ? AboutPage('image', '2') : ''; ?>);">
                 <div class="page1overlay " style="background:<?= AboutPage('bg_color', '2') ?>;opacity: <?= AboutPage('opasity', '2') ?>;">
-                    <a class="home-link" href="<?= AboutPage('link', '2') ?>">
-                        <div class="p-5"><?= AboutPage('content', '2') ?></div>
-                    </a>
+                    <div class="p-5"><?= AboutPage('content', '2') ?></div>
                 </div>
             </div>
         </div>
@@ -171,9 +165,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
         <div class="col-md-2 m-0 p-0 mb-lg-0" style="background-image:url(assets/mediacenter/<?= (AboutPage('img_yes_no', '3') == 1) ? AboutPage('image', '3') : ''; ?>);">
             <div class=" page-content page2">
                 <div class="page2overlay" style="background:<?= AboutPage('bg_color', '3') ?>; opacity:<?= AboutPage('opasity', '3') ?>;">
-                    <a class="home-link" href="<?= AboutPage('link', '3') ?>">
-                        <div class="p-5"><?= AboutPage('content', '3') ?></div>
-                    </a>
+                    <div class="p-5"><?= AboutPage('content', '3') ?></div>
                 </div>
             </div>
         </div>
@@ -181,9 +173,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
         <div class="col-md-8 m-0 p-0">
             <div class="page-content page2" style="background-image:url(assets/mediacenter/<?= (AboutPage('img_yes_no', '4') == 1) ? AboutPage('image', '4') : ''; ?>);">
                 <div class="page2overlay" style="background:<?= AboutPage('bg_color', '4') ?>;opacity: <?= AboutPage('opasity', '4') ?>;">
-                    <a class="home-link" href="<?= AboutPage('link', '4') ?>">
-                        <div class="p-5"><?= AboutPage('content', '4') ?></div>
-                    </a>
+                    <div class="p-5"><?= AboutPage('content', '4') ?></div>
                 </div>
             </div>
         </div>
@@ -191,9 +181,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
         <div class="col-md-2 m-0 p-0" style="background-image:url(assets/mediacenter/<?= (AboutPage('img_yes_no', '5') == 1) ? AboutPage('image', '5') : ''; ?>);">
             <div class="page-content page2">
                 <div class="page2overlay " style="background:<?= AboutPage('bg_color', '5') ?>;opacity: <?= AboutPage('opasity', '5') ?>;">
-                    <a class="home-link" href="<?= AboutPage('link', '5') ?>">
-                        <div class="p-5"><?= AboutPage('content', '5') ?></div>
-                    </a>
+                    <div class="p-5"><?= AboutPage('content', '5') ?></div>
                 </div>
             </div>
         </div>
@@ -204,9 +192,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
         <div class="col-md-6 m-0 p-0 mb-lg-0">
             <div class="page-content page3" style="background-image:url(assets/mediacenter/<?= (AboutPage('img_yes_no', '6') == 1) ? AboutPage('image', '6') : ''; ?>);">
                 <div class="page3overlay" style="background:<?= AboutPage('bg_color', '6') ?>; opacity:<?= AboutPage('opasity', '6') ?>;">
-                    <a class="home-link" href="<?= AboutPage('link', '6') ?>">
-                        <div class="p-5"><?= AboutPage('content', '6') ?></div>
-                    </a>
+                    <div class="p-5"><?= AboutPage('content', '6') ?></div>
                 </div>
             </div>
         </div>
@@ -214,9 +200,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
         <div class="col-md-6 m-0 p-0">
             <div class="page-content page3" style="background-image:url(assets/mediacenter/<?= (AboutPage('img_yes_no', '7') == 1) ? AboutPage('image', '7') : ''; ?>);">
                 <div class="page3overlay " style="background:<?= AboutPage('bg_color', '7') ?>;opacity: <?= AboutPage('opasity', '7') ?>;">
-                    <a class="home-link" href="<?= AboutPage('link', '7') ?>">
-                        <div class="p-5"><?= AboutPage('content', '7') ?></div>
-                    </a>
+                    <div class="p-5"><?= AboutPage('content', '7') ?></div>
                 </div>
             </div>
         </div>
