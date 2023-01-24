@@ -182,9 +182,12 @@ if (!isset($_SESSION['user'])) {
                             <li class="sidenav-item"><a href="contact_list.php" class="sidenav-link">
                                     <div>Contact Us</div>
                                 </a></li>
+                            <li class="sidenav-item"><a href="team_list.php" class="sidenav-link">
+                                    <div>Our Team</div>
+                                </a></li>
 
                             <li class="sidenav-item"><a href="team.php" class="sidenav-link">
-                                    <div>Team</div>
+                                    <div>Team add</div>
                                 </a></li>
                             <li class="sidenav-item"><a href="ourclients.php" class="sidenav-link">
                                     <div>Clients</div>
