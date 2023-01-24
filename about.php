@@ -55,11 +55,8 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
                     <li class="nav-item">
                         <a class="nav-link nav_menu fw-bold" href="https://test.supremeip.com/" style="">
                             <i class="fas fa-home" style="display: inline-block!important;transform: rotate(0deg); "></i>
-
                             Home</a>
                     </li>
-
-
                 </ul>
             </div>
         </div>
@@ -160,7 +157,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
     </div>
 
 
-    <div class="row m-0" style="background:<?= AboutPage('bg_color', '3') ?>;">
+    <div class="row m-0">
         <!-- section-2 -->
         <div class="col-md-2 m-0 p-0 mb-lg-0" style="background-image:url(assets/mediacenter/<?= (AboutPage('img_yes_no', '3') == 1) ? AboutPage('image', '3') : ''; ?>);">
             <div class=" page-content page2">
