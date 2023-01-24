@@ -76,35 +76,31 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
   /*Home Page*/
 
   .page1 {
-    min-height: 300px;
+    height: 250px;
   }
 
   .page1overlay {
-    min-height: 300px;
+    height: 250px;
     width: 100%;
     overflow: hidden;
   }
 
-  .page2 {
-    min-height: 550px;
-  }
 
   .page2overlay {
-    min-height: 550px;
+
     width: 100%;
     overflow: hidden;
   }
 
   .page3 {
-    min-height: 200px;
+    height: 250px;
   }
 
   .page3overlay {
-    min-height: 200px;
+    height: 250px;
     width: 100%;
     overflow: hidden;
   }
-
 
   .page-content {
     background-size: cover;
@@ -171,8 +167,8 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
 
   <div class="row m-0" style="background:<?= TeamPage('bg_color', '3') ?> !important;">
     <!-- section-2 -->
-    <div class="col-md-2 m-0 p-0 mb-lg-0">
-      <div class=" page-content page2" style="background-image:url(assets/mediacenter/<?= (TeamPage('img_yes_no', '3') == 1) ? TeamPage('image', '3') : ''; ?>);">
+    <div class="col-md-2 m-0 p-0 mb-lg-0" style="background-image:url(assets/mediacenter/<?= (TeamPage('img_yes_no', '3') == 1) ? TeamPage('image', '3') : ''; ?>);">
+      <div class=" page-content page2">
         <div class="page2overlay" style="background:<?= TeamPage('bg_color', '3') ?>; opacity:<?= TeamPage('opasity', '3') ?>;">
           <a class="home-link" href="<?= TeamPage('link', '3') ?>">
             <div class=" py-5 text-center"><?= TeamPage('content', '3') ?></div>

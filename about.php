@@ -76,31 +76,28 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
     /*Home Page*/
 
     .page1 {
-        min-height: 300px;
+        height: 250px;
     }
 
     .page1overlay {
-        min-height: 300px;
+        height: 250px;
         width: 100%;
         overflow: hidden;
     }
 
-    .page2 {
-        min-height: 550px;
-    }
 
     .page2overlay {
-        min-height: 550px;
+        
         width: 100%;
         overflow: hidden;
     }
 
     .page3 {
-        min-height: 200px;
+        height: 250px;
     }
 
     .page3overlay {
-        min-height: 200px;
+        height: 250px;
         width: 100%;
         overflow: hidden;
     }
@@ -169,10 +166,10 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
     </div>
 
 
-    <div class="row m-0">
+    <div class="row m-0" style="background:<?= AboutPage('bg_color', '3') ?>;">
         <!-- section-2 -->
-        <div class="col-md-2 m-0 p-0 mb-lg-0">
-            <div class=" page-content page2" style="background-image:url(assets/mediacenter/<?= (AboutPage('img_yes_no', '3') == 1) ? AboutPage('image', '3') : ''; ?>);">
+        <div class="col-md-2 m-0 p-0 mb-lg-0" style="background-image:url(assets/mediacenter/<?= (AboutPage('img_yes_no', '3') == 1) ? AboutPage('image', '3') : ''; ?>);">
+            <div class=" page-content page2">
                 <div class="page2overlay" style="background:<?= AboutPage('bg_color', '3') ?>; opacity:<?= AboutPage('opasity', '3') ?>;">
                     <a class="home-link" href="<?= AboutPage('link', '3') ?>">
                         <div class="p-5"><?= AboutPage('content', '3') ?></div>
@@ -191,8 +188,8 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
             </div>
         </div>
 
-        <div class="col-md-2 m-0 p-0">
-            <div class="page-content page2" style="background-image:url(assets/mediacenter/<?= (AboutPage('img_yes_no', '5') == 1) ? AboutPage('image', '5') : ''; ?>);">
+        <div class="col-md-2 m-0 p-0" style="background-image:url(assets/mediacenter/<?= (AboutPage('img_yes_no', '5') == 1) ? AboutPage('image', '5') : ''; ?>);">
+            <div class="page-content page2">
                 <div class="page2overlay " style="background:<?= AboutPage('bg_color', '5') ?>;opacity: <?= AboutPage('opasity', '5') ?>;">
                     <a class="home-link" href="<?= AboutPage('link', '5') ?>">
                         <div class="p-5"><?= AboutPage('content', '5') ?></div>

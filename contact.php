@@ -76,31 +76,28 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
     /*Home Page*/
 
     .page1 {
-        min-height: 300px;
+        height: 250px;
     }
 
     .page1overlay {
-        min-height: 300px;
+        height: 250px;
         width: 100%;
         overflow: hidden;
     }
 
-    .page2 {
-        min-height: 550px;
-    }
 
     .page2overlay {
-        min-height: 550px;
+
         width: 100%;
         overflow: hidden;
     }
 
     .page3 {
-        min-height: 200px;
+        height: 250px;
     }
 
     .page3overlay {
-        min-height: 200px;
+        height: 250px;
         width: 100%;
         overflow: hidden;
     }
