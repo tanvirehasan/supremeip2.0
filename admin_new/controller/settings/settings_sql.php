@@ -675,6 +675,71 @@ if (isset($_POST['socalsetingupdate'])) {
 }
 
 
+// MObile Sosial bar 
+
+
+//Socal 
+if (isset($_POST['mobilesocalnewadd'])) {
+
+  $icon = $_POST['icon'];
+  $name = $_POST['name'];
+  $social_url = $_POST['social_url'];
+  $qr_image = $_FILES["qr_image"]["name"];
+
+  //image
+  $target_dir  = "../assets/mediacenter/";
+  $target_file = $target_dir . basename($_FILES["qr_image"]["name"]);
+  move_uploaded_file($_FILES["qr_image"]["tmp_name"], $target_file);
+
+  $insrt = "INSERT INTO `mobile_social`(`name`, `social_url`, `icon`, `qr_image`) VALUES ('$name','$social_url','$icon', '$qr_image')";
+  $conn->query($insrt);
+}
+
+if (isset($_POST['mobilesocalupdate'])) {
+
+  $icon = $_POST['icon'];
+  $name = $_POST['name'];
+  $social_url = $_POST['social_url'];
+  $id = $_POST['sid'];
+
+  if ($_FILES["qr_image"]["name"] != '') {
+    $qr_image = $_FILES["qr_image"]["name"];
+    $target_dir  = "../assets/mediacenter/";
+    $target_file = $target_dir . basename($_FILES["qr_image"]["name"]);
+    move_uploaded_file($_FILES["qr_image"]["tmp_name"], $target_file);
+  } else {
+    $qr_image = $_POST["qr_image2"];
+  }
+  $update = "UPDATE `mobile_social` SET `name`='$name', `social_url`='$social_url', `icon`='$icon', `qr_image`='$qr_image' WHERE id='$id'";
+  $conn->query($update);
+}
+
+if (isset($_GET['mobilesocial_delete'])) {
+  $delete = "DELETE FROM mobile_social WHERE id={$_GET['mobilesocial_delete']}";
+  $conn->query($delete);
+}
+
+
+
+if (isset($_POST['mobilesocalsetingupdate'])) {
+
+  $mobilesocialbar_bgcolor        = $_POST['mobilesocialbar_bgcolor'];
+  $mobilesocialbar_iconcolor      = $_POST['mobilesocialbar_iconcolor'];
+  $mobilesocialbar_iconhovercolor = $_POST['mobilesocialbar_iconhovercolor'];
+  $mobilesocialbar_hoverbgcolor   = $_POST['mobilesocialbar_hoverbgcolor'];
+  $mobilesocialbar_imagesize      = $_POST['mobilesocialbar_imagesize'];
+
+  $setingupdate = "UPDATE `settings` SET  
+  `mobilesocialbar_bgcolor`='$mobilesocialbar_bgcolor',
+  `mobilesocialbar_iconcolor`='$mobilesocialbar_iconcolor',
+  `mobilesocialbar_iconhovercolor`='$mobilesocialbar_iconhovercolor',
+  `mobilesocialbar_hoverbgcolor`='$mobilesocialbar_hoverbgcolor',
+  `mobilesocialbar_imagesize`='$mobilesocialbar_imagesize' ";
+  $conn->query($setingupdate);
+}
+
+
+
 
 
 

@@ -111,6 +111,9 @@ if (!isset($_SESSION['user'])) {
                             <li class="sidenav-item"><a href="setting.php?setting=General" class="sidenav-link">
                                     <div>Social Bar</div>
                                 </a></li>
+                            <li class="sidenav-item"><a href="setting.php?setting=mobilesocil" class="sidenav-link">
+                                    <div>Mobile Social Bar</div>
+                                </a></li>
                             <li class="sidenav-item"><a href="setting.php?setting=Menu" class="sidenav-link">
                                     <div>Manu Setting</div>
                                 </a></li>

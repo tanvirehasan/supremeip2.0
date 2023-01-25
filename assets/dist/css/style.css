@@ -828,21 +828,3 @@ transform: rotate(30deg);
 
 
 
-/*========= footer Mobile Menu ========================== */
-
-
-.mobile_bottom_menu{
-   background-color: #00538e;
-   padding: 10px 25px;
-   width: 100%;
-}
-.mobile_bottom_menu a{
-  color: #FFFFFF;
-  font-size: 20px;
- 
-}
-
-
-.mobile_bottom_menu a:hover{
-  color: #514949;
-}
