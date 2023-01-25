@@ -44,18 +44,6 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
 <?php include "inc/header.php"; ?>
 
 
-<style>
-    .navbar-toggler:focus {
-        text-decoration: none !important;
-        outline: 0 !important;
-        box-shadow: 0 0 0 0 !important;
-    }
-</style>
-
-<!-- mobile menu -->
-
-
-
 <!-- main content -->
 <main class="col-md-10 ms-sm-auto col-lg-10  m-0 p-0">
     <div class="row mx-0 p-0 m-0 d-flex justify-content-center" style="background:<?= settings('Center_bg') ?>">

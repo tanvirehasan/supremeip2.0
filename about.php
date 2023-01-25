@@ -37,38 +37,6 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
 
 <?php include "inc/header.php"; ?>
 
-
-
-<!-- mobile menu -->
-<div class="d-sm-block d-md-none">
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background:#ece7e3 !important">
-        <div class="container-fluid  mb-2">
-            <div class="d-flex">
-                <a class="" href="index.php"><img src="assets/brand/SUPREMEiP Law Firm.png" width="60%" alt="SUPREMEiP"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="text-white" style="outline: none !important;  box-shadow: none !important;"><i style="outline: none !important; box-shadow: none !important;" class="fas fa-bars"></i></span>
-                </button>
-            </div>
-
-            <div class="collapse  navbar-collapse " id="navbarNav2">
-                <ul class="navbar-nav mt-3 mobile_menu">
-                    <li class="nav-item">
-                        <a class="nav-link nav_menu fw-bold" href="https://test.supremeip.com/" style="">
-                            <i class="fas fa-home" style="display: inline-block!important;transform: rotate(0deg); "></i>
-                            Home</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</div>
-
-
-<!-- quick contact -->
-
-
-<div class="mobile-margin"></div>
-
 <style type="text/css">
     /*Home Page*/
 
