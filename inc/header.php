@@ -83,7 +83,7 @@
 
       <!-- mobile menu -->
       <div class="d-sm-block d-md-none">
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background:#ece7e3 !important">
+        <div class="navbar navbar-expand-lg navbar-light fixed-top" style="background:#ece7e3 !important">
           <div class="container-fluid  mb-2">
             <div class="d-flex">
               <a class="" href="index.php"><img src="assets/brand/SUPREMEiP Law Firm.png" width="60%" alt="SUPREMEiP"></a>
@@ -91,50 +91,51 @@
                 <span class="text-white" style="outline: none !important;  box-shadow: none !important;"><i style="outline: none !important; box-shadow: none !important;" class="fas fa-bars"></i></span>
               </button>
             </div>
+          </div>
 
-            <div class="collapse  navbar-collapse " id="navbarNav2">
-              <ul class="navbar-nav mt-3 ">
-                <div class="accordion ps-2" id="accordionExample">
+          <div class="collapse  navbar-collapse mobile_menu" id="navbarNav2">
+            <ul class="navbar-nav mt-3 ">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item bg-transparent">
+                  <div class="accordion-header p-0" id="homebtn">
+                    <a class="nav-link" href=""> <i class="fas fa-home"></i> Home </a>
+                  </div>
+                </div>
+                <?php $data = SelectData('menu_new', "WHERE menu_perent='#' AND manu_status!='0' ORDER BY serial_list ASC");
+                foreach ($data as $row) { ?>
+
                   <div class="accordion-item bg-transparent">
-                    <div class="accordion-header p-0" id="homebtn">
-                      <a class="nav-link" href=""> <i class="fas fa-home"></i> Home </a>
+                    <div class="accordion-header p-0" id="headingTwo">
+                      <a class="accordion-button collapsed bg-transparent nav-link " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo<?= $row['menu_id'] ?>" aria-expanded="false" aria-controls="collapseTwo">
+                        <i class="<?= $row['icon'] ?> pe-1"></i> <?= $row['menu_title'] ?></a>
+                    </div>
+                    <div id="collapseTwo<?= $row['menu_id'] ?>" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="accordion-body m-0 p-0">
+                        <?php $pageid = $row['menu_id'];
+                        $data = SelectData('menu_new', "WHERE menu_perent='$pageid' AND manu_status!='0' ORDER BY serial_list ASC");
+                        foreach ($data as $crow) { ?>
+                          <a class="nav-link" id="sub_menu_link" href="pages.php?page=<?= $row['manu_url'] ?>&child=<?= $crow['manu_url'] ?>">
+                            <i class="<?= $crow['icon'] ?> pe-1"></i> <?= $crow['menu_title'] ?></a>
+                        <?php } ?>
+                      </div>
                     </div>
                   </div>
-                  <?php $data = SelectData('menu_new', "WHERE menu_perent='#' AND manu_status!='0' ORDER BY serial_list ASC");
-                  foreach ($data as $row) { ?>
 
-                    <div class="accordion-item bg-transparent">
-                      <div class="accordion-header p-0" id="headingTwo">
-                        <a class="accordion-button collapsed bg-transparent nav-link " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo<?= $row['menu_id'] ?>" aria-expanded="false" aria-controls="collapseTwo">
-                          <i class="<?= $row['icon'] ?> pe-1"></i> <?= $row['menu_title'] ?></a>
-                      </div>
-                      <div id="collapseTwo<?= $row['menu_id'] ?>" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                        <div class="accordion-body m-0 p-0">
-                          <?php $pageid = $row['menu_id'];
-                          $data = SelectData('menu_new', "WHERE menu_perent='$pageid' AND manu_status!='0' ORDER BY serial_list ASC");
-                          foreach ($data as $crow) { ?>
-                            <a class="nav-link" id="sub_menu_link" href="pages.php?page=<?= $row['manu_url'] ?>&child=<?= $crow['manu_url'] ?>">
-                              <i class="<?= $crow['icon'] ?> pe-1"></i> <?= $crow['menu_title'] ?></a>
-                          <?php } ?>
-                        </div>
-                      </div>
+                <?php } ?>
+
+                <?php $sdata = SelectData('menu_new', "WHERE menu_perent='single' AND manu_status!='0' ORDER BY serial_list ASC");
+                foreach ($sdata as $srow) { ?>
+                  <div class="accordion-item bg-transparent">
+                    <div class="accordion-header p-0" id="homebtn">
+                      <a class="nav-link" href="<?= $srow['manu_url'] ?>"> <i class="<?= $srow['icon'] ?>" pe-1></i> <?= $srow['menu_title'] ?> </a>
                     </div>
-
-                  <?php } ?>
-
-                  <?php $sdata = SelectData('menu_new', "WHERE menu_perent='single' AND manu_status!='0' ORDER BY serial_list ASC");
-                  foreach ($sdata as $srow) { ?>
-                    <div class="accordion-item bg-transparent">
-                      <div class="accordion-header p-0" id="homebtn">
-                        <a class="nav-link" href="<?= $srow['manu_url'] ?>"> <i class="<?= $srow['icon'] ?>" pe-1></i> <?= $srow['menu_title'] ?> </a>
-                      </div>
-                    </div>
-                  <?php } ?>
-                </div>
+                  </div>
+                <?php } ?>
+              </div>
 
 
-              </ul>
-            </div>
+            </ul>
           </div>
+        </div>
         </nav>
       </div>
