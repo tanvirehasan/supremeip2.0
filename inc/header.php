@@ -72,15 +72,6 @@
         </div>
       </nav>
 
-      <style>
-        .accordion-item button:focus {
-          text-decoration: none !important;
-          outline: 0 !important;
-          box-shadow: 0 0 0 0 !important;
-        }
-      </style>
-
-
       <!-- mobile menu -->
       <div class="d-sm-block d-md-none">
         <div class="navbar navbar-expand-lg navbar-light fixed-top" style="background:<?= header_menu('background_color'); ?>;">
@@ -88,7 +79,7 @@
             <div class="d-flex">
               <a class="" href="index.php"><img src="assets/brand/SUPREMEiP Law Firm.png" width="60%" alt="SUPREMEiP"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="text-white" style="outline: none !important;  box-shadow: none !important;"><i style="color:<?= header_menu('font_color') ?>;outline: none !important; box-shadow: none !important;" class="fas fa-bars"></i></span>
+                <span class="text-white" style="outline: none !important;  box-shadow: none !important;"><i style="color:<?= header_menu('font_color') ?>; outline: none !important; box-shadow: none !important;" class="fas fa-bars"></i></span>
               </button>
             </div>
           </div>
@@ -139,3 +130,13 @@
         </div>
         </nav>
       </div>
+
+
+
+      <style>
+        .accordion-item button:focus {
+          text-decoration: none !important;
+          outline: 0 !important;
+          box-shadow: 0 0 0 0 !important;
+        }
+      </style>

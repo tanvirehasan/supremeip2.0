@@ -6,8 +6,8 @@ include "inc/function.php";
 
 .logoimg img{width:<?= settings('logo_size') ?>%;}
 
-<!-- social Bar menu  -->
-
+<?php //social Bar menu 
+?>
 
 
 
@@ -34,6 +34,15 @@ border: 2px solid #047742;
 border-radius: 10px;
 }
 
+.mobile_menu a{
+font-size: <?= header_menu('font_size') ?>px !important;
+color:<?= header_menu('font_color') ?> !important;
+text-transform:<?= header_menu('text_transform') ?>;
+line-height:<?= header_menu('line_height') ?>;
+cursor: pointer;
+border-bottom:1px solid rgba(255, 255, 255, 0.1);
+font-family:<?php echo html_entity_decode(header_menu('font_family')); ?>;
+}
 
 
 nav .accordion-header {
@@ -54,14 +63,14 @@ padding-left:20px !important;
 
 .page-content a{ text-decoration:none !important }
 
+
+
 .page-content a:hover{
 color:<?= header_menu('hover_color') ?> !important;
 background-color:<?= header_menu('text_bg_hover_color'); ?>!important;
 padding:5px;
+
 }
-
-
-
 
 nav .accordion-header a:hover{
 color: <?= header_menu('hover_color'); ?> !important;
@@ -138,12 +147,23 @@ opacity: 0.3;
 }
 
 
+
 .active{
 color:<?= header_menu('active_color'); ?> !important;
 font-size: <?= 1 + header_menu('font_size'); ?>px !important;
 font-weight: bold !important;
 }
 
+
+.sidebar {
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+overflow: visible;
+z-index: 100; /* Behind the navbar */
+box-shadow: 0px 0px <?= settings('shadow_color_number') ?>px <?= settings('shadow_color') ?>;
+}
 
 
 
@@ -255,33 +275,13 @@ font-weight: bold !important;
 
 
 
-.sidebar {
-position: fixed;
-top: 0;
-bottom: 0;
-left: 0;
-overflow: visible;
-z-index: 100; /* Behind the navbar */
-box-shadow: 0px 0px <?= settings('shadow_color_number') ?>px <?= settings('shadow_color') ?>;
-}
 
 
-.sharebtn a i{
-color:<?= sub_menu('font_color') ?> !important;
-}
-
-
-#ylhbtn{
-font-size:<?= settings('Your_Lawyer_font_size') ?>px !important;
-color:<?= settings('Your_Lawyer_font_color') ?>!important;
-background:<?= settings('Your_Lawyer_bg_color') ?>!important;
-font-family:<?= html_entity_decode(settings('Your_Lawyer_font_famaily')) ?>!important;
-text-transform:<?= settings('page_header_font_lettercash') ?>!important;
-}
 
 
 <?php //Team 
 ?>
+
 .team_icon{
 padding: 5px 6px;
 position: absolute;
@@ -355,18 +355,12 @@ color:black !important;
 
 
 
-h1, .h1{ color:<?= text_color_settings('color_code', 'h1') ?> !important;
-font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h1')) ?>!important;}
-h2, .h2{ color:<?= text_color_settings('color_code', 'h2') ?> !important;
-font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h2')) ?>!important;}
-h3, .h3{ color:<?= text_color_settings('color_code', 'h3') ?> !important;
-font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h3')) ?>!important;}
-h4, .h4{ color:<?= text_color_settings('color_code', 'h4') ?> !important;
-font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h4')) ?>!important;}
-h5, .h5{ color:<?= text_color_settings('color_code', 'h5') ?> !important;
-font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h5')) ?>!important;}
-h6, .h6{ color:<?= text_color_settings('color_code', 'h6') ?> !important;
-font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h6')) ?>!important;}
+h1, .h1{ color:<?= text_color_settings('color_code', 'h1') ?> !important; font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h1')) ?>!important;}
+h2, .h2{ color:<?= text_color_settings('color_code', 'h2') ?> !important; font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h2')) ?>!important;}
+h3, .h3{ color:<?= text_color_settings('color_code', 'h3') ?> !important; font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h3')) ?>!important;}
+h4, .h4{ color:<?= text_color_settings('color_code', 'h4') ?> !important; font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h4')) ?>!important;}
+h5, .h5{ color:<?= text_color_settings('color_code', 'h5') ?> !important; font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h5')) ?>!important;}
+h6, .h6{ color:<?= text_color_settings('color_code', 'h6') ?> !important; font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h6')) ?>!important;}
 
 p{ color:<?= text_color_settings('color_code', 'p') ?> !important;}
 

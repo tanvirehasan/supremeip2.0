@@ -36,8 +36,7 @@
 
 <?php include "inc/header.php"; ?>
 
-<!-- quick contact -->
- <div class="mobile-margin" ></div>
+
 
 <style type="text/css">
     /*Home Page*/
