@@ -69,7 +69,7 @@
                     <?php } ?>        
             </div>
 
-            <div class="col-md-12 mt-3 p-3" style="background:<?=settings('page_content_bg')?>" ><?=html_entity_decode($pageinfo->page_content)?></div>
+            <div class="col-md-12 mt-3 p-4" style="background:<?=settings('page_content_bg')?>" ><?=html_entity_decode($pageinfo->page_content)?></div>
 
             <!-- widget_set -->
             <div class="col-md-12 p-0 m-0 mb-5">

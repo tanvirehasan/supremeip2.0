@@ -73,7 +73,7 @@
       </nav>
 
       <!-- mobile menu -->
-      <div class="d-sm-block d-md-none">
+      <div class="d-sm-block d-md-none mt-5 ">
         <div class="navbar navbar-expand-lg navbar-light fixed-top" style="background:<?= header_menu('background_color'); ?>;">
           <div class="container-fluid  mb-2">
             <div class="d-flex">
@@ -136,61 +136,15 @@
         }
       </style>
 
-      <div class="mobile-margin mt-5"></div>
 
       <div class="d-sm-block d-md-none">
-        <div class="fixed-bottom p-0 m-0">
-          <div class="sc-bottom-bar">
-            <a class="sc-menu-item">
-              <i class="fas fa-list"></i>
-            </a>
-
-            <a class="sc-menu-item">
-              <i class="fas fa-calendar-alt"></i>
-            </a>
-
-            <a class="sc-menu-item sc-current">
-              <i class="fas fa-home"></i>
-            </a>
-            <a class="sc-nav-indicator">
-            </a>
-
-
-            <a class="sc-menu-item">
-              <i class="fas fa-calendar-alt"></i>
-            </a>
-            <a class="sc-menu-item">
-              <i class="fas fa-calendar-alt"></i>
-            </a>
+        <div class="fixed-bottom mobile_bottom_menu">
+          <div class="d-flex justify-content-between ">
+            <a href=""><i class="fab fa-whatsapp"></i></a>
+            <a href=""><i class="fas fa-envelope"></i></a>
+            <a href=""><i class="fas fa-home"></i></a>
+            <a href=""><i class="fas fa-map-marked-alt"></i></a>
+            <a href=""><i class="fas fa-phone"></i></a>
           </div>
         </div>
       </div>
-
-
-
-      <script>
-        var menu_bar = document.querySelector('.sc-bottom-bar');
-        var menu_item = document.querySelectorAll('.sc-menu-item');
-        var menu_indicator = document.querySelector('.sc-nav-indicator');
-        var menu_current_item = document.querySelector('.sc-current');
-        var menu_position;
-
-        menu_position = menu_current_item.offsetLeft - 16;
-        menu_indicator.style.left = menu_position + "px";
-        menu_bar.style.backgroundPosition = menu_position - 8 + 'px';
-        menu_item.forEach(
-          function(select_menu_item) {
-            select_menu_item.addEventListener('click', function(e) {
-              e.preventDefault();
-              menu_position = this.offsetLeft - 16;
-              menu_indicator.style.left = menu_position + "px";
-              menu_bar.style.backgroundPosition = menu_position - 8 + 'px';
-              [...select_menu_item.parentElement.children].forEach(
-                sibling => {
-                  sibling.classList.remove('sc-current');
-                })
-              select_menu_item.classList.add('sc-current');
-            });
-          }
-        )
-      </script>
