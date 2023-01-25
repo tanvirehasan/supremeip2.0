@@ -74,19 +74,19 @@
 
       <!-- mobile menu -->
       <div class="d-sm-block d-md-none mt-5 ">
-        <div class="navbar navbar-expand-lg navbar-light fixed-top" style="background:<?= header_menu('background_color'); ?>;">
-          <div class="container-fluid  mb-2">
+        <div class="navbar navbar-expand-lg navbar-light fixed-top" style="background:<?= settings('mobilesocialbar_bgcolor'); ?>;">
+          <div class="container-fluid">
             <div class="d-flex">
               <a class="" href="index.php"><img src="assets/brand/SUPREMEiP Law Firm.png" width="60%" alt="SUPREMEiP"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="text-white" style="outline: none !important;  box-shadow: none !important;"><i style="color:<?= header_menu('font_color') ?>; outline: none !important; box-shadow: none !important;" class="fas fa-bars"></i></span>
+                <span class="text-white" style="outline: none !important;  box-shadow: none !important;"><i style="color:<?= settings('mobilesocialbar_iconcolor') ?>; outline: none !important; box-shadow: none !important;" class="fas fa-bars"></i></span>
               </button>
             </div>
           </div>
 
           <div class="collapse  navbar-collapse mobile_menu" id="navbarNav2">
-            <ul class="navbar-nav mt-3 ">
-              <div class="accordion" id="accordionExample">
+            <ul class="navbar-nav mt-3 " style="background:<?= settings('mobilesocialbar_bgcolor'); ?>;">
+              <div class="accordion" id="accordionExample" style="background:<?= settings('mobilesocialbar_bgcolor'); ?>;">
                 <div class="accordion-item bg-transparent">
                   <div class="accordion-header p-0" id="homebtn">
                     <a class="nav-link" href=""> <i class="fas fa-home"></i> Home </a>
