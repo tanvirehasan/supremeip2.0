@@ -140,11 +140,14 @@
       <div class="d-sm-block d-md-none">
         <div class="fixed-bottom mobile_bottom_menu" style="background-color: <?= settings('mobilesocialbar_bgcolor'); ?>;padding: 10px 25px !important;">
           <div class="d-flex justify-content-between ">
-            <a href=""><i class="fab fa-whatsapp"></i></a>
-            <a href=""><i class="fas fa-envelope"></i></a>
-            <a href=""><i class="fas fa-home"></i></a>
-            <a href=""><i class="fas fa-map-marked-alt"></i></a>
-            <a href=""><i class="fas fa-phone"></i></a>
+            <?php
+            $data = SelectData('mobile_social', 'ORDER BY serial_list ASC');
+            if ($data->num_rows > 0) {
+              while ($social = $data->fetch_object()) { ?>
+                <a href="<?= $social->social_url ?>"><i class="<?= $social->icon ?>"></i></a>
+            <?php }
+            } ?>
+
           </div>
         </div>
       </div>
@@ -152,15 +155,18 @@
 
       <style>
         .mobile_bottom_menu a {
-          color: <?= settings('mobilesocialbar_iconcolor'); ?> !important;
+          color: <?= settings('mobilesocialbar_iconcolor');
+                  ?> !important;
           font-size: 20px;
         }
 
         .mobile_bottom_menu a:hover {
-          color: <?= settings('mobilesocialbar_iconhovercolor'); ?>;
+          color: <?= settings('mobilesocialbar_iconhovercolor');
+                  ?>;
         }
 
         .mobile_bottom_menu a:active {
-          color: <?= settings('mobilesocialbar_iconhovercolor'); ?> !important;
+          color: <?= settings('mobilesocialbar_iconhovercolor');
+                  ?> !important;
         }
       </style>
