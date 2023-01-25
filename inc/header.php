@@ -123,16 +123,11 @@
                   </div>
                 <?php } ?>
               </div>
-
-
             </ul>
           </div>
         </div>
         </nav>
       </div>
-
-
-
       <style>
         .accordion-item button:focus {
           text-decoration: none !important;
@@ -140,3 +135,5 @@
           box-shadow: 0 0 0 0 !important;
         }
       </style>
+
+      <div class="mobile-margin"></div>

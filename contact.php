@@ -40,7 +40,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
 
 
 
-<div class="mobile-margin"></div>
+
 
 <style type="text/css">
     /*Home Page*/
