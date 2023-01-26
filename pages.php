@@ -57,7 +57,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
                     <div class="p-3 pt-5"><?= html_entity_decode($pageinfo->page_title) ?></div>
                 </div>
                 <div class="col-md-8 p-0 m-0" style="background:<?= settings('page_sub_title_bg') ?>">
-                    <div class="notice">
+                    <div class="notice d-none d-md-block d-lg-block">
                         <div class="p-2 float-end" style="background:<?= settings('page_contact_bg') ?>; color:<?= settings('page_contact_text_color') ?>;"><?= settings('page_contact_text') ?></div>
                     </div>
                     <div class="p-3 mt-5"><?= html_entity_decode($pageinfo->page_sub_title) ?></div>

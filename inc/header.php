@@ -75,7 +75,7 @@
       <!-- mobile menu -->
       <div class="d-sm-block d-md-none mt-5 ">
         <div class="navbar navbar-expand-lg navbar-light fixed-top m-0 p-0" style="background:<?= header_menu('background_color'); ?>;">
-          <div class="p-3 m-0" style="background:<?= header_menu('mobilemenu_color');?>;">
+          <div class="p-3 m-0" style="background:<?= header_menu('mobilemenu_color'); ?>;">
             <div class="d-flex">
               <a class="" href="index.php"><img src="assets/brand/SUPREMEiP Law Firm.png" width="60%" alt="SUPREMEiP"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -140,8 +140,8 @@
       </style>
 
 
-      <div class="d-sm-block d-md-none">
-        <div class="fixed-bottom mobile_bottom_menu" style="background-color: <?= settings('mobilesocialbar_bgcolor'); ?>;padding: 10px 25px !important;">
+      <div class="d-sm-block d-md-none d-lg-none ">
+        <div class="fixed-bottom mobile_bottom_menu" style="background-color: <?= settings('mobilesocialbar_bgcolor'); ?>;padding: 10px 25px !important; width:100%;">
           <div class="d-flex justify-content-between ">
             <?php
             $data = SelectData('mobile_social', 'ORDER BY serial_list ASC');
@@ -158,18 +158,15 @@
 
       <style>
         .mobile_bottom_menu a {
-          color: <?= settings('mobilesocialbar_iconcolor');
-                  ?> !important;
+          color: <?= settings('mobilesocialbar_iconcolor'); ?> !important;
           font-size: 20px;
         }
 
         .mobile_bottom_menu a:hover {
-          color: <?= settings('mobilesocialbar_iconhovercolor');
-                  ?>;
+          color: <?= settings('mobilesocialbar_iconhovercolor'); ?>;
         }
 
         .mobile_bottom_menu a:active {
-          color: <?= settings('mobilesocialbar_iconhovercolor');
-                  ?> !important;
+          color: <?= settings('mobilesocialbar_iconhovercolor'); ?> !important;
         }
       </style>
