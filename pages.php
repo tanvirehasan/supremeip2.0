@@ -81,16 +81,16 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
                     if ($price_data->num_rows > 0) { ?>
                         <!-- price table -->
                         <div class="p-0 mt-4" style="background-color:<?= widget_set('Section_bg', 1) ?>; padding:<?= widget_set('padding', 1) ?>px !important; ">
-                            <h3 class="section_title_page m-0 ps-2 "><i class="fas fa-money-check-alt px-1"></i> <?= $pageinfo->Section_Title_Price ?></h3>
+                            <h3 class="section_title_page m-0 ps-5 "><i class="fas fa-money-check-alt px-1"></i> <?= $pageinfo->Section_Title_Price ?></h3>
                             <div class="row mx-0 p-0">
                                 <table id="priceTable" class="table table-bordered p-0 m-0" style="width:100%;">
                                     <tr>
-                                        <th class="p-3 px-4">Description</th>
-                                        <th class="p-3 px-4">Cost </th>
+                                        <th class="px-5 ">Description</th>
+                                        <th class="px-5 ">Cost </th>
                                     </tr>
                                     <?php while ($price = $price_data->fetch_object()) { ?>
                                         <tr>
-                                            <td class="px-4">
+                                            <td class="px-5">
                                                 <div class='<?= widget_set('ptsize', 1) ?>' style="font-family:<?= widget_set('ptfont', 1) ?> !important; color:<?= widget_set('ptcolor', 1) ?> !important; text-transform:<?= widget_set('ptcase', 1) ?> !important "><?= $price->price_title ?></div>
                                                 <p class="<?= widget_set('pdsize', 1) ?>" style="font-family:<?= widget_set('pdfont', 1) ?> !important; color:<?= widget_set('pdcolor', 1) ?> !important; text-transform:<?= widget_set('pdcase', 1) ?> !important; margin: 0; padding: 0;"> <?= html_entity_decode($price->Price_Description) ?></p>
                                             </td>
