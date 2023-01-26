@@ -54,7 +54,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
         <div class="col-md-9 mt-3">
             <div class="row">
                 <div class="col-md-4" style="background:<?= settings('page_title_bg') ?>">
-                    <div class="p-3"><?= html_entity_decode($pageinfo->page_title) ?></div>
+                    <div class="p-3 pt-5"><?= html_entity_decode($pageinfo->page_title) ?></div>
                 </div>
                 <div class="col-md-8 p-0 m-0" style="background:<?= settings('page_sub_title_bg') ?>">
                     <div class="notice">
@@ -81,9 +81,9 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
                     if ($price_data->num_rows > 0) { ?>
                         <!-- price table -->
                         <div class="p-0 mt-4" style="background-color:<?= widget_set('Section_bg', 1) ?>; padding:<?= widget_set('padding', 1) ?>px !important; ">
-                            <h3 class="section_title_page ps-2"><i class="fas fa-money-check-alt px-1"></i> <?= $pageinfo->Section_Title_Price ?></h3>
-                            <div class="row mx-0">
-                                <table id="priceTable" class="table table-bordered " style="width: 100%;">
+                            <h3 class="section_title_page m-0 ps-2 "><i class="fas fa-money-check-alt px-1"></i> <?= $pageinfo->Section_Title_Price ?></h3>
+                            <div class="row mx-0 p-0">
+                                <table id="priceTable" class="table table-bordered p-0 m-0" style="width:100%;">
                                     <tr>
                                         <th class="p-3 px-4">Description</th>
                                         <th class="p-3 px-4">Cost </th>
