@@ -148,6 +148,10 @@ if (isset($_POST['sidebarupdated'])) {
   $downdivider_color        =$_POST["downdivider_color"];
   $downdivider_size         =$_POST["downdivider_size"];
 
+  $mobilemenu_color         = $_POST["mobilemenu_color"];
+  $mobilemenuicon_color     = $_POST["mobilemenuicon_color"];
+
+
 
      $sql=" UPDATE header_menu SET  
 
@@ -171,7 +175,12 @@ if (isset($_POST['sidebarupdated'])) {
       downactive_color='$downactive_color',    
       downtext_transform='$downtext_transform',
       downdivider_color='$downdivider_color',
-      downdivider_size='$downdivider_size'    
+      downdivider_size='$downdivider_size',
+
+      mobilemenu_color='$mobilemenu_color',
+      mobilemenuicon_color='$mobilemenuicon_color'
+
+
            
       ";
      if(mysqli_query($conn, $sql)){
@@ -737,18 +746,6 @@ if (isset($_POST['mobilesocalsetingupdate'])) {
   `mobilesocialbar_imagesize`='$mobilesocialbar_imagesize' ";
   $conn->query($setingupdate);
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

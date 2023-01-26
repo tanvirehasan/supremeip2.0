@@ -189,6 +189,16 @@ $row = $data->fetch_object();
                                     <input type="color" name="downactive_color" value="<?= header_menu('downactive_color'); ?>" class="form-control" style='border:none;  padding:0'>
                                 </td>
                             </tr>
+                            <tr>
+                                <td>
+                                    Mobile BG color:
+                                    <input type="color" name="mobilemenu_color" class="form-control" value="<?= header_menu('mobilemenu_color'); ?>" style="border:none; padding:0">
+                                </td>
+                                <td>Icon Color:
+                                    <input type="color" name="mobilemenuicon_color" value="<?= header_menu('mobilemenuicon_color'); ?>" class="form-control" style='border:none; padding:0'>
+                                </td>
+                            </tr>
+
 
                         </table>
                         <div class=" m-0 my-3"><button type="submit" name="sidebarupdated" class="btn btn-primary">Update</button></div>
