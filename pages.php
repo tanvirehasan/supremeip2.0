@@ -95,7 +95,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
                                                 <p class="<?= widget_set('pdsize', 1) ?>" style="font-family:<?= widget_set('pdfont', 1) ?> !important; color:<?= widget_set('pdcolor', 1) ?> !important; text-transform:<?= widget_set('pdcase', 1) ?> !important; margin: 0; padding: 0;"> <?= html_entity_decode($price->Price_Description) ?></p>
                                             </td>
                                             <td>
-                                                <h5 class="<?= widget_set('psize', 1) ?>" style="font-family:<?= widget_set('pfont', 1) ?> !important; color:<?= widget_set('pcolor', 1) ?> !important; text-transform:<?= widget_set('pcase', 1) ?> !important "><?= $price->Priceamount ?></h5>
+                                                <h5 class="<?= widget_set('psize', 1) ?> p-4" style="font-family:<?= widget_set('pfont', 1) ?> !important; color:<?= widget_set('pcolor', 1) ?> !important; text-transform:<?= widget_set('pcase', 1) ?> !important "><?= $price->Priceamount ?></h5>
                                             </td>
                                         </tr>
                                     <?php } ?>
