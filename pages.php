@@ -85,12 +85,12 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
                             <div class="row mx-0">
                                 <table id="priceTable" class="table table-bordered " style="width: 100%;">
                                     <tr>
-                                        <th class="p-3">Description</th>
-                                        <th class="p-3">Cost </th>
+                                        <th class="p-3 px-4">Description</th>
+                                        <th class="p-3 px-4">Cost </th>
                                     </tr>
                                     <?php while ($price = $price_data->fetch_object()) { ?>
                                         <tr>
-                                            <td class="p-3">
+                                            <td class="px-4">
                                                 <div class='<?= widget_set('ptsize', 1) ?>' style="font-family:<?= widget_set('ptfont', 1) ?> !important; color:<?= widget_set('ptcolor', 1) ?> !important; text-transform:<?= widget_set('ptcase', 1) ?> !important "><?= $price->price_title ?></div>
                                                 <p class="<?= widget_set('pdsize', 1) ?>" style="font-family:<?= widget_set('pdfont', 1) ?> !important; color:<?= widget_set('pdcolor', 1) ?> !important; text-transform:<?= widget_set('pdcase', 1) ?> !important; margin: 0; padding: 0;"> <?= html_entity_decode($price->Price_Description) ?></p>
                                             </td>
