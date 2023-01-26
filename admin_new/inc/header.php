@@ -213,8 +213,8 @@ if (!isset($_SESSION['user'])) {
                             <li class="sidenav-item"><a href="setting.php?setting=General" class="sidenav-link">
                                     <div>General Setting</div>
                                 </a></li>
-                            <li class="sidenav-item"><a href="setting.php?setting=Menu" class="sidenav-link">
-                                    <div>Manu Setting</div>
+                            <li class="sidenav-item"><a href="setting.php?setting=Color" class="sidenav-link">
+                                    <div>Font & Color Setting</div>
                                 </a></li>
                             <!-- <li class="sidenav-item"><a href="setting.php?setting=Team" class="sidenav-link"><div>Team Setting</div></a></li> -->
                             <li class="sidenav-item"><a href="setting.php?setting=Page" class="sidenav-link">
