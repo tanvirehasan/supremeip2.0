@@ -14,15 +14,17 @@
   <meta property="og:title" content="<?= $site_title ?>" />
   <meta property="og:description" content="<?= $site_Description ?>" />
   <meta property="og:image" content="assets/mediacenter/<?= $site_banner ?>" />
-
   <link rel="icon" href="assets/brand/<?= settings('favicon') ?>" sizes="32x32" />
-
   <link href="assets/dist/css/style.css" type="text/css" rel="stylesheet">
   <link rel='stylesheet' type='text/css' href='style.php' />
   <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.2/css/pro.min.css">
   <link href="assets/dist/css/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas Neue&family=Fjalla One&family=Oswald:wght@700&family=Poppins:wght@500&family=Yanone Kaffeesatz:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas Neue&family=Fjalla One&family=Oswald:wght@700&family=Poppins:wght@500&family=Yanone Kaffeesatz:wght@700&family=Aboreto&display=swap" rel="stylesheet">
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
 </head>

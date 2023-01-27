@@ -104,7 +104,7 @@ if (!isset($_SESSION['user'])) {
                     <li class="sidenav-item">
                         <a href="home_list.php" class="sidenav-link ">
                             <i class="sidenav-icon fas fa-copy"></i>
-                            <div>Homw Content</div>
+                            <div>Home Content</div>
                         </a>
                     </li>
 
@@ -139,10 +139,7 @@ if (!isset($_SESSION['user'])) {
                                 </a></li>
                             <li class="sidenav-item"><a href="team_list.php" class="sidenav-link">
                                     <div>Our Team</div>
-                                </a></li>
-                            <li class="sidenav-item"><a href="team.php" class="sidenav-link">
-                                    <div>New Team Member Add</div>
-                                </a></li>
+                                </a></li>                            
                             <li class="sidenav-item"><a href="ourclients.php" class="sidenav-link">
                                     <div>Our Client</div>
                                 </a></li>
