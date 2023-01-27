@@ -10,7 +10,7 @@ $page_iid  = $page->page_id;
 $page_data = SelectData('pages', "WHERE page_id='$page_iid' AND page_status='1'");
 $pageinfo  = $page_data->fetch_object();
 
-$site_title = $pageinfo->page_title;
+$site_title = strip_tags($pageinfo->page_title);
 $site_Description = settings('site_Description');
 $site_banner = settings('site_banner');
 
