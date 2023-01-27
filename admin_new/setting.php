@@ -736,40 +736,18 @@ $row = $data->fetch_object();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!--color Setting -->
     <?php if (isset($_GET['setting']) && $_GET['setting'] == 'Color') { ?>
 
         <div class="row">
             <div class="col-12 globalbtn">
-                <h3 class="bg-white p-3 text-uppercase text-primary"><i class="fas fa-cog"></i> Global Color Setting</h3>
+                <h3 class="bg-white p-3 text-uppercase text-primary"><i class="fas fa-cog"></i> Font Setting</h3>
             </div>
 
             <div class="col-md-12 global">
                 <!-- Font Color Settings -->
                 <div class="card p-3">
-                    <label for="categoryname" class="h4 pt-2" style="font-weight:700;">Font Color Settings </label>
+                    <label for="categoryname" class="h4 pt-2" style="font-weight:700;">Font Color Settings | <a href="fontadd">New Font</a></label>
                     <table class="table  table-bordered text-center">
                         <?php
                         $data3 = SelectData('text_color_settings', '');
