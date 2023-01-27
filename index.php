@@ -1,42 +1,11 @@
-<?php 
-  include "inc/db.php";
-  include "inc/function.php";
-  $sharelink = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-  $baseurl=basename($_SERVER['REQUEST_URI']);
+<?php
+    include_once "inc/db.php";
+    include_once "inc/function.php";
+    $site_title = settings('site_title');
+    $site_Description = settings('site_Description');
+    $site_banner = settings('site_banner');
+    include_once "inc/header.php"; 
 ?>
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?=settings('site_title')?></title> 
-    <!-- <base href="http://localhost/supremeip2.0/"> -->
-    <meta name="description" content="<?=settings('site_Description')?>" />
-    <meta name="keywords" content="trademark, ipr, patent, design, copyright, registration, renewal, objection, opposition, assignment, remove, journal, search,">
-    <meta name="author" content="SUPREMEiP">
-    
-    <meta property="og:url"                content="http://supremeip.com/" />
-    <meta property="og:type"               content="article" />
-    <meta property="og:title"              content="SUPREMEiP"/>
-    <meta property="og:description"        content="SUPREMEiP is top-ranked IP law firm in Bangladesh with the international presence provides specialized services in Intellectual Property Rights, Corporate Affairs, Foreign Trade and Investment, Taxation, and Litigation."/>
-    <meta property="og:image"              content="assets/mediacenter/<?=settings('site_banner')?>" />
-    
-    <link rel="icon" href="assets/brand/<?=settings('favicon')?>" sizes="32x32" />
-   
-    
-    <link href="assets/dist/css/style.css" type="text/css" rel="stylesheet">
-    <link rel='stylesheet' type='text/css' href='style.php' />
-    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.2/css/pro.min.css">  
-    <link href="assets/dist/css/owl.carousel.min.css" rel="stylesheet">
-    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" >
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Oswald:wght@700&family=Poppins:wght@500&family=Yanone+Kaffeesatz:wght@700&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  
-  </head>
-
-<?php include "inc/header.php"; ?>
-
-
 
 <style type="text/css">
     /*Home Page*/
@@ -78,15 +47,6 @@
         margin: 0;
         padding: 0;
     }
-
-
-
-
-
-
-
-
-
 
       @media only screen and (max-width: 600px) {
       .mobile-margin{
@@ -237,30 +197,8 @@
 </div>
 </main>
 
-    <style>
-    .navbar-toggler:focus {
-         text-decoration: none !important;
-         outline: 0 !important;
-         box-shadow: 0 0 0 0 !important; 
-    }
-    </style>
 
-
- <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
-    
-<script src="assets/dist/js/dashboard.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="assets/dist/js/owl.carousel.min.js"></script>
-
- 
-  </body>
-</html>
-   
-
-
+<?php include_once 'inc/footer.php' ?>
 
     
     

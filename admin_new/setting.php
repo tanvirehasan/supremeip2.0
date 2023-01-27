@@ -10,13 +10,8 @@ $row = $data->fetch_object();
 
 <div class="container-fluid flex-grow-1 container-p-y">
 
-    <?php if (isset($_GET['setting']) && $_GET['setting'] == 'Menu') { ?>
-
+    <?php if (isset($_GET['setting']) && $_GET['setting'] == 'logotitle') { ?>
         <div class="row">
-            <div class="col-12 menubtn">
-                <h3 class="bg-white p-3 text-uppercase text-primary"><i class="fas fa-cog"></i> Menu Setting</h3>
-            </div>
-
             <div class="col-12 ">
                 <div class="card bg-white p-3">
                     <form method="POST" action="" enctype="multipart/form-data">
@@ -67,12 +62,18 @@ $row = $data->fetch_object();
                     </form>
                 </div>
             </div>
+        </div>
+
+    <?php } ?>
 
 
 
+    <?php if (isset($_GET['setting']) && $_GET['setting'] == 'Menu') { ?>
 
-
-
+        <div class="row">
+            <div class="col-12 menubtn">
+                <h3 class="bg-white p-3 text-uppercase text-primary"><i class="fas fa-cog"></i> Menu Setting</h3>
+            </div>
 
             <!-- Main Side Menu -->
             <div class="col-md-12 menu">
@@ -359,8 +360,12 @@ $row = $data->fetch_object();
                 </div>
                 </table>
             </div>
+        </div>
+    <?php } ?>
 
-
+    <!--social Setting -->
+    <?php if (isset($_GET['setting']) && $_GET['setting'] == 'section') { ?>
+        <div class="row">
             <div class="col-md-12 page">
                 <div class="card p-3">
                     <form method="POST" action="" enctype="multipart/form-data">
@@ -397,9 +402,11 @@ $row = $data->fetch_object();
                     </form>
                 </div>
             </div>
-
         </div>
+
     <?php } ?>
+
+
 
 
     <!--social Setting -->
