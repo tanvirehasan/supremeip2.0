@@ -103,80 +103,33 @@ if (!isset($_SESSION['user'])) {
 
                     <!-- Home-->
                     <li class="sidenav-item">
-                        <a href="javascript:" class="sidenav-link sidenav-toggle">
-                            <i class="sidenav-icon fas fa-cog"></i>
-                            <div>Home</div>
+                        <a href="home_list.php" class="sidenav-link ">
+                            <i class="sidenav-icon fas fa-copy"></i>
+                            <div>Homw Content</div>
                         </a>
-                        <ul class="sidenav-menu">
-                            <li class="sidenav-item"><a href="setting.php?setting=General" class="sidenav-link">
-                                    <div>Social Bar</div>
-                                </a></li>
-                            <li class="sidenav-item"><a href="setting.php?setting=mobilesocil" class="sidenav-link">
-                                    <div>Mobile Social Bar</div>
-                                </a></li>
-                            <li class="sidenav-item"><a href="setting.php?setting=Menu" class="sidenav-link">
-                                    <div>Manu Setting</div>
-                                </a></li>
-                            <li class="sidenav-item"><a href="home_list.php" class="sidenav-link">
-                                    <div>Home Content</div>
-                                </a></li>
-                        </ul>
                     </li>
 
-                    <!--  page-->
+                    <!-- Pages  -->
                     <li class="sidenav-item">
                         <a href="javascript:" class="sidenav-link sidenav-toggle">
                             <i class="sidenav-icon fas fa-cog"></i>
-                            <div>Pages</div>
+                            <div>Post Pages</div>
                         </a>
                         <ul class="sidenav-menu">
                             <li class="sidenav-item"><a href="pages.php" class="sidenav-link">
-                                    <div>Pages</div>
+                                    <div>Add/Edit</div>
                                 </a></li>
                             <li class="sidenav-item"><a href="setting.php?setting=Page" class="sidenav-link">
-                                    <div>Pages Setting</div>
-                                </a></li>
-                            <li class="sidenav-item"><a href="widget.php" class="sidenav-link">
-                                    <div>widget Setting</div>
+                                    <div>Page Settings</div>
                                 </a></li>
                         </ul>
                     </li>
 
-                    <!--  Blog & newws-->
-                    <!-- <li class="sidenav-item">
-                        <a href="javascript:" class="sidenav-link sidenav-toggle">
-                            <i class="sidenav-icon fas fa-blog"></i>
-                            <div>Blog & News</div>                            
-                        </a>
-                        <ul class="sidenav-menu">
-                            <li class="sidenav-item">
-                                <a href="posts.php" class="sidenav-link">
-                                    <div>Post</div>
-                                </a>
-                            </li>
-                             <li class="sidenav-item">
-                                <a href="blog_category.php" class="sidenav-link">
-                                    <div>Catagories</div>
-                                </a>
-                            </li>                                                      
-                        </ul>
-                    </li> -->
-
-
-                    <!-- menu -->
-                    <li class="sidenav-item">
-                        <a href="menu2.php" class="sidenav-link">
-                            <i class="sidenav-icon fab fa-mendeley"></i>
-                            <div>Menu</div>
-                        </a>
-                    </li>
-
-
-                    <!-- we-->
+                    <!-- Fixed Pages  -->
                     <li class="sidenav-item">
                         <a href="javascript:" class="sidenav-link sidenav-toggle">
-                            <i class="sidenav-icon fas fa-door-open"></i>
-                            <div>WE</div>
+                            <i class="sidenav-icon fas fa-cog"></i>
+                            <div>Fixed Pages</div>
                         </a>
                         <ul class="sidenav-menu">
                             <li class="sidenav-item"><a href="about_list.php" class="sidenav-link">
@@ -188,57 +141,96 @@ if (!isset($_SESSION['user'])) {
                             <li class="sidenav-item"><a href="team_list.php" class="sidenav-link">
                                     <div>Our Team</div>
                                 </a></li>
-
                             <li class="sidenav-item"><a href="team.php" class="sidenav-link">
-                                    <div>Team add</div>
+                                    <div>New Team Member Add</div>
                                 </a></li>
                             <li class="sidenav-item"><a href="ourclients.php" class="sidenav-link">
-                                    <div>Clients</div>
+                                    <div>Our Client</div>
                                 </a></li>
                             <li class="sidenav-item"><a href="services.php" class="sidenav-link">
-                                    <div>Services</div>
+                                    <div>Our Services</div>
                                 </a></li>
-
                         </ul>
                     </li>
 
-
-                    <!-- Setting-->
+                    <!-- Menu  -->
                     <li class="sidenav-item">
                         <a href="javascript:" class="sidenav-link sidenav-toggle">
                             <i class="sidenav-icon fas fa-cog"></i>
-                            <div>Settings</div>
+                            <div>Menu</div>
                         </a>
                         <ul class="sidenav-menu">
-                            <li class="sidenav-item"><a href="setting.php?setting=General" class="sidenav-link">
-                                    <div>General Setting</div>
+                            <li class="sidenav-item"><a href="menu2.php" class="sidenav-link">
+                                    <div>Add/Edit</div>
                                 </a></li>
-                            <li class="sidenav-item"><a href="setting.php?setting=Color" class="sidenav-link">
-                                    <div>Font & Color Setting</div>
+                            <li class="sidenav-item"><a href="setting.php?setting=Menu" class="sidenav-link">
+                                    <div>Desktop Menu Settings</div>
                                 </a></li>
-                            <!-- <li class="sidenav-item"><a href="setting.php?setting=Team" class="sidenav-link"><div>Team Setting</div></a></li> -->
-                            <li class="sidenav-item"><a href="setting.php?setting=Page" class="sidenav-link">
-                                    <div>Page Setting</div>
+                            <li class="sidenav-item"><a href="#" class="sidenav-link">
+                                    <div>Mobile Menu Settings</div>
                                 </a></li>
-                            <!-- <li class="sidenav-item"><a href="setting.php?setting=Color" class="sidenav-link"><div>Color Setting</div></a></li> -->
-                            <!-- <li class="sidenav-item"><a href="link.php" class="sidenav-link"><div>Forward Url</div></a></li> -->
-                            <!-- <li class="sidenav-item"><a href="../database-backup.php" class="sidenav-link"><div>Backup</div></a></li>                                          -->
                         </ul>
                     </li>
 
-
-
-
-
-                    <!-- Management-->
+                    <!-- Social Bar Setting  -->
                     <li class="sidenav-item">
-                        <a href="file_management.php" class="sidenav-link ">
-                            <i class="sidenav-icon fas fa-copy"></i>
-                            <div>File Management</div>
+                        <a href="javascript:" class="sidenav-link sidenav-toggle">
+                            <i class="sidenav-icon fas fa-cog"></i>
+                            <div>Social Bar Settings</div>
                         </a>
+                        <ul class="sidenav-menu">
+                            <li class="sidenav-item"><a href="setting.php?setting=General" class="sidenav-link">
+                                    <div>Desktop Social Bar</div>
+                                </a></li>
+                            <li class="sidenav-item"><a href="setting.php?setting=mobilesocil" class="sidenav-link">
+                                    <div>Mobile Social Bar</div>
+                                </a></li>
+                        </ul>
                     </li>
 
+                    <!-- Widget Setting  -->
+                    <li class="sidenav-item">
+                        <a href="javascript:" class="sidenav-link sidenav-toggle">
+                            <i class="sidenav-icon fas fa-cog"></i>
+                            <div>Widget Settings</div>
+                        </a>
+                        <ul class="sidenav-menu">
+                            <li class="sidenav-item"><a href="setting.php?setting=General" class="sidenav-link">
+                                    <div>Section Title Settings</div>
+                                </a></li>
+                            <li class="sidenav-item"><a href="widget.php" class="sidenav-link">
+                                    <div>Price</div>
+                                </a></li>
+                            <li class="sidenav-item"><a href="widget.php" class="sidenav-link">
+                                    <div>Flowchart</div>
+                                </a></li>
+                            <li class="sidenav-item"><a href="widget.php" class="sidenav-link">
+                                    <div>FAQ</div>
+                                </a></li>
+                            <li class="sidenav-item"><a href="widget.php" class="sidenav-link">
+                                    <div>File Manager</div>
+                                </a></li>
+                        </ul>
+                    </li>
 
+                    <!-- Widget Setting  -->
+                    <li class="sidenav-item">
+                        <a href="javascript:" class="sidenav-link sidenav-toggle">
+                            <i class="sidenav-icon fas fa-cog"></i>
+                            <div>Site Settings</div>
+                        </a>
+                        <ul class="sidenav-menu">
+                            <li class="sidenav-item"><a href="setting.php?setting=Menu" class="sidenav-link">
+                                    <div>Site Identity</div>
+                                </a></li>
+                            <li class="sidenav-item"><a href="setting.php?setting=Color" class="sidenav-link">
+                                    <div>Font Settings</div>
+                                </a></li>
+                            <li class="sidenav-item"><a href="setting.php?setting=mobilesocil" class="sidenav-link">
+                                    <div>Custom Codes</div>
+                                </a></li>
+                        </ul>
+                    </li>
                 </ul>
 
 
@@ -283,122 +275,9 @@ if (!isset($_SESSION['user'])) {
                         </div>
 
                         <div class="navbar-nav align-items-lg-center ml-auto">
-                            <div class="demo-navbar-notifications nav-item dropdown mr-lg-3">
-                                <a class="nav-link dropdown-toggle hide-arrow" href="#" data-toggle="dropdown">
-                                    <i class="feather icon-bell navbar-icon align-middle"></i>
-                                    <span class="badge badge-danger badge-dot indicator"></span>
-                                    <span class="d-lg-none align-middle">&nbsp; Notifications</span>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <div class="bg-primary text-center text-white font-weight-bold p-3">
-                                        4 New Notifications
-                                    </div>
-                                    <div class="list-group list-group-flush">
-                                        <a href="javascript:" class="list-group-item list-group-item-action media d-flex align-items-center">
-                                            <div class="ui-icon ui-icon-sm feather icon-home bg-secondary border-0 text-white"></div>
-                                            <div class="media-body line-height-condenced ml-3">
-                                                <div class="text-dark">Login from 192.168.1.1</div>
-                                                <div class="text-light small mt-1">
-                                                    Aliquam ex eros, imperdiet vulputate hendrerit et.
-                                                </div>
-                                                <div class="text-light small mt-1">12h ago</div>
-                                            </div>
-                                        </a>
 
-                                        <a href="javascript:" class="list-group-item list-group-item-action media d-flex align-items-center">
-                                            <div class="ui-icon ui-icon-sm feather icon-user-plus bg-primary border-0 text-white"></div>
-                                            <div class="media-body line-height-condenced ml-3">
-                                                <div class="text-dark">You have
-                                                    <strong>4</strong> new followers
-                                                </div>
-                                                <div class="text-light small mt-1">
-                                                    Phasellus nunc nisl, posuere cursus pretium nec, dictum vehicula tellus.
-                                                </div>
-                                            </div>
-                                        </a>
 
-                                        <a href="javascript:" class="list-group-item list-group-item-action media d-flex align-items-center">
-                                            <div class="ui-icon ui-icon-sm feather icon-power bg-danger border-0 text-white"></div>
-                                            <div class="media-body line-height-condenced ml-3">
-                                                <div class="text-dark">Server restarted</div>
-                                                <div class="text-light small mt-1">
-                                                    19h ago
-                                                </div>
-                                            </div>
-                                        </a>
 
-                                        <a href="javascript:" class="list-group-item list-group-item-action media d-flex align-items-center">
-                                            <div class="ui-icon ui-icon-sm feather icon-alert-triangle bg-warning border-0 text-dark"></div>
-                                            <div class="media-body line-height-condenced ml-3">
-                                                <div class="text-dark">99% server load</div>
-                                                <div class="text-light small mt-1">
-                                                    Etiam nec fringilla magna. Donec mi metus.
-                                                </div>
-                                                <div class="text-light small mt-1">
-                                                    20h ago
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <a href="javascript:" class="d-block text-center text-light small p-2 my-1">Show all notifications</a>
-                                </div>
-                            </div>
-
-                            <div class="demo-navbar-messages nav-item dropdown mr-lg-3">
-                                <a class="nav-link dropdown-toggle hide-arrow" href="#" data-toggle="dropdown">
-                                    <i class="feather icon-mail navbar-icon align-middle"></i>
-                                    <span class="badge badge-success badge-dot indicator"></span>
-                                    <span class="d-lg-none align-middle">&nbsp; Messages</span>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <div class="bg-primary text-center text-white font-weight-bold p-3">
-                                        4 New Messages
-                                    </div>
-                                    <div class="list-group list-group-flush">
-                                        <a href="javascript:" class="list-group-item list-group-item-action media d-flex align-items-center">
-                                            <img src="assets/img/avatars/6-small.png" class="d-block ui-w-40 rounded-circle" alt>
-                                            <div class="media-body ml-3">
-                                                <div class="text-dark line-height-condenced">Lorem ipsum dolor consectetuer elit.</div>
-                                                <div class="text-light small mt-1">
-                                                    Josephin Doe &nbsp;·&nbsp; 58m ago
-                                                </div>
-                                            </div>
-                                        </a>
-
-                                        <a href="javascript:" class="list-group-item list-group-item-action media d-flex align-items-center">
-                                            <img src="assets/img/avatars/4-small.png" class="d-block ui-w-40 rounded-circle" alt>
-                                            <div class="media-body ml-3">
-                                                <div class="text-dark line-height-condenced">Lorem ipsum dolor sit amet, consectetuer.</div>
-                                                <div class="text-light small mt-1">
-                                                    Lary Doe &nbsp;·&nbsp; 1h ago
-                                                </div>
-                                            </div>
-                                        </a>
-
-                                        <a href="javascript:" class="list-group-item list-group-item-action media d-flex align-items-center">
-                                            <img src="assets/img/avatars/5-small.png" class="d-block ui-w-40 rounded-circle" alt>
-                                            <div class="media-body ml-3">
-                                                <div class="text-dark line-height-condenced">Lorem ipsum dolor sit amet elit.</div>
-                                                <div class="text-light small mt-1">
-                                                    Alice &nbsp;·&nbsp; 2h ago
-                                                </div>
-                                            </div>
-                                        </a>
-
-                                        <a href="javascript:" class="list-group-item list-group-item-action media d-flex align-items-center">
-                                            <img src="assets/img/avatars/11-small.png" class="d-block ui-w-40 rounded-circle" alt>
-                                            <div class="media-body ml-3">
-                                                <div class="text-dark line-height-condenced">Lorem ipsum dolor sit amet consectetuer amet elit dolor sit.</div>
-                                                <div class="text-light small mt-1">
-                                                    Suzen &nbsp;·&nbsp; 5h ago
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-
-                                    <a href="javascript:" class="d-block text-center text-light small p-2 my-1">Show all messages</a>
-                                </div>
-                            </div>
 
                             <!-- Divider -->
                             <div class="nav-item d-none d-lg-block text-big font-weight-light line-height-1 opacity-25 mr-3 ml-1">|</div>
@@ -410,13 +289,6 @@ if (!isset($_SESSION['user'])) {
                                     </span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
-                                    <!--  <a href="javascript:" class="dropdown-item">
-                                        <i class="feather icon-user text-muted"></i> &nbsp; My profile</a>
-                                    <a href="javascript:" class="dropdown-item">
-                                        <i class="feather icon-mail text-muted"></i> &nbsp; Messages</a>
-                                    <a href="javascript:" class="dropdown-item">
-                                        <i class="feather icon-settings text-muted"></i> &nbsp; Account settings</a> -->
-                                    <!-- <div class="dropdown-divider"></div> -->
                                     <a href="logout.php" class="dropdown-item">
                                         <i class="feather icon-power text-danger"></i> &nbsp; Log Out</a>
                                 </div>
