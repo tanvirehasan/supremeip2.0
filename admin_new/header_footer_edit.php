@@ -6,7 +6,7 @@ $file = "../inc/header.php"; // file to edit
 $html = file_get_contents($file); //read the file contents
 $header = htmlentities($html, ENT_QUOTES);
 
-// footer
+//footer
 $files = "../inc/footer.php"; // file to edit
 $htmls = file_get_contents($files); //read the file contents
 $footer = htmlentities($htmls, ENT_QUOTES);
@@ -47,13 +47,13 @@ $footer = htmlentities($htmls, ENT_QUOTES);
     <?php
     if (isset($_POST['footerpagesave'])) {
         $footer_file_content = urldecode($_POST['footer_file_content']);
-        file_put_contents('inc/header.php', html_entity_decode($footer_file_content)); //save the file
+        file_put_contents('../inc/footer.php', html_entity_decode($footer_file_content)); //save the file
         echo "<script>window.location.href='" . $_SERVER['PHP_SELF'] . "';</script>";
     }
 
     if (isset($_POST['headerpagesave'])) {
         $header_file_content = urldecode($_POST['header_file_content']);
-        file_put_contents('inc/header.php', html_entity_decode($header_file_content)); //save the file
+        file_put_contents('../inc/header.php', html_entity_decode($header_file_content)); //save the file
         echo "<script>window.location.href='" . $_SERVER['PHP_SELF'] . "';</script>";
     }
     ?>

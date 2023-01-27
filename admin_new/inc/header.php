@@ -225,7 +225,7 @@ if (!isset($_SESSION['user'])) {
                             <li class="sidenav-item"><a href="setting.php?setting=Color" class="sidenav-link">
                                     <div>Font Settings</div>
                                 </a></li>
-                            <li class="sidenav-item"><a href="setting.php?setting=mobilesocil" class="sidenav-link">
+                            <li class="sidenav-item"><a href="header_footer_edit.php" class="sidenav-link">
                                     <div>Custom Codes</div>
                                 </a></li>
                         </ul>
