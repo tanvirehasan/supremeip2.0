@@ -747,7 +747,7 @@ $row = $data->fetch_object();
             <div class="col-md-12 global">
                 <!-- Font Color Settings -->
                 <div class="card p-3">
-                    <label for="categoryname" class="h4 pt-2" style="font-weight:700;">Font Color Settings | <a href="fontadd">New Font</a></label>
+                    <label for="categoryname" class="h4 pt-2" style="font-weight:700;">Font Color Settings | <a href="fontadd.php">New Font</a></label>
                     <table class="table  table-bordered text-center">
                         <?php
                         $data3 = SelectData('text_color_settings', '');
