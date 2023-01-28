@@ -139,7 +139,7 @@ if (!isset($_SESSION['user'])) {
                                 </a></li>
                             <li class="sidenav-item"><a href="team_list.php" class="sidenav-link">
                                     <div>Our Team</div>
-                                </a></li>                            
+                                </a></li>
                             <li class="sidenav-item"><a href="ourclients.php" class="sidenav-link">
                                     <div>Our Client</div>
                                 </a></li>
@@ -290,3 +290,6 @@ if (!isset($_SESSION['user'])) {
                     </div>
                 </nav>
                 <!-- [ Layout navbar ( Header ) ] End -->
+
+
+            

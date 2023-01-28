@@ -1,10 +1,10 @@
 <?php
-include_once "inc/db.php";
-include_once "inc/function.php";
-$site_title = 'About Us';
-$site_Description = settings('site_Description');
-$site_banner = settings('site_banner');
-include_once "inc/header.php";
+    include_once "inc/db.php";
+    include_once "inc/function.php";
+    $site_title = 'About Us';
+    $site_Description = settings('site_Description');
+    $site_banner = settings('site_banner');
+    include_once "inc/header.php";
 ?>
 
 <style type="text/css">

@@ -139,6 +139,9 @@
             }
         }
     </script>
+
+
+
     <script src="assets/js/pages/dashboards_index.js"></script>
     <script src="dist/js/jquery.dataTables.min.js"></script>
     <script> $('#data_table').DataTable();</script>
