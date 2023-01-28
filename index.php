@@ -4,7 +4,7 @@
     $site_title = settings('site_title');
     $site_Description = settings('site_Description');
     $site_banner = settings('site_banner');
-    include_once "inc/header.php"; 
+    include "inc/header.php"; 
 ?>
 
 <style type="text/css">

@@ -16,15 +16,14 @@
   <meta property="og:description" content="<?= $site_Description ?>" />
   <meta property="og:image" content="assets/mediacenter/<?= $site_banner ?>" />
   <link rel="icon" href="assets/brand/<?= settings('favicon') ?>" sizes="32x32" />
+  <link href="style.php" type='text/css' rel='stylesheet'>
   <link href="assets/dist/css/style.css" type="text/css" rel="stylesheet">
-  <link rel='stylesheet' type='text/css' href='style.php' />
   <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.2/css/pro.min.css">
   <link href="assets/dist/css/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Google font -->
-  <link href="https://fonts.googleapis.com/css2?<?= FontLink()?>display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?<?= FontLink() ?>display=swap" rel="stylesheet">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
@@ -33,7 +32,6 @@
 <body id="supremeip">
 
   <?php include "headeredit.php"; ?>
-
 
   <div class="">
 
@@ -48,8 +46,8 @@
               <?php
               if ($srow['social_url'] == '') { ?>
                 <i class="<?= $srow['icon'] ?> p-1 ps-3"></i>
-                <div class="qr_link" id="qr_link_<?= $srow['id'] ?>">
-                  <a href="<?= $srow['social_url'] ?>" target="NULL"><img src="assets/mediacenter/<?= $srow['qr_image'] ?>" alt="" width="100%"></a>
+                <div class="qr_link" style="width:<?= settings('socialbar_imagesize') ?>;">
+                  <a href="<?= $srow['social_url'] ?>" target="NULL"><img src="assets/mediacenter/<?= $srow['qr_image'] ?>" alt="" style='width:100%' ;></a>
                 </div>
               <?php } else { ?>
                 <a href="<?= $srow['social_url'] ?>" target="NULL"><i class="<?= $srow['icon'] ?> p-1 ps-3"></i></a>

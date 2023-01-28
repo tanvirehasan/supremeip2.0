@@ -9,10 +9,11 @@ include "inc/function.php";
 
 <!-- social Bar menu  -->
 
-.qr_link{width:<?= settings('socialbar_imagesize'); ?>;}
-.icon_box:hover{background-color:<?= settings('socialbar_hoverbgcolor'); ?>;}
-.icon_box i{color:<?= settings('socialbar_iconcolor'); ?>;}
+
+.icon_box:hover{background-color:<?= settings('socialbar_hoverbgcolor') ?>}
+.icon_box i{color:<?= settings('socialbar_iconcolor') ?>}
 .icon_box i:hover{color:<?= settings('socialbar_iconhovercolor'); ?>!important;}
+
 
 
 <!-- ========= footer Mobile Menu ==========================  -->
