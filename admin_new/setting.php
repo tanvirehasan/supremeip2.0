@@ -770,9 +770,9 @@ $row = $data->fetch_object();
                         </tbody>
                     </table>
 
-                    <form class="row g-3 needs-validation" action="" method="post" novalidate>
+                    <form class="row g-3 needs-validation" action="" method="post" novalidate >
                         <table class="table table-bordered">
-                            <tr>
+                            <tr >
                                 <td><input type="text" name="font_link" class="form-control border" placeholder="Font Link "></td>
                                 <td><input type="text" name="font_name" class="form-control border" placeholder="Font Name"></td>
                                 <td><button type="submit" name="fontadd" class="btn btn-primary border">Submit</button></td>
@@ -794,7 +794,7 @@ $row = $data->fetch_object();
                     <label for="categoryname" class="h4 pt-2" style="font-weight:700;">Font Color Settings | <a href="fontadd.php">New Font</a></label>
                     <table class="table  table-bordered text-center" id="data_table">
                         <thead>
-                            
+
                         </thead>
                         <tbody>
                             <?php
