@@ -96,7 +96,7 @@ include_once "inc/header.php";
 
   <div class="row m-0" style="background:<?= TeamPage('bg_color', '3') ?> !important;">
     <!-- section-2 -->
-    <div class="col-md-2 m-0 p-0 mb-lg-0" style="background-image:url(assets/mediacenter/<?= (TeamPage('img_yes_no', '3') == 1) ? AboutPage('image', '3') : ''; ?>);">
+    <div class="col-md-2 m-0 p-0 mb-lg-0" style="background-image:url(assets/mediacenter/<?= (TeamPage('img_yes_no', '3') == 1) ? TeamPage('image', '3') : ''; ?>);">
       <div class=" page-content page2">
         <div class="page2overlay" style="background:<?= TeamPage('bg_color', '3') ?>; opacity:<?= TeamPage('opasity', '3') ?>;">
           <div class="p-5"><?= TeamPage('content', '3') ?></div>
@@ -129,7 +129,7 @@ include_once "inc/header.php";
       </div>
     </div>
 
-    <div class="col-md-2 m-0 p-0" style="background-image:url(assets/mediacenter/<?= (TeamPage('img_yes_no', '5') == 1) ? AboutPage('image', '5') : ''; ?>);">
+    <div class="col-md-2 m-0 p-0" style="background-image:url(assets/mediacenter/<?= (TeamPage('img_yes_no', '5') == 1) ? TeamPage('image', '5') : ''; ?>);">
       <div class="page-content page2">
         <div class="page2overlay " style="background:<?= TeamPage('bg_color', '5') ?>;opacity: <?= TeamPage('opasity', '5') ?>;">
           <div class="p-5"><?= TeamPage('content', '5') ?></div>
@@ -141,7 +141,7 @@ include_once "inc/header.php";
   <div class="row m-0">
     <!-- section-3 -->
     <div class="col-md-6 m-0 p-0 mb-lg-0">
-      <div class="page-content page3" style="background-image:url(assets/mediacenter/<?= (TeamPage('img_yes_no', '6') == 1) ? AboutPage('image', '6') : ''; ?>);">
+      <div class="page-content page3" style="background-image:url(assets/mediacenter/<?= (TeamPage('img_yes_no', '6') == 1) ? TeamPage('image', '6') : ''; ?>);">
         <div class="page3overlay" style="background:<?= TeamPage('bg_color', '6') ?>; opacity:<?= TeamPage('opasity', '6') ?>;">
           <div class="p-5"><?= TeamPage('content', '6') ?></div>
         </div>
@@ -149,7 +149,7 @@ include_once "inc/header.php";
     </div>
 
     <div class="col-md-6 m-0 p-0">
-      <div class="page-content page3" style="background-image:url(assets/mediacenter/<?= (TeamPage('img_yes_no', '7') == 1) ? AboutPage('image', '7') : ''; ?>);">
+      <div class="page-content page3" style="background-image:url(assets/mediacenter/<?= (TeamPage('img_yes_no', '7') == 1) ? TeamPage('image', '7') : ''; ?>);">
         <div class="page3overlay " style="background:<?= TeamPage('bg_color', '7') ?>;opacity: <?= TeamPage('opasity', '7') ?>;">
           <div class="p-5"><?= TeamPage('content', '7') ?></div>
         </div>
