@@ -741,6 +741,50 @@ $row = $data->fetch_object();
 
         <div class="row">
             <div class="col-12 globalbtn">
+                <h3 class="bg-white p-3 text-uppercase text-primary"><i class="fas fa-cog"></i> Font List</h3>
+            </div>
+            <div class="col-12">
+                <div class="card p-5">
+
+                    <table class="table table-bordered" id="data_table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Font Link</th>
+                                <th>Font Name</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $i = 1;
+                            $data = SelectData('font', '');
+                            while ($row = $data->fetch_object()) { ?>
+                                <tr>
+                                    <td><?= $i++; ?></td>
+                                    <td><?= $row->font_link ?></td>
+                                    <td><?= $row->font_name ?></td>
+                                    <td><a href="setting.php?font_delete=<?= $row->id ?>"> <i class="fa fa-trash" aria-hidden="true"></i> </a> </td>
+                                </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
+
+                    <form class="row g-3 needs-validation" action="" method="post" novalidate>
+                        <table class="table table-bordered">
+                            <tr>
+                                <td><input type="text" name="font_link" class="form-control border" placeholder="Font Link "></td>
+                                <td><input type="text" name="font_name" class="form-control border" placeholder="Font Name"></td>
+                                <td><button type="submit" name="fontadd" class="btn btn-primary border">Submit</button></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 globalbtn">
                 <h3 class="bg-white p-3 text-uppercase text-primary"><i class="fas fa-cog"></i> Font Setting</h3>
             </div>
 
@@ -748,45 +792,44 @@ $row = $data->fetch_object();
                 <!-- Font Color Settings -->
                 <div class="card p-3">
                     <label for="categoryname" class="h4 pt-2" style="font-weight:700;">Font Color Settings | <a href="fontadd.php">New Font</a></label>
-                    <table class="table  table-bordered text-center">
-                        <?php
-                        $data3 = SelectData('text_color_settings', '');
-                        if ($data3->num_rows > 0) {
-                            while ($social = $data3->fetch_object()) { ?>
-                                <form method="POST" action="" id="fontcolorsettings" enctype="multipart/form-data">
-                                    <tr>
-                                        <td class="h5"><?= $social->text_name ?></td>
+                    <table class="table  table-bordered text-center" id="data_table">
+                        <thead>
+                            
+                        </thead>
+                        <tbody>
+                            <?php
+                            $data3 = SelectData('text_color_settings', '');
+                            if ($data3->num_rows > 0) {
+                                while ($social = $data3->fetch_object()) { ?>
+                                    <form method="POST" action="" id="fontcolorsettings" enctype="multipart/form-data">
 
-                                        <td>
-                                            <select name="font_fmaily" class="form-control" style="border:0px">
-                                                <option style="font-family:<?= $social->font_fmaily ?>;" value="<?= $social->font_fmaily ?>"><?= $social->font_fmaily ?></option>
-                                                <?php font_select(); ?>
-                                            </select>
-                                        </td>
+                                        <tr>
+                                            <td class="h5"><?= $social->text_name ?></td>
 
-                                        <td><input type="color" name="color_code" class="form-control p-0 m-0" value="<?= $social->color_code ?>" style="border:0"> </td>
-                                        <input type="hidden" name="tcid" value="<?= $social->tcid ?>">
-                                        <td class=""><button type="submit" class="btn" name="textcolorupdate"><i class="fas fa-check"></i> </button> </td>
-                                    </tr>
-                                </form>
-                        <?php }
-                        } ?>
+                                            <td>
+                                                <select name="font_fmaily" class="form-control" style="border:0px">
+                                                    <option style="font-family:<?= $social->font_fmaily ?>;" value="<?= $social->font_fmaily ?>"><?= $social->font_fmaily ?></option>
+                                                    <?php font_select(); ?>
+                                                </select>
+                                            </td>
+
+                                            <td><input type="color" name="color_code" class="form-control p-0 m-0" value="<?= $social->color_code ?>" style="border:0"> </td>
+                                            <input type="hidden" name="tcid" value="<?= $social->tcid ?>">
+                                            <td class=""><button type="submit" class="btn" name="textcolorupdate"><i class="fas fa-check"></i> </button> </td>
+                                        </tr>
+
+                                    </form>
+                            <?php }
+                            } ?>
+                        </tbody>
                     </table>
                 </div>
             </div>
-
-
-
-
-
         </div>
 
+
     <?php } ?>
-
-
 </div>
-
-
 
 
 <?php include 'inc/footer.php'; ?>

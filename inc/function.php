@@ -45,12 +45,6 @@ function TeamPage($col_name, $id)
 }
 
 
-
-
-
-
-
-
 //catagory
 function postcate($col_name, $id){
     $row = mysqli_fetch_array(SelectData('blogs_category',"WHERE cat_id='$id'"));
@@ -108,6 +102,13 @@ function color_code_to_name($color_id, $color_name){
 }
 
 
+//font_link
+function FontLink(){
+    $data = SelectData('font', "");
+    while ($row = $data->fetch_object()) {
+        echo "family=". html_entity_decode($row->font_link, ENT_COMPAT | ENT_HTML401 | ENT_XML1 | ENT_XHTML | ENT_HTML5).'&';
+    }     
+}
 
 
 

@@ -23,7 +23,7 @@
   <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Google font -->
-  <link href="https://fonts.googleapis.com/css2?family=Bebas Neue&family=Fjalla One&family=Oswald:wght@700&family=Poppins:wght@500&family=Yanone Kaffeesatz:wght@700&family=Aboreto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?<?= FontLink()?>display=swap" rel="stylesheet">
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>

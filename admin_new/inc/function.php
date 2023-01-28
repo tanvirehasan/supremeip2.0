@@ -27,7 +27,6 @@ function DeleteData($table_name, $more){
 }
 
 
-
 function rowcount($TableName,$moresql){        
     global $conn;
 	$sql = "SELECT * FROM $TableName $moresql";
@@ -176,6 +175,18 @@ function select_color(){
     }
 }
 
+//font_link
+function FontLink()
+{
+    $data = SelectData('font', "");
+    while ($row = $data->fetch_object()) {
+        echo "family=" . html_entity_decode($row->font_link, ENT_COMPAT | ENT_HTML401 | ENT_XML1 | ENT_XHTML | ENT_HTML5) . '&';
+    }
+}
+
+
+
+
 
 function color_name($code){                                   
     $data = SelectData('color_settings',"where color_code='$code' ");
@@ -184,7 +195,15 @@ function color_name($code){
 }
 
 
-include "fontselect.php";
+//font_select
+function font_select()
+{
+    $data = SelectData('font', "");
+    while ($row = $data->fetch_object()) {
+        $name = html_entity_decode($row->font_name, ENT_COMPAT | ENT_HTML401 | ENT_XML1 | ENT_XHTML | ENT_HTML5);
+        echo "<option value='$name' style='font-family:$name;' >" . $name . "</option>";
+    }
+}
 
 //Team_Design
 function Team_Design($data){

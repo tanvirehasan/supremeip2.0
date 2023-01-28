@@ -27,6 +27,32 @@ if (isset($_POST['colorupdate'])) {
 }
 
 
+//new font Add 
+
+if (isset($_POST['fontadd'])) {
+
+  $font_link = htmlentities($_POST['font_link'], ENT_QUOTES);
+  $font_name = htmlentities($_POST['font_name'], ENT_QUOTES);
+
+  $inset = "INSERT INTO font (font_link,font_name) VALUES ('$font_link','$font_name')";
+  if (mysqli_query($conn, $inset) == TRUE) {
+      echo "Success";
+      Reconect('setting.php?setting=Color');
+  } else {
+    echo "SORRY";
+  }
+}
+
+//fontdelete
+if (isset($_GET['font_delete'])) {
+  $delete = "DELETE FROM font WHERE id={$_GET['font_delete']}";
+  if ($conn->query($delete)==TRUE) {
+    Reconect('setting.php?setting=Color');
+  }
+  
+}
+
+
 //btn style Update
 if (isset($_POST['btnstyle_update'])) {
  
@@ -43,10 +69,6 @@ if (isset($_POST['btnstyle_update'])) {
          
   }
 }
-
-
-
-
 
 
 //color Update
@@ -66,10 +88,7 @@ if (isset($_POST['textcolorupdate'])) {
 
 
 
-
 if (isset($_POST['logoupdate'])) {
-
-
 
   $logo_size=$_POST["logo_size"];
   $site_title=$_POST["site_title"];
@@ -116,9 +135,6 @@ if (isset($_POST['logoupdate'])) {
        echo "error";
      }
 }
-
-
-
 
 
 
@@ -771,7 +787,7 @@ if (isset($_POST['urlupdate'])) {
 if (isset($_GET['url_delete'])) {
       $delete = "DELETE FROM custom_url WHERE urlid={$_GET['url_delete']}";
       $conn->query($delete);
-      echo "Hellosdklfjaslkd fklasdjfl kjasdlkfj aslkdjf l";
+      echo "";
       Reconect('general.php');
 }
 
