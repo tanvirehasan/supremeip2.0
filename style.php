@@ -278,12 +278,6 @@ font-weight: bold !important;
 <!--============ MOBILE MENU END  =======================-->
 
 
-
-
-
-
-
-
 <?php //Team 
 ?>
 
@@ -315,14 +309,14 @@ padding:0px !important;
 
 .teamname{
 color: <?= Team_Design('name_font_color') ?>!important;
-font-family:<?= html_entity_decode(Team_Design('name_font_family')) ?>;
-font-size: <?= Team_Design('name_font_size') ?>px;
+font-family:<?= html_entity_decode(Team_Design('name_font_family'), ENT_QUOTES | ENT_HTML5) ?> !important;
+font-size: <?= Team_Design('name_font_size') ?>px !important;
 }
 
 .designation{
 font-size: <?= Team_Design('designation_font_size') ?>px;
 color: <?= Team_Design('designation_font_color') ?> !important;
-font-family:<?= html_entity_decode(Team_Design('designation_font_family')) ?>;
+font-family:<?= html_entity_decode(Team_Design('designation_font_family'), ENT_QUOTES | ENT_HTML5) ?>;
 }
 
 #ylh:hover{
