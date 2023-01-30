@@ -216,23 +216,23 @@ $row = $data->fetch_object();
             <div class="col-12 teambtn">
                 <h3 class="bg-white p-3 text-uppercase text-primary"><i class="fas fa-cog"></i> Team Setting</h3>
             </div>
+
+            <div class="col-md-12">
+                <h5> <a href="team_list.php">Team Page List</a> | <a href="team.php" class="ps-2">Team Members List</a> | <a href="setting.php?setting=Team">Team Settings</a> </h5>
+            </div>
             <!-- Our Team -->
-            <div class="col-md-4 team">
+            <div class="col-md-12 team">
                 <div class="card p-3">
                     <form method="POST" action="" enctype="multipart/form-data">
                         <label for="categoryname" class="h5 w-100" style="font-weight:700;">Team Setting</label>
-                        <table class="mb-3" style="width: 100%;">
+                        <table class="table table-bordered p-0 m-0">
                             <tr>
                                 <td>name size:</td>
-                                <td><input type="text" name="name_font_size" class="form-control" min="1" max="100" value="<?= Team_Design('name_font_size'); ?>" id="fontsize"></td>
+                                <td><input type="text" name="name_font_size" class="form-control border" min="1" max="100" value="<?= Team_Design('name_font_size'); ?>" id="fontsize"></td>
 
                                 <td>designation size: </td>
-                                <td><input type="text" name="designation_font_size" class="form-control" min="1" max="100" value="<?= Team_Design('designation_font_size'); ?>" id="fontsize"></td>
+                                <td><input type="text" name="designation_font_size" class="form-control border" min="1" max="100" value="<?= Team_Design('designation_font_size'); ?>" id="fontsize"></td>
 
-                            </tr>
-                        </table>
-                        <table class="mb-3" style="width: 100%;">
-                            <tr>
                                 <td style="font-family:<?= Team_Design('name_font_family'); ?>;">name:</td>
                                 <td>
                                     <select name="name_font_family" class="form-control" style="border:none;">
@@ -241,66 +241,40 @@ $row = $data->fetch_object();
                                     </select>
                                 </td>
 
-                                <td style="font-family:<?= Team_Design('designation_font_family'); ?>;">| designation:</td>
+                                <td style="font-family:<?= Team_Design('designation_font_family'); ?>;">designation:</td>
                                 <td>
                                     <select name="designation_font_family" class="form-control" style="border:none;">
                                         <option value="<?= Team_Design('designation_font_family'); ?>"><?= Team_Design('designation_font_family'); ?></option>
                                         <?= font_select() ?>
                                     </select>
                                 </td>
-
-
                             </tr>
+
                         </table>
-                        <table style="width: 100%;">
+                        <table class="table table-bordered">
                             <tr>
                                 <td>Name Color:
-                                    <input type="color" value="<?= Team_Design('name_font_color'); ?>" class="form-control" style='height: 50px; border:none; padding:0'>
-                                    <select name="name_font_color" class="form-control">
-                                        <option value="<?= Team_Design('name_font_color'); ?>"><?= color_name(Team_Design('name_font_color')) ?></option>
-                                        <?php select_color(); ?>
-                                    </select>
+                                    <input type="color" name="name_font_color" value="<?= Team_Design('name_font_color'); ?>" class="form-control" style='border:none; padding:0'>
                                 </td>
                                 <td>D-color:
-                                    <input type="color" value="<?= Team_Design('designation_font_color'); ?>" class="form-control" style='height: 50px; border:none;  padding:0'>
-                                    <select name="designation_font_color" class="form-control">
-                                        <option value="<?= Team_Design('designation_font_color'); ?>"><?= color_name(Team_Design('designation_font_color')) ?></option>
-                                        <?php select_color(); ?>
-                                    </select>
+                                    <input type="color" name="designation_font_color" value="<?= Team_Design('designation_font_color'); ?>" class="form-control" style='border:none;  padding:0'>
                                 </td>
                                 <td>Icon:
-                                    <input type="color" value="<?= Team_Design('icon_color'); ?>" class="form-control" style='height: 50px; border:none;  padding:0'>
-                                    <select name="icon_color" class="form-control">
-                                        <option value="<?= Team_Design('icon_color'); ?>"><?= color_name(Team_Design('icon_color')) ?></option>
-                                        <?php select_color(); ?>
-                                    </select>
+                                    <input type="color" name="icon_color" value="<?= Team_Design('icon_color'); ?>" class="form-control" style='border:none;  padding:0'>
                                 </td>
                                 <td>Icon BG:
-                                    <input type="color" value="<?= Team_Design('icon_bg_color'); ?>" class="form-control" style='height: 50px; border:none;  padding:0'>
-                                    <select name="icon_bg_color" class="form-control">
-                                        <option value="<?= Team_Design('icon_bg_color'); ?>"><?= color_name(Team_Design('icon_bg_color')) ?></option>
-                                        <?php select_color(); ?>
-                                    </select>
+                                    <input type="color" name="icon_bg_color" value="<?= Team_Design('icon_bg_color'); ?>" class="form-control" style='border:none;  padding:0'>
                                 </td>
 
                                 <td>hover:
-                                    <input type="color" value="<?= Team_Design('hover_color'); ?>" class="form-control" style='height: 50px; border:none;  padding:0'>
-                                    <select name="hover_color" class="form-control">
-                                        <option value="<?= Team_Design('hover_color'); ?>"><?= color_name(Team_Design('hover_color')) ?></option>
-                                        <?php select_color(); ?>
-                                    </select>
+                                    <input type="color" name="hover_color" value="<?= Team_Design('hover_color'); ?>" class="form-control" style='border:none;  padding:0'>
                                 </td>
-
-
-
+                                <td>BG Color:
+                                    <input type="color" name="background_color" value="<?= Team_Design('background_color'); ?>" class="form-control" style='border:none;  padding:0'>
+                                </td>
                             </tr>
                         </table>
-                        <label for="" class="form-label mt-3">background color</label>
-                        <div style='height:50px;width:100%; border:none; padding:0; background:<?= Team_Design('background_color'); ?>'></div>
-                        <select name="background_color" id="" class="form-control">
-                            <option value="<?= Team_Design('background_color'); ?>"><?= color_name(Team_Design('background_color')) ?></option>
-                            <?php select_color(); ?>
-                        </select>
+
                         <div class=" m-0 my-3"><button type="submit" name="team_design_update" class="btn btn-primary">Update</button></div>
                     </form>
                 </div>
@@ -770,9 +744,9 @@ $row = $data->fetch_object();
                         </tbody>
                     </table>
 
-                    <form class="row g-3 needs-validation" action="" method="post" novalidate >
+                    <form class="row g-3 needs-validation" action="" method="post" novalidate>
                         <table class="table table-bordered">
-                            <tr >
+                            <tr>
                                 <td><input type="text" name="font_link" class="form-control border" placeholder="Font Link "></td>
                                 <td><input type="text" name="font_name" class="form-control border" placeholder="Font Name"></td>
                                 <td><button type="submit" name="fontadd" class="btn btn-primary border">Submit</button></td>

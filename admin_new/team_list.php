@@ -8,7 +8,7 @@
             <div class="col-md-12">
                 <div class="card mt-5">
                     <div class="card-header">
-                        <h5> Team Page List | <a href="team.php" class="ps-2">Team Members List</a> </h5>
+                        <h5> Team Page List | <a href="team.php" class="ps-2">Team Members List</a> | <a href="setting.php?setting=Team">Team Settings</a> </h5>
                     </div>
                     <div class="card-body">
                         <div class="row align-items-center m-l-0">

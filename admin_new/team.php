@@ -1,29 +1,36 @@
-<?php 
-    include "inc/header.php";
-    include_once 'controller/teams/teams_sql.php';
-    $data = SelectData('settings','');
-    $row = $data->fetch_object();
-?> 
+<?php
+include "inc/header.php";
+include_once 'controller/teams/teams_sql.php';
+$data = SelectData('settings', '');
+$row = $data->fetch_object();
+?>
 
-<div class="container-fluid flex-grow-1 container-p-y"> 
+<div class="container-fluid flex-grow-1 container-p-y">
     <div class="row">
-        <div class="col-10"><h3 class="bg-white p-3 text-uppercase text-primary"><i class="fas fa-users"></i> Our Team</h3></div>
-        <div class="col-2"><h3 class="bg-white text-center p-3 text-uppercase text-info"><button onclick="add_team('views/teams/add.php')" class="btn p-0 text-primary"> New <i class="fas fa-plus"></i></button></h3></div>
+        <div class="col-10">
+            <h3 class="bg-white p-3 text-uppercase text-primary"><i class="fas fa-users"></i> Our Team</h3>
+        </div>
+        <div class="col-2">
+            <h3 class="bg-white text-center p-3 text-uppercase text-info"><button onclick="add_team('views/teams/add.php')" class="btn p-0 text-primary"> New <i class="fas fa-plus"></i></button></h3>
+        </div>
     </div>
-        <!-- logo -->       
+    <!-- logo -->
     <div class="row">
+        <div class="col-md-12">
+            <h5> <a href="team_list.php">Team Page List</a> | <a href="team.php" class="ps-2">Team Members List</a> | <a href="setting.php?setting=Team">Team Settings</a> </h5>
+        </div>
         <div class="col-md-12" id="team">
-        </div>    
+        </div>
     </div><!-- row -->
 </div>
 
 
 <!-- popup -->
-<script> 
+<script>
     // view
-    setInterval( function(){
+    setInterval(function() {
         $("#team").load("views/teams/team_view.php");
-    },1000);
+    }, 1000);
 
 
     //add
@@ -56,23 +63,21 @@
         $.ajax({
             url: url,
             method: "POST",
-            success: function(data) {                            
-            },
+            success: function(data) {},
         });
     }
-
 </script>
 
 
 
 <!-- Modal for client -->
 <div class="modal fade" id="dataModal">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content" id="client">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" id="client">
 
+        </div>
     </div>
-  </div>
 </div>
 
 
-<?php include 'inc/footer.php';?>
+<?php include 'inc/footer.php'; ?>

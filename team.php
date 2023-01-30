@@ -112,15 +112,24 @@ include_once "inc/header.php";
           $team_data = SelectData('our_team', "");
           if ($team_data->num_rows > 0) { ?>
             <?php while ($teaminfo = $team_data->fetch_object()) { ?>
-              <div class="row mx-3 my-3 bg-light">
+              <div class="row mx-3 my-3" style="background-color:<?= Team_Design('background_color') ?>;">
                 <div class="col-md-4 p-0">
                   <img src="assets/mediacenter/team/<?= $teaminfo->Profile_pic ?>" alt="" width="100%">
                 </div>
                 <div class="col-md-8 p-3">
-                  <div class="h4 p-0 m-0 pt-1"><?= $teaminfo->Name ?></div>
-                  <b class="fs-6"><?= $teaminfo->Designation ?></b>
-                  <div><?php $contetext = strip_tags(html_entity_decode($teaminfo->About));
-                        echo substr_replace($contetext, "", 480);   ?></div>
+                  <div class="p-0 m-0 pt-1 teamname"><?= $teaminfo->Name ?></div>
+                  <div class="designation"><?= $teaminfo->Designation ?></div>
+                  <div class="text">
+                    <?php $contetext = strip_tags(html_entity_decode($teaminfo->About));
+                    echo substr_replace($contetext, "", 350); ?>
+                    <div class="teamsocalbar team_icon pt-3">
+                      <a href="<?= $teaminfo->facebook ?>"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                      <a href="https://api.whatsapp.com/send?phone=<?= $teaminfo->whatsapp ?>"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                      <a href="mailto:<?= $teaminfo->Email ?>"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                      <a href="<?= $teaminfo->linkedin ?>"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                      <a href="tel:<?= $teaminfo->Phone_No ?>"><i class="fas fa-phone" aria-hidden="true"></i></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             <?php } ?>

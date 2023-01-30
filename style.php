@@ -288,49 +288,42 @@ font-weight: bold !important;
 ?>
 
 .team_icon{
-padding: 5px 6px;
-position: absolute;
-z-index: 1;
 width:35px;
+
 background:<?= Team_Design('icon_bg_color') ?>;
 overflow: hidden;
-border-bottom-right-radius:10px ;
 }
 
 .team_icon i{
-padding: 5px 3px;
+padding: 5px 6px;
 color: <?= Team_Design('icon_color') ?>!important;
-font-size: 12px;
+font-size: 16px;
 }
 
 .team_icon i:hover{
-font-size: 14px;
+font-size: 17px;
+cursor: pointer;
+background:<?= Team_Design('icon_bg_color') ?> !important;
+color:<?= Team_Design('hover_color') ?> !important;
+border-radius: 2px;
 }
 
-
-.team_info{
-background: <?= Team_Design('background_color') ?>;
-padding: 15px;
+.team_icon a:hover{
+background:none !important;
+padding:0px !important;
 }
 
-.team_info b{
+.teamname{
 color: <?= Team_Design('name_font_color') ?>!important;
 font-family:<?= html_entity_decode(Team_Design('name_font_family')) ?>;
 font-size: <?= Team_Design('name_font_size') ?>px;
 }
 
-.team_info p{
+.designation{
 font-size: <?= Team_Design('designation_font_size') ?>px;
 color: <?= Team_Design('designation_font_color') ?> !important;
 font-family:<?= html_entity_decode(Team_Design('designation_font_family')) ?>;
 }
-
-.team-card:hover{
-box-shadow:0px 0px 7px <?= Team_Design('hover_color') ?>;
-transition: 0.5s;
-cursor: pointer;
-}
-
 
 #ylh:hover{
 cursor: default !important;
