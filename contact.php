@@ -1,10 +1,10 @@
 <?php
-    include_once "inc/db.php";
-    include_once "inc/function.php";
-    $site_title = 'Contact Us';
-    $site_Description = settings('site_Description');
-    $site_banner = settings('site_banner');
-    include_once "inc/header.php";
+include_once "inc/db.php";
+include_once "inc/function.php";
+$site_title = 'Contact Us';
+$site_Description = settings('site_Description');
+$site_banner = settings('site_banner');
+include_once "inc/header.php";
 ?>
 
 
@@ -115,7 +115,24 @@
         <div class="col-md-8 m-0 p-0">
             <div class="page-content page2" style="background-image:url(assets/mediacenter/<?= (contactPage('img_yes_no', '4') == 1) ? contactPage('image', '4') : ''; ?>);">
                 <div class="page2overlay" style="background:<?= contactPage('bg_color', '4') ?>;opacity: <?= contactPage('opasity', '4') ?>;">
-                    <div class="p-5"><?= contactPage('content', '4') ?></div>
+                    <div class="p-5">
+                        <?php
+                        echo contactPage('content', '4');
+
+                        $data = SelectData('address_map', "");
+                        while ($row = $data->fetch_object()) { ?>
+
+                            <div class="row bg-light p-0 m-0">
+                                <div class="col-md-6 p-3"><?= htmlspecialchars_decode($row->address, ENT_QUOTES | ENT_HTML5); ?>
+                                </div>
+                                <div class="col-md-6 p-0">
+                                    <embed src="<?= $row->map ?>" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                                </div>
+                            </div>
+
+                        <?php } ?>
+
+                    </div>
                 </div>
             </div>
         </div>

@@ -75,8 +75,9 @@
                                         <tr>
                                             <td><?= $i++ ?></td>
                                             <td><?= $home->title ?></td>
-                                            <td><?php $contetext = strip_tags($home->content); echo substr_replace($contetext, "...", 100); ?></td>
-                                                
+                                            <td><?php $contetext = strip_tags($home->content);
+                                                echo substr_replace($contetext, "...", 100); ?></td>
+
                                             <td><img src="../assets/mediacenter/<?= $home->image ?>" style=" width: 50px; height:50px;"></td>
                                             <td>
                                                 <div style="background:<?= $home->bg_color ?>; width: 50px; height:50px;"></div>
@@ -125,10 +126,12 @@
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
+
+            <!-- ======== MAP  ==========-->
+            <?php include "map_adress.php"; ?>
+
+
         </div>
     </div>
 </div>
