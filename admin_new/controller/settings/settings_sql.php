@@ -407,8 +407,10 @@ $designation_font_size=$_POST['designation_font_size'];
 $name_font_color=$_POST['name_font_color'];
 $designation_font_color=$_POST['designation_font_color'];
 
-$name_font_family=htmlspecialchars($_POST["name_font_family"]);
-$designation_font_family=htmlspecialchars($_POST['designation_font_family']);
+$name_font_family=htmlspecialchars($_POST["name_font_family"], ENT_QUOTES);
+$designation_font_family=htmlspecialchars($_POST['designation_font_family'], ENT_QUOTES);
+
+
 
 $icon_color=$_POST['icon_color'];
 $icon_bg_color=$_POST['icon_bg_color'];
