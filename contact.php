@@ -104,8 +104,8 @@ include_once "inc/header.php";
 
     <div class="row m-0">
         <!-- section-2 -->
-        <div class="col-md-2 m-0 p-0 mb-lg-0">
-            <div class="page-content page2" style="background-image:url(assets/mediacenter/<?= (contactPage('img_yes_no', '3') == 1) ? contactPage('image', '3') : ''; ?>);">
+        <div class="col-md-2 m-0 p-0 mb-lg-0" style="background-image:url(assets/mediacenter/<?= (contactPage('img_yes_no', '3') == 1) ? contactPage('image', '3') : ''; ?>);">
+            <div class=" page-content page2">
                 <div class="page2overlay" style="background:<?= contactPage('bg_color', '3') ?>; opacity:<?= contactPage('opasity', '3') ?>;">
                     <div class="p-5"><?= contactPage('content', '3') ?></div>
                 </div>
@@ -137,13 +137,15 @@ include_once "inc/header.php";
             </div>
         </div>
 
-        <div class="col-md-2 m-0 p-0">
-            <div class="page-content page2" style="background-image:url(assets/mediacenter/<?= (contactPage('img_yes_no', '5') == 1) ? contactPage('image', '5') : ''; ?>);">
-                <div class="page2overlay " style="background:<?= contactPage('bg_color', '5') ?>;opacity: <?= contactPage('opasity', '5') ?>;">
+        <div class="col-md-2 m-0 p-0 mb-lg-0" style="background-image:url(assets/mediacenter/<?= (contactPage('img_yes_no', '5') == 1) ? contactPage('image', '5') : ''; ?>);">
+            <div class=" page-content page2">
+                <div class="page2overlay" style="background:<?= contactPage('bg_color', '5') ?>; opacity:<?= contactPage('opasity', '5') ?>;">
                     <div class="p-5"><?= contactPage('content', '5') ?></div>
                 </div>
             </div>
         </div>
+
+
     </div>
 
     <div class="row m-0">

@@ -94,7 +94,7 @@ include_once "inc/header.php";
   </div>
 
 
-  <div class="row m-0" style="background:<?= TeamPage('bg_color', '3') ?> !important;">
+  <div class="row m-0">
     <!-- section-2 -->
     <div class="col-md-2 m-0 p-0 mb-lg-0" style="background-image:url(assets/mediacenter/<?= (TeamPage('img_yes_no', '3') == 1) ? TeamPage('image', '3') : ''; ?>);">
       <div class=" page-content page2">
