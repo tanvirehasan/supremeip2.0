@@ -9,9 +9,6 @@
 		$facebook	 = $_POST['facebook'];
 		$linkedin	 = $_POST['linkedin'];
 		$whatsapp	 = $_POST['whatsapp'];
-		
-
-
 
 	    $target_dir = "../assets/mediacenter/team/";
 	    $Profile_pic    = $_FILES["Profile_pic"]["name"];            
@@ -20,7 +17,7 @@
 
 	    $insert = "INSERT INTO our_team ( Name, Designation, About, Phone_No, Email,facebook,linkedin,whatsapp, Profile_pic ) VALUES ( '$Name', '$Designation', '$About', '$Phone_No', '$Email','$facebook','$linkedin','$whatsapp', '$Profile_pic' )";
         if ($conn->query($insert)) {
-            $mess =  "success";
+			Reconect('team.php');
         }else{$mess="Sorry";}
 
 	}
@@ -51,7 +48,7 @@
 	    team_id='$team_id' ";
 
         if ($conn->query($update)) {
-            $mess =  "success";
+			Reconect('team.php');
         }else{$mess="Sorry";}
 
 	}
@@ -59,7 +56,9 @@
 
     if (isset($_GET['delete_id'])) {
         $delete = "DELETE FROM our_team WHERE team_id={$_GET['delete_id']}";
-        $conn->query($delete);
+       if($conn->query($delete)==TRUE){
+		Reconect('team.php');
+		}
 
     }	
 

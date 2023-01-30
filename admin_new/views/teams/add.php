@@ -21,7 +21,7 @@
                         <input type="text" class="form-control mb-4 " name="Designation" required>
 
                         <label for="categoryname" class="form-label pb-2" style="font-weight:700;">About*</label>
-                        <textarea class="editors" name="About" required></textarea>
+                        <textarea class="editors" name="About"></textarea>
 
                         <label for="categoryname" class=" form-label mt-4" style="font-weight:700;">Phone No.*</label>
                         <input type="text" class="form-control mb-4 " name="Phone_No" required>
@@ -29,14 +29,14 @@
                         <label for="categoryname" class=" form-label" style="font-weight:700;">Email*</label>
                         <input type="email" class="form-control mb-4 " name="Email" required>
 
-                        <label for="categoryname" class=" form-label" style="font-weight:700;">Facebook*</label>
-                        <input type="text" class="form-control mb-4 " name="facebook" required>
+                        <label for="categoryname" class=" form-label" style="font-weight:700;">Facebook</label>
+                        <input type="text" class="form-control mb-4 " name="facebook" >
 
-                        <label for="categoryname" class=" form-label" style="font-weight:700;">Linkedin*</label>
-                        <input type="text" class="form-control mb-4 " name="linkedin" required>
+                        <label for="categoryname" class=" form-label" style="font-weight:700;">Linkedin</label>
+                        <input type="text" class="form-control mb-4 " name="linkedin" >
 
-                        <label for="categoryname" class=" form-label" style="font-weight:700;">Whatsapp*</label>
-                        <input type="text" class="form-control mb-4 " name="whatsapp" required>
+                        <label for="categoryname" class=" form-label" style="font-weight:700;">Whatsapp</label>
+                        <input type="text" class="form-control mb-4 " name="whatsapp" >
 
 
 

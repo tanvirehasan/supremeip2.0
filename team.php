@@ -109,7 +109,7 @@ include_once "inc/header.php";
         <div class="page2overlay" style="background:<?= TeamPage('bg_color', '4') ?>;opacity: <?= TeamPage('opasity', '4') ?>;">
 
           <?php
-          $team_data = SelectData('our_team', "");
+          $team_data = SelectData('our_team', "ORDER BY serial_list ASC");
           if ($team_data->num_rows > 0) { ?>
             <?php while ($teaminfo = $team_data->fetch_object()) { ?>
               <div class="row mx-3 my-3" style="background-color:<?= Team_Design('background_color') ?>;">
@@ -123,11 +123,11 @@ include_once "inc/header.php";
                     <?php $contetext = strip_tags(html_entity_decode($teaminfo->About));
                     echo substr_replace($contetext, "", 350); ?>
                     <div class="teamsocalbar team_icon pt-3">
-                      <a href="<?= $teaminfo->facebook ?>"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                      <a href="https://api.whatsapp.com/send?phone=<?= $teaminfo->whatsapp ?>"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
-                      <a href="mailto:<?= $teaminfo->Email ?>"><i class="fas fa-envelope" aria-hidden="true"></i></a>
-                      <a href="<?= $teaminfo->linkedin ?>"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-                      <a href="tel:<?= $teaminfo->Phone_No ?>"><i class="fas fa-phone" aria-hidden="true"></i></a>
+                      <?php echo ($teaminfo->facebook != '') ? "<a href='$teaminfo->facebook'><i class='fab fa-facebook-f' aria-hidden='true'></i></a>" : ''; ?>
+                      <?php echo ($teaminfo->whatsapp != '') ? "<a href='https://api.whatsapp.com/send?phone= $teaminfo->whatsapp'><i class='fab fa-whatsapp' aria-hidden='true'></i></a>" : ''; ?>
+                      <?php echo ($teaminfo->Email != '') ? "<a href='mailto:$teaminfo->Email'><i class='fas fa-envelope' aria-hidden='true'></i></a>" : ''; ?>
+                      <?php echo ($teaminfo->linkedin != '') ? "<a href='$teaminfo->linkedin'><i class='fab fa-linkedin' aria-hidden='true'></i></a>" : ''; ?>
+                      <?php echo ($teaminfo->Phone_No != '') ? "<a href='tel:$teaminfo->Phone_No'><i class='fas fa-phone' aria-hidden='true'></i></a>" : ''; ?>                    
                     </div>
                   </div>
                 </div>
