@@ -10,7 +10,7 @@ $page_iid  = $page->page_id;
 $page_data = SelectData('pages', "WHERE page_id='$page_iid' AND page_status='1'");
 $pageinfo  = $page_data->fetch_object();
 
-$site_title = strip_tags(html_entity_decode($pageinfo->page_title));
+$site_title = strip_tags(html_entity_decode($pageinfo->page_title), ENT_QUOTES | ENT_XML1, 'UTF-8');
 $site_Description = settings('site_Description');
 $site_banner = settings('site_banner');
 
@@ -24,13 +24,13 @@ include_once "inc/header.php";
         <div class="col-md-9 mt-3">
             <div class="row">
                 <div class="col-md-4" style="background:<?= settings('page_title_bg') ?>">
-                    <div class="p-3 pt-5"><?= html_entity_decode($pageinfo->page_title) ?></div>
+                    <div class="p-3 pt-5"><?= html_entity_decode($pageinfo->page_title, ENT_QUOTES | ENT_XML1, 'UTF-8') ?></div>
                 </div>
                 <div class="col-md-8 p-0 m-0" style="background:<?= settings('page_sub_title_bg') ?>">
                     <div class="notice d-none d-md-block d-lg-block">
                         <div class="p-2 float-end" style="background:<?= settings('page_contact_bg') ?>; color:<?= settings('page_contact_text_color') ?>;"><?= settings('page_contact_text') ?></div>
                     </div>
-                    <div class="p-3 mt-5"><?= html_entity_decode($pageinfo->page_sub_title) ?></div>
+                    <div class="p-3 mt-5"><?= html_entity_decode($pageinfo->page_sub_title, ENT_QUOTES | ENT_XML1, 'UTF-8') ?></div>
                 </div>
                 <div class="col-12 mt-3 p-1" style="background:<?= settings('page_submenu_bg') ?>">
                     <?php
@@ -42,7 +42,7 @@ include_once "inc/header.php";
                     <?php } ?>
                 </div>
 
-                <div class="col-md-12 mt-3 p-5" style="background:<?= settings('page_content_bg') ?>"><?= html_entity_decode($pageinfo->page_content) ?></div>
+                <div class="col-md-12 mt-3 p-5" style="background:<?= settings('page_content_bg') ?>"><?= html_entity_decode($pageinfo->page_content, ENT_QUOTES | ENT_XML1, 'UTF-8') ?></div>
 
                 <!-- widget_set -->
                 <div class="col-md-12 p-0 m-0 mb-5 ">
@@ -62,7 +62,7 @@ include_once "inc/header.php";
                                         <tr>
                                             <td class="px-5 p-4">
                                                 <div class='<?= widget_set('ptsize', 1) ?>' style="font-family:<?= widget_set('ptfont', 1) ?> !important; color:<?= widget_set('ptcolor', 1) ?> !important; text-transform:<?= widget_set('ptcase', 1) ?> !important "><?= $price->price_title ?></div>
-                                                <p class="<?= widget_set('pdsize', 1) ?>" style="font-family:<?= widget_set('pdfont', 1) ?> !important; color:<?= widget_set('pdcolor', 1) ?> !important; text-transform:<?= widget_set('pdcase', 1) ?> !important; margin: 0; padding: 0;"> <?= html_entity_decode($price->Price_Description) ?></p>
+                                                <p class="<?= widget_set('pdsize', 1) ?>" style="font-family:<?= widget_set('pdfont', 1) ?> !important; color:<?= widget_set('pdcolor', 1) ?> !important; text-transform:<?= widget_set('pdcase', 1) ?> !important; margin: 0; padding: 0;"> <?= html_entity_decode($price->Price_Description, ENT_QUOTES | ENT_XML1, 'UTF-8') ?></p>
                                             </td>
                                             <td>
                                                 <h5 class="<?= widget_set('psize', 1) ?> p-4" style="font-family:<?= widget_set('pfont', 1) ?> !important; color:<?= widget_set('pcolor', 1) ?> !important; text-transform:<?= widget_set('pcase', 1) ?> !important "><?= $price->Priceamount ?></h5>
@@ -111,7 +111,7 @@ include_once "inc/header.php";
                                     <div class="mb-2 p-3" style="background-color:<?= widget_set('stage_bg', 2) ?> !important;">
                                         <div class="<?= widget_set('ptsize', 2) ?> border-0 border-bottom pb-2" style="font-family:<?= widget_set('ptfont', 2) ?> !important; color:<?= widget_set('ptcolor', 2) ?> !important; text-transform:<?= widget_set('ptcase', 2) ?> !important; width: 120px; "><?= $flowchart->Process_Title ?></div>
                                         <div class='<?= widget_set('psize', 2) ?>' style="font-family:<?= widget_set('pfont', 2) ?> !important; color:<?= widget_set('pcolor', 2) ?> !important; text-transform:<?= widget_set('pcase', 2) ?> !important; "><?= $flowchart->Flowchart_Titel; ?></div>
-                                        <div class='<?= widget_set('pdsize', 2) ?>' style="font-family:<?= widget_set('pdfont', 2) ?> !important; color:<?= widget_set('pdcolor', 2) ?> !important; text-transform:<?= widget_set('pdcase', 2) ?> !important; margin: 0; padding: 0;"><?= html_entity_decode($flowchart->Flowchart_descripstion) ?></div>
+                                        <div class='<?= widget_set('pdsize', 2) ?>' style="font-family:<?= widget_set('pdfont', 2) ?> !important; color:<?= widget_set('pdcolor', 2) ?> !important; text-transform:<?= widget_set('pdcase', 2) ?> !important; margin: 0; padding: 0;"><?= html_entity_decode($flowchart->Flowchart_descripstion, ENT_QUOTES | ENT_XML1, 'UTF-8') ?></div>
                                     </div>
                                 <?php } ?>
                             </div>
@@ -133,7 +133,7 @@ include_once "inc/header.php";
                                             <button class="accordion-button collapsed <?= widget_set('ptsize', 3) ?>" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?= $faq->FAQid ?>" aria-expanded="false" aria-controls="flush-collapse<?= $faq->FAQid ?>" style="font-family:<?= widget_set('ptfont', 3) ?> !important; color:<?= widget_set('ptcolor', 3) ?> !important; text-transform:<?= widget_set('ptcase', 3) ?> !important;"><?= $faq->faq_title ?></button>
                                         </h2>
                                         <div id="flush-collapse<?= $faq->FAQid ?>" class="accordion-collapse collapse" aria-labelledby="flush-heading<?= $faq->FAQid ?>" data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body fw-normal <?= widget_set('pdsize', 3) ?>" style="font-family:<?= widget_set('pdfont', 3) ?> !important; color:<?= widget_set('pdcolor', 3) ?> !important; text-transform:<?= widget_set('pdcase', 3) ?> !important;"><?= html_entity_decode($faq->faq_descrippstion) ?></div>
+                                            <div class="accordion-body fw-normal <?= widget_set('pdsize', 3) ?>" style="font-family:<?= widget_set('pdfont', 3) ?> !important; color:<?= widget_set('pdcolor', 3) ?> !important; text-transform:<?= widget_set('pdcase', 3) ?> !important;"><?= html_entity_decode($faq->faq_descrippstion, ENT_QUOTES | ENT_XML1, 'UTF-8') ?></div>
                                         </div>
                                     </div>
                                 <?php } ?>

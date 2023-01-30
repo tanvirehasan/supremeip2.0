@@ -5,9 +5,9 @@
 
     if (isset($_POST['page_update'])) {
         
-        $page_title   = htmlspecialchars($_POST['page_title']);  
-        $page_sub_title   = htmlspecialchars($_POST['page_sub_title']);
-        $page_content   = htmlspecialchars($_POST['page_content']);
+        $page_title   = htmlspecialchars($_POST['page_title'], ENT_QUOTES | ENT_XML1, 'UTF-8');  
+        $page_sub_title   = htmlspecialchars($_POST['page_sub_title'], ENT_QUOTES | ENT_XML1, 'UTF-8');
+        $page_content   = htmlspecialchars($_POST['page_content'], ENT_QUOTES | ENT_XML1, 'UTF-8');
 
         $page_status    = $_POST['page_status'];
         $seo_title      = $_POST['seo_title'];
