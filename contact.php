@@ -112,10 +112,10 @@ include_once "inc/header.php";
             </div>
         </div>
 
-        <div class="col-md-8 m-0 p-0">
+        <div class="col-md-8 col-sm-12 col-lg-8 m-0 p-0">
             <div class="page-content page2" style="background-image:url(assets/mediacenter/<?= (contactPage('img_yes_no', '4') == 1) ? contactPage('image', '4') : ''; ?>);">
                 <div class="page2overlay" style="background:<?= contactPage('bg_color', '4') ?>;opacity: <?= contactPage('opasity', '4') ?>;">
-                    <div class="p-5">
+                    <div class="p-md-5 py-5 p-3">
                         <?php
                         echo contactPage('content', '4');
 

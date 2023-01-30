@@ -74,7 +74,7 @@ if (isset($_POST['btnstyle_update'])) {
 //color Update
 if (isset($_POST['textcolorupdate'])) {
  
-  $font_fmaily = htmlspecialchars($_POST["font_fmaily"]);
+  $font_fmaily = htmlspecialchars($_POST["font_fmaily"], ENT_QUOTES);
   $color_code = $_POST['color_code'];
   $tcid  = $_POST['tcid'];
 
