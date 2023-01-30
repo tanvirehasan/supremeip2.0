@@ -347,12 +347,12 @@ color:black !important;
 
 
 
-h1, .h1{ color:<?= text_color_settings('color_code', 'h1') ?> !important; font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h1')) ?>!important;}
-h2, .h2{ color:<?= text_color_settings('color_code', 'h2') ?> !important; font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h2')) ?>!important;}
-h3, .h3{ color:<?= text_color_settings('color_code', 'h3') ?> !important; font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h3')) ?>!important;}
-h4, .h4{ color:<?= text_color_settings('color_code', 'h4') ?> !important; font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h4')) ?>!important;}
-h5, .h5{ color:<?= text_color_settings('color_code', 'h5') ?> !important; font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h5')) ?>!important;}
-h6, .h6{ color:<?= text_color_settings('color_code', 'h6') ?> !important; font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h6')) ?>!important;}
+h1, .h1{ color:<?= text_color_settings('color_code', 'h1') ?> !important; font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h1'),ENT_QUOTES | ENT_XML1, 'UTF-8') ?>!important;}
+h2, .h2{ color:<?= text_color_settings('color_code', 'h2') ?> !important; font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h2'),ENT_QUOTES | ENT_XML1, 'UTF-8') ?>!important;}
+h3, .h3{ color:<?= text_color_settings('color_code', 'h3') ?> !important; font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h3'),ENT_QUOTES | ENT_XML1, 'UTF-8') ?>!important;}
+h4, .h4{ color:<?= text_color_settings('color_code', 'h4') ?> !important; font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h4'),ENT_QUOTES | ENT_XML1, 'UTF-8') ?>!important;}
+h5, .h5{ color:<?= text_color_settings('color_code', 'h5') ?> !important; font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h5'),ENT_QUOTES | ENT_XML1, 'UTF-8') ?>!important;}
+h6, .h6{ color:<?= text_color_settings('color_code', 'h6') ?> !important; font-family:<?= html_entity_decode(text_color_settings('font_fmaily', 'h6'),ENT_QUOTES | ENT_XML1, 'UTF-8') ?>!important;}
 
 p{ color:<?= text_color_settings('color_code', 'p') ?> !important;}
 
