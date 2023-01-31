@@ -27,6 +27,7 @@ include_once "inc/header.php";
     .page2overlay {
 
         width: 100%;
+        min-height: 100%;
         overflow: hidden;
     }
 
@@ -123,10 +124,15 @@ include_once "inc/header.php";
 
     <div class="row m-0">
         <!-- section-2 -->
-        <div class="col-md-2 m-0 p-0 mb-lg-0" style="background-image:url(assets/mediacenter/<?= (contactPage('img_yes_no', '5') == 1) ? contactPage('image', '5') : ''; ?>);">
+        <div class="col-md-2 m-0 p-0 mb-lg-0" 
+        <?php if (contactPage('img_yes_no', '5') == 1) {
+            echo "style='background-image:url(assets/mediacenter/" . contactPage('image', '5') . "'";
+             } else {
+            echo "style='background:" . contactPage('bg_color', '5') . ";opacity:" .contactPage('opasity', '5')."'";
+        } ?>>
             <div class=" page-content page2">
-                <div class="page2overlay" style="background:<?= contactPage('bg_color', '5') ?>; opacity:<?= contactPage('opasity', '5') ?>;">
-                    <div class="p-5"><?= contactPage('content', '5') ?></div>
+                <div class="p-5">
+                    <?= contactPage('content', '5') ?>
                 </div>
             </div>
         </div>
@@ -156,10 +162,15 @@ include_once "inc/header.php";
             </div>
         </div>
 
-        <div class="col-md-2 m-0 p-0 mb-lg-0" style="background-image:url(assets/mediacenter/<?= (contactPage('img_yes_no', '7') == 1) ? contactPage('image', '7') : ''; ?>);">
+        <div class="col-md-2 m-0 p-0 mb-lg-0" <?php
+            if (contactPage('img_yes_no', '7') == 1) {
+                echo "style='background-image:url(assets/mediacenter/" . contactPage('image', '7') . "'";
+            } else {
+                echo "style='background:" . contactPage('bg_color', '7') . ";opacity:" . contactPage('opasity', '7') . "'";
+            } ?>>
             <div class=" page-content page2">
-                <div class="page2overlay" style="background:<?= contactPage('bg_color', '7') ?>; opacity:<?= contactPage('opasity', '7') ?>;">
-                    <div class="p-5"><?= contactPage('content', '7') ?></div>
+                <div class="p-5">
+                    <?= contactPage('content', '7') ?>
                 </div>
             </div>
         </div>
@@ -167,7 +178,7 @@ include_once "inc/header.php";
 
     </div>
 
-    <div class="row m-0">
+    <div class=" row m-0">
         <!-- section-3 -->
         <div class="col-md-3 m-0 p-0 mb-lg-0">
             <div class="page-content page3" style="background-image:url(assets/mediacenter/<?= (contactPage('img_yes_no', '8') == 1) ? contactPage('image', '8') : ''; ?>);">
@@ -199,7 +210,7 @@ include_once "inc/header.php";
                     <div class="p-5"><?= contactPage('content', '11') ?></div>
                 </div>
             </div>
-        </div>       
+        </div>
 
     </div>
 </main>
