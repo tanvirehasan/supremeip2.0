@@ -96,13 +96,21 @@ include_once "inc/header.php";
 
   <div class="row m-0">
     <!-- section-2 -->
-    <div class="col-md-2 m-0 p-0 mb-lg-0" style="background-image:url(assets/mediacenter/<?= (TeamPage('img_yes_no', '3') == 1) ? TeamPage('image', '3') : ''; ?>);">
+
+    <div class="col-md-2 m-0 p-0 mb-lg-0" <?php
+                                          if (TeamPage('img_yes_no', '3') == 1) {
+                                            echo "style='background-image:url(assets/mediacenter/" . TeamPage('image', '3') . "'";
+                                          } else {
+                                            echo "style='background:" . TeamPage('bg_color', '3') . ";opacity:" . TeamPage('opasity', '3') . "'";
+                                          } ?>>
       <div class=" page-content page2">
-        <div class="page2overlay" style="background:<?= TeamPage('bg_color', '3') ?>; opacity:<?= TeamPage('opasity', '3') ?>;">
-          <div class="p-5"><?= TeamPage('content', '3') ?></div>
+        <div class="p-5">
+          <?= TeamPage('content', '3') ?>
         </div>
       </div>
     </div>
+
+
 
     <div class="col-md-8 m-0 p-0">
       <div class=" page-content page2" style="background-image:url(assets/mediacenter/<?= (TeamPage('img_yes_no', '4') == 1) ? TeamPage('image', '4') : ''; ?>);">
@@ -127,7 +135,7 @@ include_once "inc/header.php";
                       <?php echo ($teaminfo->whatsapp != '') ? "<a href='https://api.whatsapp.com/send?phone= $teaminfo->whatsapp'><i class='fab fa-whatsapp' aria-hidden='true'></i></a>" : ''; ?>
                       <?php echo ($teaminfo->Email != '') ? "<a href='mailto:$teaminfo->Email'><i class='fas fa-envelope' aria-hidden='true'></i></a>" : ''; ?>
                       <?php echo ($teaminfo->linkedin != '') ? "<a href='$teaminfo->linkedin'><i class='fab fa-linkedin' aria-hidden='true'></i></a>" : ''; ?>
-                      <?php echo ($teaminfo->Phone_No != '') ? "<a href='tel:$teaminfo->Phone_No'><i class='fas fa-phone' aria-hidden='true'></i></a>" : ''; ?>                    
+                      <?php echo ($teaminfo->Phone_No != '') ? "<a href='tel:$teaminfo->Phone_No'><i class='fas fa-phone' aria-hidden='true'></i></a>" : ''; ?>
                     </div>
                   </div>
                 </div>
@@ -138,13 +146,20 @@ include_once "inc/header.php";
       </div>
     </div>
 
-    <div class="col-md-2 m-0 p-0" style="background-image:url(assets/mediacenter/<?= (TeamPage('img_yes_no', '5') == 1) ? TeamPage('image', '5') : ''; ?>);">
-      <div class="page-content page2">
-        <div class="page2overlay " style="background:<?= TeamPage('bg_color', '5') ?>;opacity: <?= TeamPage('opasity', '5') ?>;">
-          <div class="p-5"><?= TeamPage('content', '5') ?></div>
+    <div class="col-md-2 m-0 p-0 mb-lg-0" <?php
+      if (TeamPage('img_yes_no', '5') == 1) {
+        echo "style='background-image:url(assets/mediacenter/" . TeamPage('image', '5') . "'";
+      } else {
+        echo "style='background:" . TeamPage('bg_color', '5') . ";opacity:" . TeamPage('opasity', '5') . "'";
+      } ?>>
+      <div class=" page-content page2">
+        <div class="p-5">
+          <?= TeamPage('content', '5') ?>
         </div>
       </div>
     </div>
+
+
   </div>
 
   <div class="row m-0">

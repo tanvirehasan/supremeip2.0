@@ -1,10 +1,10 @@
 <?php
-    include_once "inc/db.php";
-    include_once "inc/function.php";
-    $site_title = 'About Us';
-    $site_Description = settings('site_Description');
-    $site_banner = settings('site_banner');
-    include_once "inc/header.php";
+include_once "inc/db.php";
+include_once "inc/function.php";
+$site_title = 'About Us';
+$site_Description = settings('site_Description');
+$site_banner = settings('site_banner');
+include_once "inc/header.php";
 ?>
 
 <style type="text/css">
@@ -97,10 +97,15 @@
 
     <div class="row m-0">
         <!-- section-2 -->
-        <div class="col-md-2 m-0 p-0 mb-lg-0" style="background-image:url(assets/mediacenter/<?= (AboutPage('img_yes_no', '3') == 1) ? AboutPage('image', '3') : ''; ?>);">
+        <div class="col-md-2 m-0 p-0 mb-lg-0" <?php
+                if (AboutPage('img_yes_no', '3') == 1) {
+                    echo "style='background-image:url(assets/mediacenter/" . AboutPage('image', '3') . "'";
+                } else {
+                    echo "style='background:" . AboutPage('bg_color', '3') . ";opacity:" . AboutPage('opasity', '3') . "'";
+                } ?>>
             <div class=" page-content page2">
-                <div class="page2overlay" style="background:<?= AboutPage('bg_color', '3') ?>; opacity:<?= AboutPage('opasity', '3') ?>;">
-                    <div class="p-5"><?= AboutPage('content', '3') ?></div>
+                <div class="p-5">
+                    <?= AboutPage('content', '3') ?>
                 </div>
             </div>
         </div>
@@ -113,13 +118,19 @@
             </div>
         </div>
 
-        <div class="col-md-2 m-0 p-0" style="background-image:url(assets/mediacenter/<?= (AboutPage('img_yes_no', '5') == 1) ? AboutPage('image', '5') : ''; ?>);">
-            <div class="page-content page2">
-                <div class="page2overlay " style="background:<?= AboutPage('bg_color', '5') ?>;opacity: <?= AboutPage('opasity', '5') ?>;">
-                    <div class="p-5"><?= AboutPage('content', '5') ?></div>
+        <div class="col-md-2 m-0 p-0 mb-lg-0" <?php
+                                                if (AboutPage('img_yes_no', '5') == 1) {
+                                                    echo "style='background-image:url(assets/mediacenter/" . AboutPage('image', '5') . "'";
+                                                } else {
+                                                    echo "style='background:" . AboutPage('bg_color', '5') . ";opacity:" . AboutPage('opasity', '5') . "'";
+                                                } ?>>
+            <div class=" page-content page2">
+                <div class="p-5">
+                    <?= AboutPage('content', '5') ?>
                 </div>
             </div>
         </div>
+
     </div>
 
     <div class="row m-0">
