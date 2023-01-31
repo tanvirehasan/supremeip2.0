@@ -40,12 +40,13 @@
                                     </tr>
                                     <?php
                                     $i = 1;
-                                    $home_data = SelectData('contact_page', "LIMIT 0,2");
+                                    $home_data = SelectData('contact_page', "LIMIT 0,4");
                                     while ($home = $home_data->fetch_object()) { ?>
                                         <tr>
                                             <td><?= $i++ ?></td>
                                             <td><?= $home->title ?></td>
-                                            <td><?= strip_tags($home->content) ?></td>
+                                            <td><?php $contetext = strip_tags($home->content);
+                                                echo substr_replace($contetext, "...", 100); ?></td>
                                             <td><img src="../assets/mediacenter/<?= $home->image ?>" style=" width: 50px; height:50px;"></td>
                                             <td>
                                                 <div style="background:<?= $home->bg_color ?>; width: 50px; height:50px;"></div>
@@ -69,7 +70,7 @@
                                     </tr>
                                     <?php
                                     $i = 1;
-                                    $home_data = SelectData('contact_page', "LIMIT 2,3");
+                                    $home_data = SelectData('contact_page', "LIMIT 4,3");
                                     while ($home = $home_data->fetch_object()) { ?>
 
                                         <tr>
@@ -100,7 +101,7 @@
                                     </tr>
                                     <?php
                                     $i = 1;
-                                    $home_data = SelectData('contact_page', "LIMIT 5,2");
+                                    $home_data = SelectData('contact_page', "LIMIT 7,4");
                                     while ($home = $home_data->fetch_object()) { ?>
 
                                         <tr>
