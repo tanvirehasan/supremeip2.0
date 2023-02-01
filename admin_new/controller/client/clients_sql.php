@@ -15,7 +15,7 @@ if (isset($_POST['add_client'])) {
 			if ($conn->query($insert)==TRUE) {
 				$bg="bg-success";
 				$error = "Success";
-				Reconect('ourclients.php');
+				Reconect('ourclients.php?clients');
 			}else{
 				$bg="bg-danger";
 				$error = "Sorry!";
@@ -45,7 +45,7 @@ if (isset($_POST['update_client'])) {
 	if ($conn->query($insert)==TRUE) {
 		$bg="bg-warning";
 		$error = "Update Success";
-		Reconect('ourclients.php');
+		Reconect('ourclients.php?clients');
 	}else{
 		$bg="bg-danger";
 		$error = "Sorry!";
@@ -59,7 +59,7 @@ if (isset($_GET['delete_id'])) {
 	if ($conn->query($delete)) {
 		$bg = "bg-danger";
 		$error = "deleted";
-		Reconect('ourclients.php');
+		Reconect('ourclients.php?clients');
 	}
 
 }
