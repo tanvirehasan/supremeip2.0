@@ -62,7 +62,106 @@ if (isset($_GET['delete_id'])) {
 		Reconect('ourclients.php');
 	}
 
-}	
+}
+
+
+
+
+
+
+//Logo Uplaod
+
+if (isset($_POST['clogoadd'])) {
+
+	$client_name = $_POST['client_name'];
+	$file  = $_FILES['client_logo'];
+
+	// File properties
+	$file_name = $file['name'];
+	$file_tmp = $file['tmp_name'];
+	$file_size = $file['size'];
+	$file_error = $file['error'];
+
+	// Work out the file extension
+	$file_ext = explode('.', $file_name);
+	$file_ext = strtolower(end($file_ext));
+
+	// Specify allowed file extensions
+	$allowed = array('txt', 'jpg', 'jpeg', 'png');
+
+	// Check if the uploaded file's extension is allowed
+	if (in_array($file_ext, $allowed)) {
+		// Check if there are no errors
+		if ($file_error === 0) {
+			// Check if the file size is below the maximum allowed
+			if ($file_size <= 1000000) {
+				// Create a new file name to avoid overwriting existing files
+				$file_name_new = uniqid('', true) . '.' . $file_ext;
+
+				// Set the destination for the uploaded file
+				$file_destination = '../assets/mediacenter/client/' . $file_name_new;
+
+				// Move the uploaded file to its final destination
+				if (move_uploaded_file($file_tmp, $file_destination)) {
+					echo "File uploaded successfully";
+
+					$insert = "INSERT INTO client_logos (`client_name`,`client_logo`) VALUES('$client_name','$file_name_new')";
+					if (mysqli_query($conn, $insert)==TRUE) {
+						Reconect('ourclients.php?logo');
+					}
+
+				} else {
+					echo "File could not be uploaded";
+				}
+			} else {
+				echo "File size is too large";
+			}
+		} else {
+			echo "There was an error uploading your file";
+		}
+	} else {
+		echo "File type not allowed";
+	}
+}
+
+
+// Update 
+if (isset($_POST['clogoaddupdate'])) {
+	$client_name = $_POST['client_name'];
+	if ($_FILES["file"]["name"] != '') {
+		$target_dir = "../assets/mediacenter/client/";
+		$file= $_FILES["file"]["name"];
+		$target_file = $target_dir . basename($_FILES["file"]["name"]);
+		move_uploaded_file($_FILES["file"]["tmp_name"], $target_file);
+	} else {
+		$file    = $_POST['file2'];
+			
+	}
+
+	$insert = "UPDATE client_logos SET  `client_name`='$client_name', `client_logo`='$file' WHERE id={$_GET['leid']} ";
+	if ($conn->query($insert) == TRUE) {
+		Reconect('ourclients.php?logo');
+	} else {
+
+	}
+
+
+
+}
+
+
+//Delete 
+if (isset($_GET['ldid'])) {
+	$delete = "DELETE FROM client_logos WHERE id={$_GET['ldid']}";
+	if ($conn->query($delete)) {
+		Reconect('ourclients.php?logo');
+	}
+}
+
+
+
+
+
 
 
 

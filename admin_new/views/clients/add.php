@@ -30,10 +30,7 @@
                     </datalist>
 
                     <label for="categoryname" class="form-label pb-2" style="font-weight:700;">Client details</label>
-                    <textarea class="editors" name="client_ditils" require></textarea>
-
-                    <label for="categoryname" class="form-label pt-5" style="font-weight:700;">color</label>
-                    <input type="color" class="form-control mb-4" value="<?=settings('client_bg_defult')?>"  name="bgcolor" require style="height:80px;">
+                    <textarea class="editors" name="client_ditils" require></textarea>                    
 
                     <div class="float-right my-3">
                         <button type="submit" name="add_client" class="btn btn-primary"> Submit</button>
