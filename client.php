@@ -1,7 +1,7 @@
 <?php
-include_once "inc/db.php";
-include_once "inc/function.php";
-include_once "inc/header.php";
+    include_once "inc/db.php";
+    include_once "inc/function.php";
+    include_once "inc/header.php";
 ?>
 
 <!-- main content -->
@@ -42,13 +42,6 @@ include_once "inc/header.php";
                 </div>
             <?php } ?>
             <!-- FAQ End-->
-
-
-
-
-
-
-
         </div>
     </div>
 </main>
