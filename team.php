@@ -128,8 +128,7 @@ include_once "inc/header.php";
                   <div class="p-0 m-0 pt-1 teamname"><?= $teaminfo->Name ?></div>
                   <div class="designation"><?= $teaminfo->Designation ?></div>
                   <div class="text">
-                    <?php $contetext = strip_tags(html_entity_decode($teaminfo->About));
-                    echo substr_replace($contetext, "", 350); ?>
+                    <?php echo html_entity_decode($teaminfo->About) ?>
                     <div class="teamsocalbar team_icon pt-3">
                       <?php echo ($teaminfo->facebook != '') ? "<a href='$teaminfo->facebook'><i class='fab fa-facebook-f' aria-hidden='true'></i></a>" : ''; ?>
                       <?php echo ($teaminfo->whatsapp != '') ? "<a href='https://api.whatsapp.com/send?phone= $teaminfo->whatsapp'><i class='fab fa-whatsapp' aria-hidden='true'></i></a>" : ''; ?>
