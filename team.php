@@ -129,7 +129,7 @@ include_once "inc/header.php";
                   <div class="designation pb-3"><?= $teaminfo->Designation ?></div>
                   <div class="text">
                     <?php echo html_entity_decode($teaminfo->About) ?>
-                    <div class="teamsocalbar team_icon pt-2">
+                    <div class="teamsocalbar team_icon">
                       <?php echo ($teaminfo->facebook != '') ? "<a href='$teaminfo->facebook'><i class='fab fa-facebook-f' aria-hidden='true'></i></a>" : ''; ?>
                       <?php echo ($teaminfo->whatsapp != '') ? "<a href='https://api.whatsapp.com/send?phone= $teaminfo->whatsapp'><i class='fab fa-whatsapp' aria-hidden='true'></i></a>" : ''; ?>
                       <?php echo ($teaminfo->Email != '') ? "<a href='mailto:$teaminfo->Email'><i class='fas fa-envelope' aria-hidden='true'></i></a>" : ''; ?>
