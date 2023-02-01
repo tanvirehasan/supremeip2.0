@@ -126,7 +126,7 @@ include_once "inc/header.php";
                 </div>
                 <div class="col-md-8 p-3">
                   <div class="p-0 m-0 pt-1 teamname"><?= $teaminfo->Name ?></div>
-                  <div class="designation"><?= $teaminfo->Designation ?></div>
+                  <div class="designation mb-2"><?= $teaminfo->Designation ?></div>
                   <div class="text">
                     <?php echo html_entity_decode($teaminfo->About) ?>
                     <div class="teamsocalbar team_icon pt-3">
