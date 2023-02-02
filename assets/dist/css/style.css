@@ -83,14 +83,14 @@ body {
 
 .sqecode ul li{
   list-style: none;
-  /* position:absolute; */
+  position:relative;
 }
 
 
 .qr_link{
   margin-left: 40px;
   display: none;
-  margin-top: -30px;
+  margin-bottom:-40px;
   position:absolute;
   bottom: 0;
 }

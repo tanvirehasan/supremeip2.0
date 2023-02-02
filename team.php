@@ -120,7 +120,7 @@ include_once "inc/header.php";
           $team_data = SelectData('our_team', "ORDER BY serial_list ASC");
           if ($team_data->num_rows > 0) { ?>
             <?php while ($teaminfo = $team_data->fetch_object()) { ?>
-              <div class="row mx-3 my-3" style="background-color:<?= Team_Design('background_color') ?>;">
+              <div class="row" style="background-color:<?= Team_Design('background_color') ?>;">
                 <div class="col-md-4 p-0">
                   <img src="assets/mediacenter/team/<?= $teaminfo->Profile_pic ?>" alt="" width="100%">
                 </div>

@@ -43,16 +43,18 @@
           foreach ($sdata as $srow) { ?>
 
             <ul>
-              <li class="icon_box py-2"><i class="<?= $srow['icon'] ?> p-1 ps-3"></i>
-                <ul>
-                  <li>
-                    <div class="qr_link" style="width:<?= settings('socialbar_imagesize') ?>;">
-                      <a href="<?= $srow['social_url'] ?>" target="NULL"><img src="assets/mediacenter/<?= $srow['qr_image'] ?>" alt="" style='width:100%' ;></a>
-                    </div>
-                  </li>
-                </ul>
+              <?php if ($srow['social_url'] == '') { ?>
+                <li class="icon_box py-2"><i class="<?= $srow['icon'] ?> p-1 ps-3"></i>
+                  <ul>
+                    <li>
+                      <div class="qr_link" style="width:<?= settings('socialbar_imagesize') ?>;">
+                        <a href="<?= $srow['social_url'] ?>" target="NULL"><img src="assets/mediacenter/<?= $srow['qr_image'] ?>" alt="" style='width:100%' ;></a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              <?php } ?>
 
-              </li>
             </ul>
 
 
