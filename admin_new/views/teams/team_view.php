@@ -75,9 +75,3 @@ include "../../inc/function.php";
         </div>
     </div>
 </div>
-
-
-<script src="../dist/js/jquery.dataTables.min.js"></script>
-<script>
-    $('#data_table').DataTable();
-</script>
