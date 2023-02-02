@@ -76,16 +76,26 @@ body {
   font-size: .875rem;
 }
 
+.sqecode ul{
+  margin: 0;
+  padding: 0;
+}
+
+.sqecode ul li{
+  list-style: none;
+  /* position:absolute; */
+}
 
 
 .qr_link{
   margin-left: 40px;
   display: none;
+  margin-top: -30px;
   position:absolute;
   bottom: 0;
 }
 
-.icon_box:hover>.qr_link{
+.sqecode ul li:hover> ul li .qr_link{
   cursor: pointer;
   display: block;
 }
