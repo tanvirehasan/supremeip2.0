@@ -7,7 +7,7 @@ include "../../inc/function.php";
 <script>
     $(document).ready(function() {
         $(function() {
-            $(".sort").sortable({
+            $("#sort").sortable({
                 opacity: 0.8,
                 cursor: 'move',
                 update: function() {
@@ -28,7 +28,7 @@ include "../../inc/function.php";
         </div>
 
         <div class="">
-            <table class="table table-bordered table-striped mb-0 sort">
+            <table class="table table-bordered table-striped mb-0" id="data_table">
                 <thead>
                     <tr>
                         <th>Move</th>
@@ -42,8 +42,7 @@ include "../../inc/function.php";
                     </tr>
                 </thead>
 
-                <tbody class="">
-
+                <tbody id="sort">
                     <?php
                     $i = 1;
                     $teab_data = SelectData('our_team', "ORDER BY serial_list ASC");
@@ -76,3 +75,9 @@ include "../../inc/function.php";
         </div>
     </div>
 </div>
+
+
+<script src="../dist/js/jquery.dataTables.min.js"></script>
+<script>
+    $('#data_table').DataTable();
+</script>
