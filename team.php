@@ -125,7 +125,7 @@ include_once "inc/header.php";
                   <img src="assets/mediacenter/team/<?= $teaminfo->Profile_pic ?>" alt="" width="100%">
                 </div>
                 <div class="col-md-8 p-3">
-                  <div class="p-0 m-0 pt-1 teamname"><?= $teaminfo->Name ?></div>
+                  <div class="p-0 m-0 teamname"><?= $teaminfo->Name ?></div>
                   <div class="designation pb-3"><?= $teaminfo->Designation ?></div>
                   <div class="text">
                     <?php echo html_entity_decode($teaminfo->About) ?>
