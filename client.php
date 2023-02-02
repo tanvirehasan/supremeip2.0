@@ -12,7 +12,7 @@
         while ($row = $data->fetch_object()) { ?>
             <div class="col-4 col-md-2 p-1 m-0">
                 <div class="card p-2 bg-light" style="border: 1px solid #979797;">
-                    <img src="assets/mediacenter/client/logo.jpeg" alt="" style="width: 100%;">
+                    <img src="assets/mediacenter/client/<?=$row->client_logo?>" alt="" style="width: 100%;">
                 </div>
 
             </div>
