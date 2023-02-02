@@ -30,7 +30,7 @@ $row = $data->fetch_object();
     // view
     setInterval(function() {
         $("#team").load("views/teams/team_view.php");
-    }, 5000);
+    }, 2000);
 
 
     //add
