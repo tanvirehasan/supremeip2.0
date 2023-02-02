@@ -98,22 +98,18 @@ $row = $data->fetch_object();
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card card-body">
-                    <?php
-                    $data = SelectData('client_logos', "");
-                    while ($row = $data->fetch_object()) { ?>
-                        <div class="col-md-3 containeriamge ">
-                            <img src="../assets/mediacenter/client/<?= $row->client_logo ?>" alt="Avatar" class="image" style="width:100%; border:1px solid red; padding:5px;border-radius:10px;">
-                            <div class="middle d-flex w-100 justify-content-center">
-                                <a href="ourclients.php?leid=<?= $row->id ?>" class="text btn btn-success btn-sm text-white mx-1">Edit</a>
-                                <a href="ourclients.php?ldid=<?= $row->id ?>" class="text btn btn-danger btn-sm text-white">Delete</a>
-                            </div>
-                        </div>
-                    <?php } ?>
+        <div class="row bg-white m-1 p-3">
+            <?php
+            $data = SelectData('client_logos', "");
+            while ($row = $data->fetch_object()) { ?>
+                <div class="col-md-3 containeriamge ">
+                    <img src="../assets/mediacenter/client/<?= $row->client_logo ?>" alt="Avatar" class="image" style="width:100%; border:1px solid red; padding:5px;border-radius:10px;">
+                    <div class="middle d-flex w-100 justify-content-center">
+                        <a href="ourclients.php?leid=<?= $row->id ?>" class="text btn btn-success btn-sm text-white mx-1">Edit</a>
+                        <a href="ourclients.php?ldid=<?= $row->id ?>" class="text btn btn-danger btn-sm text-white">Delete</a>
+                    </div>
                 </div>
-            </div>
+            <?php } ?>
         </div>
 
     <?php } ?>
