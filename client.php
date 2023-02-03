@@ -5,8 +5,8 @@ include_once "inc/header.php";
 ?>
 
 <!-- main content -->
-<main class="col-md-10 ms-md-auto col-lg-10 mt-5 mt-md-0 p-2" style="overflow: hidden;">
-    <div class="row p-0 mx-0 m-0" style="background-color: <?= settings('client_bg'); ?>;">
+<main class="col-md-10 ms-md-auto col-lg-10 mt-5 mt-md-0 p-2" style="overflow: hidden; background-color: <?= settings('client_bg'); ?>;">
+    <div class="row p-0 mx-0 m-0">
         <?php
         $i = 1;
         $limit = settings('client_logo_limit');
