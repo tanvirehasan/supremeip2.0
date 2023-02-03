@@ -4,22 +4,6 @@ include "../../inc/function.php";
 ?>
 
 
-<script>
-    $(document).ready(function() {
-        $(function() {
-            $("#sort").sortable({
-                opacity: 0.8,
-                cursor: 'move',
-                update: function() {
-                    var order = $(this).sortable("serialize") + '&update=team';
-                    $.post("controller/menu/menu_postion_update.php", order);
-                }
-            });
-        });
-    });
-</script>
-
-
 <div class="card">
     <div class="card-body">
         <div class="row align-items-center m-l-0">
