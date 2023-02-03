@@ -69,7 +69,7 @@ $row = $data->fetch_object();
                                         <td><i class="fas fa-bars"></i></td>
                                         <td><?= $i++ ?></td>
                                         <td><?= $team->Name ?></td>
-                                        <td><?php echo substr_replace($team->Designation, "...", 60); ?></td>
+                                        <td><?php echo substr_replace($team->Designation, "...", 20); ?></td>
 
                                         <td><?= $team->Phone_No ?></td>
                                         <td><?= $team->Email ?></td>
