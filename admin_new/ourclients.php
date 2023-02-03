@@ -82,6 +82,36 @@ $row = $data->fetch_object();
                 <h3 class="bg-white text-center p-3 text-uppercase text-info"><a id="newlogoform" class="btn p-0 text-primary"> New <i class="fas fa-plus"></i></a></h3>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-body">
+                    <table class="table table-bordered">
+                        <form action="" method="POST">
+                            <tr>
+                                <td>Page BG</td>
+                                <td>Logo BG</td>
+                                <td>Border Color</td>
+                                <td>Border Size</td>
+                                <td>Logo Limit</td>
+                                <td>Action</td>
+                            </tr>
+                            <tr>
+                                <td><input type="color" name="client_bg" value="<?= settings('client_bg'); ?>" class="form-control p-0 m-0 border"></td>
+                                <td><input type="color" name="client_logo_bg" value="<?= settings('client_logo_bg'); ?>" class="form-control p-0 m-0 border"></td>
+                                <td><input type="color" name="client_border_color" value="<?= settings('client_border_color'); ?>" class="form-control p-0 m-0 border"></td>
+                                <td><input type="text" name="client_border_size" value="<?= settings('client_border_size'); ?>" class="form-control p-0 m-0 border"></td>
+                                <td><input type="text" name="client_logo_limit" value="<?= settings('client_logo_limit'); ?>" class="form-control p-0 m-0 border"></td>
+                                <td> <input type="submit" name="clientcolor_Update" value="Update" class="btn btn-danger"> </td>
+                            </tr>
+                        </form>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
         <div class="row">
             <div class="col-md-12" id="logoform" style="display: none;">
                 <div class="card card-body ">
@@ -109,7 +139,7 @@ $row = $data->fetch_object();
                     <div class="middle d-flex w-100 justify-content-center">
                         <form action="" method="POST" enctype="multipart/form-data">
                             <input type="file" name="file" class="custom-file-input">
-                            <input type="hidden" name="id" value="<?= $row->id?>">
+                            <input type="hidden" name="id" value="<?= $row->id ?>">
                             <input type="submit" name="clogoaddupdate" value="Update">
                         </form>
 

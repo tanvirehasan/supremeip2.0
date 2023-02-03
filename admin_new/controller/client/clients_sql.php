@@ -160,6 +160,37 @@ if (isset($_GET['ldid'])) {
 
 
 
+if (isset($_POST['clientcolor_Update'])) {
+
+	$client_bg = $_POST["client_bg"];
+	$client_logo_bg = $_POST["client_logo_bg"];
+	$client_border_color = $_POST["client_border_color"];
+	$client_border_size = $_POST["client_border_size"];
+	$client_logo_limit = $_POST["client_logo_limit"];
+
+	$sql = " UPDATE settings SET 
+    
+    client_bg='$client_bg',
+    client_logo_bg='$client_logo_bg',
+    client_border_color='$client_border_color',
+    client_border_size='$client_border_size',
+    client_logo_limit='$client_logo_limit'
+    ";
+
+	if ($conn->query($sql)) {
+		Reconect('ourclients.php?logo');
+	}
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

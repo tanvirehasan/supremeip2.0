@@ -6,14 +6,15 @@ include_once "inc/header.php";
 
 <!-- main content -->
 <main class="col-md-10 ms-md-auto col-lg-10 mt-5 mt-md-0 p-2" style="overflow: hidden;">
-    <div class="row p-0 mx-0 m-0">
+    <div class="row p-0 mx-0 m-0" style="background-color: <?= settings('client_bg'); ?>;">
         <?php
         $i = 1;
-        $data = SelectData('client_logos', "LIMIT 48");
+        $limit = settings('client_logo_limit');
+        $data = SelectData('client_logos', "LIMIT $limit ");
         while ($row = $data->fetch_object()) { ?>
             <div class="col-4 col-md-2 p-1 m-0">
-                <div class="card p-0 bg-light" style="border: 1px solid #979797;">
-                    <img src="assets/mediacenter/client/<?= $row->client_logo ?>" alt="" style="width: 100%;">
+                <div class="card p-0" style="border: <?= settings('client_border_size'); ?>px solid <?= settings('client_border_color'); ?>; background-color:<?= settings('client_logo_bg'); ?>">
+                    <img src="assets/mediacenter/client/<?= $row->client_logo ?>" alt="" style="width: 100%; border-radius:4px;">
                     <p class="imagno"><?= $i ?></p>
                 </div>
 
@@ -70,14 +71,12 @@ include_once "inc/header.php";
         transition: .5s ease;
         position: absolute;
         top: 10px;
-        left:10px;
+        left: 10px;
         font-size: 8px;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         text-align: center;
     }
-
-
 </style>
 
 
