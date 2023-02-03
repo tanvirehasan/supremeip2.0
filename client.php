@@ -1,22 +1,25 @@
 <?php
-    include_once "inc/db.php";
-    include_once "inc/function.php";
-    include_once "inc/header.php";
+include_once "inc/db.php";
+include_once "inc/function.php";
+include_once "inc/header.php";
 ?>
 
 <!-- main content -->
 <main class="col-md-10 ms-md-auto col-lg-10 mt-5 mt-md-0 p-2" style="overflow: hidden;">
     <div class="row p-0 mx-0 m-0">
         <?php
-        $data = SelectData('client_logos', "");
+        $i = 1;
+        $data = SelectData('client_logos', "LIMIT 48");
         while ($row = $data->fetch_object()) { ?>
             <div class="col-4 col-md-2 p-1 m-0">
-                <div class="card p-2 bg-light" style="border: 1px solid #979797;">
-                    <img src="assets/mediacenter/client/<?=$row->client_logo?>" alt="" style="width: 100%;">
+                <div class="card p-0 bg-light" style="border: 1px solid #979797;">
+                    <img src="assets/mediacenter/client/<?= $row->client_logo ?>" alt="" style="width: 100%;">
+                    <p class="imagno"><?= $i ?></p>
                 </div>
 
             </div>
-        <?php } ?>
+        <?php $i++;
+        } ?>
     </div>
 
     <div class="row">
@@ -25,7 +28,7 @@
             if ($faq_data->num_rows > 0) { ?>
                 <h3 class="section_title_page "> <i class="fa fa-circle-o-notch" aria-hidden="true"></i> Our Clients</h3>
                 <div class="faq  p-0 px-md-0 " style="background-color:<?= widget_set('Section_bg', 3) ?>; padding:<?= widget_set('padding', 3) ?>px !important; border:<?= widget_set('border', 3) ?> !important;">
-                
+
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                         <?php while ($faq = $faq_data->fetch_object()) { ?>
                             <div class="accordion-item">
@@ -45,6 +48,37 @@
         </div>
     </div>
 </main>
+
+
+
+<style>
+    .containeriamge {
+        position: relative;
+        width: 100%;
+    }
+
+    .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+
+    .imagno {
+        transition: .5s ease;
+        position: absolute;
+        top: 10px;
+        left:10px;
+        font-size: 8px;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+
+</style>
 
 
 

@@ -127,7 +127,7 @@ if (isset($_POST['clogoadd'])) {
 
 // Update 
 if (isset($_POST['clogoaddupdate'])) {
-	$client_name = $_POST['client_name'];
+	
 	if ($_FILES["file"]["name"] != '') {
 		$target_dir = "../assets/mediacenter/client/";
 		$file= $_FILES["file"]["name"];
@@ -138,7 +138,7 @@ if (isset($_POST['clogoaddupdate'])) {
 			
 	}
 
-	$insert = "UPDATE client_logos SET  `client_name`='$client_name', `client_logo`='$file' WHERE id={$_GET['leid']} ";
+	$insert = "UPDATE client_logos SET `client_logo`='$file' WHERE id={$_POST['id']} ";
 	if ($conn->query($insert) == TRUE) {
 		Reconect('ourclients.php?logo');
 	} else {

@@ -100,16 +100,24 @@ $row = $data->fetch_object();
 
         <div class="row bg-white m-1 p-3">
             <?php
+            $i = 1;
             $data = SelectData('client_logos', "");
             while ($row = $data->fetch_object()) { ?>
-                <div class="col-md-3 containeriamge ">
+                <div class="col-md-2 m-0 p-0 p-1 containeriamge ">
                     <img src="../assets/mediacenter/client/<?= $row->client_logo ?>" alt="Avatar" class="image" style="width:100%; border:1px solid red; padding:5px;border-radius:10px;">
+                    <p class="imagno"><?= $i ?></p>
                     <div class="middle d-flex w-100 justify-content-center">
-                        <a href="ourclients.php?leid=<?= $row->id ?>" class="text btn btn-success btn-sm text-white mx-1">Edit</a>
-                        <a href="ourclients.php?ldid=<?= $row->id ?>" class="text btn btn-danger btn-sm text-white">Delete</a>
+                        <form action="" method="POST" enctype="multipart/form-data">
+                            <input type="file" name="file" class="custom-file-input">
+                            <input type="hidden" name="id" value="<?= $row->id?>">
+                            <input type="submit" name="clogoaddupdate" value="Update">
+                        </form>
+
+
                     </div>
                 </div>
-            <?php } ?>
+            <?php $i++;
+            }  ?>
         </div>
 
     <?php } ?>
@@ -173,6 +181,17 @@ $row = $data->fetch_object();
         backface-visibility: hidden;
     }
 
+    .imagno {
+        transition: .5s ease;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-size: 10px;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
     .middle {
         transition: .5s ease;
         opacity: 0;
@@ -190,6 +209,37 @@ $row = $data->fetch_object();
 
     .containeriamge:hover .middle {
         opacity: 1;
+    }
+
+
+    /* UPload button  */
+
+    .custom-file-input::-webkit-file-upload-button {
+        visibility: hidden;
+    }
+
+    .custom-file-input::after {
+        content: 'Select some files';
+        display: inline-block;
+        background: linear-gradient(top, #f9f9f9, #e3e3e3);
+        border: 1px solid #999;
+        border-radius: 3px;
+        padding: 5px 8px;
+        outline: none;
+        white-space: nowrap;
+        -webkit-user-select: none;
+        cursor: pointer;
+        text-shadow: 1px 1px #fff;
+        font-weight: 700;
+        font-size: 10pt;
+    }
+
+    .custom-file-input:hover::before {
+        border-color: black;
+    }
+
+    .custom-file-input:active::before {
+        background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
     }
 </style>
 

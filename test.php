@@ -1,150 +1,15 @@
-<body id="supremeip">
-  <div class="">
+<?php 
 
-  <div class="row m-0 p-0">
+include "inc/db.php";
 
-  <div class="socialicon p-0 d-none d-lg-block d-md-block" style="width:40px; height:100%; background:<?=settings('socialbar_bgcolor');?>; z-index:999; position:fixed;">
-    <div class="sqecode" style="position: absolute; bottom:50px;">
-
-      <?php $sdata = SelectData('social',"");
-      foreach($sdata as $srow){?>
-
-      <div class="icon_box py-2" id="icon_<?=$srow['id']?>">
-        <?php
-            if ($srow['social_url']=='') {?>
-              <i class="<?=$srow['icon']?> p-1 ps-3"></i>
-              <div class="qr_link" id="qr_link_<?=$srow['id']?>">
-              <a href="<?=$srow['social_url']?>" target="NULL" ><img src="assets/mediacenter/<?=$srow['qr_image']?>" alt="" width="100%"></a>
-              </div>
-            <?php }else{?>
-              <a href="<?=$srow['social_url']?>" target="NULL" ><i class="<?=$srow['icon']?> p-1 ps-3"></i></a>
-            <?php } ?> 
-      </div> 
-    <?php } ?>
-  
-    </div>
-  </div>
-
-    <nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block sidebar collapse accordion" style="background:<?=header_menu('background_color');?>;padding:0px; padding-left:25px;">
-      <div class="position-sticky">    
-        <div class="logo_text ms-3 px-2 mb-4 py-4">
-            <div class="logoimg">  
-              <a href="/"><img src="assets/brand/<?=settings('logo')?>" alt="SUPREMEiP"></a>      
-            </div>      
-          </div>
-
-<div class="accordion" id="accordionExample">
-
-<?php $data = SelectData('menu_new',"WHERE menu_perent='#' AND manu_status!='0' ");
-      foreach($data as $row){?>
-
-      <ul class="accordion-item">
-        <li class="accordion-header" id="headingTwo">
-          <a class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo<?=$row['menu_id']?>" aria-expanded="false" aria-controls="collapseTwo">
-            <?=$row['menu_title']?>
-          </a>
-        </li>
-        <div id="collapseTwo<?=$row['menu_id']?>" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <ul class="" > 
-                  <?php $pageid = $row['menu_title'];
-                  $data = SelectData('menu_new',"WHERE menu_perent='$pageid' AND manu_status!='0' ");
-                  foreach($data as $crow){?>
-                  <li class="nav-item">                
-                      <a class="nav-link m-0 p-0 "  href="pages.php?page=<?=$row['manu_url']?>&child=<?=$crow['manu_url']?>"><i class="fas fa-jug " style="display: inline-block!important;transform: rotate(0deg);"></i> <?=$crow['menu_title']?></a>
-                  </li>
-                  <?php } ?>
-              </ul>   
-          </div>
-        </div>
-      </ul>
-
-<?php } ?>
-  
-</div>
+$a=1;
+while ($a <= 100) {
+  mysqli_query($conn, "INSERT INTO `client_logos`(`client_logo`) VALUES ('USAID-Identity.svg.png')");
+  echo "Done </br>";
+  $a++;
+}
 
 
 
-        <ul class="navbar-nav ms-3 header_menu" >
-          <li class="nav-item m-0 p-0 ">
-            <a class="nav-link nav_menus m-0 p-0" href="/">           
-            <i class="fas fa-home" style="display: inline-block!important;transform: rotate(0deg);"></i> Home</a>       
-          </li>   
-            
-            <?php $data = SelectData('menu_new',"WHERE menu_perent='#' AND manu_status!='0' ");
-                foreach($data as $row){?>
-                    <li class="nav-item m-0 p-0 dropdown">
-                        <a class="nav-link  py-1 dropdown-toggle" id="navbarkDropdown_<?=$row['menu_id']?>" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">                 
-                        <i class="<?=$row['icon']?>" style="display: inline-block!important;transform: rotate(0deg);"></i> <?=$row['menu_title']?></a>
-                        
-                            <ul class="dropdowncard dropdowncard<?=$row['menu_id']?>" > 
-                                <?php $pageid = $row['menu_title'];
-                                $data = SelectData('menu_new',"WHERE menu_perent='$pageid' AND manu_status!='0' ");
-                                foreach($data as $crow){?>
-                                <li class="nav-item">                
-                                    <a class="nav-link m-0 p-0 "  href="pages.php?page=<?=$row['manu_url']?>&child=<?=$crow['manu_url']?>"><i class="fas fa-jug " style="display: inline-block!important;transform: rotate(0deg);"></i> <?=$crow['menu_title']?></a>
-                                </li>
-                                <?php } ?>
-                            </ul>                       
-                    </li>               
+?>
 
-                    <script>
-                    $(document).ready(function(){
-                      $("#navbarkDropdown_<?=$row['menu_id']?>").click(function(){
-                        $(".dropdowncard<?=$row['menu_id']?>").toggle();
-                      });
-                    });
-                    </script>
-            <?php } ?>   
-              <li class="nav-item m-0 p-0">
-                <a class="nav-link nav_menus m-0 p-0" href="team.php">           
-                <i class="fas fa-users" style="display: inline-block!important;transform: rotate(0deg);"></i> Our Team</a>       
-              </li>             
-      </ul>
-
-
-      
-
-
-
-      </div>  
-  </nav>
-
-  <script>
-    $(document).ready(function(){
-      $("nav").click(function(){
-        $(".qr_link").hide();
-      });
-    });
-  </script>
-
-
-<div class="accordion ps-2" id="accordionExample">
-
-<?php $data = SelectData('menu_new',"WHERE menu_perent='#' AND manu_status!='0' ");
-      foreach($data as $row){?>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo<?=$row['menu_id']?>" aria-expanded="false" aria-controls="collapseTwo">
-            <?=$row['menu_title']?>
-          </button>
-        </h2>
-        <div id="collapseTwo<?=$row['menu_id']?>" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <div class="" > 
-                  <?php $pageid = $row['menu_title'];
-                  $data = SelectData('menu_new',"WHERE menu_perent='$pageid' AND manu_status!='0' ");
-                  foreach($data as $crow){?>
-                  <div class="nav-item">                
-                      <a class="nav-link m-0 p-0 "  href="pages.php?page=<?=$row['manu_url']?>&child=<?=$crow['manu_url']?>"><i class="fas fa-jug " style="display: inline-block!important;transform: rotate(0deg);"></i> <?=$crow['menu_title']?></a>
-                  </div>
-                  <?php } ?>
-              </div>   
-          </div>
-        </div>
-      </div>
-
-<?php } ?>
-  
-</div>
