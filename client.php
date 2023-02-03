@@ -24,7 +24,7 @@ include_once "inc/header.php";
     </div>
 
     <div class="row">
-        <div class="col-md-12 mt-5">
+        <div class="col-md-12 mt-5 p-3">
             <?php $faq_data = SelectData('our_clients', "");
             if ($faq_data->num_rows > 0) { ?>
                 <h3 class="section_title_page "> <i class="fa fa-circle-o-notch" aria-hidden="true"></i> Our Clients</h3>
