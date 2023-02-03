@@ -45,7 +45,7 @@ $row = $data->fetch_object();
                     </div>
 
                     <div class="">
-                        <table class="table table-bordered table-striped mb-0" id="data_table">
+                        <table class="table table-bordered table-striped mb-0" id="">
                             <thead>
                                 <tr>
                                     <th>Move</th>
@@ -61,6 +61,7 @@ $row = $data->fetch_object();
 
                             <tbody id="sort">
                                 <?php
+                                
                                 $i = 1;
                                 $teab_data = SelectData('our_team', "ORDER BY serial_list ASC");
                                 while ($team = $teab_data->fetch_object()) { ?>
